@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":350,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":true,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="微动和轴">
+<meta property="og:url" content="http://example.com/2020/11/07/%E5%BE%AE%E5%8A%A8%E5%92%8C%E8%BD%B4/index.html">
+<meta property="og:site_name" content="Yukminnie">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/u=2915443138,610379945&fm=26&gp=0.jpg.jpg">
+<meta property="article:published_time" content="2020-11-07T05:16:21.000Z">
+<meta property="article:modified_time" content="2020-11-15T08:27:22.713Z">
+<meta property="article:author" content="Yukminnie">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/u=2915443138,610379945&fm=26&gp=0.jpg.jpg">
+
+<link rel="canonical" href="http://example.com/2020/11/07/%E5%BE%AE%E5%8A%A8%E5%92%8C%E8%BD%B4/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>微动和轴 | Yukminnie</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Yukminnie</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/07/%E5%BE%AE%E5%8A%A8%E5%92%8C%E8%BD%B4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yukminnie">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yukminnie">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          微动和轴
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-11-07 13:16:21" itemprop="dateCreated datePublished" datetime="2020-11-07T13:16:21+08:00">2020-11-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-15 16:27:22" itemprop="dateModified" datetime="2020-11-15T16:27:22+08:00">2020-11-15</time>
+              </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/11/07/%E5%BE%AE%E5%8A%A8%E5%92%8C%E8%BD%B4/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/07/%E5%BE%AE%E5%8A%A8%E5%92%8C%E8%BD%B4/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/u=2915443138,610379945&fm=26&gp=0.jpg.jpg"></p>
+<a id="more"></a>
+<p>随便写写，不当真。</p>
+<h4 id="轴体"><a href="#轴体" class="headerlink" title="轴体"></a>轴体</h4><h5 id="普通轴"><a href="#普通轴" class="headerlink" title="普通轴"></a>普通轴</h5><p>大部分体验过各类轴体后，最后都会选择红轴吧。虽然红轴和茶轴都是“二代产物”，但是能被大部分人喜欢或者适应，才是重点。青轴和黑轴才是真机械轴这种说法，我觉得体验体验是可以的，日常使用不太合适。青轴二段“机械感”强，但是键程长，虽然说黑轴亚历克数大，但是可以做到“蜻蜓点水”，青轴就不行了，时间长了，手指还是很累的。茶轴，本身来说毫无特色，或许没有特色也算是一种特色？可以用“高级薄膜感”来形容吧，那种“飒飒”的声音，长时间使用，个人接受不能。</p>
+<p>不建议去使用这两年出的“静音矮红”，原因和茶轴类似。</p>
+<p>至于奶轴，白轴，绿轴之类，没有用过不多说了。</p>
+<h5 id="光轴"><a href="#光轴" class="headerlink" title="光轴"></a>光轴</h5><p>网吧这种双飞燕轴挺多的，侧面也证明了，寿命应该是不错的。特点是直上直下，触发迅速，但是却有特别轻微段落感，个人感觉的确适合拿来打游戏。不过因为双飞燕的这类产品，外观都是杀马特，实在是难以接受。雷蛇也有一款光轴，不过价格稍贵，有兴趣的人可以试试。</p>
+<h5 id="静电容"><a href="#静电容" class="headerlink" title="静电容"></a>静电容</h5><p>当然，这不是机械轴，只是懒得分类就写这里了。我觉得比起商家各种神乎其技的宣传，重点还是要放到“退烧”二字上。觉得静电容好的，心态应该和觉得 mac 剪刀脚架构键盘敲起来很舒服的是一类人。另外说一点，静电容给人的感觉和下面我说的日产欧姆龙微动，有点异曲同工之妙。</p>
+<h4 id="微动"><a href="#微动" class="headerlink" title="微动"></a>微动</h4><p>最初我觉得，鼠标点击手感，和微动的关系最大，事实证明我是错的。</p>
+<ul>
+<li><p>不同的模具搭配不同的微动，会有各种各样的手感(樱桃t85在赛睿sensei和罗技g pro手感上完全不一样)</p>
+</li>
+<li><p>随着鼠标长时间的点击，不同的微动，手感变化的差异大小也是不同的（国产欧姆龙50m）</p>
+</li>
+<li><p>不同的人对于手感的接受也不同（大力金刚指），所以～</p>
+</li>
+</ul>
+<p>可能我写了一大推，别人上手后，完全是不一样的感觉。所以写个前提，这篇个人感受，主要基于模具是罗技g pro，针对手型是抓鼠姿态。</p>
+<h5 id="国产欧姆龙，主要特点是脆。"><a href="#国产欧姆龙，主要特点是脆。" class="headerlink" title="国产欧姆龙，主要特点是脆。"></a>国产欧姆龙，主要特点是脆。</h5><p>貌似罗技和雷蛇好点的鼠标，现在都是国产欧姆龙了，罗技是50m蓝点，雷蛇是定制的50m绿点。蓝点50m我就这么说吧，“松松垮垮”，当然，我这么说，并不是对这款微动持否定态度，反而我适应了几天以后，很沉迷于这种感觉，像是一个“老朋友”一样。</p>
+<p>其实谈起蓝点，我更喜欢蓝点20m，这款微动大量存在于罗技入门款，也是罗技鼠标“两年内必双击”的元凶，但是手感个人觉得不软不硬，连击感很好，以前用的也最多。微动寿命也不是一概而论的，50m就5000万次而20m就2000万次这样，一看脸，再看使用频率。</p>
+<p>相对来说，雷蛇绿点50m在脆的同时，貌似更“稳”一点，但是，“又脆又稳”，本身键程又比樱桃长，往往带来的结果就是“偏硬”，我个人不太喜欢这种手感，起码我用了几天还是适应不了。“汝之蜜糖，彼之砒霜”，适应的人成为神器也说不定，毕竟李相赫用的这。</p>
+<p>赛睿sensei系列。之前RNG战队几乎都用的这个系列（不过电商广告RNG都给罗技代言囧，据说是uzi用过g502，年轻人喜欢撸铁），根据模具不同，有“霜冻”“烈焰”等等分别，最开始是经典“大师”，个人感觉是一样的东西。310是我用的时间最长的一款鼠标，甚至最后模具卡扣（和微动接触的部分）都磨损了，以至于更换微动后，手感更加松松垮垮了，就放在那里没有再用了。据更换微动的师傅说，也是欧姆龙蓝点50m，因为我基本只用过这一款赛睿，不多做评价。</p>
+<h5 id="日产欧姆龙"><a href="#日产欧姆龙" class="headerlink" title="日产欧姆龙"></a>日产欧姆龙</h5><p>貌似很多人喜欢f37这个微动，我现在用的也是这个。主要优点，我觉得是整个生命周期内，手感变化很小，几乎感觉不到，以至于突然某天双击了，我还很纳闷。这一点和国产欧姆龙是最大区别，国产蓝点50m在使用过程中，能感觉到“逐渐松动感”。还有就是这款微动，手感是“软中带着脆”，不会有国产蓝点50m刚装上去那种“和你较着劲”的那种弹。寿命的话，个人觉得接近国产蓝点20m，不算耐用，但也不像很多人介绍的那样“工业微动寿命完全没有保证”，可以接受的范围</p>
+<h5 id="德国樱桃微动"><a href="#德国樱桃微动" class="headerlink" title="德国樱桃微动"></a>德国樱桃微动</h5><p>主要特点是是短平快。之前用过t85那款，号称是永不双击，我看很多人说适合连点，适合fps游戏，我试了一下，玩rts的确不太舒服（磨具是罗技g pro ，不排除其他品牌的适合），给我一种“黑轴”的感觉，玩fps游戏的想试试的话，推荐压力克数较小的那款。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/11/06/%E9%BB%91%E8%8B%B9%E6%9E%9C/" rel="prev" title="黑苹果踩坑">
+      <i class="fa fa-chevron-left"></i> 黑苹果踩坑
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/11/10/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E4%BA%BA%E7%89%A9)/" rel="next" title="吞食天地-诸葛孔明传(人物)">
+      吞食天地-诸葛孔明传(人物) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BD%B4%E4%BD%93"><span class="nav-number">1.</span> <span class="nav-text">轴体</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E8%BD%B4"><span class="nav-number">1.1.</span> <span class="nav-text">普通轴</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%89%E8%BD%B4"><span class="nav-number">1.2.</span> <span class="nav-text">光轴</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9D%99%E7%94%B5%E5%AE%B9"><span class="nav-number">1.3.</span> <span class="nav-text">静电容</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AE%E5%8A%A8"><span class="nav-number">2.</span> <span class="nav-text">微动</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9B%BD%E4%BA%A7%E6%AC%A7%E5%A7%86%E9%BE%99%EF%BC%8C%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9%E6%98%AF%E8%84%86%E3%80%82"><span class="nav-number">2.1.</span> <span class="nav-text">国产欧姆龙，主要特点是脆。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%97%A5%E4%BA%A7%E6%AC%A7%E5%A7%86%E9%BE%99"><span class="nav-number">2.2.</span> <span class="nav-text">日产欧姆龙</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BE%B7%E5%9B%BD%E6%A8%B1%E6%A1%83%E5%BE%AE%E5%8A%A8"><span class="nav-number">2.3.</span> <span class="nav-text">德国樱桃微动</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Yukminnie</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yukminnie</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'rpBRGEoXmrJ9fHlfoKzzD3V4-gzGzoHsz',
+      appKey     : 'M2lmKKKUD0z7S0z6OceadDsk',
+      placeholder: "我有一言, 请诸位静听~",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>
