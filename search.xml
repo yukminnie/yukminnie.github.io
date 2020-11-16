@@ -10,12 +10,18 @@
 
 <h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-53-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-54-39.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-54-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-55-29.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-55-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-56-39.png.png"></p>
 ]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
   </entry>
   <entry>
     <title>94虎扑三国-1</title>
     <url>/2020/11/06/94%E4%B8%89%E5%9B%BD-1/</url>
     <content><![CDATA[<p>暂未</p>
 <a id="more"></a>]]></content>
+      <tags>
+        <tag>看剧</tag>
+      </tags>
   </entry>
   <entry>
     <title>软件安装记录</title>
@@ -31,6 +37,9 @@
 
 <h4 id="mac-其他软件"><a href="#mac-其他软件" class="headerlink" title="mac 其他软件"></a>mac 其他软件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Neat download manager</span><br><span class="line"></span><br><span class="line">SmoothScroll</span><br><span class="line"></span><br><span class="line">clover </span><br><span class="line"></span><br><span class="line">hackintool</span><br><span class="line"></span><br><span class="line">feem</span><br><span class="line"></span><br><span class="line">irreader</span><br><span class="line"></span><br><span class="line">pdf expert</span><br><span class="line"></span><br><span class="line">mellow</span><br><span class="line"></span><br><span class="line">paste(ccboard)</span><br><span class="line"></span><br><span class="line">cleanmymacx(柠檬清理)</span><br><span class="line"></span><br><span class="line">图压(tuya.xinxiao.tech)</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
   </entry>
   <entry>
     <title>FFmpeg日常用法</title>
@@ -52,6 +61,9 @@
 <h4 id="转-gif"><a href="#转-gif" class="headerlink" title="转 gif"></a>转 gif</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ffmpeg -i IMG_8619.MP4 -s 320x240 -r &#39;5&#39; ou1t.gif</span><br></pre></td></tr></table></figure>
 
 <h4 id="和-youtube-dl-搭配下载指定视频片段"><a href="#和-youtube-dl-搭配下载指定视频片段" class="headerlink" title="和 youtube-dl 搭配下载指定视频片段"></a>和 youtube-dl 搭配下载指定视频片段</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ffmpeg -i &quot;youtube-dl -g 获取的视频直链&quot; -ss 00:15:15.00 -to 00:17:10.00 -c copy out.mp4</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hexo安装过程记录</title>
@@ -91,6 +103,9 @@
 
 
 ]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
   </entry>
   <entry>
     <title>Youtube-dl日常用法</title>
@@ -106,18 +121,27 @@
 <h4 id="常见参数和例子"><a href="#常见参数和例子" class="headerlink" title="常见参数和例子"></a>常见参数和例子</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># demo</span><br><span class="line">youtube-dl  --external-downloader aria2c --external-downloader ar</span><br><span class="line">ia2c --external-downloader-args &quot;-x 16  -k 1M&quot; -f &#39;bestvideo[ext&#x3D;mp4]+bestaudio[ext&#x3D;m4a]&#x2F;bestvideo+bestaudio&#39; --proxy &#39;http:&#x2F;&#x2F;127.0.0.1:10809&#39; </span><br><span class="line"></span><br><span class="line"># 代理</span><br><span class="line">youtube-dl --proxy &#39;http:&#x2F;&#x2F;127.0.0.1:1080&#39; </span><br><span class="line"></span><br><span class="line"># 下载引擎</span><br><span class="line">--external-downloader aria2c  </span><br><span class="line"></span><br><span class="line"># 格式</span><br><span class="line">youtube-dl -f &#39;bestvideo[ext&#x3D;mp4]+bestaudio[ext&#x3D;m4a]&#x2F;bestvideo+bestaudio&#39; --merge-output-format mp4  </span><br><span class="line"></span><br><span class="line"># cookies</span><br><span class="line">youtube-dl -cookies cookies.tx </span><br><span class="line"></span><br><span class="line"># 忽略错误警告</span><br><span class="line">youtube-dl -ciw  </span><br><span class="line"></span><br><span class="line"># 下载视频列表</span><br><span class="line">youtube-dl --playlist-items </span><br><span class="line"></span><br><span class="line"># 可用格式</span><br><span class="line">youtube-dl --list-formats </span><br><span class="line"></span><br><span class="line"># 用户名密码</span><br><span class="line">youtube -u username -p  password</span><br><span class="line"></span><br><span class="line"># 下载参数(不常用)</span><br><span class="line">--external-downloader-args &quot;-x 16  -k 1M&quot;</span><br><span class="line"></span><br><span class="line"># 栗子 1(下载 4k 转为 mp4)</span><br><span class="line">youtube-dl -ciw -f &#39;bestvideo[ext&#x3D;webm]+bestaudio[ext&#x3D;m4a]&#x2F;bestvideo+bestaudio&#39; --merge-output-format mp4 </span><br><span class="line"></span><br><span class="line"># 栗子 2(下载 1080p 转为 mkv)</span><br><span class="line">youtube-dl -ciw -f &#39;bestvideo[ext&#x3D;mp4]+bestaudio[ext&#x3D;mp4]&#x2F;bestvideo+bestaudio&#39; --merge-output-format mkv</span><br><span class="line"></span><br><span class="line"># 栗子 3(自动寻找分辨率大于等于 1080p 的可用格式进行下载)</span><br><span class="line">youtube-dl -ciw -f best[height&gt;&#x3D;1080]</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
   </entry>
   <entry>
     <title>《我们第一次战败》</title>
     <url>/2020/11/05/%E3%80%8A%E6%88%91%E4%BB%AC%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%88%98%E8%B4%A5%E3%80%8B/</url>
     <content><![CDATA[<p>占用。</p>
 <a id="more"></a>]]></content>
+      <tags>
+        <tag>看书</tag>
+      </tags>
   </entry>
   <entry>
     <title>吞食天地-诸葛孔明传(事件)</title>
     <url>/2019/11/14/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E4%BA%8B%E4%BB%B6)/</url>
     <content><![CDATA[<p>占用。</p>
 <a id="more"></a>]]></content>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
   </entry>
   <entry>
     <title>吞食天地-诸葛孔明传(人物)</title>
@@ -125,6 +149,9 @@
     <content><![CDATA[<p>占用。</p>
 <a id="more"></a>
 <h5 id="蜀"><a href="#蜀" class="headerlink" title="蜀"></a>蜀</h5><h5 id="魏"><a href="#魏" class="headerlink" title="魏"></a>魏</h5><h5 id="吴"><a href="#吴" class="headerlink" title="吴"></a>吴</h5>]]></content>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
   </entry>
   <entry>
     <title>吞食天地-诸葛孔明传(地图)</title>
@@ -144,6 +171,9 @@
 <h5 id="雍凉"><a href="#雍凉" class="headerlink" title="雍凉"></a>雍凉</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-084824.jpg.jpg"></p>
 <h5 id="汉中"><a href="#汉中" class="headerlink" title="汉中"></a>汉中</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-144452.jpg.jpg"></p>
 ]]></content>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
   </entry>
   <entry>
     <title>吞食天地-诸葛孔明传(装备)</title>
@@ -160,6 +190,9 @@
 <h5 id="甲"><a href="#甲" class="headerlink" title="甲"></a>甲</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/yukminnie_2020-11-14_17-46-31.jpg.jpg"></p>
 <h5 id="盔"><a href="#盔" class="headerlink" title="盔"></a>盔</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/yukminnie_2020-11-14_17-47-20.jpg.jpg"></p>
 ]]></content>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
   </entry>
   <entry>
     <title>图床踩坑</title>
@@ -181,6 +214,9 @@
 <h5 id="tinypng"><a href="#tinypng" class="headerlink" title="tinypng"></a>tinypng</h5><p>注册账号获取 api 就好了, 每月 500 张, 可申请多个</p>
 <p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/20201109125117.png.png"></p>
 ]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
   </entry>
   <entry>
     <title>微动和轴</title>
@@ -210,6 +246,9 @@
 <h5 id="日产欧姆龙"><a href="#日产欧姆龙" class="headerlink" title="日产欧姆龙"></a>日产欧姆龙</h5><p>貌似很多人喜欢f37这个微动，我现在用的也是这个。主要优点，我觉得是整个生命周期内，手感变化很小，几乎感觉不到，以至于突然某天双击了，我还很纳闷。这一点和国产欧姆龙是最大区别，国产蓝点50m在使用过程中，能感觉到“逐渐松动感”。还有就是这款微动，手感是“软中带着脆”，不会有国产蓝点50m刚装上去那种“和你较着劲”的那种弹。寿命的话，个人觉得接近国产蓝点20m，不算耐用，但也不像很多人介绍的那样“工业微动寿命完全没有保证”，可以接受的范围</p>
 <h5 id="德国樱桃微动"><a href="#德国樱桃微动" class="headerlink" title="德国樱桃微动"></a>德国樱桃微动</h5><p>主要特点是是短平快。之前用过t85那款，号称是永不双击，我看很多人说适合连点，适合fps游戏，我试了一下，玩rts的确不太舒服（磨具是罗技g pro ，不排除其他品牌的适合），给我一种“黑轴”的感觉，玩fps游戏的想试试的话，推荐压力克数较小的那款。</p>
 ]]></content>
+      <tags>
+        <tag>硬件</tag>
+      </tags>
   </entry>
   <entry>
     <title>软路由踩坑</title>
@@ -255,6 +294,9 @@
 
 <h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><h5 id="lean-源码编译的固件"><a href="#lean-源码编译的固件" class="headerlink" title="lean 源码编译的固件"></a>lean 源码编译的固件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 在防火墙加入规则, 不然白名单模式会有问题</span><br><span class="line"></span><br><span class="line">iptables -t nat -I POSTROUTING -j MASQUERADE</span><br><span class="line"></span><br><span class="line"># xxr 黑名单加入苹果服务，不然部分依赖 icloud 同步的软件会出问题</span><br><span class="line"></span><br><span class="line">*.apple.com</span><br></pre></td></tr></table></figure>
 <h5 id="koolxx"><a href="#koolxx" class="headerlink" title="koolxx"></a>koolxx</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 建议关闭节点检测和自动切换</span><br><span class="line"></span><br><span class="line"># 订阅节点时, 会把 baidu.com 作为混淆, 建议修改为根据订阅节点设置</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>硬件</tag>
+      </tags>
   </entry>
   <entry>
     <title>黑苹果踩坑</title>
@@ -303,6 +345,9 @@
 <h4 id="核显缓冲帧补丁"><a href="#核显缓冲帧补丁" class="headerlink" title="核显缓冲帧补丁"></a>核显缓冲帧补丁</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 黑果小兵博客</span><br><span class="line">https:&#x2F;&#x2F;blog.daliansky.net&#x2F;Intel-FB-Patcher-tutorial-and-insertion-pose.html</span><br></pre></td></tr></table></figure>
 <p><a href="https://blog-file-1253466367.cos.ap-beijing.myqcloud.com/Hackintool(%E5%8E%9FIntel%20FB-Patcher)%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%E5%8F%8A%E6%8F%92%E5%85%A5%E5%A7%BF%E5%8A%BF%20_%20%E9%BB%91%E6%9E%9C%E5%B0%8F%E5%85%B5%E7%9A%84%E9%83%A8%E8%90%BD%E9%98%81.pdf">缓冲帧补丁离线md备份</a></p>
 ]]></content>
+      <tags>
+        <tag>硬件</tag>
+      </tags>
   </entry>
   <entry>
     <title>03射雕剧本</title>
@@ -10808,5 +10853,8 @@
 <p>月光下群丐议论纷纷，郭靖自散乱的人群中一步步走近台前。</p>
 <p>作者: 北方影武者 发表日期: 2003</p>
 ]]></content>
+      <tags>
+        <tag>看剧</tag>
+      </tags>
   </entry>
 </search>
