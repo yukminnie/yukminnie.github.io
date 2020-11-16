@@ -1,300 +1,312 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>谷歌商店插件</title>
+    <url>/2020/11/03/hello-world/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/chrome-web-store-icon-chrome-web-store-logo-png-transparent-png-chrome-web-store-png-820_524.png.png"></p>
+<a id="more"></a>
 
-<link rel="stylesheet" href="/css/main.css">
+<h4 id="日常用"><a href="#日常用" class="headerlink" title="日常用"></a>日常用</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 沙拉查词</span><br><span class="line">18 年是发现的页面翻译软件, 干净好用</span><br><span class="line"></span><br><span class="line"># Web Clipper</span><br><span class="line">剪辑页面插件, 替代印象笔记, onenote 这些</span><br><span class="line"></span><br><span class="line"># Neat download manager </span><br><span class="line">代替 IDM</span><br><span class="line"></span><br><span class="line"># OneTab</span><br><span class="line">聊胜于无吧, 用了好多年了</span><br><span class="line"></span><br><span class="line"># 愉阅 vs ImageAssistant</span><br><span class="line">页面图片收集</span><br><span class="line"></span><br><span class="line"># SmoothScroll</span><br><span class="line">平滑滚动</span><br><span class="line"></span><br><span class="line"># adguard</span><br><span class="line">毕竟是商业公司的东西，个人觉得比 ublock 全面些</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-53-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-54-39.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-54-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-55-29.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-55-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-56-39.png.png"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>94虎扑三国-1</title>
+    <url>/2020/11/06/94%E4%B8%89%E5%9B%BD-1/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>软件安装记录</title>
+    <url>/2020/11/06/Chocolatey/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/homebrew.jpg.jpg"></p>
+<a id="more"></a>
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<h4 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/landing-medium-1.jpg.jpg"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># brew</span><br><span class="line">&#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install.sh)&quot;</span><br><span class="line"></span><br><span class="line"># git</span><br><span class="line">brew install git</span><br><span class="line"></span><br><span class="line"># oh-my-zsh</span><br><span class="line">sh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.github.com&#x2F;ohmyzsh&#x2F;ohmyzsh&#x2F;master&#x2F;tools&#x2F;install.sh)&quot;</span><br><span class="line"></span><br><span class="line"># cask</span><br><span class="line">brew cask install  visual-studio-code mweb picgo  telegram postman alfred the-unarchiver anki avidemux foxmail iina webstorm feem baidunetdisk google-chrome downie marginnote baiduinput</span><br><span class="line"></span><br><span class="line"># bash</span><br><span class="line">brew install nodejs npm ffmpeg youtube-dl</span><br><span class="line"></span><br><span class="line"># other </span><br><span class="line">tuxera-ntfs</span><br></pre></td></tr></table></figure>
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":350,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":true,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+<h4 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/landing-medium.jpg.jpg"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># install</span><br><span class="line">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol &#x3D; [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https:&#x2F;&#x2F;chocolatey.org&#x2F;install.ps1&#39;))</span><br><span class="line"></span><br><span class="line"># 旧的(例如win8.1)可能会报错, 提示 WMF 版本低之类, 解决方法如下(或者微软官网下载 WMF)</span><br><span class="line">choco install powershell</span><br><span class="line"></span><br><span class="line"># main</span><br><span class="line">choco install wox git nodejs youtube-dl aria2 greenshot ffmpeg atom 7zip postman potplayer bitvise-ssh-client vscode winscp pycharm-community docker mysql picgo avidemux joplin -y</span><br><span class="line"></span><br><span class="line"># proxy  使用基于网卡代理的软件接管流量效果比较好</span><br><span class="line">choco config set proxy http:&#x2F;&#x2F;localhost:8888</span><br><span class="line"></span><br><span class="line"># spider </span><br><span class="line">choco install streamlink fiddler selenium-chrome-driver phantomjs -y</span><br><span class="line"></span><br><span class="line"># sql</span><br><span class="line">choco install redis-64 mysql sqlite dbeaver</span><br><span class="line"></span><br><span class="line"># upanok</span><br><span class="line">rufus cpu-z.install  crystaldiskinfo sqlite </span><br><span class="line"></span><br><span class="line"># .net .vc 直接搜索版本就好, 例子如下</span><br><span class="line">choco install dotnet3.5</span><br><span class="line">choco install dotnet4.0</span><br><span class="line">choco install dotnet4.5</span><br><span class="line">choco install dotnet4.5.1</span><br><span class="line">choco install dotnet4.5.2</span><br><span class="line">choco install dotnet4.6</span><br><span class="line">choco install dotnet4.6.1</span><br><span class="line">choco install dotnet4.6.2</span><br><span class="line">choco install dotnet4.7</span><br><span class="line">choco install dotnet4.7.1</span><br><span class="line">choco install dotnet4.7.2</span><br><span class="line">choco install netfx-4.8</span><br><span class="line"></span><br><span class="line">choco install vcredist2005 vcredist2008 vcredist2010 vcredist2012</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># other</span><br><span class="line">choco install gitextensions poweriso anaconda3</span><br><span class="line"></span><br><span class="line"># ss</span><br><span class="line">choco install shadowsocksr-windows</span><br><span class="line">choco install shadowsocks</span><br><span class="line">choco install shadowsocks-qt5</span><br><span class="line">choco install openconnect-gui</span><br></pre></td></tr></table></figure>
 
-  <meta name="description" content="早几年得到这份拷贝弄丢了, 特别后悔, 无意间在台湾的论坛上发现了转载, 已经是 03 的文章了。 不是完整版, 好东西值得品味。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="03射雕剧本">
-<meta property="og:url" content="http://example.com/2020/11/06/%E5%B0%84%E9%9B%95%E5%89%A7%E6%9C%AC/index.html">
-<meta property="og:site_name" content="Yukminnie">
-<meta property="og:description" content="早几年得到这份拷贝弄丢了, 特别后悔, 无意间在台湾的论坛上发现了转载, 已经是 03 的文章了。 不是完整版, 好东西值得品味。">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/%E9%9B%BB%E8%A6%96%E5%8A%87%E5%B0%84%E9%B5%B0%E8%8B%B1%E9%9B%84%E5%82%B32003.jpg.jpg">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/posticon.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/profile.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/email.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/edit.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/posticon.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/profile.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/email.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/edit.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/posticon.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/profile.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/email.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/edit.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/posticon.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/profile.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/email.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/edit.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/posticon.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/profile.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/email.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/edit.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/posticon.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/profile.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/email.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/edit.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/posticon.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/profile.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/email.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/edit.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/posticon.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/profile.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/email.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/edit.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/posticon.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/profile.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/email.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/edit.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/posticon.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/profile.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/email.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/edit.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/posticon.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/profile.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/email.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/edit.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/posticon.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/profile.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/email.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/edit.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/posticon.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/profile.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/email.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/edit.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/posticon.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/profile.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/email.gif">
-<meta property="og:image" content="http://jinyong.ylib.com/snowtalk/images/edit.gif">
-<meta property="article:published_time" content="2020-11-06T10:20:43.000Z">
-<meta property="article:modified_time" content="2020-11-15T09:24:36.713Z">
-<meta property="article:author" content="Yukminnie">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/%E9%9B%BB%E8%A6%96%E5%8A%87%E5%B0%84%E9%B5%B0%E8%8B%B1%E9%9B%84%E5%82%B32003.jpg.jpg">
+<h4 id="mac-其他软件"><a href="#mac-其他软件" class="headerlink" title="mac 其他软件"></a>mac 其他软件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Neat download manager</span><br><span class="line"></span><br><span class="line">SmoothScroll</span><br><span class="line"></span><br><span class="line">clover </span><br><span class="line"></span><br><span class="line">hackintool</span><br><span class="line"></span><br><span class="line">feem</span><br><span class="line"></span><br><span class="line">irreader</span><br><span class="line"></span><br><span class="line">pdf expert</span><br><span class="line"></span><br><span class="line">mellow</span><br><span class="line"></span><br><span class="line">paste(ccboard)</span><br><span class="line"></span><br><span class="line">cleanmymacx(柠檬清理)</span><br><span class="line"></span><br><span class="line">图压(tuya.xinxiao.tech)</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>FFmpeg日常用法</title>
+    <url>/2020/11/06/FFmpeg/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/1_M991891hzkJrFHyMzWrhSg.jpeg.jpeg"></p>
+<a id="more"></a>
 
-<link rel="canonical" href="http://example.com/2020/11/06/%E5%B0%84%E9%9B%95%E5%89%A7%E6%9C%AC/">
+<p>精确剪辑, avidemux 会更方便一点</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ffmpeg</span><br><span class="line">brew install ffmpeg</span><br><span class="line">choco install ffmpeg</span><br><span class="line"></span><br><span class="line"># avidemux</span><br><span class="line">brew cask install avidemux</span><br><span class="line">choco installl avidemux</span><br></pre></td></tr></table></figure>
 
+<h4 id="命令顺序"><a href="#命令顺序" class="headerlink" title="命令顺序"></a>命令顺序</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ffmpeg [global options] [input options] -i input [output options] output</span><br></pre></td></tr></table></figure>
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
+<h4 id="无损转换"><a href="#无损转换" class="headerlink" title="无损转换"></a>无损转换</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ffmpeg -y -i &#39;video.mkv&#39; -codec copy &#39;video.mp4&#39;</span><br></pre></td></tr></table></figure>
 
-  <title>03射雕剧本 | Yukminnie</title>
-  
+<h4 id="批量转换"><a href="#批量转换" class="headerlink" title="批量转换"></a>批量转换</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for %a in (&quot;*.ts&quot;) do ffmpeg -i &quot;%a&quot; -threads 2 -codec copy -y &quot;newfiles\%~na.mp4&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="截取图片帧"><a href="#截取图片帧" class="headerlink" title="截取图片帧"></a>截取图片帧</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ffmpeg -i inputfile.avi -threads 64 -r 1 -t 4 -f image2 image-%05d.jpeg </span><br><span class="line">线程 每秒截取数量 持续时间 保存类型</span><br></pre></td></tr></table></figure>
+
+<h4 id="转-gif"><a href="#转-gif" class="headerlink" title="转 gif"></a>转 gif</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ffmpeg -i IMG_8619.MP4 -s 320x240 -r &#39;5&#39; ou1t.gif</span><br></pre></td></tr></table></figure>
+
+<h4 id="和-youtube-dl-搭配下载指定视频片段"><a href="#和-youtube-dl-搭配下载指定视频片段" class="headerlink" title="和 youtube-dl 搭配下载指定视频片段"></a>和 youtube-dl 搭配下载指定视频片段</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ffmpeg -i &quot;youtube-dl -g 获取的视频直链&quot; -ss 00:15:15.00 -to 00:17:10.00 -c copy out.mp4</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>Hexo安装过程记录</title>
+    <url>/2020/11/06/Hexo/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/1_aOv6h3h_v9PQWa03zGACnw.png.png"></p>
+<a id="more"></a>
+
+<p> 因为是以前的博客迁移, 这个 hexo 也搭建好多次, 其实每次碰到问题还是挺多的, 这次记录一下吧, 也可能以后还用得着</p>
+<h4 id="安装-git-、npm，-不题"><a href="#安装-git-、npm，-不题" class="headerlink" title="安装 git 、npm， 不题"></a>安装 git 、npm， 不题</h4><h4 id="安装就开始报错，提示需要权限，加-sudo，挂代理"><a href="#安装就开始报错，提示需要权限，加-sudo，挂代理" class="headerlink" title="安装就开始报错，提示需要权限，加 sudo，挂代理"></a>安装就开始报错，提示需要权限，加 sudo，挂代理</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo npm install hexo-cli -g</span><br><span class="line"></span><br><span class="line"># 保证代理可用或者换源</span><br></pre></td></tr></table></figure>
+
+<h4 id="初始化，克隆主题失败，还是要挂代理"><a href="#初始化，克隆主题失败，还是要挂代理" class="headerlink" title="初始化，克隆主题失败，还是要挂代理"></a>初始化，克隆主题失败，还是要挂代理</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br><span class="line"></span><br><span class="line"># 保证代理可用或者换源</span><br><span class="line"># 配置环境中如果报出各种莫名其妙的错误, 一般都是 node 版本有问题, homebrew 重装后根据提示操作基本可以解决</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-03_19-48-40.jpg.jpg"></p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-03_19-48-53.jpg.jpg"></p>
+<h4 id="生成SSH公钥"><a href="#生成SSH公钥" class="headerlink" title="生成SSH公钥"></a>生成SSH公钥</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;钥匙名&quot;</span><br><span class="line"></span><br><span class="line">git config --global user.name “your_username”  # 设置用户名</span><br><span class="line">git config --global user.email “your_email”  # 设置邮箱 </span><br></pre></td></tr></table></figure>
+
+<h4 id="想要使用-atom-命令行内打开目录-可选-，在-gitbook-搜索到软件自带命令"><a href="#想要使用-atom-命令行内打开目录-可选-，在-gitbook-搜索到软件自带命令" class="headerlink" title="想要使用 atom 命令行内打开目录(可选)，在 gitbook 搜索到软件自带命令"></a>想要使用 atom 命令行内打开目录(可选)，在 gitbook 搜索到软件自带命令</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">install commend shell</span><br></pre></td></tr></table></figure>
+
+<h4 id="git-验证，-出现-是直接回车还会输入yes的问题-，不忍直视"><a href="#git-验证，-出现-是直接回车还会输入yes的问题-，不忍直视" class="headerlink" title="git 验证， 出现 是直接回车还会输入yes的问题 ，不忍直视"></a>git 验证， 出现 <code>是直接回车还会输入yes</code>的问题 ，不忍直视</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 不要随便就回车, 有时需要输入 yes 确认的, 回车会报错</span><br><span class="line"></span><br><span class="line">ssh -T git@git.coding.net  # coding</span><br><span class="line">ssh -T git@github.com   # github</span><br><span class="line">ssh -T git@gitee.com    # oschina</span><br></pre></td></tr></table></figure>
 
 
 
+<h4 id="生成页面，本地测试三连"><a href="#生成页面，本地测试三连" class="headerlink" title="生成页面，本地测试三连"></a>生成页面，本地测试三连</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean     </span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<h4 id="测试成功，准备连接远程仓库，修改-config-yml"><a href="#测试成功，准备连接远程仓库，修改-config-yml" class="headerlink" title="测试成功，准备连接远程仓库，修改_config.yml"></a>测试成功，准备连接远程仓库，修改_config.yml</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &#39;你的git仓库地址&#39;</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h4 id="提交与部署"><a href="#提交与部署" class="headerlink" title="提交与部署"></a>提交与部署</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<h4 id="Next-主题"><a href="#Next-主题" class="headerlink" title="Next 主题"></a>Next 主题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<h4 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h4><p>因为是以前的博客迁移, 结果在此绑定域名的时候, github 报了一个不常见的错误, 意思是我的域名, 之前有人绑定过了, 不明觉厉</p>
+<blockquote>
+<p>The CNAME *.cc is already taken.<br>Check out <a href="https://help.github.com/articles/troubleshooting-custom-domains/#cname-already-taken">https://help.github.com/articles/troubleshooting-custom-domains/#cname-already-taken</a> for more information.</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 解决方法是向 github 提交 support, 大概一个小时, 对方邮件回复, 让我在域名解析中添加一个 TXT 记录</span><br><span class="line"></span><br><span class="line"># 解析添加后, 用下面的命令验证一下, 如果生效了就给 github 回复一下邮件, 然后域名就被释放了</span><br><span class="line"></span><br><span class="line">dig *.cc(你的域名) TXT</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/20201114131503.png.png"></p>
+<h4 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pjax  # 改善页面刷新体验</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;theme-next-pjax</span><br><span class="line"></span><br><span class="line">pangu  # 自动文字排版</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;next-theme&#x2F;hexo-pangu</span><br><span class="line"></span><br><span class="line">local_search  # 关键字搜索</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-generator-searchdb</span><br><span class="line"></span><br><span class="line">valine  # 评论系统</span><br><span class="line">集成无需安装</span><br></pre></td></tr></table></figure>
 
 
+]]></content>
+  </entry>
+  <entry>
+    <title>Youtube-dl日常用法</title>
+    <url>/2020/11/06/Youtube-dl/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/ElbLzPCU8AEe0xg.jpg.jpg"></p>
+<a id="more"></a>
+<p>youtube-dl 被 github 下架了</p>
+<h4 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h4><ul>
+<li>-ciw 默认带上</li>
+<li>网络状况不好情况下, aria2 效果较好</li>
+<li>使用基于网卡 tun/tap 的代理软件(比如 netchx)避免很多麻烦</li>
+</ul>
+<h4 id="常见参数和例子"><a href="#常见参数和例子" class="headerlink" title="常见参数和例子"></a>常见参数和例子</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># demo</span><br><span class="line">youtube-dl  --external-downloader aria2c --external-downloader ar</span><br><span class="line">ia2c --external-downloader-args &quot;-x 16  -k 1M&quot; -f &#39;bestvideo[ext&#x3D;mp4]+bestaudio[ext&#x3D;m4a]&#x2F;bestvideo+bestaudio&#39; --proxy &#39;http:&#x2F;&#x2F;127.0.0.1:10809&#39; </span><br><span class="line"></span><br><span class="line"># 代理</span><br><span class="line">youtube-dl --proxy &#39;http:&#x2F;&#x2F;127.0.0.1:1080&#39; </span><br><span class="line"></span><br><span class="line"># 下载引擎</span><br><span class="line">--external-downloader aria2c  </span><br><span class="line"></span><br><span class="line"># 格式</span><br><span class="line">youtube-dl -f &#39;bestvideo[ext&#x3D;mp4]+bestaudio[ext&#x3D;m4a]&#x2F;bestvideo+bestaudio&#39; --merge-output-format mp4  </span><br><span class="line"></span><br><span class="line"># cookies</span><br><span class="line">youtube-dl -cookies cookies.tx </span><br><span class="line"></span><br><span class="line"># 忽略错误警告</span><br><span class="line">youtube-dl -ciw  </span><br><span class="line"></span><br><span class="line"># 下载视频列表</span><br><span class="line">youtube-dl --playlist-items </span><br><span class="line"></span><br><span class="line"># 可用格式</span><br><span class="line">youtube-dl --list-formats </span><br><span class="line"></span><br><span class="line"># 用户名密码</span><br><span class="line">youtube -u username -p  password</span><br><span class="line"></span><br><span class="line"># 下载参数(不常用)</span><br><span class="line">--external-downloader-args &quot;-x 16  -k 1M&quot;</span><br><span class="line"></span><br><span class="line"># 栗子 1(下载 4k 转为 mp4)</span><br><span class="line">youtube-dl -ciw -f &#39;bestvideo[ext&#x3D;webm]+bestaudio[ext&#x3D;m4a]&#x2F;bestvideo+bestaudio&#39; --merge-output-format mp4 </span><br><span class="line"></span><br><span class="line"># 栗子 2(下载 1080p 转为 mkv)</span><br><span class="line">youtube-dl -ciw -f &#39;bestvideo[ext&#x3D;mp4]+bestaudio[ext&#x3D;mp4]&#x2F;bestvideo+bestaudio&#39; --merge-output-format mkv</span><br><span class="line"></span><br><span class="line"># 栗子 3(自动寻找分辨率大于等于 1080p 的可用格式进行下载)</span><br><span class="line">youtube-dl -ciw -f best[height&gt;&#x3D;1080]</span><br></pre></td></tr></table></figure>
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+]]></content>
+  </entry>
+  <entry>
+    <title>《我们第一次战败》</title>
+    <url>/2020/11/05/%E3%80%8A%E6%88%91%E4%BB%AC%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%88%98%E8%B4%A5%E3%80%8B/</url>
+    <content><![CDATA[<p>占用。</p>
+<a id="more"></a>]]></content>
+  </entry>
+  <entry>
+    <title>吞食天地-诸葛孔明传(事件)</title>
+    <url>/2020/11/14/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E4%BA%8B%E4%BB%B6)/</url>
+    <content><![CDATA[<p>占用。</p>
+<a id="more"></a>]]></content>
+  </entry>
+  <entry>
+    <title>吞食天地-诸葛孔明传(人物)</title>
+    <url>/2020/11/10/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E4%BA%BA%E7%89%A9)/</url>
+    <content><![CDATA[<p>占用。</p>
+<a id="more"></a>
+<h5 id="蜀"><a href="#蜀" class="headerlink" title="蜀"></a>蜀</h5><h5 id="魏"><a href="#魏" class="headerlink" title="魏"></a>魏</h5><h5 id="吴"><a href="#吴" class="headerlink" title="吴"></a>吴</h5>]]></content>
+  </entry>
+  <entry>
+    <title>吞食天地-诸葛孔明传(地图)</title>
+    <url>/2020/11/06/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E5%9C%B0%E5%9B%BE)/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/hqdefault.jpg.jpg"></p>
+<a id="more"></a>
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+<h4 id="可以玩一辈子的小游戏"><a href="#可以玩一辈子的小游戏" class="headerlink" title="可以玩一辈子的小游戏"></a>可以玩一辈子的小游戏</h4><iframe src="//player.bilibili.com/player.html?aid=633402&bvid=BV17s411f7u3&cid=932579&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<h4 id="地图"><a href="#地图" class="headerlink" title="地图"></a>地图</h4><h5 id="徐州"><a href="#徐州" class="headerlink" title="徐州"></a>徐州</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-081105.jpg.jpg"></p>
+<h5 id="冀州"><a href="#冀州" class="headerlink" title="冀州"></a>冀州</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-132317.jpg.jpg"></p>
+<h5 id="中原"><a href="#中原" class="headerlink" title="中原"></a>中原</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-075417.jpg.jpg"></p>
+<h5 id="荆州北"><a href="#荆州北" class="headerlink" title="荆州北"></a>荆州北</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-140113.jpg.jpg"></p>
+<h5 id="荆州南"><a href="#荆州南" class="headerlink" title="荆州南"></a>荆州南</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-141414.jpg.jpg"></p>
+<h5 id="江东-柴桑"><a href="#江东-柴桑" class="headerlink" title="江东(柴桑)"></a>江东(柴桑)</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-133921.jpg.jpg"></p>
+<h5 id="益州"><a href="#益州" class="headerlink" title="益州"></a>益州</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-143310.jpg.jpg"></p>
+<h5 id="雍凉"><a href="#雍凉" class="headerlink" title="雍凉"></a>雍凉</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-084824.jpg.jpg"></p>
+<h5 id="汉中"><a href="#汉中" class="headerlink" title="汉中"></a>汉中</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-144452.jpg.jpg"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>吞食天地-诸葛孔明传(装备)</title>
+    <url>/2020/11/13/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E8%A3%85%E5%A4%87)/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/a1mjm-50r6e.png.png"></p>
+<a id="more"></a>
 
-</head>
+<h4 id="装备"><a href="#装备" class="headerlink" title="装备"></a>装备</h4><h5 id="剑"><a href="#剑" class="headerlink" title="剑"></a>剑</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/yukminnie_2020-11-14_17-41-14.jpg.jpg"></p>
+<h5 id="刀"><a href="#刀" class="headerlink" title="刀"></a>刀</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/yukminnie_2020-11-14_17-43-45.jpg.jpg"></p>
+<h5 id="枪"><a href="#枪" class="headerlink" title="枪"></a>枪</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/yukminnie_2020-11-14_17-42-53.jpg.jpg"></p>
+<h5 id="斧"><a href="#斧" class="headerlink" title="斧"></a>斧</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/yukminnie_2020-11-14_17-44-09.jpg.jpg"></p>
+<h5 id="弓"><a href="#弓" class="headerlink" title="弓"></a>弓</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/yukminnie_2020-11-14_17-45-28.jpg.jpg"></p>
+<h5 id="盾"><a href="#盾" class="headerlink" title="盾"></a>盾</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/yukminnie_2020-11-14_17-48-05.jpg.jpg"></p>
+<h5 id="甲"><a href="#甲" class="headerlink" title="甲"></a>甲</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/yukminnie_2020-11-14_17-46-31.jpg.jpg"></p>
+<h5 id="盔"><a href="#盔" class="headerlink" title="盔"></a>盔</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/yukminnie_2020-11-14_17-47-20.jpg.jpg"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>图床踩坑</title>
+    <url>/2020/11/06/%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/image.jpg.jpg"></p>
+<a id="more"></a>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<p>腾讯云有轻量的免费额度, 付费也不贵, 做好域名安全</p>
+<h4 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h4><h5 id="mac"><a href="#mac" class="headerlink" title="mac"></a>mac</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install picgo</span><br></pre></td></tr></table></figure>
+<h5 id="win"><a href="#win" class="headerlink" title="win"></a>win</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">choco install picgo</span><br></pre></td></tr></table></figure>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
+<h4 id="上传设置"><a href="#上传设置" class="headerlink" title="上传设置"></a>上传设置</h4><h5 id="上传设置没有问题，就是上传不了"><a href="#上传设置没有问题，就是上传不了" class="headerlink" title="上传设置没有问题，就是上传不了"></a>上传设置没有问题，就是上传不了</h5><p>最后查明原因是滑动选择按钮，v4 和 v5 用<em>蓝色和绿色</em>区别，这个真的很误导人, 默认是 v4， 点选成 v5 就好了 ，浪费了不少时间</p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/20201109124705.png.png"></p>
+<h4 id="网页压缩"><a href="#网页压缩" class="headerlink" title="网页压缩"></a>网页压缩</h4><h5 id="国内地址"><a href="#国内地址" class="headerlink" title="国内地址"></a>国内地址</h5><p>tinify.cn</p>
+<h6 id="国际版地址"><a href="#国际版地址" class="headerlink" title="国际版地址"></a>国际版地址</h6><p>tinypng.com</p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2018-08-26_19-25-03.jpg.jpg"></p>
+<h4 id="插件压缩"><a href="#插件压缩" class="headerlink" title="插件压缩"></a>插件压缩</h4><h5 id="compress"><a href="#compress" class="headerlink" title="compress"></a>compress</h5><p>然后就是插件设置，brew 默认安装的是 2.2.2 版本， 安装压缩插件后， 手动升级了 2.3beta 版本， 然后插件中心就不见了， 看 issue 中的 搜索栏输入 plugin 解决方法并不管用， 手动卸载和重装，以及重启电脑都没有用。无可奈何之际，试了试cleanmymac，才卸干净了， 重装就好了，Mac 的很多软件残留之类，还是很多不懂的东西, 免费的可是用腾讯的柠檬清理</p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/20201109124827.png.png"></p>
+<h5 id="tinypng"><a href="#tinypng" class="headerlink" title="tinypng"></a>tinypng</h5><p>注册账号获取 api 就好了, 每月 500 张, 可申请多个</p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/20201109125117.png.png"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>微动和轴</title>
+    <url>/2020/11/07/%E5%BE%AE%E5%8A%A8%E5%92%8C%E8%BD%B4/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/u=2915443138,610379945&fm=26&gp=0.jpg.jpg"></p>
+<a id="more"></a>
+<p>随便写写，不当真。</p>
+<h4 id="轴体"><a href="#轴体" class="headerlink" title="轴体"></a>轴体</h4><h5 id="普通轴"><a href="#普通轴" class="headerlink" title="普通轴"></a>普通轴</h5><p>大部分体验过各类轴体后，最后都会选择红轴吧。虽然红轴和茶轴都是“二代产物”，但是能被大部分人喜欢或者适应，才是重点。青轴和黑轴才是真机械轴这种说法，我觉得体验体验是可以的，日常使用不太合适。青轴二段“机械感”强，但是键程长，虽然说黑轴亚历克数大，但是可以做到“蜻蜓点水”，青轴就不行了，时间长了，手指还是很累的。茶轴，本身来说毫无特色，或许没有特色也算是一种特色？可以用“高级薄膜感”来形容吧，那种“飒飒”的声音，长时间使用，个人接受不能。</p>
+<p>不建议去使用这两年出的“静音矮红”，原因和茶轴类似。</p>
+<p>至于奶轴，白轴，绿轴之类，没有用过不多说了。</p>
+<h5 id="光轴"><a href="#光轴" class="headerlink" title="光轴"></a>光轴</h5><p>网吧这种双飞燕轴挺多的，侧面也证明了，寿命应该是不错的。特点是直上直下，触发迅速，但是却有特别轻微段落感，个人感觉的确适合拿来打游戏。不过因为双飞燕的这类产品，外观都是杀马特，实在是难以接受。雷蛇也有一款光轴，不过价格稍贵，有兴趣的人可以试试。</p>
+<h5 id="静电容"><a href="#静电容" class="headerlink" title="静电容"></a>静电容</h5><p>当然，这不是机械轴，只是懒得分类就写这里了。我觉得比起商家各种神乎其技的宣传，重点还是要放到“退烧”二字上。觉得静电容好的，心态应该和觉得 mac 剪刀脚架构键盘敲起来很舒服的是一类人。另外说一点，静电容给人的感觉和下面我说的日产欧姆龙微动，有点异曲同工之妙。</p>
+<h4 id="微动"><a href="#微动" class="headerlink" title="微动"></a>微动</h4><p>最初我觉得，鼠标点击手感，和微动的关系最大，事实证明我是错的。</p>
+<ul>
+<li><p>不同的模具搭配不同的微动，会有各种各样的手感(樱桃t85在赛睿sensei和罗技g pro手感上完全不一样)</p>
+</li>
+<li><p>随着鼠标长时间的点击，不同的微动，手感变化的差异大小也是不同的（国产欧姆龙50m）</p>
+</li>
+<li><p>不同的人对于手感的接受也不同（大力金刚指），所以～</p>
+</li>
+</ul>
+<p>可能我写了一大推，别人上手后，完全是不一样的感觉。所以写个前提，这篇个人感受，主要基于模具是罗技g pro，针对手型是抓鼠姿态。</p>
+<h5 id="国产欧姆龙，主要特点是脆。"><a href="#国产欧姆龙，主要特点是脆。" class="headerlink" title="国产欧姆龙，主要特点是脆。"></a>国产欧姆龙，主要特点是脆。</h5><p>貌似罗技和雷蛇好点的鼠标，现在都是国产欧姆龙了，罗技是50m蓝点，雷蛇是定制的50m绿点。蓝点50m我就这么说吧，“松松垮垮”，当然，我这么说，并不是对这款微动持否定态度，反而我适应了几天以后，很沉迷于这种感觉，像是一个“老朋友”一样。</p>
+<p>其实谈起蓝点，我更喜欢蓝点20m，这款微动大量存在于罗技入门款，也是罗技鼠标“两年内必双击”的元凶，但是手感个人觉得不软不硬，连击感很好，以前用的也最多。微动寿命也不是一概而论的，50m就5000万次而20m就2000万次这样，一看脸，再看使用频率。</p>
+<p>相对来说，雷蛇绿点50m在脆的同时，貌似更“稳”一点，但是，“又脆又稳”，本身键程又比樱桃长，往往带来的结果就是“偏硬”，我个人不太喜欢这种手感，起码我用了几天还是适应不了。“汝之蜜糖，彼之砒霜”，适应的人成为神器也说不定，毕竟李相赫用的这。</p>
+<p>赛睿sensei系列。之前RNG战队几乎都用的这个系列（不过电商广告RNG都给罗技代言囧，据说是uzi用过g502，年轻人喜欢撸铁），根据模具不同，有“霜冻”“烈焰”等等分别，最开始是经典“大师”，个人感觉是一样的东西。310是我用的时间最长的一款鼠标，甚至最后模具卡扣（和微动接触的部分）都磨损了，以至于更换微动后，手感更加松松垮垮了，就放在那里没有再用了。据更换微动的师傅说，也是欧姆龙蓝点50m，因为我基本只用过这一款赛睿，不多做评价。</p>
+<h5 id="日产欧姆龙"><a href="#日产欧姆龙" class="headerlink" title="日产欧姆龙"></a>日产欧姆龙</h5><p>貌似很多人喜欢f37这个微动，我现在用的也是这个。主要优点，我觉得是整个生命周期内，手感变化很小，几乎感觉不到，以至于突然某天双击了，我还很纳闷。这一点和国产欧姆龙是最大区别，国产蓝点50m在使用过程中，能感觉到“逐渐松动感”。还有就是这款微动，手感是“软中带着脆”，不会有国产蓝点50m刚装上去那种“和你较着劲”的那种弹。寿命的话，个人觉得接近国产蓝点20m，不算耐用，但也不像很多人介绍的那样“工业微动寿命完全没有保证”，可以接受的范围</p>
+<h5 id="德国樱桃微动"><a href="#德国樱桃微动" class="headerlink" title="德国樱桃微动"></a>德国樱桃微动</h5><p>主要特点是是短平快。之前用过t85那款，号称是永不双击，我看很多人说适合连点，适合fps游戏，我试了一下，玩rts的确不太舒服（磨具是罗技g pro ，不排除其他品牌的适合），给我一种“黑轴”的感觉，玩fps游戏的想试试的话，推荐压力克数较小的那款。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>软路由踩坑</title>
+    <url>/2020/11/06/%E8%BD%AF%E8%B7%AF%E7%94%B1/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/LEDE-OpenWRT.png.png"></p>
+<a id="more"></a>
 
-  <div class="site-meta">
+<p>个人用的话, 推荐旁路由模式</p>
+<h4 id="alias-xx-“ss”"><a href="#alias-xx-“ss”" class="headerlink" title="alias xx = “ss”"></a>alias xx = “ss”</h4><h4 id="旁路由和-ap"><a href="#旁路由和-ap" class="headerlink" title="旁路由和 ap"></a>旁路由和 ap</h4><h5 id="硬路由做主路由"><a href="#硬路由做主路由" class="headerlink" title="硬路由做主路由"></a>硬路由做主路由</h5><p>没有交换机的话, 软路由做旁路, 不影响家里的其他用户</p>
+<h6 id="硬路由做-ap"><a href="#硬路由做-ap" class="headerlink" title="硬路由做 ap"></a>硬路由做 ap</h6><p>有交换机的话, 软路由拨号, 接交换机, 再接硬路由做 ap, 内网中转交给交换机, 同时交换机下面可以接 nas 或者其他设备</p>
+<h4 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h4><h5 id="lean"><a href="#lean" class="headerlink" title="lean"></a>lean</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;coolsnowwolf&#x2F;lede&#x2F;releases&#x2F;</span><br></pre></td></tr></table></figure>
 
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Yukminnie</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
+<h5 id="koolshare"><a href="#koolshare" class="headerlink" title="koolshare"></a>koolshare</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;firmware.koolshare.cn&#x2F;LEDE_X64_fw867&#x2F;</span><br></pre></td></tr></table></figure>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
+<h4 id="处理器"><a href="#处理器" class="headerlink" title="处理器"></a>处理器</h4><h5 id="需求不高"><a href="#需求不高" class="headerlink" title="需求不高"></a>需求不高</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">j1800</span><br></pre></td></tr></table></figure>
+<h5 id="推荐"><a href="#推荐" class="headerlink" title="推荐"></a>推荐</h5><p>3865u的软路由, 性能只能说够用, 价格超过了它的实际价值, 需要 exsi 的话, 4105 不错, 价格还行</p>
+<h4 id="固件"><a href="#固件" class="headerlink" title="固件"></a>固件</h4><h5 id="爱快-高恪"><a href="#爱快-高恪" class="headerlink" title="爱快 高恪"></a>爱快 高恪</h5><ul>
+<li><p>流控<br>这两个不是特殊需求用的, 主要还是用于流控, 不多说了</p>
+</li>
+<li><p>ap<br>接 k2t 刷集客实现 wifi 自动切换效果不错</p>
+</li>
+</ul>
+<h5 id="Lede"><a href="#Lede" class="headerlink" title="Lede"></a>Lede</h5><ul>
+<li><p>koolxx<br>新版固件安装会有限制, koolxx 不更新后, 偶尔会有这样那样的小毛病, 界面体验还是挺卡的</p>
+</li>
+<li><p>商店<br>商店加载不出来, 在 lan 口更改一下 dns 可以解决, 114 119 以及运营商的都试一下</p>
+</li>
+<li><p>如果用得到商店里的应用, lede 挺好的</p>
+</li>
+</ul>
+<h5 id="Linoel"><a href="#Linoel" class="headerlink" title="Linoel"></a>Linoel</h5><ul>
+<li><p>负载均衡<br>要求线路配置相同, 没有几个人是自己买多个 vps 自己搭吧, 如果有的话, 这个固件不错的, paxxwall 颜值很高</p>
+</li>
+<li><p>openclash<br>分流, 喜欢折腾的可以试试（没有这个需求还未尝试）</p>
+</li>
+</ul>
+<h5 id="Lean"><a href="#Lean" class="headerlink" title="Lean"></a>Lean</h5><p>lean 原版, 相对最稳了。大部分人的固件都是来自 lean 的编译。日常用还是建议用 lean 自己编译的原版, 没有太多小毛病。</p>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><h5 id="多拨"><a href="#多拨" class="headerlink" title="多拨"></a>多拨</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">看地区</span><br></pre></td></tr></table></figure>
+<h5 id="网易云解锁"><a href="#网易云解锁" class="headerlink" title="网易云解锁"></a>网易云解锁</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">旁路由模式也是生效的</span><br></pre></td></tr></table></figure>
+<h5 id="KMS"><a href="#KMS" class="headerlink" title="KMS"></a>KMS</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">旁路由模式是无效的</span><br></pre></td></tr></table></figure>
+<h5 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">拓展很多了, 比如 gogs, jupyter, 本地 markdown服务, webdev之类</span><br></pre></td></tr></table></figure>
+<h5 id="广告过滤"><a href="#广告过滤" class="headerlink" title="广告过滤"></a>广告过滤</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">不推荐使用, 效果不太好, 如果有外版电视盒子需要屏蔽油管广告之类的, 可以尝试一下广告屏蔽大师plus+, koolproxyR这些, adguardhome也不好用</span><br></pre></td></tr></table></figure>
 
+<h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><h5 id="lean-源码编译的固件"><a href="#lean-源码编译的固件" class="headerlink" title="lean 源码编译的固件"></a>lean 源码编译的固件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 在防火墙加入规则, 不然白名单模式会有问题</span><br><span class="line"></span><br><span class="line">iptables -t nat -I POSTROUTING -j MASQUERADE</span><br><span class="line"></span><br><span class="line"># xxr 黑名单加入苹果服务，不然部分依赖 icloud 同步的软件会出问题</span><br><span class="line"></span><br><span class="line">*.apple.com</span><br></pre></td></tr></table></figure>
+<h5 id="koolxx"><a href="#koolxx" class="headerlink" title="koolxx"></a>koolxx</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 建议关闭节点检测和自动切换</span><br><span class="line"></span><br><span class="line"># 订阅节点时, 会把 baidu.com 作为混淆, 建议修改为根据订阅节点设置</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>黑苹果踩坑</title>
+    <url>/2020/11/06/%E9%BB%91%E8%8B%B9%E6%9E%9C/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Hackintosh_Wallpaper_KathaBuzzDotCom-2.jpg.jpg"></p>
+<a id="more"></a>
 
+<p>选对硬件, 不要折腾自己</p>
+<h4 id="启动盘"><a href="#启动盘" class="headerlink" title="启动盘"></a>启动盘</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 制作软件</span><br><span class="line">etcher</span><br><span class="line"></span><br><span class="line"># 镜像</span><br><span class="line">https:&#x2F;&#x2F;mirrors.dtops.cc&#x2F;iso&#x2F;MacOS&#x2F;daliansky_macos&#x2F;</span><br><span class="line"></span><br><span class="line"># 用移动固态做启动盘</span><br><span class="line">如果你觉悟到这是一件超级折磨的事情, 选个固态硬盘装在移动硬盘盒上来做启动盘吧</span><br></pre></td></tr></table></figure>
 
+<h4 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 10.14 </span><br><span class="line">实话实说, 10.14.6 很稳</span><br><span class="line"></span><br><span class="line"># 10.15</span><br><span class="line">添加了硬解 hevc 支持, 看个人吧</span><br></pre></td></tr></table></figure>
 
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
+<h4 id="硬件选择"><a href="#硬件选择" class="headerlink" title="硬件选择"></a>硬件选择</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 长期维护机型</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;daliansky&#x2F;daliansky.github.io</span><br><span class="line"></span><br><span class="line"># 其他</span><br><span class="line">笔记本看缘分, amd 的 u 玩玩可以, 不要当真</span><br></pre></td></tr></table></figure>
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+<h4 id="安装准备"><a href="#安装准备" class="headerlink" title="安装准备"></a>安装准备</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 操作系统</span><br><span class="line">bios 选其他操作系统</span><br><span class="line"></span><br><span class="line"># 核芯显卡设置</span><br><span class="line">bios最大显存设置 256m, 主要是针对想要同时驱动核显和独显的人群</span><br><span class="line"></span><br><span class="line"># 拔掉多余设备</span><br><span class="line">pcie 网卡, usb网卡, 网线等</span><br><span class="line"></span><br><span class="line"># 独显有 dp 接口, 优先用 dp</span><br><span class="line">dp 对黑苹果来说, 是自适应性最好的接口</span><br></pre></td></tr></table></figure>
 
-  </li>
-        <li class="menu-item menu-item-archives">
+<h4 id="安装过程中提示应用程序副本已损坏"><a href="#安装过程中提示应用程序副本已损坏" class="headerlink" title="安装过程中提示应用程序副本已损坏"></a>安装过程中提示应用程序副本已损坏</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 10.14</span><br><span class="line">断开网络, 打开终端, 时间改为2016.02.14之前就好</span><br><span class="line">date 122014102015</span><br><span class="line"></span><br><span class="line"># 10.15</span><br><span class="line">断开网络, 打开终端, 时间改为2018年以后就好</span><br><span class="line">date 000102032018</span><br></pre></td></tr></table></figure>
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+<h4 id="安装开始Bios卡加号"><a href="#安装开始Bios卡加号" class="headerlink" title="安装开始Bios卡加号"></a>安装开始Bios卡加号</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 换插内存条</span><br><span class="line">换个插槽位置</span><br><span class="line"></span><br><span class="line"># 内存条不兼容</span><br><span class="line">宽窄混用, 单双面颗粒混用</span><br></pre></td></tr></table></figure>
 
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
-        </a>
-      </li>
-  </ul>
-</nav>
+<h4 id="IOConsoleUsers-time-0-0-gt-0-lin-0-llk-1-IOConsoleUsers-gIOScreenLockState-3-hs-0-bs-0-nov-0-sm-0x0错误"><a href="#IOConsoleUsers-time-0-0-gt-0-lin-0-llk-1-IOConsoleUsers-gIOScreenLockState-3-hs-0-bs-0-nov-0-sm-0x0错误" class="headerlink" title="IOConsoleUsers: time(0) 0-&gt;0, lin 0, llk 1, IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, nov 0, sm 0x0错误"></a>IOConsoleUsers: time(0) 0-&gt;0, lin 0, llk 1, IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, nov 0, sm 0x0错误</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 取消勾选Inject Intel</span><br><span class="line"></span><br><span class="line"># 或者将platform-id修改为0x12345678</span><br></pre></td></tr></table></figure>
 
+<h4 id="安装重启过程黑屏"><a href="#安装重启过程黑屏" class="headerlink" title="安装重启过程黑屏"></a>安装重启过程黑屏</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># boot args添加引导参数：agdpmod&#x3D;pikera</span><br><span class="line"></span><br><span class="line"># 更新WhateverGreen</span><br></pre></td></tr></table></figure>
 
+<h4 id="安装卡在最后两分钟"><a href="#安装卡在最后两分钟" class="headerlink" title="安装卡在最后两分钟"></a>安装卡在最后两分钟</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 使用OsxAptioFixDrv-64.efi或者OsxAptioFixDrv3-64.efi替换AptioMemoryFix.efi</span><br><span class="line"></span><br><span class="line"># 抹盘直接选择APFS格式</span><br></pre></td></tr></table></figure>
+<h4 id="部分启动参数（heipg-cn）"><a href="#部分启动参数（heipg-cn）" class="headerlink" title="部分启动参数（heipg.cn）"></a>部分启动参数（heipg.cn）</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-v	用于安装前期启动时显示代码界面，在安装macOS时，应添加此参数以获取明确的错误信息。</span><br><span class="line">-x	安全启动模式，类似 Windows 的安全模式。此模式下 macOS 会尽可能少的加载 Kext 文件。</span><br><span class="line">-s	单用户模式。这一模式将会启动终端模式，可以用这种方式修复你的系统。</span><br><span class="line">-f	关闭 Kext 缓存模式，等于强制重建 Kext 缓存。</span><br><span class="line">-l	在系统日志中输出内存泄漏的相关记录。</span><br><span class="line">iog&#x3D;0x0	此参数将强制 MacBook 机型在合盖后，接入外部显示器和键盘时系统保持开启状态；但同时，此参数会在接入外部显示器时关闭笔记本的内屏，这可能对保护屏幕以及省电有帮助。</span><br><span class="line">platform&#x3D;X86PC	此参数将强制禁用 ACPI 电源管理。而 platform&#x3D;ACPI 将强制启用 ACPI 电源管理。</span><br><span class="line">idlehalt&#x3D;1	强制 CPU 进入低功耗模式。</span><br><span class="line">debug&#x3D;0x100	此参数用于禁用五国图，把 Kernel Panic（内核崩溃）的相关数据直接输出在屏幕上，可用于禁止发生内核崩溃时自动重启，这将对排查错误有助益，这一参数还可以用于 Core Dump。其它可用值还有：0x200，这可以在内核崩溃后使用快捷键（C 继续、R 重启、K 进入 KDB）；0x400 可用于触发内核崩溃后自动进行 Core Dump；0x2000 将只生成并发送 Kernel Panic 日志，不包括完整的 Core Dump。除此之外还有很多其他值，但一般以上几个已经足够安装 macOS 时使用。</span><br><span class="line">keepsyms&#x3D;1	此参数可以为 debug&#x3D;0xN 提供更多错误信息。</span><br><span class="line">dart&#x3D;0	此参数会关闭 64 位硬件上的系统 PCI 地址映射器（DART）。DART 在拥有 2GB 以上物理内存的机器上是必需的，在默认情况下 DART 都是加载的。当使用 Clover 引导系统且 BIOS 无法关闭 VT-d 时可尝试此参数。</span><br><span class="line">darkwake&#x3D;0	在拥有完全定制好的 USB 接口时完全不必使用此参数，除非你真的需要操控 HID Tickle 行为。darkwake 是 XNU 的一部分，XNU 是一个混合内核，是 Darwin 系统的一部分（macOS 和 iOS 均使用了 Darwin ）。因启动参数仅用于按位计算，所以可能的值有 0、1、2、3、256、257、258、259 等等以此类推，也因此 darkwake&#x3D;8 实际等于 darkwake&#x3D;0；darkwake&#x3D;10 实际等于 darkwake&#x3D;2，XNU 自 2782.1.97 起删除了这两个值（8 和 10），故这两个值在 Yosemite 及更高版本 macOS 中已失效。黑苹果建议关闭电能小憩，使用 pmset 命令调试休眠。如果实在需要使用，可尝试 darkwake&#x3D;0 或 3。更多信息可参考外网这篇文章。</span><br><span class="line">nvda_drv&#x3D;1	开启 NVIDIA Web Driver，用于启用英伟达显卡驱动。</span><br><span class="line">nv_disable&#x3D;1	关闭英伟达显卡驱动，请勿与 nvda_drv&#x3D;1 同时使用。</span><br><span class="line">-no_compat_check	用于禁用 macOS 兼容性检查。例如，macOS 11.0 BigSur 不再支持 iMac 2014 年之前推出的机型，此时可使用此参数以禁止兼容性检查，以达到安装目的。</span><br><span class="line">kext-dev-mode&#x3D;1	开启 Kext 开发模式，将允许加载未签名的 Kext。在 Yosemite 及更高版本 macOS 中，默认情况下出于安全原因，只会加载已签名的 Kext。此参数可以在 Yosemite 更改此设置，允许加载未签名的 Kext。在比 Yosemite 更新的 macOS 版本（El Capitan）中，引入了另一种安全机制，即系统完整性保护（SIP，也称为 Rootless），该系统会防止修改系统文件，加载未签名的 Kext 等。SIP 可以通过注入正确的 CSR NVRAM 变量来禁用，也可以通过恢复分区运行命令行禁用它。总之，在 10.11 及以后的系统中，已无需此参数。</span><br><span class="line">cpus&#x3D;1	CPU单核模式，用于限制系统中活动 CPU 的数量。苹果的开发者工具有一个选项用于启用或禁用系统中的一些 CPU，但你也可以通过这个参数指定要使用的 CPU 数量。在某些情况下，这也许有助于省电，或者你正在调试 X86 电源驱动。</span><br><span class="line">-xcpm	用于强制开启 xcpm 以实现 CPU 原生电源管理，一般用于较老架构的 CPU，例如 Ivy Bridge。</span><br><span class="line">npci&#x3D;0x2000	此参数会禁用某些与 kIOPCIConfiguratorPFM64 相关的 PCI 调试，另一个相似的选择是 npci&#x3D;0x3000，后者还会禁用与 gIOPCITunnelledKey 相关的调试。当卡在 PCI Start Configuration 时，应使用此参数，因为存在与 PCI 通道有关的 IRQ 冲突。</span><br><span class="line">npci&#x3D;0x3000	同 npci&#x3D;0x2000。</span><br><span class="line">rootless&#x3D;0	使用 Rootless 模式，请勿在 El Capitan 及更高版本的 macOS 上使用，因为从 El Capitan 起引入了 SIP（系统完整性保护）机制。一般情况下关闭 SIP 即可达成你的目的。</span><br><span class="line">-disablegfxfirmware	在 WhateverGreen.kext 出现之前，该参数用于关闭苹果的 iGPU firmware 以正确驱动 Intel 核显，在 macOS 10.13 及更高版本中已不使用。</span><br></pre></td></tr></table></figure>
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="Searching..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
+<h4 id="时间不同步"><a href="#时间不同步" class="headerlink" title="时间不同步"></a>时间不同步</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 安装完成后, win系统命令行敲如下代码</span><br><span class="line">Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation &#x2F;v RealTimeIsUniversal &#x2F;t REG_DWORD &#x2F;d 1</span><br></pre></td></tr></table></figure>
 
-    </div>
-  </div>
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+<h4 id="电脑关机是因为发生了问题"><a href="#电脑关机是因为发生了问题" class="headerlink" title="电脑关机是因为发生了问题"></a>电脑关机是因为发生了问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 我的尝试 </span><br><span class="line">删除了clover下的apple文件夹, 重启</span><br><span class="line"></span><br><span class="line"># 他人尝试 </span><br><span class="line">sudo nvram -c （清除nvram）</span><br><span class="line"></span><br><span class="line"># 其实还是因为配置有问题, 引起没有正常开关机</span><br></pre></td></tr></table></figure>
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
+<h4 id="程序已损坏-来自不明的开发者-3步"><a href="#程序已损坏-来自不明的开发者-3步" class="headerlink" title="程序已损坏/来自不明的开发者(3步)"></a>程序已损坏/来自不明的开发者(3步)</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># sudo spctl --master-disable</span><br><span class="line"># 安全性与隐私中 允许任何来源</span><br><span class="line"># 在finder中右键打开软件</span><br></pre></td></tr></table></figure>
 
-          <div class="content post posts-expand">
-            
+<h4 id="声卡问题"><a href="#声卡问题" class="headerlink" title="声卡问题"></a>声卡问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># applealc.kext 安装仿冒声卡</span><br><span class="line">不同的版本可能仿冒 id 会有变化</span><br><span class="line"></span><br><span class="line"># VodooHDA.kext 万能驱动</span><br><span class="line">整体来说比较完善了, 不过还是建议通过 applealc.kext 驱动</span><br><span class="line"></span><br><span class="line"># 安装好了有杂音, 尝试更换上述软件版本</span><br><span class="line"></span><br><span class="line"># 说到底, 还是最开始所说, 先查询别人同样硬件的安装先例, 不给自己找麻烦</span><br></pre></td></tr></table></figure>
 
-    
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/06/%E5%B0%84%E9%9B%95%E5%89%A7%E6%9C%AC/">
+<h4 id="独立显卡问题"><a href="#独立显卡问题" class="headerlink" title="独立显卡问题"></a>独立显卡问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 建议560xt</span><br><span class="line">性价比高, 和rx580 2304p性能差距很小, 没有矿卡</span><br><span class="line"></span><br><span class="line"># 买了rx580 2048p的</span><br><span class="line">刷rx570 Bios才能免驱</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yukminnie">
-      <meta itemprop="description" content="">
-    </span>
+<h4 id="核芯显卡问题"><a href="#核芯显卡问题" class="headerlink" title="核芯显卡问题"></a>核芯显卡问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># hd4000, 4400, 4600</span><br><span class="line">这些虽然可以和独显共存, 但是加速效果不明显, 打缓冲帧不方便</span><br><span class="line"></span><br><span class="line"># 五六代英特尔之后的核显, 例如uhd630这种集显最好驱动</span><br><span class="line">和独立显卡兼容性最好, 打缓冲帧最方便</span><br><span class="line"></span><br><span class="line"># 后面会说到核显对系统稳定性的影响</span><br></pre></td></tr></table></figure>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yukminnie">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          03射雕剧本
-        </h1>
+<h4 id="网卡问题"><a href="#网卡问题" class="headerlink" title="网卡问题"></a>网卡问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 板载有线网卡基本都是免驱的</span><br><span class="line">装好了发现没有驱动成功, 更换 IntelMausi.kext 的版本</span><br><span class="line"></span><br><span class="line"># 无线网卡自主选择购买</span><br><span class="line">如果想实现隔空投送的话</span><br></pre></td></tr></table></figure>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+<h4 id="图片软件崩溃-FCPX-导出花屏"><a href="#图片软件崩溃-FCPX-导出花屏" class="headerlink" title="图片软件崩溃, FCPX 导出花屏"></a>图片软件崩溃, FCPX 导出花屏</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/smbios.png.png"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 如果选择了imac 14.2 这种核显独显共存的机型</span><br><span class="line">但是你屏蔽了核显, 或者核显没有正确驱动, 这种机型打开图片默认是使用核显的, 然后图片程序就崩溃了。同时, fcpx 导出阶段也会调用核显进行加速, 因为核显是不可用状态, 会导致视频花屏</span><br><span class="line"></span><br><span class="line"># 选择imac pro 1.1</span><br><span class="line">视频实时渲染, a卡独显驱动后, 预览效果流畅; 视频导出阶段, 核芯显卡驱动后, 虽然可以实现加速, 但是主要还是靠CPU（如果不是 uhd630 这种有特殊优化的核显）, 意义不大。所以如果是 hd4xxx 这些老核显, 建议 bios屏蔽, 选择 imac pro 1.1 这种不带核显的机型, 可以避免很多问题</span><br><span class="line"></span><br><span class="line"># 看上图具体问题具体分析</span><br><span class="line">比如你买了一个 nuc, 当然选 macmini 机型是比较好的</span><br></pre></td></tr></table></figure>
 
-              <time title="Created: 2020-11-06 18:20:43" itemprop="dateCreated datePublished" datetime="2020-11-06T18:20:43+08:00">2020-11-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-15 17:24:36" itemprop="dateModified" datetime="2020-11-15T17:24:36+08:00">2020-11-15</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2020/11/06/%E5%B0%84%E9%9B%95%E5%89%A7%E6%9C%AC/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/06/%E5%B0%84%E9%9B%95%E5%89%A7%E6%9C%AC/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/%E9%9B%BB%E8%A6%96%E5%8A%87%E5%B0%84%E9%B5%B0%E8%8B%B1%E9%9B%84%E5%82%B32003.jpg.jpg"></p>
+<h4 id="核显缓冲帧补丁"><a href="#核显缓冲帧补丁" class="headerlink" title="核显缓冲帧补丁"></a>核显缓冲帧补丁</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 黑果小兵博客</span><br><span class="line">https:&#x2F;&#x2F;blog.daliansky.net&#x2F;Intel-FB-Patcher-tutorial-and-insertion-pose.html</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog-file-1253466367.cos.ap-beijing.myqcloud.com/Hackintool(%E5%8E%9FIntel%20FB-Patcher)%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%E5%8F%8A%E6%8F%92%E5%85%A5%E5%A7%BF%E5%8A%BF%20_%20%E9%BB%91%E6%9E%9C%E5%B0%8F%E5%85%B5%E7%9A%84%E9%83%A8%E8%90%BD%E9%98%81.pdf">缓冲帧补丁离线md备份</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>03射雕剧本</title>
+    <url>/2020/11/06/%E5%B0%84%E9%9B%95%E5%89%A7%E6%9C%AC/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/%E9%9B%BB%E8%A6%96%E5%8A%87%E5%B0%84%E9%B5%B0%E8%8B%B1%E9%9B%84%E5%82%B32003.jpg.jpg"></p>
 <p>早几年得到这份拷贝弄丢了, 特别后悔, 无意间在台湾的论坛上发现了转载, 已经是 03 的文章了。</p>
 <p>不是完整版, 好东西值得品味。</p>
 <a id="more"></a>
@@ -1124,7 +1136,7 @@
 <p>黄蓉一笑，策马走开。郭靖飞身上马，扬鞭绝尘，这一刻忽有些大漠里的豪情。</p>
 <p><strong>柔然</strong></p>
 <p><img data-src="http://jinyong.ylib.com/snowtalk/images/posticon.gif"><br><strong>张贴于 2003-5-17 15:30:14 台湾当地时间</strong>   <img data-src="http://jinyong.ylib.com/snowtalk/images/profile.gif"><br>  <a href="mailto:tianqiuyi@163.com"><img data-src="http://jinyong.ylib.com/snowtalk/images/email.gif">
-</a>   <a target="_blank" rel="noopener" href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465551&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
+</a>   <a href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465551&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
 </a></p>
 <hr>
 <p>射雕英雄传》第十三集《五湖废人》</p>
@@ -1837,7 +1849,7 @@
 <p>本集完</p>
 <p><strong>柔然</strong></p>
 <p><img data-src="http://jinyong.ylib.com/snowtalk/images/posticon.gif"><br><strong>张贴于 2003-5-17 15:40:12 台湾当地时间</strong>   <img data-src="http://jinyong.ylib.com/snowtalk/images/profile.gif"><br>  <a href="mailto:tianqiuyi@163.com"><img data-src="http://jinyong.ylib.com/snowtalk/images/email.gif">
-</a>   <a target="_blank" rel="noopener" href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465557&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
+</a>   <a href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465557&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
 </a></p>
 <hr>
 <p>《射雕英雄传》第十四集《桃花岛主》</p>
@@ -2505,7 +2517,7 @@
 <p>郭靖：你说你叫段天德？</p>
 <p><strong>柔然</strong></p>
 <p><img data-src="http://jinyong.ylib.com/snowtalk/images/posticon.gif"><br><strong>张贴于 2003-5-17 15:45:56 台湾当地时间</strong>   <img data-src="http://jinyong.ylib.com/snowtalk/images/profile.gif"><br>  <a href="mailto:tianqiuyi@163.com"><img data-src="http://jinyong.ylib.com/snowtalk/images/email.gif">
-</a>   <a target="_blank" rel="noopener" href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465558&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
+</a>   <a href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465558&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
 </a></p>
 <hr>
 <p>《射雕英雄传》第十五集《神龙摆尾》</p>
@@ -3263,7 +3275,7 @@
 <p>本集完</p>
 <p><strong>柔然</strong></p>
 <p><img data-src="http://jinyong.ylib.com/snowtalk/images/posticon.gif"><br><strong>张贴于 2003-5-17 15:53:53 台湾当地时间</strong>   <img data-src="http://jinyong.ylib.com/snowtalk/images/profile.gif"><br>  <a href="mailto:tianqiuyi@163.com"><img data-src="http://jinyong.ylib.com/snowtalk/images/email.gif">
-</a>   <a target="_blank" rel="noopener" href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465560&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
+</a>   <a href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465560&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
 </a></p>
 <hr>
 <p>第十六集《九阴真经》</p>
@@ -4101,7 +4113,7 @@
 <p>本集完</p>
 <p><strong>柔然</strong></p>
 <p><img data-src="http://jinyong.ylib.com/snowtalk/images/posticon.gif"><br><strong>张贴于 2003-5-17 15:56:27 台湾当地时间</strong>   <img data-src="http://jinyong.ylib.com/snowtalk/images/profile.gif"><br>  <a href="mailto:tianqiuyi@163.com"><img data-src="http://jinyong.ylib.com/snowtalk/images/email.gif">
-</a>   <a target="_blank" rel="noopener" href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465561&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
+</a>   <a href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465561&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
 </a></p>
 <hr>
 <p>《射雕英雄传》十七集《双手互搏》</p>
@@ -4656,7 +4668,7 @@
 <p>本集完</p>
 <p><strong>柔然</strong></p>
 <p><img data-src="http://jinyong.ylib.com/snowtalk/images/posticon.gif"><br><strong>张贴于 2003-5-17 16:01:05 台湾当地时间</strong>   <img data-src="http://jinyong.ylib.com/snowtalk/images/profile.gif"><br>  <a href="mailto:tianqiuyi@163.com"><img data-src="http://jinyong.ylib.com/snowtalk/images/email.gif">
-</a>   <a target="_blank" rel="noopener" href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465562&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
+</a>   <a href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465562&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
 </a></p>
 <hr>
 <p>《射雕英雄传》第十八集《三道试题》</p>
@@ -5102,7 +5114,7 @@
 <p>本集完</p>
 <p><strong>柔然</strong></p>
 <p><img data-src="http://jinyong.ylib.com/snowtalk/images/posticon.gif"><br><strong>张贴于 2003-5-17 16:05:23 台湾当地时间</strong>   <img data-src="http://jinyong.ylib.com/snowtalk/images/profile.gif"><br>  <a href="mailto:tianqiuyi@163.com"><img data-src="http://jinyong.ylib.com/snowtalk/images/email.gif">
-</a>   <a target="_blank" rel="noopener" href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465564&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
+</a>   <a href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465564&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
 </a></p>
 <hr>
 <p>《射雕英雄传》第十九集《洪涛巨鲨》</p>
@@ -5648,7 +5660,7 @@
 <p>本集完</p>
 <p><strong>柔然</strong></p>
 <p><img data-src="http://jinyong.ylib.com/snowtalk/images/posticon.gif"><br><strong>张贴于 2003-5-17 16:09:36 台湾当地时间</strong>   <img data-src="http://jinyong.ylib.com/snowtalk/images/profile.gif"><br>  <a href="mailto:tianqiuyi@163.com"><img data-src="http://jinyong.ylib.com/snowtalk/images/email.gif">
-</a>   <a target="_blank" rel="noopener" href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465567&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
+</a>   <a href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465567&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
 </a></p>
 <hr>
 <p>射雕英雄传第二十集《窜改经文》</p>
@@ -6307,7 +6319,7 @@
 <p>那船猛然一阵摇晃，带得两人都站立不定，轰轰隆隆的声音中，船尾已沉入水中。</p>
 <p><strong>柔然</strong></p>
 <p><img data-src="http://jinyong.ylib.com/snowtalk/images/posticon.gif"><br><strong>张贴于 2003-5-17 16:20:59 台湾当地时间</strong>   <img data-src="http://jinyong.ylib.com/snowtalk/images/profile.gif"><br>  <a href="mailto:tianqiuyi@163.com"><img data-src="http://jinyong.ylib.com/snowtalk/images/email.gif">
-</a>   <a target="_blank" rel="noopener" href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465571&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
+</a>   <a href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465571&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
 </a></p>
 <hr>
 <p>《射雕英雄传》第二十一集《千钧巨岩》</p>
@@ -7122,7 +7134,7 @@
 <p>欧阳锋凝神运气，将一棵大木卡住绞盘，跳进水里，将欧阳克牢牢抱住。</p>
 <p><strong>柔然</strong></p>
 <p><img data-src="http://jinyong.ylib.com/snowtalk/images/posticon.gif"><br><strong>张贴于 2003-5-17 16:25:32 台湾当地时间</strong>   <img data-src="http://jinyong.ylib.com/snowtalk/images/profile.gif"><br>  <a href="mailto:tianqiuyi@163.com"><img data-src="http://jinyong.ylib.com/snowtalk/images/email.gif">
-</a>   <a target="_blank" rel="noopener" href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465573&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
+</a>   <a href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465573&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
 </a></p>
 <hr>
 <p>《射雕英雄传》第二十二集《骑鲨遨游》</p>
@@ -7872,7 +7884,7 @@
 <p>黄药师面对大海，吹奏一曲，曲罢，转身没入茫茫夜色。</p>
 <p><strong>柔然</strong></p>
 <p><img data-src="http://jinyong.ylib.com/snowtalk/images/posticon.gif"><br><strong>张贴于 2003-5-17 16:43:48 台湾当地时间</strong>   <img data-src="http://jinyong.ylib.com/snowtalk/images/profile.gif"><br>  <a href="mailto:tianqiuyi@163.com"><img data-src="http://jinyong.ylib.com/snowtalk/images/email.gif">
-</a>   <a target="_blank" rel="noopener" href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465581&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
+</a>   <a href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465581&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
 </a></p>
 <hr>
 <p>第二十三集《大闹禁宫》</p>
@@ -8863,7 +8875,7 @@
 <p>黄蓉定了定神，先抱起郭靖，再去推开了房门。</p>
 <p><strong>柔然</strong></p>
 <p><img data-src="http://jinyong.ylib.com/snowtalk/images/posticon.gif"><br><strong>张贴于 2003-5-17 16:47:31 台湾当地时间</strong>   <img data-src="http://jinyong.ylib.com/snowtalk/images/profile.gif"><br>  <a href="mailto:tianqiuyi@163.com"><img data-src="http://jinyong.ylib.com/snowtalk/images/email.gif">
-</a>   <a target="_blank" rel="noopener" href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465582&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
+</a>   <a href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465582&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
 </a></p>
 <hr>
 <p>《射雕英雄传》第二十四集《密室疗伤》</p>
@@ -9652,7 +9664,7 @@
 <p>　　 众人就此鼠窜而去，黄药师仰头看了看天色。</p>
 <p><strong>柔然</strong></p>
 <p><img data-src="http://jinyong.ylib.com/snowtalk/images/posticon.gif"><br><strong>张贴于 2003-5-17 17:05:07 台湾当地时间</strong>   <img data-src="http://jinyong.ylib.com/snowtalk/images/profile.gif"><br>  <a href="mailto:tianqiuyi@163.com"><img data-src="http://jinyong.ylib.com/snowtalk/images/email.gif">
-</a>   <a target="_blank" rel="noopener" href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465589&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
+</a>   <a href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465589&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
 </a></p>
 <hr>
 <p>抱歉：第25集《荒村野店》找不到了，只好跳过那一集，请大家见谅啊</p>
@@ -10339,7 +10351,7 @@
 <p>　　　郭靖起身要呵黄蓉的痒，黄蓉笑着连连闪避，郭靖一扑之际，眼前一花，扑<br>到的居然是个白白胖胖的汉子，正是那净衣派三长老中的一个。</p>
 <p><strong>柔然</strong></p>
 <p><img data-src="http://jinyong.ylib.com/snowtalk/images/posticon.gif"><br><strong>张贴于 2003-5-17 17:15:34 台湾当地时间</strong>   <img data-src="http://jinyong.ylib.com/snowtalk/images/profile.gif"><br>  <a href="mailto:tianqiuyi@163.com"><img data-src="http://jinyong.ylib.com/snowtalk/images/email.gif">
-</a>   <a target="_blank" rel="noopener" href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465593&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
+</a>   <a href="http://jinyong.ylib.com/snowtalk/edit.asp?ch=other&no=465593&r=0&top=26722"><img data-src="http://jinyong.ylib.com/snowtalk/images/edit.gif">
 </a></p>
 <hr>
 <p>《射雕英雄传》第二十七集《轩辕台前》</p>
@@ -10794,284 +10806,6 @@
 <p>黄 蓉（指着杨康）完颜康，你若非做贼心虚，何必做这杀人灭口之事？</p>
 <p>月光下群丐议论纷纷，郭靖自散乱的人群中一步步走近台前。</p>
 <p>作者: 北方影武者 发表日期: 2003</p>
-
-    </div>
-
-    
-    
-    
-
-      <footer class="post-footer">
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/11/06/Hexo/" rel="prev" title="Hexo安装过程记录">
-      <i class="fa fa-chevron-left"></i> Hexo安装过程记录
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/11/06/Youtube-dl/" rel="next" title="Youtube-dl日常用法">
-      Youtube-dl日常用法 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-    <div class="comments" id="valine-comments"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AD%A3%E6%96%87"><span class="nav-number">1.</span> <span class="nav-text">正文</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Yukminnie</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">16</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Yukminnie</span>
-</div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/pjax/pjax.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-  <script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '#page-configurations',
-    '.content-wrap',
-    '.post-toc-wrap',
-    '.languages',
-    '#pjax'
-  ],
-  switches: {
-    '.post-toc-wrap': Pjax.switches.innerHTML
-  },
-  analytics: false,
-  cacheBust: false,
-  scrollTo : !CONFIG.bookmark.enable
-});
-
-window.addEventListener('pjax:success', () => {
-  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
-    var code = element.text || element.textContent || element.innerHTML || '';
-    var parent = element.parentNode;
-    parent.removeChild(element);
-    var script = document.createElement('script');
-    if (element.id) {
-      script.id = element.id;
-    }
-    if (element.className) {
-      script.className = element.className;
-    }
-    if (element.type) {
-      script.type = element.type;
-    }
-    if (element.src) {
-      script.src = element.src;
-      // Force synchronous loading of peripheral JS.
-      script.async = false;
-    }
-    if (element.dataset.pjax !== undefined) {
-      script.dataset.pjax = '';
-    }
-    if (code !== '') {
-      script.appendChild(document.createTextNode(code));
-    }
-    parent.appendChild(script);
-  });
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
-
-
-
-  
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div id="pjax">
-  
-
-  
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'rpBRGEoXmrJ9fHlfoKzzD3V4-gzGzoHsz',
-      appKey     : 'M2lmKKKUD0z7S0z6OceadDsk',
-      placeholder: "我有一言, 请诸位静听~",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : false,
-      lang       : 'zh-cn' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
-
-    </div>
-</body>
-</html>
+]]></content>
+  </entry>
+</search>
