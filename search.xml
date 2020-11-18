@@ -471,7 +471,7 @@
 <h5 id="Lean"><a href="#Lean" class="headerlink" title="Lean"></a>Lean</h5><p>lean 原版, 相对最稳了。大部分人的固件都是来自 lean 的编译。日常用还是建议用 lean 自己编译的原版, 没有太多小毛病。</p>
 <h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><h5 id="多拨"><a href="#多拨" class="headerlink" title="多拨"></a>多拨</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">看地区</span><br></pre></td></tr></table></figure>
 <h5 id="网易云解锁"><a href="#网易云解锁" class="headerlink" title="网易云解锁"></a>网易云解锁</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">旁路由模式也是生效的</span><br></pre></td></tr></table></figure>
-<h5 id="KMS"><a href="#KMS" class="headerlink" title="KMS"></a>KMS</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">旁路由模式是无效的</span><br></pre></td></tr></table></figure>
+
 <h5 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">拓展很多了, 比如 gogs, jupyter, 本地 markdown服务, webdev之类</span><br></pre></td></tr></table></figure>
 <h5 id="广告过滤"><a href="#广告过滤" class="headerlink" title="广告过滤"></a>广告过滤</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">不推荐使用, 效果不太好, 如果有外版电视盒子需要屏蔽油管广告之类的, 可以尝试一下广告屏蔽大师plus+, koolproxyR这些, adguardhome也不好用</span><br></pre></td></tr></table></figure>
 
@@ -11326,7 +11326,17 @@
   <entry>
     <title>marginnote同步问题</title>
     <url>/2020/01/16/%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-18_12-30-15.png.png"></p>
+<a id="more"></a>
+<p>我在软路由里提到过这个问题。</p>
+<h4 id="marginnote"><a href="#marginnote" class="headerlink" title="marginnote"></a>marginnote</h4><p>排除比如网络故障，DNS故障这些客观原因不谈，其实 icloud 的同步，在国内还是挺快的，自从在贵州建立服务器以来。</p>
+<p>最初我也不知道哪里出了问题，就一直用的隔空传送，不过还是不太方便。因为我路由日常就是全局白名单模式，突然想到，会不会是走了特别线路呢？</p>
+<p>在 xx 中，我尝试在黑名单中加入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*.apple.com</span><br></pre></td></tr></table></figure>
+
+<p>重启设备后，同步立马就成功了。</p>
+<h4 id="onedrive"><a href="#onedrive" class="headerlink" title="onedrive"></a>onedrive</h4><p>其实我就是突然由 mn 同步这件事，不由自主就想到微软的云服务。不得不说，微软的云服务，真的是个很神奇的东西，不管你网络情况如何，都能保证不让你用的爽，和巨硬的软件简直五五开。</p>
+<h4 id="应该企业理念不同"><a href="#应该企业理念不同" class="headerlink" title="应该企业理念不同"></a>应该企业理念不同</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">苹果：开发者，我是你 D</span><br><span class="line"></span><br><span class="line">微软： 用户，我是你 D</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>软件</tag>
       </tags>
@@ -11379,7 +11389,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># dns 服务不配置好，有时候旁路由无法联网，可以多添加一些 dns，比如本地服务商提供的，或者公共服务，比如</span><br><span class="line"></span><br><span class="line">114.114.114.114</span><br><span class="line">180.76.76.76</span><br><span class="line">223.5.5.5</span><br></pre></td></tr></table></figure>
 
 <h4 id="关闭-lan-口-dhcp-服务"><a href="#关闭-lan-口-dhcp-服务" class="headerlink" title="关闭 lan 口 dhcp 服务"></a>关闭 lan 口 dhcp 服务</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-41-51.png.png"></p>
-]]></content>
+<h4 id="旁路由模式下的-KMS"><a href="#旁路由模式下的-KMS" class="headerlink" title="旁路由模式下的 KMS"></a>旁路由模式下的 KMS</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">旁路由模式是无效的，需要注意</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>硬件</tag>
       </tags>
