@@ -491,7 +491,7 @@
 
 <p>16年入了台搬瓦工上的传家宝，一年/20刀，好好珍惜和爱护</p>
 <h4 id="免密登录"><a href="#免密登录" class="headerlink" title="免密登录"></a>免密登录</h4><p><strong>在本机生成 ssh key 公钥私钥</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -C mykey</span><br><span class="line">    </span><br><span class="line">ssh-keygen.exe -C mykey  # windows</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -C mykey</span><br><span class="line"></span><br><span class="line">ssh-keygen.exe -C mykey  # windows</span><br></pre></td></tr></table></figure>
 <p><strong>会提示你生成的文件的地址, 并且让你输入密码, 你不要输入密码, 直接回车, 这样你就得到了一对 ssh-key</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">id_rsa 是私钥 自己保存 不要给别人</span><br><span class="line"></span><br><span class="line">id_rsa.pub 是公钥, 是要到处使用的</span><br></pre></td></tr></table></figure>
 <p><strong>把本机生成的 <code>id_rsa.pub</code> 添加到服务器 /root/.ssh/authorized_keys 文件中</strong></p>
@@ -499,34 +499,34 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;root</span><br><span class="line">mkdir .ssh</span><br><span class="line">touch authorized_keys</span><br></pre></td></tr></table></figure>
 
 <p><strong>编辑 authorized_keys 文件, 把刚才生成的 <code>id_rsa.pub</code> 文件里面的内容粘贴进去并保存退出, 这里可以粘贴多个 key, 一行一个</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano .ssh&#x2F;authorized_keys</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano .ssh&#x2F;authorized_keys</span><br></pre></td></tr></table></figure>
 
 <p><strong>禁用密码登录</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano &#x2F;etc&#x2F;ssh&#x2F;sshd_config</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano &#x2F;etc&#x2F;ssh&#x2F;sshd_config</span><br></pre></td></tr></table></figure>
 
 <p>把里面的 PasswordAuthentication 改成 no 值</p>
 <p><strong>重启 ssh 服务</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service ssh restart</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service ssh restart</span><br></pre></td></tr></table></figure>
 
 
 <h4 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h4><p>单独记录了, 在博客内搜索 <code>ufw防火墙</code></p>
 <h4 id="linux-oh-my-zsh"><a href="#linux-oh-my-zsh" class="headerlink" title="linux oh-my-zsh"></a>linux oh-my-zsh</h4><p> <strong>安装 oh-my-zsh 配置(方便你使用命令行的配置)</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get install</span><br><span class="line"></span><br><span class="line">wget https:&#x2F;&#x2F;github.com&#x2F;robbyrussell&#x2F;oh-my-zsh&#x2F;raw&#x2F;master&#x2F;tools&#x2F;install.sh -O - | sh</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get install</span><br><span class="line"></span><br><span class="line">wget https:&#x2F;&#x2F;github.com&#x2F;robbyrussell&#x2F;oh-my-zsh&#x2F;raw&#x2F;master&#x2F;tools&#x2F;install.sh -O - | sh</span><br></pre></td></tr></table></figure>
 
 
 
 <h4 id="服务器中文编码问题"><a href="#服务器中文编码问题" class="headerlink" title="服务器中文编码问题"></a>服务器中文编码问题</h4><p><strong>编辑下面的文件</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano &#x2F;etc&#x2F;environment</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano &#x2F;etc&#x2F;environment</span><br></pre></td></tr></table></figure>
 
 <p><strong>加入下面的内容, 保存退出</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">LC_CTYPE&#x3D;&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_ALL&#x3D;&quot;en_US.UTF-8&quot;</span><br></pre></td></tr></table></figure>
 
-<h4 id="随便记些命令"><a href="#随便记些命令" class="headerlink" title="随便记些命令"></a>随便记些命令</h4><h5 id="ssh-和-scp"><a href="#ssh-和-scp" class="headerlink" title="ssh 和 scp"></a>ssh 和 scp</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># scp</span><br><span class="line"></span><br><span class="line">scp -P 29337 -r app root@ip:&#x2F;tmp</span><br><span class="line"></span><br><span class="line"># scp执行WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!错误解决</span><br><span class="line"></span><br><span class="line">1, 查看家目录下的.ssh&#x2F;know_hosts文件</span><br><span class="line">2, 删除对应的失效的客户端 ip</span><br><span class="line">cat ~&#x2F;.ssh&#x2F;known_hosts</span><br><span class="line">     </span><br><span class="line"># ssh</span><br><span class="line">ssh -p 29337 root@你的ip</span><br></pre></td></tr></table></figure>
+<h4 id="随便记些命令"><a href="#随便记些命令" class="headerlink" title="随便记些命令"></a>随便记些命令</h4><h5 id="ssh-和-scp"><a href="#ssh-和-scp" class="headerlink" title="ssh 和 scp"></a>ssh 和 scp</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># scp</span><br><span class="line"></span><br><span class="line">scp -P 29337 -r app root@ip:&#x2F;tmp</span><br><span class="line"></span><br><span class="line"># scp执行WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!错误解决</span><br><span class="line"></span><br><span class="line">1, 查看家目录下的.ssh&#x2F;know_hosts文件</span><br><span class="line">2, 删除对应的失效的客户端 ip</span><br><span class="line">cat ~&#x2F;.ssh&#x2F;known_hosts</span><br><span class="line"></span><br><span class="line"># ssh</span><br><span class="line">ssh -p 29337 root@你的ip</span><br></pre></td></tr></table></figure>
 
 <h5 id="cp-拷贝命令"><a href="#cp-拷贝命令" class="headerlink" title="cp 拷贝命令"></a>cp 拷贝命令</h5><p>使用指令”cp”将当前目录”test/“下的所有文件复制到新目录”newtest”下，输入如下命令：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cp –r test&#x2F; newtest        </span><br></pre></td></tr></table></figure>
 
-<h5 id="Linux-查找文件、文件夹"><a href="#Linux-查找文件、文件夹" class="headerlink" title="Linux 查找文件、文件夹"></a>Linux 查找文件、文件夹</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查找tomcat7文件夹所在的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;tomcat7&#39; -type d </span><br><span class="line"></span><br><span class="line"># 查找server.xml文件的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;server.xml&#39; -print</span><br></pre></td></tr></table></figure>
+<h5 id="Linux-查找文件、文件夹"><a href="#Linux-查找文件、文件夹" class="headerlink" title="Linux 查找文件、文件夹"></a>Linux 查找文件、文件夹</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查找tomcat7文件夹所在的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;tomcat7&#39; -type d</span><br><span class="line"></span><br><span class="line"># 查找server.xml文件的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;server.xml&#39; -print</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>软件</tag>
@@ -4524,7 +4524,7 @@
 <p>丘处机正拔腿要追，床上的女子却终于打帐子下钻了出来：道长，小女子怎生是好？</p>
 <p>丘处机只好苦笑着回身揖首：贫道这厢有礼了。</p>
 <p>场：二十七 景：郊外祠堂</p>
-<p>时：夜 人物：美姬、丐帮弟子、黎生、余兆兴、欧阳克、郭靖、黄蓉</p>
+<p>时：夜 人物：美姬、丐帮弟子、黎生、余兆兴、欧阳克、郭靖、黄蓉</p>
 <p>空地里一座大祠堂微露灯光，几名美姬抬着布袋进屋。</p>
 <p>丐帮弟子四下分散，顿时将整座祠堂团团围住。</p>
 <p>大厅上供着无数神主牌位，一人坐在几枝大红烛间轻摇折扇。</p>
@@ -5068,7 +5068,7 @@
 <p>　　　　 几颗丸药喂了下去，穆念慈终于悠悠醒转。</p>
 <p>黄蓉大喜：穆姐姐，你醒来啦？</p>
 <p>穆念慈：(竟是神情如常，让黄蓉扶着站了起来) 妹子，上次我给你的那柄匕首，相<br>烦借我一用。</p>
-<p>黄　蓉：(不知好歹，掉了头便找郭靖) 靖哥哥，你把杨大哥那柄匕首给穆姐姐。</p>
+<p>黄　蓉：(不知好歹，掉了头便找郭靖) 靖哥哥，你把杨大哥那柄匕首给穆姐姐</p>
 <p>郭　靖：(点头) 你说得是。（从怀里掏出那柄朱聪从梅超风身上取来的匕首，发现<br>外面包着的皮革上刺了许多小字）这上面有好些字。</p>
 <p>黄　蓉：(不耐烦) 你现在还有心去瞧？</p>
 <p>　　　 郭靖憨笑，将那皮革往怀里一塞，将匕首交给穆念慈。</p>
@@ -5163,7 +5163,7 @@
 <p>时：日</p>
 <p>人：郭靖　黄蓉</p>
 <p>黄蓉；这里好吗？</p>
-<p>郭　靖：(环顾四周，已忘了迈步) 我一辈子从未见过这么多，这么好看的桃花！</p>
+<p>郭　靖：(环顾四周，已忘了迈步) 我一辈子从未见过这么多，这么好看的桃花!</p>
 <p>黄　蓉： 这里的景致好吗？</p>
 <p>郭　靖：没想到你爹不爱说话，却把自己的家里布置得这样漂亮！</p>
 <p>黄 蓉：(得意之极)若在阳春三月，岛上的桃花盛开，那才教好看呢。师父不肯说<br>我爹爹的武功是天下第一，但爹爹种花的本事盖世无双，师父必要心服口服的。只<br>不过师父只是爱吃爱喝，未必懂得甚么是好花好木，当真俗气得紧。</p>
@@ -5193,7 +5193,7 @@
 <p>景：桃花岛 外</p>
 <p>时：暮</p>
 <p>　　　 盘膝运功的郭靖忽然听见远处充满诱惑力的箫声。</p>
-<p>郭 靖:张开眼睛，又听了两句，忍不住站起来，朝着箫声传来的方向走了两步。</p>
+<p>郭 靖:张开眼睛，又听了两句，忍不住站起来，朝着箫声传来的方向走了两步.</p>
 <p>郭 靖开始狂奔，而身边永远是树林的幻象与桃林的幻象交织在一起，一会儿翠绿，<br>一会儿晕红。</p>
 <p>　　　 他发现自己又走进了一条死路，而箫声又在反方向响起。</p>
 <p>郭　靖已经无法控制自己的心智，木偶一般跟着箫声奔跑，在山麓上纵跃。</p>
@@ -5368,8 +5368,8 @@
 <p>周伯通：(一愣) 怎么？你真的不愿意么？王重阳武功比我高太多所以不肯跟我结拜。<br>难道你武功也比我高得太多？你还摇头？若说武功一样才能结拜，那么我去跟黄老<br>邪、老毒物结拜？他们又嫌我打他们不过 。岂有此理，你要我跟这又聋又哑的家<br>伙结拜？</p>
 <p>　　　　说着跳了起来大发脾气，乱扯胡子。</p>
 <p>郭　靖：(忙不迭搀住) 弟子与前辈辈份实在差着太多，实在怕累前辈被人笑骂。日<br>后若是遇到马道长、丘道长，弟子岂不……</p>
-<p>周伯通：(掩面大哭) 休提这两个臭牛鼻子！你定是嫌我太老，不肯跟我结拜！！</p>
-<p>郭　靖：(吓慌了神，柔声) 别哭，别哭……（壮起嗓子）弟子与前辈结拜便是！</p>
+<p>周伯通：(掩面大哭) 休提这两个臭牛鼻子！你定是嫌我太老，不肯跟我结拜!</p>
+<p>郭　靖：(吓慌了神，柔声) 别哭，别哭……（壮起嗓子）弟子与前辈结拜便是!</p>
 <p>周伯通：(双足乱蹬) 你那是被我逼的，日后人家问起来，你定推在我的身上。总之<br>我知道你是不肯称我为义兄了！！</p>
 <p>郭　靖：(实在没法) 那咱们结为兄弟便是。</p>
 <p>周伯通：(停了干嚎)还要割手指头喝血酒，这一步是万万不能少的。你先割来看看！</p>
@@ -5461,7 +5461,7 @@
 <p>周伯通：(成心卖弄) 又约了别派好手的师伯、师叔、师兄、师弟、师姐、师妹、师<br>姑、师姨、师干爹、师干妈一古脑地出来……（喘口大气）我说到哪里了？</p>
 <p>郭　靖：师干妈。</p>
 <p>周伯通：(点头) 对，许多师干妈一齐来向黄裳为难，骂他行事不按武林中的规矩。<br>黄裳说，我是做官儿的，又不是武林中人，你们武林规矩甚么的，我怎么知道。对<br>方那些姨妈干爹就七嘴八舌地吵了起来。——兄弟，该你啦！</p>
-<p>郭　靖：(一愣，先护住了心口) 我也是姨妈干爹吗？（周伯通点头）我说什么？</p>
+<p>郭　靖：(一愣，先护住了心口) 我也是姨妈干爹吗？（周伯通点头）我说什么?</p>
 <p>周伯通：你说你若非武林中人，怎么会武，难道你师父只教你武功不教练武的规矩<br>么？</p>
 <p>郭　靖：(拿着架子) 你若非武林中人，怎么会武，难道你师父只教你武功不教练武<br>的规矩么？</p>
 <p>周伯通：(老老实实地一抱拳)我没师父。（语音激昂）那些人死也不信，吵到后来，<br>你说怎样？</p>
@@ -5566,7 +5566,7 @@
 <p>周伯通：(得意之极，踱来踱去地卖着关子) 我也奇怪得很哪。我问（转身对哑仆）<br>师哥，你这是干什么？（哑仆微笑）对，就是这个样子，他微笑不答！——我问，<br>你是怕人来偷来抢哪？</p>
 <p>郭　靖：谁敢来偷来抢重阳真人的东西？</p>
 <p>周伯通：(点头不迭) 对，对，兄弟你这个双篝接得好，今后一定要时时地接。我说，<br>（对哑仆）师哥呀师哥，你再不说话我就要来偷来抢啦！他让我自己想去！</p>
-<p>郭　靖：(忽然福至心灵，脱口而出) 对啊！正该好好地藏起来，其实烧了更好！</p>
+<p>郭　靖：(忽然福至心灵，脱口而出) 对啊！正该好好地藏起来，其实烧了更好!</p>
 <p>周伯通：(点头不迭) 正是，你这句接得也不错。（忽的一下回过头来）兄弟，你傻<br>头傻脑的，怎么一猜便中？</p>
 <p>郭　靖：(红了脸) 我只是想，王真人武功既已天下第一，他练得再强，也还是天下<br>第一。我还想，他到华山论剑，绝不是为了争天下第一的名头，而是要得这部《九<br>阴真经》；他要得到经书，也不是为了要练其中功夫，而是要救普天下的英雄好汉，<br>免得他们相互残杀，大家不得好死。</p>
 <p>　　　 周伯通面色阴晴不定，抬头向天，半晌不语。</p>
@@ -10830,7 +10830,7 @@
 <p>郭靖（边凑过去看边问）：谁呀？</p>
 <p>黄蓉：我的师侄，你的贤弟。</p>
 <p>郭靖：原来是归云庄的少庄主……蓉儿，你又讨我便宜。</p>
-<p>　　 陆冠英见到程瑶迦，怔了怔，不便细加打量，试探着又叫了一声：“店家。”</p>
+<p>　　 陆冠英见到程瑶迦，怔了怔，不便细加打量，试探着又叫了一声：”店家”</p>
 <p>　　 程瑶迦见是个青年男子，登觉害羞，忙转过了头。</p>
 <p>　　 陆冠英走到灶下也不见有人，闻到白饭香气，回头向程瑶迦告罪。</p>
 <p>陆冠英：在下腹中飢饿，讨碗饭吃，姑娘莫怪。</p>
@@ -11293,8 +11293,8 @@
 <p>场：五</p>
 <p>景：野店</p>
 <p>时：日</p>
-<p>人：黄药师　黄蓉　 郭靖　南希仁 全金发　韩宝驹　朱聪　韩小莹 柯镇恶　</p>
-<p>　　　众人已经回到野店坐定。</p>
+<p>人：黄药师　黄蓉　 郭靖　南希仁 全金发　韩宝驹　朱聪　韩小莹 柯镇恶</p>
+<p>众人已经回到野店坐定。</p>
 <p>黄药师：蓉儿，这些日子是怎么过来的，还要等爹爹问，你才肯说吗？</p>
 <p>黄蓉（慧黠一笑）：也没什么了不起的事，蓉儿不过是赶上一次沉船，还到过一个<br>荒岛，坐</p>
 <p>　　 了一次木筏，又闯了一次皇宫，还当上了一个小小的丐帮帮主……</p>
