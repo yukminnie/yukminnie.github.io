@@ -21,17 +21,17 @@
   </script>
 
   <meta property="og:type" content="article">
-<meta property="og:title" content="常忘的linux命令记录">
+<meta property="og:title" content="ubuntu的一些初始化配置">
 <meta property="og:url" content="http://example.com/2018/04/18/ssh%E5%92%8Cscp%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="Yukminnie">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Linux_scp_command_640x400.jpg.jpg">
+<meta property="og:image" content="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/ubuntu-logo-EED17E0B9E-seeklogo.com.png.png">
 <meta property="article:published_time" content="2018-04-18T05:30:35.000Z">
-<meta property="article:modified_time" content="2020-11-17T13:58:58.827Z">
+<meta property="article:modified_time" content="2020-11-22T05:26:37.728Z">
 <meta property="article:author" content="Yukminnie">
 <meta property="article:tag" content="软件">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Linux_scp_command_640x400.jpg.jpg">
+<meta name="twitter:image" content="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/ubuntu-logo-EED17E0B9E-seeklogo.com.png.png">
 
 <link rel="canonical" href="http://example.com/2018/04/18/ssh%E5%92%8Cscp%E8%AE%B0%E5%BD%95/">
 
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>常忘的linux命令记录 | Yukminnie</title>
+  <title>ubuntu的一些初始化配置 | Yukminnie</title>
   
 
 
@@ -197,7 +197,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          常忘的linux命令记录
+          ubuntu的一些初始化配置
         </h1>
 
         <div class="post-meta">
@@ -214,7 +214,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-17 21:58:58" itemprop="dateModified" datetime="2020-11-17T21:58:58+08:00">2020-11-17</time>
+                <time title="Modified: 2020-11-22 13:26:37" itemprop="dateModified" datetime="2020-11-22T13:26:37+08:00">2020-11-22</time>
               </span>
 
           
@@ -242,14 +242,47 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Linux_scp_command_640x400.jpg.jpg"></p>
+        <p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/ubuntu-logo-EED17E0B9E-seeklogo.com.png.png"></p>
 <a id="more"></a>
-<h4 id="ssh-和-scp"><a href="#ssh-和-scp" class="headerlink" title="ssh 和 scp"></a>ssh 和 scp</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># scp</span><br><span class="line"></span><br><span class="line">scp -P 29337 -r app root@ip:&#x2F;tmp</span><br><span class="line"></span><br><span class="line"># scp执行WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!错误解决</span><br><span class="line"></span><br><span class="line">1, 查看家目录下的.ssh&#x2F;know_hosts文件</span><br><span class="line">2, 删除对应的失效的客户端 ip</span><br><span class="line">cat ~&#x2F;.ssh&#x2F;known_hosts</span><br><span class="line">     </span><br><span class="line"># ssh</span><br><span class="line">ssh -p 29337 root@你的ip</span><br></pre></td></tr></table></figure>
 
-<h4 id="cp-拷贝命令"><a href="#cp-拷贝命令" class="headerlink" title="cp 拷贝命令"></a>cp 拷贝命令</h4><p>使用指令”cp”将当前目录”test/“下的所有文件复制到新目录”newtest”下，输入如下命令：</p>
+<p>16年入了台搬瓦工上的传家宝，一年/20刀，好好珍惜和爱护</p>
+<h4 id="免密登录"><a href="#免密登录" class="headerlink" title="免密登录"></a>免密登录</h4><p><strong>在本机生成 ssh key 公钥私钥</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -C mykey</span><br><span class="line">    </span><br><span class="line">ssh-keygen.exe -C mykey  # windows</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+<p><strong>会提示你生成的文件的地址, 并且让你输入密码, 你不要输入密码, 直接回车, 这样你就得到了一对 ssh-key</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">id_rsa 是私钥 自己保存 不要给别人</span><br><span class="line"></span><br><span class="line">id_rsa.pub 是公钥, 是要到处使用的</span><br></pre></td></tr></table></figure>
+<p><strong>把本机生成的 <code>id_rsa.pub</code> 添加到服务器 /root/.ssh/authorized_keys 文件中</strong></p>
+<p><strong>用 root 用户登录到服务器, 创建 .ssh 目录，创建authorized_keys文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;root</span><br><span class="line">mkdir .ssh</span><br><span class="line">touch authorized_keys</span><br></pre></td></tr></table></figure>
+
+<p><strong>编辑 authorized_keys 文件, 把刚才生成的 <code>id_rsa.pub</code> 文件里面的内容粘贴进去并保存退出, 这里可以粘贴多个 key, 一行一个</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nano .ssh&#x2F;authorized_keys</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>禁用密码登录</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nano &#x2F;etc&#x2F;ssh&#x2F;sshd_config</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>把里面的 PasswordAuthentication 改成 no 值</p>
+<p><strong>重启 ssh 服务</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service ssh restart</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h4><p>单独记录了, 在博客内搜索 <code>ufw防火墙</code></p>
+<h4 id="linux-oh-my-zsh"><a href="#linux-oh-my-zsh" class="headerlink" title="linux oh-my-zsh"></a>linux oh-my-zsh</h4><p> <strong>安装 oh-my-zsh 配置(方便你使用命令行的配置)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apt-get install</span><br><span class="line"></span><br><span class="line">wget https:&#x2F;&#x2F;github.com&#x2F;robbyrussell&#x2F;oh-my-zsh&#x2F;raw&#x2F;master&#x2F;tools&#x2F;install.sh -O - | sh</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="服务器中文编码问题"><a href="#服务器中文编码问题" class="headerlink" title="服务器中文编码问题"></a>服务器中文编码问题</h4><p><strong>编辑下面的文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nano &#x2F;etc&#x2F;environment</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>加入下面的内容, 保存退出</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LC_CTYPE&#x3D;&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_ALL&#x3D;&quot;en_US.UTF-8&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="随便记些命令"><a href="#随便记些命令" class="headerlink" title="随便记些命令"></a>随便记些命令</h4><h5 id="ssh-和-scp"><a href="#ssh-和-scp" class="headerlink" title="ssh 和 scp"></a>ssh 和 scp</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># scp</span><br><span class="line"></span><br><span class="line">scp -P 29337 -r app root@ip:&#x2F;tmp</span><br><span class="line"></span><br><span class="line"># scp执行WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!错误解决</span><br><span class="line"></span><br><span class="line">1, 查看家目录下的.ssh&#x2F;know_hosts文件</span><br><span class="line">2, 删除对应的失效的客户端 ip</span><br><span class="line">cat ~&#x2F;.ssh&#x2F;known_hosts</span><br><span class="line">     </span><br><span class="line"># ssh</span><br><span class="line">ssh -p 29337 root@你的ip</span><br></pre></td></tr></table></figure>
+
+<h5 id="cp-拷贝命令"><a href="#cp-拷贝命令" class="headerlink" title="cp 拷贝命令"></a>cp 拷贝命令</h5><p>使用指令”cp”将当前目录”test/“下的所有文件复制到新目录”newtest”下，输入如下命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp –r test&#x2F; newtest        </span><br></pre></td></tr></table></figure>
 
-<h4 id="Linux-查找文件、文件夹"><a href="#Linux-查找文件、文件夹" class="headerlink" title="Linux 查找文件、文件夹"></a>Linux 查找文件、文件夹</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 查找tomcat7文件夹所在的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;tomcat7&#39; -type d </span><br><span class="line"></span><br><span class="line"># 查找server.xml文件的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;server.xml&#39; -print</span><br></pre></td></tr></table></figure>
+<h5 id="Linux-查找文件、文件夹"><a href="#Linux-查找文件、文件夹" class="headerlink" title="Linux 查找文件、文件夹"></a>Linux 查找文件、文件夹</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 查找tomcat7文件夹所在的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;tomcat7&#39; -type d </span><br><span class="line"></span><br><span class="line"># 查找server.xml文件的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;server.xml&#39; -print</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -334,7 +367,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#ssh-%E5%92%8C-scp"><span class="nav-number">1.</span> <span class="nav-text">ssh 和 scp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cp-%E6%8B%B7%E8%B4%9D%E5%91%BD%E4%BB%A4"><span class="nav-number">2.</span> <span class="nav-text">cp 拷贝命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux-%E6%9F%A5%E6%89%BE%E6%96%87%E4%BB%B6%E3%80%81%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">3.</span> <span class="nav-text">Linux 查找文件、文件夹</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text">免密登录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99"><span class="nav-number">2.</span> <span class="nav-text">防火墙</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#linux-oh-my-zsh"><span class="nav-number">3.</span> <span class="nav-text">linux oh-my-zsh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">服务器中文编码问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9A%8F%E4%BE%BF%E8%AE%B0%E4%BA%9B%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">随便记些命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ssh-%E5%92%8C-scp"><span class="nav-number">5.1.</span> <span class="nav-text">ssh 和 scp</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#cp-%E6%8B%B7%E8%B4%9D%E5%91%BD%E4%BB%A4"><span class="nav-number">5.2.</span> <span class="nav-text">cp 拷贝命令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Linux-%E6%9F%A5%E6%89%BE%E6%96%87%E4%BB%B6%E3%80%81%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">5.3.</span> <span class="nav-text">Linux 查找文件、文件夹</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -348,7 +381,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-count">43</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

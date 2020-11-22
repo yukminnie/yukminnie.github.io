@@ -11501,7 +11501,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Oh-my-zsh的简单配置</title>
+    <title>Terminal和OMZ</title>
     <url>/2017/10/16/Oh-my-zsh%E7%9A%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/zsh-300x300.jpg.jpg"></p>
 <a id="more"></a>
@@ -11513,7 +11513,36 @@
 <h4 id="使配置生效"><a href="#使配置生效" class="headerlink" title="使配置生效"></a>使配置生效</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
 <h4 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 下载高亮插件</span><br><span class="line">cd ~&#x2F;.oh-my-zsh&#x2F;custom&#x2F;plugins</span><br><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;zsh-users&#x2F;zsh-syntax-highlighting.git</span><br><span class="line"></span><br><span class="line"># 配置</span><br><span class="line">plugins&#x3D;(</span><br><span class="line">zsh-syntax-highlighting</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># 配置生效</span><br><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
 
-<h4 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install zsh</span><br><span class="line"></span><br><span class="line">wget https:&#x2F;&#x2F;github.com&#x2F;robbyrussell&#x2F;oh-my-zsh&#x2F;raw&#x2F;master&#x2F;tools&#x2F;install.sh -O - | sh</span><br></pre></td></tr></table></figure>
+
+<h4 id="自定义一个命令例子"><a href="#自定义一个命令例子" class="headerlink" title="自定义一个命令例子"></a>自定义一个命令例子</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /User/minnie/demo/write_blog.sh    <span class="comment"># 很繁琐</span></span><br></pre></td></tr></table></figure>
+<!-- more -->
+
+<h5 id="1，修改系统变量"><a href="#1，修改系统变量" class="headerlink" title="1，修改系统变量"></a>1，修改系统变量</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑 ~/.bashrc 文件</span></span><br><span class="line"><span class="comment"># User/Minnie/demo 是我的脚本存储目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;User/Minnie/demo:<span class="variable">$PATH</span>&quot;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 source ~/.bashrc 使设置生效, 我们就可以这样执行脚本</span></span><br><span class="line"></span><br><span class="line">sh write_blog.sh    </span><br></pre></td></tr></table></figure>
+
+
+<h5 id="2，添加shebang声明"><a href="#2，添加shebang声明" class="headerlink" title="2，添加shebang声明"></a>2，添加shebang声明</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑脚本文件, 首行添加声明</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 现在我们可以这样执行脚本</span></span><br><span class="line"></span><br><span class="line">write_blog.sh</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="3，去除后缀名"><a href="#3，去除后缀名" class="headerlink" title="3，去除后缀名"></a>3，去除后缀名</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 后缀名也是没有意义的</span></span><br><span class="line"></span><br><span class="line">mv write_blog.sh write_blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 此时, 命令简化为</span></span><br><span class="line"></span><br><span class="line">write_blog</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="4，添加alias声明"><a href="#4，添加alias声明" class="headerlink" title="4，添加alias声明"></a>4，添加alias声明</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 再次编辑 ~/.bashrc 文件</span></span><br><span class="line"><span class="comment"># 添加 alias 命令</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> wb=<span class="string">&quot;write_blog&quot;</span>   </span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 _source ~/.bashrc_ 使设置生效, 最终成果</span></span><br><span class="line"></span><br><span class="line">wb</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="问题集锦"><a href="#问题集锦" class="headerlink" title="问题集锦"></a>问题集锦</h5><p>为什么不把脚本直接命名为wb, 而是使用alias</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">防止忘记了它的功能.</span><br></pre></td></tr></table></figure>
+
+<p>提示权限拒绝</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod +x write_blog</span><br></pre></td></tr></table></figure>
+
+<p>提示找不到文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shebang声明的路径不对</span><br></pre></td></tr></table></figure>
+
+<h5 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h5><p>自己的写博客脚本<code>bk.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Users/minnie/hexo/blog</span><br><span class="line">hexo new <span class="variable">$1</span></span><br><span class="line">code ~/hexo/blog/<span class="built_in">source</span>/_posts/</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<p>发布博客脚本<code>fb.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Users/minnie/hexo/blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <tags>
@@ -11677,16 +11706,49 @@
       </tags>
   </entry>
   <entry>
-    <title>常忘的linux命令记录</title>
+    <title>ubuntu的一些初始化配置</title>
     <url>/2018/04/18/ssh%E5%92%8Cscp%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Linux_scp_command_640x400.jpg.jpg"></p>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/ubuntu-logo-EED17E0B9E-seeklogo.com.png.png"></p>
 <a id="more"></a>
-<h4 id="ssh-和-scp"><a href="#ssh-和-scp" class="headerlink" title="ssh 和 scp"></a>ssh 和 scp</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># scp</span><br><span class="line"></span><br><span class="line">scp -P 29337 -r app root@ip:&#x2F;tmp</span><br><span class="line"></span><br><span class="line"># scp执行WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!错误解决</span><br><span class="line"></span><br><span class="line">1, 查看家目录下的.ssh&#x2F;know_hosts文件</span><br><span class="line">2, 删除对应的失效的客户端 ip</span><br><span class="line">cat ~&#x2F;.ssh&#x2F;known_hosts</span><br><span class="line">     </span><br><span class="line"># ssh</span><br><span class="line">ssh -p 29337 root@你的ip</span><br></pre></td></tr></table></figure>
 
-<h4 id="cp-拷贝命令"><a href="#cp-拷贝命令" class="headerlink" title="cp 拷贝命令"></a>cp 拷贝命令</h4><p>使用指令”cp”将当前目录”test/“下的所有文件复制到新目录”newtest”下，输入如下命令：</p>
+<p>16年入了台搬瓦工上的传家宝，一年/20刀，好好珍惜和爱护</p>
+<h4 id="免密登录"><a href="#免密登录" class="headerlink" title="免密登录"></a>免密登录</h4><p><strong>在本机生成 ssh key 公钥私钥</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -C mykey</span><br><span class="line">    </span><br><span class="line">ssh-keygen.exe -C mykey  # windows</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+<p><strong>会提示你生成的文件的地址, 并且让你输入密码, 你不要输入密码, 直接回车, 这样你就得到了一对 ssh-key</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">id_rsa 是私钥 自己保存 不要给别人</span><br><span class="line"></span><br><span class="line">id_rsa.pub 是公钥, 是要到处使用的</span><br></pre></td></tr></table></figure>
+<p><strong>把本机生成的 <code>id_rsa.pub</code> 添加到服务器 /root/.ssh/authorized_keys 文件中</strong></p>
+<p><strong>用 root 用户登录到服务器, 创建 .ssh 目录，创建authorized_keys文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;root</span><br><span class="line">mkdir .ssh</span><br><span class="line">touch authorized_keys</span><br></pre></td></tr></table></figure>
+
+<p><strong>编辑 authorized_keys 文件, 把刚才生成的 <code>id_rsa.pub</code> 文件里面的内容粘贴进去并保存退出, 这里可以粘贴多个 key, 一行一个</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano .ssh&#x2F;authorized_keys</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>禁用密码登录</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano &#x2F;etc&#x2F;ssh&#x2F;sshd_config</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>把里面的 PasswordAuthentication 改成 no 值</p>
+<p><strong>重启 ssh 服务</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service ssh restart</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h4><p>单独记录了, 在博客内搜索 <code>ufw防火墙</code></p>
+<h4 id="linux-oh-my-zsh"><a href="#linux-oh-my-zsh" class="headerlink" title="linux oh-my-zsh"></a>linux oh-my-zsh</h4><p> <strong>安装 oh-my-zsh 配置(方便你使用命令行的配置)</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get install</span><br><span class="line"></span><br><span class="line">wget https:&#x2F;&#x2F;github.com&#x2F;robbyrussell&#x2F;oh-my-zsh&#x2F;raw&#x2F;master&#x2F;tools&#x2F;install.sh -O - | sh</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="服务器中文编码问题"><a href="#服务器中文编码问题" class="headerlink" title="服务器中文编码问题"></a>服务器中文编码问题</h4><p><strong>编辑下面的文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano &#x2F;etc&#x2F;environment</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>加入下面的内容, 保存退出</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">LC_CTYPE&#x3D;&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_ALL&#x3D;&quot;en_US.UTF-8&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="随便记些命令"><a href="#随便记些命令" class="headerlink" title="随便记些命令"></a>随便记些命令</h4><h5 id="ssh-和-scp"><a href="#ssh-和-scp" class="headerlink" title="ssh 和 scp"></a>ssh 和 scp</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># scp</span><br><span class="line"></span><br><span class="line">scp -P 29337 -r app root@ip:&#x2F;tmp</span><br><span class="line"></span><br><span class="line"># scp执行WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!错误解决</span><br><span class="line"></span><br><span class="line">1, 查看家目录下的.ssh&#x2F;know_hosts文件</span><br><span class="line">2, 删除对应的失效的客户端 ip</span><br><span class="line">cat ~&#x2F;.ssh&#x2F;known_hosts</span><br><span class="line">     </span><br><span class="line"># ssh</span><br><span class="line">ssh -p 29337 root@你的ip</span><br></pre></td></tr></table></figure>
+
+<h5 id="cp-拷贝命令"><a href="#cp-拷贝命令" class="headerlink" title="cp 拷贝命令"></a>cp 拷贝命令</h5><p>使用指令”cp”将当前目录”test/“下的所有文件复制到新目录”newtest”下，输入如下命令：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cp –r test&#x2F; newtest        </span><br></pre></td></tr></table></figure>
 
-<h4 id="Linux-查找文件、文件夹"><a href="#Linux-查找文件、文件夹" class="headerlink" title="Linux 查找文件、文件夹"></a>Linux 查找文件、文件夹</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查找tomcat7文件夹所在的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;tomcat7&#39; -type d </span><br><span class="line"></span><br><span class="line"># 查找server.xml文件的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;server.xml&#39; -print</span><br></pre></td></tr></table></figure>
+<h5 id="Linux-查找文件、文件夹"><a href="#Linux-查找文件、文件夹" class="headerlink" title="Linux 查找文件、文件夹"></a>Linux 查找文件、文件夹</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查找tomcat7文件夹所在的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;tomcat7&#39; -type d </span><br><span class="line"></span><br><span class="line"># 查找server.xml文件的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;server.xml&#39; -print</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>软件</tag>
@@ -12076,6 +12138,178 @@
 ]]></content>
       <tags>
         <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker笔记-dockerfile</title>
+    <url>/2018/10/18/docker%E7%AC%94%E8%AE%B0-dockerfile/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/1_yKGxIarKT7_Ug6vbWz6f_Q.png.png"></p>
+<a id="more"></a>
+
+<h4 id="Dockerfile文件"><a href="#Dockerfile文件" class="headerlink" title="Dockerfile文件"></a>Dockerfile文件</h4><p>通过 Dockerfile 配置文件来执行 docker 相关操作, 比如构建自定义Docker镜像, 取代安装软件, 执行服务等相关操作</p>
+<p>./Dockerfile</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">FROM ubuntu:18.04</span><br><span class="line">RUN apt update</span><br><span class="line">RUN apt -y install python3 python3-pip</span><br><span class="line">RUN apt pip3 install flask</span><br><span class="line">COPY app.py &#x2F;code&#x2F;app.py</span><br><span class="line">WORKDIR &#x2F;code</span><br><span class="line">CMD [&quot;python3&quot;, &quot;app.py&quot;]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<!-- more -->
+
+<p>FROM 指定基础镜像<br>RUN 构建镜像时要执行的命令<br>COPY 拷贝当前目录文件, 到docker容器中, 不同于命令 docker cp, COPY会自动在docker创建不存在的文件夹<br>WORKDIR 命令运行的默认目录<br>CMD 容器运行后要执行的命令, 值得注意的是, 这些命令都是在 WORKDIR 指定的默认目录中运行的</p>
+<p>常用命令中还有个ENTRYPOINT命令, 用于指定容器运行后的入口程序, 意义比较小</p>
+<h4 id="使用Dockerfile"><a href="#使用Dockerfile" class="headerlink" title="使用Dockerfile"></a>使用Dockerfile</h4><p>1, 在编辑好的Dockerfile文件目录下(要进行拷贝的app.py文件也要拷贝到当前目录), 我们运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker build -p webimage .</span><br></pre></td></tr></table></figure>
+
+<p>build 构建<br>-p webimage 指定构建的镜像名字, 方便以后使用<br>. 当前目录为执行环境</p>
+<p>2, 完成后, 我们使用下面的命令, 查看目前所拥有的镜像</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p>3, 使用创建好的镜像,启动一个容器, 我们叫它 demo2</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d -t -p 3333:8000 --name demo2 webimage</span><br></pre></td></tr></table></figure>
+
+<p>至此, 我们就将之前的操作, 全部封装到了一个 叫 webimage 的镜像中, 下次我们在进行这些操作时, 只需要使用这个镜像, 去启动一个容器即可</p>
+<h4 id="服务器简单上传部署"><a href="#服务器简单上传部署" class="headerlink" title="服务器简单上传部署"></a>服务器简单上传部署</h4><p>1, 使用 scp 命令上传文件夹(文件夹内包含Dockerfile, a.py 等 )</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp -P 29337 -r app root@ip:&#x2F;tmp</span><br></pre></td></tr></table></figure>
+
+<p>-P 29337 指定ssh端口(默认是22的不需要指定, 注意P是大写)</p>
+<p>2, 然后 ssh 登陆</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -p 29337 root@ip</span><br></pre></td></tr></table></figure>
+<p>-p 29337 指定ssh端口(默认是22的不需要指定, 注意p是小写)</p>
+<p>3, 进入/tmp/app目录, 执行命令生成 webimage 镜像(服务器上操作需要添加 sudo)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo docker build -t webimage .</span><br></pre></td></tr></table></figure>
+
+<p>4, 最后使用 webimage 镜像生成容器</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sodo docker run -d -p 8000:5000 --name serverdemo webimage</span><br></pre></td></tr></table></figure>
+
+<p>5, 最后, 我们可以打开本地浏览器, 可以访问 服务器ip:8000</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>这样生成容器是方便了, 但是每次都要手动把文件上传, 很繁琐, 暂且搁下, 在说这个之前, 先说一下 docker 的数据共享问题</p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker笔记</title>
+    <url>/2018/10/16/docker%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Docker-Logo-White-RGB_Vertical-BG_0.png.png"></p>
+<a id="more"></a>
+
+<h4 id="docker-好处"><a href="#docker-好处" class="headerlink" title="docker 好处"></a>docker 好处</h4><p>1, 统一环境,标准化部署<br>    不同服务器的安装运行环境是不一样的,<br>    有些源不能及时更新,安装某些新软件甚至要手动编译</p>
+<p>2, 解决依赖问题<br>    不同微服务使用了不同的依赖,相互冲突</p>
+<p>3, 隔离应用的运行环境<br>    解决某些应用(redis)因为漏洞,导致服务器权限被他人获取</p>
+<p>4, 更轻量的虚拟环境</p>
+<h4 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d -t -p 8000:5000 --name demo ubuntu:18.04</span><br><span class="line"></span><br><span class="line">-d 后台</span><br><span class="line">-t 让一个空白的ubuntu镜像在后台运行</span><br><span class="line">-p 端口映射</span><br><span class="line">--name demo 指定容器名</span><br><span class="line">ubuntu:18.04 启动容器使用的镜像名, 没有的话, docker会自动从镜像服务器下载这个镜像</span><br></pre></td></tr></table></figure>
+
+<h4 id="容器中安装软件"><a href="#容器中安装软件" class="headerlink" title="容器中安装软件"></a>容器中安装软件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec demo apt update</span><br><span class="line">docker exec demo apt -y install python3 python3-pip</span><br><span class="line">docker exec demo apt pip3 install flask</span><br></pre></td></tr></table></figure>
+
+<h4 id="容器中启动应用"><a href="#容器中启动应用" class="headerlink" title="容器中启动应用"></a>容器中启动应用</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec demo mkdir &#x2F;code</span><br><span class="line">docker cp a.py &quot;demo:&#x2F;code&#x2F;a.py&quot;</span><br><span class="line">docker exec demo python3 &#x2F;code&#x2F;a.py</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>分别是: 在这个叫 demo 的容器中, 新建一个叫 code 的文件夹; 将当前目录下的 a.py 拷贝到容器的 code 文件夹中; 在容器中运行这个 a.py 文件</p>
+<p>浏览器打开localhost:8000, 可以看到打印输出 <code>Hello from Docker</code></p>
+<p>a.py参考</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from flask import Flask</span><br><span class="line"></span><br><span class="line">app &#x3D; Flask(__name__)</span><br><span class="line"></span><br><span class="line">@app.route(&#39;&#x2F;&#39;)</span><br><span class="line">def index():</span><br><span class="line">    return &#39;Hello from Docker&#39;</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &quot;__main__&quot;:</span><br><span class="line">    app.run(host&#x3D;&quot;0.0.0.0&quot;, debug&#x3D;True)</span><br></pre></td></tr></table></figure>
+
+<h4 id="用简单的脚本代替上面的工作"><a href="#用简单的脚本代替上面的工作" class="headerlink" title="用简单的脚本代替上面的工作"></a>用简单的脚本代替上面的工作</h4><p>1, 编写两个脚本</p>
+<p>install.sh</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt -y install python3 python3-pip</span><br><span class="line">apt pip3 install flask</span><br></pre></td></tr></table></figure>
+
+<p>run.sh</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;code </span><br><span class="line">python3 a.py</span><br></pre></td></tr></table></figure>
+
+<p>2, 执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d -t -p 3333:8000 --name demo1 ubuntu:18.04</span><br><span class="line"></span><br><span class="line">docker exec demo1 mkdir &#x2F;code</span><br><span class="line">docker cp a.py &quot;demo1:&#x2F;code&#x2F;a.py&quot;</span><br><span class="line">docker cp run.sh &quot;demo1:&#x2F;code&#x2F;run.sh&quot;</span><br><span class="line">docker cp install.sh &quot;demo1:&#x2F;code&#x2F;install.sh&quot;</span><br><span class="line">docker exec demo1 bash &#x2F;code&#x2F;install.sh</span><br><span class="line">docker exec demo1 bash &#x2F;code&#x2F;run.sh</span><br></pre></td></tr></table></figure>
+
+<h4 id="其它常用命令"><a href="#其它常用命令" class="headerlink" title="其它常用命令"></a>其它常用命令</h4><p>除了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run 创建</span><br><span class="line">docker exec 运行命令</span><br><span class="line">docker stop 停止</span><br><span class="line">docker rm 删除</span><br></pre></td></tr></table></figure>
+
+<p>常用命令还有</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps 列举</span><br><span class="line">docker ps -a 列举所有</span><br><span class="line">docker start 运行容器(容器正在运行, 再次运行这个命令并不会报错)</span><br></pre></td></tr></table></figure>
+
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>用脚本重复上面的步骤也是很繁琐的, 后面我们开始用 Dockerfile 来配置这些重复操作</p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker笔记-dockervolume</title>
+    <url>/2018/10/19/docker%E7%AC%94%E8%AE%B0-dockervolume/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/types-of-mounts-tmpfs.png.png"></p>
+<a id="more"></a>
+
+<h4 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h4><p>1, 容器之间数据是不通的, 删除容器后数据都会丢失, 所以docker引入了数据卷(volume)</p>
+<p>2, 不同容器可以使用, 同一数据卷存储, 备份, 共享数据</p>
+<p>3, 删除容器后, 挂载的数据卷不会删除</p>
+<!-- more -->
+
+<h4 id="数据卷使用"><a href="#数据卷使用" class="headerlink" title="数据卷使用"></a>数据卷使用</h4><p>1, 创建, 删除, 列举数据卷</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker volume create web</span><br><span class="line">docker volume rm web</span><br><span class="line">docker volume ls</span><br></pre></td></tr></table></figure>
+
+<p>2, 挂载数据卷</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name serverdemo2 --mount source&#x3D;web,target&#x3D;&#x2F;volume webimage</span><br></pre></td></tr></table></figure>
+
+<p>source=web  使用叫web的这个数据卷<br>target=/volume 挂在到/volume目录下</p>
+<h4 id="数据卷特性演示"><a href="#数据卷特性演示" class="headerlink" title="数据卷特性演示"></a>数据卷特性演示</h4><p>1, 现在生成一个容器, 叫做demo, 并挂载一个数据卷 web到 volume目录下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name demo --mount source&#x3D;web,target&#x3D;volume webimage</span><br></pre></td></tr></table></figure>
+
+<p>2, 我们使用两种不同的方式保存demo产生的数据</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec demo sh -c &quot;date &gt; &#x2F;b.txt&quot;</span><br><span class="line">docker exec demo sh -c &quot;date &gt; &#x2F;volume&#x2F;c.txt&quot;</span><br></pre></td></tr></table></figure>
+
+<p>3, 当我们删除容器demo后, b.txt也会被删除, 但是c.txt不会被删除, 我们可以打印出来</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec demo sh -c &quot;cat &#x2F;volume&#x2F;c.txt&quot;</span><br></pre></td></tr></table></figure>
+
+<p>4, 多容器共享数据, 我们只需要这样声明新容器 demo2</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name demo2 --mount source&#x3D;web,target&#x3D;v2 webimage</span><br></pre></td></tr></table></figure>
+<p>这时候, 尽管demo2还没有生成数据, 但是执行下面的cat命令, 却打印出了数据<br>docker exec demo2 sh -c “cat /v2/c.txt”</p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git配置笔记</title>
+    <url>/2017/08/03/git%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/The-Ultimate-Git-Mastery-Course-1.jpg.jpg"></p>
+<a id="more"></a>
+
+<p>Git的一个配置笔记，方便查询用</p>
+<h4 id="绑定"><a href="#绑定" class="headerlink" title="绑定"></a>绑定</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 秘钥生成</span></span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;钥匙名&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绑定账户</span></span><br><span class="line"></span><br><span class="line">git config --global user.name “your_username”  <span class="comment"># 设置用户名</span></span><br><span class="line">git config --global user.email “your_email”  <span class="comment"># 设置邮箱</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 连接验证, `坑: 是直接回车还会输入yes?`</span></span><br><span class="line"></span><br><span class="line">ssh -T git@git.coding.net  <span class="comment"># coding</span></span><br><span class="line">ssh -T git@github.com   <span class="comment"># github</span></span><br><span class="line">ssh -T git@gitee.com    <span class="comment"># oschina</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 你的英文名</span></span><br><span class="line"></span><br><span class="line">git config --global user.name</span><br><span class="line"></span><br><span class="line"><span class="comment"># 你的邮箱</span></span><br><span class="line"></span><br><span class="line">git config --global user.email</span><br><span class="line"></span><br><span class="line"><span class="comment"># Push 哪个分支(选择一个)</span></span><br><span class="line"></span><br><span class="line">git config --global push.default matching	<span class="comment"># push 所有分支</span></span><br><span class="line">git config --global push.default simple	   <span class="comment"># push 当前分支</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置提交信息不被转义</span></span><br><span class="line"></span><br><span class="line">git config --global core.quotepath <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置默认编辑工具</span></span><br><span class="line"></span><br><span class="line">git config --global core.editor <span class="string">&quot;vim&quot;</span> 编辑工具</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 新建目录</span></span><br><span class="line"></span><br><span class="line">mkdir git-demo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> git-demo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化</span></span><br><span class="line"></span><br><span class="line">git init</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加到本地缓存</span></span><br><span class="line"></span><br><span class="line">git add 文件</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交到本地仓库</span></span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">&#x27;提交信息&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加远程仓库</span></span><br><span class="line"></span><br><span class="line">git remote add origin 仓库名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 远程仓库拉取</span></span><br><span class="line"></span><br><span class="line">git pull</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交远程仓库</span></span><br><span class="line"></span><br><span class="line">git push -u origin master <span class="comment"># 再次提交只需要git push</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote add origin git@github.com:xxxxxxx.git 将本地仓库与远程仓库关联</span><br><span class="line">git remote set-url origin git@github.com:xxxxx.git 上一步手抖了，可以用这个命令来挽回</span><br><span class="line">git branch 新建分支</span><br><span class="line">git merge 合并分支</span><br><span class="line">git stash 通灵术</span><br><span class="line">git stash pop 反转通灵术</span><br><span class="line">git revert 后悔了</span><br><span class="line">git reset 另一种后悔了</span><br><span class="line">git diff 查看详细变化</span><br></pre></td></tr></table></figure>
+
+<h4 id="看不懂时"><a href="#看不懂时" class="headerlink" title="看不懂时"></a>看不懂时</h4><blockquote>
+<p>拿走 explainshell.com</p>
+</blockquote>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/yukminnie_2018-08-03_15-05-48.jpg"></p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>群晖问题记录</title>
+    <url>/2018/06/07/%E7%BE%A4%E6%99%96%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-22_13-37-14.png.png"></p>
+<a id="more"></a>
+
+<p>关于乞丐版群晖的二三事</p>
+<h4 id="格盘"><a href="#格盘" class="headerlink" title="格盘"></a>格盘</h4><p>最开始就是各种问题。黑群晖的数据盘(群晖系统和数据不分离)，在插入白群后，提示的不是分区安装系统，而是格盘</p>
+<p>很迷的操作，就像小米路由R1D硬盘版一样</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>在线离线，DSM系统都无法安装，无线网络下，每次上传成功后，就卡在格式化硬盘这一步</p>
+<p>论坛爬帖，说是要使用有线连接，无效</p>
+<p>后来发现，只能通过群晖的 Synology Assistant桌面套件，才能顺利进行安装，这是坑一</p>
+<p>坑二就是，原来的黑群晖盘，即使安装了ubuntu，存在于局域网中时，也会被识别为群晖，从而发生找错了硬件这种事情</p>
+<h4 id="拷贝"><a href="#拷贝" class="headerlink" title="拷贝"></a>拷贝</h4><p>群晖的数据盘中，会默认每个目录下，生成一个 eaDir 索引文件夹，硬盘单独掏出来，向外复制的时候，这些文件夹会一直提示不存在</p>
+<p>开始习惯性的一个一个点跳过，后来搜索了一下，一共有2000多个这样的文件夹，而复制时间需要8个小时~</p>
+<p>先删索引目录吧，机器性能弱，索引目录删了半个多钟头~</p>
+<h4 id="题外"><a href="#题外" class="headerlink" title="题外"></a>题外</h4><p>打开云盘同步后，惊讶的发现，国内网盘除了百度云，后面跟着的，竟然是阿里云OSS和腾讯云COS </p>
+<p>然后就是清一色的国外网盘, 乞丐版又不支持安装Docker，所以无法安装飞机，进而无法同步</p>
+<hr>
+<p>那只能从路由下手了</p>
+<p>博客内搜<code>软路由</code></p>
+]]></content>
+      <tags>
+        <tag>硬件</tag>
       </tags>
   </entry>
 </search>
