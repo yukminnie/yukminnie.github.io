@@ -20,6 +20,24 @@
       </tags>
   </entry>
   <entry>
+    <title>软件安装记录</title>
+    <url>/2018/02/06/Chocolatey/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/brewsci-256x256.png.png"></p>
+<a id="more"></a>
+
+<h4 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/landing-medium-1.jpg.jpg"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># brew</span><br><span class="line">&#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install.sh)&quot;</span><br><span class="line"></span><br><span class="line"># git</span><br><span class="line">brew install git</span><br><span class="line"></span><br><span class="line"># oh-my-zsh</span><br><span class="line">sh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.github.com&#x2F;ohmyzsh&#x2F;ohmyzsh&#x2F;master&#x2F;tools&#x2F;install.sh)&quot;</span><br><span class="line"></span><br><span class="line"># cask</span><br><span class="line">brew cask install  visual-studio-code mweb picgo  telegram postman alfred the-unarchiver anki avidemux foxmail iina webstorm feem baidunetdisk google-chrome downie marginnote baiduinput</span><br><span class="line"></span><br><span class="line"># bash</span><br><span class="line">brew install nodejs npm ffmpeg youtube-dl</span><br><span class="line"></span><br><span class="line"># other </span><br><span class="line">tuxera-ntfs</span><br></pre></td></tr></table></figure>
+
+<h4 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/landing-medium.jpg.jpg"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># install</span><br><span class="line">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol &#x3D; [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https:&#x2F;&#x2F;chocolatey.org&#x2F;install.ps1&#39;))</span><br><span class="line"></span><br><span class="line"># 旧的(例如win8.1)可能会报错, 提示 WMF 版本低之类, 解决方法如下(或者微软官网下载 WMF)</span><br><span class="line">choco install powershell</span><br><span class="line"></span><br><span class="line"># main</span><br><span class="line">choco install wox git nodejs youtube-dl aria2 greenshot ffmpeg atom 7zip postman potplayer bitvise-ssh-client vscode winscp pycharm-community docker mysql picgo avidemux joplin -y</span><br><span class="line"></span><br><span class="line"># proxy  使用基于网卡代理的软件接管流量效果比较好</span><br><span class="line">choco config set proxy http:&#x2F;&#x2F;localhost:8888</span><br><span class="line"></span><br><span class="line"># spider </span><br><span class="line">choco install streamlink fiddler selenium-chrome-driver phantomjs -y</span><br><span class="line"></span><br><span class="line"># sql</span><br><span class="line">choco install redis-64 mysql sqlite dbeaver</span><br><span class="line"></span><br><span class="line"># upanok</span><br><span class="line">rufus cpu-z.install  crystaldiskinfo sqlite </span><br><span class="line"></span><br><span class="line"># .net .vc 直接搜索版本就好, 例子如下</span><br><span class="line">choco install dotnet3.5</span><br><span class="line">choco install dotnet4.0</span><br><span class="line">choco install dotnet4.5</span><br><span class="line">choco install dotnet4.5.1</span><br><span class="line">choco install dotnet4.5.2</span><br><span class="line">choco install dotnet4.6</span><br><span class="line">choco install dotnet4.6.1</span><br><span class="line">choco install dotnet4.6.2</span><br><span class="line">choco install dotnet4.7</span><br><span class="line">choco install dotnet4.7.1</span><br><span class="line">choco install dotnet4.7.2</span><br><span class="line">choco install netfx-4.8</span><br><span class="line"></span><br><span class="line">choco install vcredist2005 vcredist2008 vcredist2010 vcredist2012</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># other</span><br><span class="line">choco install gitextensions poweriso anaconda3</span><br><span class="line"></span><br><span class="line"># ss</span><br><span class="line">choco install shadowsocksr-windows</span><br><span class="line">choco install shadowsocks</span><br><span class="line">choco install shadowsocks-qt5</span><br><span class="line">choco install openconnect-gui</span><br></pre></td></tr></table></figure>
+
+<h4 id="mac-其他软件"><a href="#mac-其他软件" class="headerlink" title="mac 其他软件"></a>mac 其他软件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Neat download manager</span><br><span class="line"></span><br><span class="line">SmoothScroll</span><br><span class="line"></span><br><span class="line">clover </span><br><span class="line"></span><br><span class="line">hackintool</span><br><span class="line"></span><br><span class="line">feem</span><br><span class="line"></span><br><span class="line">irreader</span><br><span class="line"></span><br><span class="line">pdf expert</span><br><span class="line"></span><br><span class="line">mellow</span><br><span class="line"></span><br><span class="line">paste(ccboard)</span><br><span class="line"></span><br><span class="line">cleanmymacx(柠檬清理)</span><br><span class="line"></span><br><span class="line">图压(tuya.xinxiao.tech)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>FFmpeg日常用法</title>
     <url>/2019/06/06/FFmpeg/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/1_M991891hzkJrFHyMzWrhSg.jpeg.jpeg"></p>
@@ -39,24 +57,6 @@
 <h4 id="转-gif"><a href="#转-gif" class="headerlink" title="转 gif"></a>转 gif</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ffmpeg -i IMG_8619.MP4 -s 320x240 -r &#39;5&#39; ou1t.gif</span><br></pre></td></tr></table></figure>
 
 <h4 id="和-youtube-dl-搭配下载指定视频片段"><a href="#和-youtube-dl-搭配下载指定视频片段" class="headerlink" title="和 youtube-dl 搭配下载指定视频片段"></a>和 youtube-dl 搭配下载指定视频片段</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ffmpeg -i &quot;youtube-dl -g 获取的视频直链&quot; -ss 00:15:15.00 -to 00:17:10.00 -c copy out.mp4</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软件安装记录</title>
-    <url>/2018/02/06/Chocolatey/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/brewsci-256x256.png.png"></p>
-<a id="more"></a>
-
-<h4 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/landing-medium-1.jpg.jpg"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># brew</span><br><span class="line">&#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install.sh)&quot;</span><br><span class="line"></span><br><span class="line"># git</span><br><span class="line">brew install git</span><br><span class="line"></span><br><span class="line"># oh-my-zsh</span><br><span class="line">sh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.github.com&#x2F;ohmyzsh&#x2F;ohmyzsh&#x2F;master&#x2F;tools&#x2F;install.sh)&quot;</span><br><span class="line"></span><br><span class="line"># cask</span><br><span class="line">brew cask install  visual-studio-code mweb picgo  telegram postman alfred the-unarchiver anki avidemux foxmail iina webstorm feem baidunetdisk google-chrome downie marginnote baiduinput</span><br><span class="line"></span><br><span class="line"># bash</span><br><span class="line">brew install nodejs npm ffmpeg youtube-dl</span><br><span class="line"></span><br><span class="line"># other </span><br><span class="line">tuxera-ntfs</span><br></pre></td></tr></table></figure>
-
-<h4 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/landing-medium.jpg.jpg"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># install</span><br><span class="line">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol &#x3D; [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https:&#x2F;&#x2F;chocolatey.org&#x2F;install.ps1&#39;))</span><br><span class="line"></span><br><span class="line"># 旧的(例如win8.1)可能会报错, 提示 WMF 版本低之类, 解决方法如下(或者微软官网下载 WMF)</span><br><span class="line">choco install powershell</span><br><span class="line"></span><br><span class="line"># main</span><br><span class="line">choco install wox git nodejs youtube-dl aria2 greenshot ffmpeg atom 7zip postman potplayer bitvise-ssh-client vscode winscp pycharm-community docker mysql picgo avidemux joplin -y</span><br><span class="line"></span><br><span class="line"># proxy  使用基于网卡代理的软件接管流量效果比较好</span><br><span class="line">choco config set proxy http:&#x2F;&#x2F;localhost:8888</span><br><span class="line"></span><br><span class="line"># spider </span><br><span class="line">choco install streamlink fiddler selenium-chrome-driver phantomjs -y</span><br><span class="line"></span><br><span class="line"># sql</span><br><span class="line">choco install redis-64 mysql sqlite dbeaver</span><br><span class="line"></span><br><span class="line"># upanok</span><br><span class="line">rufus cpu-z.install  crystaldiskinfo sqlite </span><br><span class="line"></span><br><span class="line"># .net .vc 直接搜索版本就好, 例子如下</span><br><span class="line">choco install dotnet3.5</span><br><span class="line">choco install dotnet4.0</span><br><span class="line">choco install dotnet4.5</span><br><span class="line">choco install dotnet4.5.1</span><br><span class="line">choco install dotnet4.5.2</span><br><span class="line">choco install dotnet4.6</span><br><span class="line">choco install dotnet4.6.1</span><br><span class="line">choco install dotnet4.6.2</span><br><span class="line">choco install dotnet4.7</span><br><span class="line">choco install dotnet4.7.1</span><br><span class="line">choco install dotnet4.7.2</span><br><span class="line">choco install netfx-4.8</span><br><span class="line"></span><br><span class="line">choco install vcredist2005 vcredist2008 vcredist2010 vcredist2012</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># other</span><br><span class="line">choco install gitextensions poweriso anaconda3</span><br><span class="line"></span><br><span class="line"># ss</span><br><span class="line">choco install shadowsocksr-windows</span><br><span class="line">choco install shadowsocks</span><br><span class="line">choco install shadowsocks-qt5</span><br><span class="line">choco install openconnect-gui</span><br></pre></td></tr></table></figure>
-
-<h4 id="mac-其他软件"><a href="#mac-其他软件" class="headerlink" title="mac 其他软件"></a>mac 其他软件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Neat download manager</span><br><span class="line"></span><br><span class="line">SmoothScroll</span><br><span class="line"></span><br><span class="line">clover </span><br><span class="line"></span><br><span class="line">hackintool</span><br><span class="line"></span><br><span class="line">feem</span><br><span class="line"></span><br><span class="line">irreader</span><br><span class="line"></span><br><span class="line">pdf expert</span><br><span class="line"></span><br><span class="line">mellow</span><br><span class="line"></span><br><span class="line">paste(ccboard)</span><br><span class="line"></span><br><span class="line">cleanmymacx(柠檬清理)</span><br><span class="line"></span><br><span class="line">图压(tuya.xinxiao.tech)</span><br></pre></td></tr></table></figure>
-]]></content>
       <tags>
         <tag>软件</tag>
       </tags>
@@ -155,38 +155,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vaagrant虚拟机管理</title>
-    <url>/2018/09/16/Vaagrant%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/49997.png.png"></p>
-<a id="more"></a>
-
-<h4 id="查看-box-列表"><a href="#查看-box-列表" class="headerlink" title="查看 box 列表"></a>查看 box 列表</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vagrant box list</span><br></pre></td></tr></table></figure>
-
-<h4 id="vagrant-镜像站"><a href="#vagrant-镜像站" class="headerlink" title="vagrant 镜像站"></a>vagrant 镜像站</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vagrantcloud.com</span><br></pre></td></tr></table></figure>
-
-<h4 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">vagrant box add  添加</span><br><span class="line">vagrant init &#39;box name&#39; 初始化(此时会生成Vagrantfile文件，我们可以配置它)</span><br><span class="line">vagrant up 启动</span><br><span class="line">vagrant ssh 登录</span><br><span class="line">vagrant status 查询当前状态</span><br><span class="line">vagrant halt 停止</span><br><span class="line">vagrant suspend 暂停状态</span><br><span class="line">vagrant resume 恢复 </span><br><span class="line">vagrant reload 重启</span><br><span class="line">vagrant destroy 销毁</span><br></pre></td></tr></table></figure>
-
-<h4 id="网络分类"><a href="#网络分类" class="headerlink" title="网络分类"></a>网络分类</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#96;端口转发，不太灵活&#96;</span><br><span class="line">把本机的端口指向虚拟机的端口  </span><br><span class="line"></span><br><span class="line">&#96;私有网络，适合个人&#96;</span><br><span class="line">虚拟机设置指定ip，只有本机可以访问  </span><br><span class="line"></span><br><span class="line">&#96;公有网络，适合团队&#96;</span><br><span class="line">虚拟机设置指定ip，局域网成员均可访问</span><br></pre></td></tr></table></figure>
-
-<h4 id="配置额外共享目录"><a href="#配置额外共享目录" class="headerlink" title="配置额外共享目录"></a>配置额外共享目录</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1. 查找config.vm.synced_folder 选项，解除注释</span><br><span class="line"></span><br><span class="line">2. 开启默认功能，并设置虚拟机共享目录权限(注意默认行后面要添加逗号)</span><br><span class="line">create: true, owner: &#39;root&#39;, group: &#39;root&#39;</span><br><span class="line"></span><br><span class="line">3. 重启虚拟机</span><br></pre></td></tr></table></figure>
-
-<h4 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1. 在Vagrantfile文件中搜索 private 或者 public 字样，进行注释或者解除注释</span><br><span class="line"></span><br><span class="line">2. vagrant reload 重启虚拟机</span><br><span class="line"></span><br><span class="line">3. vagrant ssh 登录虚拟机</span><br><span class="line"></span><br><span class="line">4. ifconfig 查看虚拟机ip</span><br><span class="line"></span><br><span class="line">5. 通过浏览器或者ping命令进行检查，和虚拟机是否畅通</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="重新打包"><a href="#重新打包" class="headerlink" title="重新打包"></a>重新打包</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1. 打包前删除虚拟机下 &#x2F;etc&#x2F;udev&#x2F;rules.d&#x2F; 的配置文件</span><br><span class="line"></span><br><span class="line">2. 退出虚拟机，执行 vagrant package , 就会在当前目录下生成打包好的 package.box 文件</span><br></pre></td></tr></table></figure>
-
-<h4 id="多台主机"><a href="#多台主机" class="headerlink" title="多台主机"></a>多台主机</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1. 加载镜像 vagrant box add  boxname boxurl</span><br><span class="line"></span><br><span class="line">2. 我们在 Vagrantfile 文件中，编辑 config 字段</span><br><span class="line">config.vm.define &#39;development&#39; do |development|</span><br><span class="line">end</span><br><span class="line">config.vm.define &#39;production&#39; do |production|</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">3. 执行 vagrant up ，两台主机生成</span><br></pre></td></tr></table></figure>
-
-<h4 id="多台主机网络设置，自定义主机名-etc-sysconfig-network"><a href="#多台主机网络设置，自定义主机名-etc-sysconfig-network" class="headerlink" title="多台主机网络设置，自定义主机名(/etc/sysconfig/network)"></a>多台主机网络设置，自定义主机名(/etc/sysconfig/network)</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1. 其实就是private网络配置了，不过要添加到主机配置文件之间(注意缩进)</span><br><span class="line"></span><br><span class="line">config.vm.define &#39;development&#39; do |development|</span><br><span class="line">    development.vm.network &#39;private_network&#39;, ip: &#39;你自定义的ip地址’</span><br><span class="line">    devolopment.vm.hostname &#x3D; &#39;自定义主机名‘</span><br><span class="line">end</span><br><span class="line">config.vm.define &#39;production&#39; do |production|</span><br><span class="line">    production.vm.network &#39;private_network&#39;, ip: &#39;你自定义的ip地址’</span><br><span class="line">    production.vm.hostname &#x3D; &#39;自定义主机名’</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">2. 公有网络就是直接更改 ，原有public 文件即可</span><br><span class="line"></span><br><span class="line">3. 执行命令 vagrant.reload 重启虚拟机</span><br></pre></td></tr></table></figure>
-
-<h4 id="多主机共享目录"><a href="#多主机共享目录" class="headerlink" title="多主机共享目录"></a>多主机共享目录</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 我们在 vagrantfile同级目录中分别创建 development , production 两个目录</span><br><span class="line"></span><br><span class="line">2. 同样是在上个设置项的config.vm.define字段中 ， 添加如下字段</span><br><span class="line">development.vm.synced_folder &#39;.&#x2F;development&#39;, &#39;&#x2F;vagrant&#39;</span><br><span class="line">production.vm.synced_folder &#39;.&#x2F;production&#39;, &#39;&#x2F;vagrant&#39;</span><br><span class="line"></span><br><span class="line">3. 执行命令 vagrant.reload 重启虚拟机</span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Systemctl服务管理</title>
     <url>/2017/10/06/Systemctl%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_19-11-13.png.png"></p>
@@ -229,6 +197,38 @@
 
 <p> 禁止服务启动,解除禁止服务启动</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo systemctl mask 服务名</span><br><span class="line">sudo systemctl unmask 服务名</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vaagrant虚拟机管理</title>
+    <url>/2018/09/16/Vaagrant%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/49997.png.png"></p>
+<a id="more"></a>
+
+<h4 id="查看-box-列表"><a href="#查看-box-列表" class="headerlink" title="查看 box 列表"></a>查看 box 列表</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vagrant box list</span><br></pre></td></tr></table></figure>
+
+<h4 id="vagrant-镜像站"><a href="#vagrant-镜像站" class="headerlink" title="vagrant 镜像站"></a>vagrant 镜像站</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vagrantcloud.com</span><br></pre></td></tr></table></figure>
+
+<h4 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">vagrant box add  添加</span><br><span class="line">vagrant init &#39;box name&#39; 初始化(此时会生成Vagrantfile文件，我们可以配置它)</span><br><span class="line">vagrant up 启动</span><br><span class="line">vagrant ssh 登录</span><br><span class="line">vagrant status 查询当前状态</span><br><span class="line">vagrant halt 停止</span><br><span class="line">vagrant suspend 暂停状态</span><br><span class="line">vagrant resume 恢复 </span><br><span class="line">vagrant reload 重启</span><br><span class="line">vagrant destroy 销毁</span><br></pre></td></tr></table></figure>
+
+<h4 id="网络分类"><a href="#网络分类" class="headerlink" title="网络分类"></a>网络分类</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#96;端口转发，不太灵活&#96;</span><br><span class="line">把本机的端口指向虚拟机的端口  </span><br><span class="line"></span><br><span class="line">&#96;私有网络，适合个人&#96;</span><br><span class="line">虚拟机设置指定ip，只有本机可以访问  </span><br><span class="line"></span><br><span class="line">&#96;公有网络，适合团队&#96;</span><br><span class="line">虚拟机设置指定ip，局域网成员均可访问</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置额外共享目录"><a href="#配置额外共享目录" class="headerlink" title="配置额外共享目录"></a>配置额外共享目录</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1. 查找config.vm.synced_folder 选项，解除注释</span><br><span class="line"></span><br><span class="line">2. 开启默认功能，并设置虚拟机共享目录权限(注意默认行后面要添加逗号)</span><br><span class="line">create: true, owner: &#39;root&#39;, group: &#39;root&#39;</span><br><span class="line"></span><br><span class="line">3. 重启虚拟机</span><br></pre></td></tr></table></figure>
+
+<h4 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1. 在Vagrantfile文件中搜索 private 或者 public 字样，进行注释或者解除注释</span><br><span class="line"></span><br><span class="line">2. vagrant reload 重启虚拟机</span><br><span class="line"></span><br><span class="line">3. vagrant ssh 登录虚拟机</span><br><span class="line"></span><br><span class="line">4. ifconfig 查看虚拟机ip</span><br><span class="line"></span><br><span class="line">5. 通过浏览器或者ping命令进行检查，和虚拟机是否畅通</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="重新打包"><a href="#重新打包" class="headerlink" title="重新打包"></a>重新打包</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1. 打包前删除虚拟机下 &#x2F;etc&#x2F;udev&#x2F;rules.d&#x2F; 的配置文件</span><br><span class="line"></span><br><span class="line">2. 退出虚拟机，执行 vagrant package , 就会在当前目录下生成打包好的 package.box 文件</span><br></pre></td></tr></table></figure>
+
+<h4 id="多台主机"><a href="#多台主机" class="headerlink" title="多台主机"></a>多台主机</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1. 加载镜像 vagrant box add  boxname boxurl</span><br><span class="line"></span><br><span class="line">2. 我们在 Vagrantfile 文件中，编辑 config 字段</span><br><span class="line">config.vm.define &#39;development&#39; do |development|</span><br><span class="line">end</span><br><span class="line">config.vm.define &#39;production&#39; do |production|</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">3. 执行 vagrant up ，两台主机生成</span><br></pre></td></tr></table></figure>
+
+<h4 id="多台主机网络设置，自定义主机名-etc-sysconfig-network"><a href="#多台主机网络设置，自定义主机名-etc-sysconfig-network" class="headerlink" title="多台主机网络设置，自定义主机名(/etc/sysconfig/network)"></a>多台主机网络设置，自定义主机名(/etc/sysconfig/network)</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1. 其实就是private网络配置了，不过要添加到主机配置文件之间(注意缩进)</span><br><span class="line"></span><br><span class="line">config.vm.define &#39;development&#39; do |development|</span><br><span class="line">    development.vm.network &#39;private_network&#39;, ip: &#39;你自定义的ip地址’</span><br><span class="line">    devolopment.vm.hostname &#x3D; &#39;自定义主机名‘</span><br><span class="line">end</span><br><span class="line">config.vm.define &#39;production&#39; do |production|</span><br><span class="line">    production.vm.network &#39;private_network&#39;, ip: &#39;你自定义的ip地址’</span><br><span class="line">    production.vm.hostname &#x3D; &#39;自定义主机名’</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">2. 公有网络就是直接更改 ，原有public 文件即可</span><br><span class="line"></span><br><span class="line">3. 执行命令 vagrant.reload 重启虚拟机</span><br></pre></td></tr></table></figure>
+
+<h4 id="多主机共享目录"><a href="#多主机共享目录" class="headerlink" title="多主机共享目录"></a>多主机共享目录</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 我们在 vagrantfile同级目录中分别创建 development , production 两个目录</span><br><span class="line"></span><br><span class="line">2. 同样是在上个设置项的config.vm.define字段中 ， 添加如下字段</span><br><span class="line">development.vm.synced_folder &#39;.&#x2F;development&#39;, &#39;&#x2F;vagrant&#39;</span><br><span class="line">production.vm.synced_folder &#39;.&#x2F;production&#39;, &#39;&#x2F;vagrant&#39;</span><br><span class="line"></span><br><span class="line">3. 执行命令 vagrant.reload 重启虚拟机</span><br></pre></td></tr></table></figure>
 
 
 ]]></content>
@@ -299,6 +299,41 @@
       </tags>
   </entry>
   <entry>
+    <title>docker笔记-dockervolume</title>
+    <url>/2018/10/19/docker%E7%AC%94%E8%AE%B0-dockervolume/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/types-of-mounts-tmpfs.png.png"></p>
+<a id="more"></a>
+
+<h4 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h4><p>1, 容器之间数据是不通的, 删除容器后数据都会丢失, 所以docker引入了数据卷(volume)</p>
+<p>2, 不同容器可以使用, 同一数据卷存储, 备份, 共享数据</p>
+<p>3, 删除容器后, 挂载的数据卷不会删除</p>
+<!-- more -->
+
+<h4 id="数据卷使用"><a href="#数据卷使用" class="headerlink" title="数据卷使用"></a>数据卷使用</h4><p>1, 创建, 删除, 列举数据卷</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker volume create web</span><br><span class="line">docker volume rm web</span><br><span class="line">docker volume ls</span><br></pre></td></tr></table></figure>
+
+<p>2, 挂载数据卷</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name serverdemo2 --mount source&#x3D;web,target&#x3D;&#x2F;volume webimage</span><br></pre></td></tr></table></figure>
+
+<p>source=web  使用叫web的这个数据卷<br>target=/volume 挂在到/volume目录下</p>
+<h4 id="数据卷特性演示"><a href="#数据卷特性演示" class="headerlink" title="数据卷特性演示"></a>数据卷特性演示</h4><p>1, 现在生成一个容器, 叫做demo, 并挂载一个数据卷 web到 volume目录下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name demo --mount source&#x3D;web,target&#x3D;volume webimage</span><br></pre></td></tr></table></figure>
+
+<p>2, 我们使用两种不同的方式保存demo产生的数据</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec demo sh -c &quot;date &gt; &#x2F;b.txt&quot;</span><br><span class="line">docker exec demo sh -c &quot;date &gt; &#x2F;volume&#x2F;c.txt&quot;</span><br></pre></td></tr></table></figure>
+
+<p>3, 当我们删除容器demo后, b.txt也会被删除, 但是c.txt不会被删除, 我们可以打印出来</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec demo sh -c &quot;cat &#x2F;volume&#x2F;c.txt&quot;</span><br></pre></td></tr></table></figure>
+
+<p>4, 多容器共享数据, 我们只需要这样声明新容器 demo2</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name demo2 --mount source&#x3D;web,target&#x3D;v2 webimage</span><br></pre></td></tr></table></figure>
+<p>这时候, 尽管demo2还没有生成数据, 但是执行下面的cat命令, 却打印出了数据<br>docker exec demo2 sh -c “cat /v2/c.txt”</p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>docker笔记</title>
     <url>/2018/10/16/docker%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Docker-Logo-White-RGB_Vertical-BG_0.png.png"></p>
@@ -335,41 +370,6 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps 列举</span><br><span class="line">docker ps -a 列举所有</span><br><span class="line">docker start 运行容器(容器正在运行, 再次运行这个命令并不会报错)</span><br></pre></td></tr></table></figure>
 
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>用脚本重复上面的步骤也是很繁琐的, 后面我们开始用 Dockerfile 来配置这些重复操作</p>
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>docker笔记-dockervolume</title>
-    <url>/2018/10/19/docker%E7%AC%94%E8%AE%B0-dockervolume/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/types-of-mounts-tmpfs.png.png"></p>
-<a id="more"></a>
-
-<h4 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h4><p>1, 容器之间数据是不通的, 删除容器后数据都会丢失, 所以docker引入了数据卷(volume)</p>
-<p>2, 不同容器可以使用, 同一数据卷存储, 备份, 共享数据</p>
-<p>3, 删除容器后, 挂载的数据卷不会删除</p>
-<!-- more -->
-
-<h4 id="数据卷使用"><a href="#数据卷使用" class="headerlink" title="数据卷使用"></a>数据卷使用</h4><p>1, 创建, 删除, 列举数据卷</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker volume create web</span><br><span class="line">docker volume rm web</span><br><span class="line">docker volume ls</span><br></pre></td></tr></table></figure>
-
-<p>2, 挂载数据卷</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name serverdemo2 --mount source&#x3D;web,target&#x3D;&#x2F;volume webimage</span><br></pre></td></tr></table></figure>
-
-<p>source=web  使用叫web的这个数据卷<br>target=/volume 挂在到/volume目录下</p>
-<h4 id="数据卷特性演示"><a href="#数据卷特性演示" class="headerlink" title="数据卷特性演示"></a>数据卷特性演示</h4><p>1, 现在生成一个容器, 叫做demo, 并挂载一个数据卷 web到 volume目录下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name demo --mount source&#x3D;web,target&#x3D;volume webimage</span><br></pre></td></tr></table></figure>
-
-<p>2, 我们使用两种不同的方式保存demo产生的数据</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec demo sh -c &quot;date &gt; &#x2F;b.txt&quot;</span><br><span class="line">docker exec demo sh -c &quot;date &gt; &#x2F;volume&#x2F;c.txt&quot;</span><br></pre></td></tr></table></figure>
-
-<p>3, 当我们删除容器demo后, b.txt也会被删除, 但是c.txt不会被删除, 我们可以打印出来</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec demo sh -c &quot;cat &#x2F;volume&#x2F;c.txt&quot;</span><br></pre></td></tr></table></figure>
-
-<p>4, 多容器共享数据, 我们只需要这样声明新容器 demo2</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name demo2 --mount source&#x3D;web,target&#x3D;v2 webimage</span><br></pre></td></tr></table></figure>
-<p>这时候, 尽管demo2还没有生成数据, 但是执行下面的cat命令, 却打印出了数据<br>docker exec demo2 sh -c “cat /v2/c.txt”</p>
 ]]></content>
       <tags>
         <tag>软件</tag>
@@ -620,28 +620,6 @@
       </tags>
   </entry>
   <entry>
-    <title>吞食天地-诸葛孔明传(地图篇)</title>
-    <url>/2019/11/06/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E5%9C%B0%E5%9B%BE)/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/05410108534ED5B46A0A4F47C7DF9980.jpeg.jpeg"></p>
-<a id="more"></a>
-
-<h4 id="通关"><a href="#通关" class="headerlink" title="通关"></a>通关</h4><iframe src="//player.bilibili.com/player.html?aid=633402&bvid=BV17s411f7u3&cid=932579&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h4 id="地图"><a href="#地图" class="headerlink" title="地图"></a>地图</h4><h5 id="徐州"><a href="#徐州" class="headerlink" title="徐州"></a>徐州</h5><p>朱灵路昭：年轻人不讲武德，偷袭我们两个老同志，城门口扒掉了我们的衣服<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-081105.jpg.jpg"></p>
-<h5 id="冀州"><a href="#冀州" class="headerlink" title="冀州"></a>冀州</h5><p>当日手足似瓜分，信断音稀杳不闻<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-132317.jpg.jpg"></p>
-<h5 id="中原"><a href="#中原" class="headerlink" title="中原"></a>中原</h5><p>将军神勇，海内皆知<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-075417.jpg.jpg"></p>
-<h5 id="荆州北"><a href="#荆州北" class="headerlink" title="荆州北"></a>荆州北</h5><p>卧龙先生正在休息，你要叫醒他吗？<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-140113.jpg.jpg"></p>
-<h5 id="荆州南"><a href="#荆州南" class="headerlink" title="荆州南"></a>荆州南</h5><p>大丈夫生于天地之间，岂能郁郁久居人下！<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-141414.jpg.jpg"></p>
-<h5 id="江东-柴桑"><a href="#江东-柴桑" class="headerlink" title="江东(柴桑)"></a>江东(柴桑)</h5><p>关平使用了秘法书<br>什么也没有发生<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-133921.jpg.jpg"></p>
-<h5 id="益州"><a href="#益州" class="headerlink" title="益州"></a>益州</h5><p>吾道号凤雏，此地名为“落凤坡”，不利于吾，当速退<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-143310.jpg.jpg"></p>
-<h5 id="汉中"><a href="#汉中" class="headerlink" title="汉中"></a>汉中</h5><p>马谡使用了缩地计，丢丢丢丢丢<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-144452.jpg.jpg"></p>
-<h5 id="雍凉"><a href="#雍凉" class="headerlink" title="雍凉"></a>雍凉</h5><p>上上下下左右上下<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-084824.jpg.jpg"></p>
-]]></content>
-      <tags>
-        <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>吞食天地-诸葛孔明传(敌将-龙虎风云篇)</title>
     <url>/2020/10/10/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E4%BA%BA%E7%89%A91)/</url>
     <content><![CDATA[<p>这部分游戏剧情，主要描绘了《演义》中，刘备假借讨伐袁术之名，逃离许都，后又于徐州为曹操大军所破，而三兄弟在乱世中分离，最终重聚的部分。</p>
@@ -671,6 +649,44 @@
       </tags>
   </entry>
   <entry>
+    <title>吞食天地-诸葛孔明传(地图篇)</title>
+    <url>/2019/11/06/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E5%9C%B0%E5%9B%BE)/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/05410108534ED5B46A0A4F47C7DF9980.jpeg.jpeg"></p>
+<a id="more"></a>
+
+<h4 id="通关"><a href="#通关" class="headerlink" title="通关"></a>通关</h4><iframe src="//player.bilibili.com/player.html?aid=633402&bvid=BV17s411f7u3&cid=932579&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h4 id="地图"><a href="#地图" class="headerlink" title="地图"></a>地图</h4><h5 id="徐州"><a href="#徐州" class="headerlink" title="徐州"></a>徐州</h5><p>朱灵路昭：年轻人不讲武德，偷袭我们两个老同志，城门口扒掉了我们的衣服<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-081105.jpg.jpg"></p>
+<h5 id="冀州"><a href="#冀州" class="headerlink" title="冀州"></a>冀州</h5><p>当日手足似瓜分，信断音稀杳不闻<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-132317.jpg.jpg"></p>
+<h5 id="中原"><a href="#中原" class="headerlink" title="中原"></a>中原</h5><p>将军神勇，海内皆知<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-075417.jpg.jpg"></p>
+<h5 id="荆州北"><a href="#荆州北" class="headerlink" title="荆州北"></a>荆州北</h5><p>卧龙先生正在休息，你要叫醒他吗？<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-140113.jpg.jpg"></p>
+<h5 id="荆州南"><a href="#荆州南" class="headerlink" title="荆州南"></a>荆州南</h5><p>大丈夫生于天地之间，岂能郁郁久居人下！<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-141414.jpg.jpg"></p>
+<h5 id="江东-柴桑"><a href="#江东-柴桑" class="headerlink" title="江东(柴桑)"></a>江东(柴桑)</h5><p>关平使用了秘法书<br>什么也没有发生<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-133921.jpg.jpg"></p>
+<h5 id="益州"><a href="#益州" class="headerlink" title="益州"></a>益州</h5><p>吾道号凤雏，此地名为“落凤坡”，不利于吾，当速退<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-143310.jpg.jpg"></p>
+<h5 id="汉中"><a href="#汉中" class="headerlink" title="汉中"></a>汉中</h5><p>马谡使用了缩地计，丢丢丢丢丢<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-144452.jpg.jpg"></p>
+<h5 id="雍凉"><a href="#雍凉" class="headerlink" title="雍凉"></a>雍凉</h5><p>上上下下左右上下<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/lg_Jietu20180823-084824.jpg.jpg"></p>
+]]></content>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>吞食天地-诸葛孔明传(我军武将篇)</title>
+    <url>/2020/07/14/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E6%88%91%E5%86%9B%E6%AD%A6%E5%B0%86%E7%AF%87)/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_173914.png.png"></p>
+<a id="more"></a>
+<p>没有算上吕布，杨怀这些 bug 将，或者 64 物复制将。</p>
+<h4 id="徐州"><a href="#徐州" class="headerlink" title="徐州"></a>徐州</h4><p>皇叔武力在 180 到 200 之间比较合理，常年在一线打拼的人<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174013.png.png"><br>看尔等插标卖首！<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174050.png.png"><br>俺也一样！<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174100.png.png"><br>工具人朱灵，路昭<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174106.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174113.png.png"><br>陈登智力有提升空间<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174122.png.png"></p>
+<h4 id="河北"><a href="#河北" class="headerlink" title="河北"></a>河北</h4><p>和许褚，典韦真的是一对<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174128.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174134.png.png"><br>为将军牵马执蹬，此生不悔！<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174139.png.png"><br>不多说了，枪兵幸运吸收者，天花板之一<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174157.png.png"><br>面板不公，不过胜在兵力加持<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174203.png.png"></p>
+<h4 id="荆州"><a href="#荆州" class="headerlink" title="荆州"></a>荆州</h4><p>束发读诗书,修德兼修身<br>仰观与俯查,韬略胸中存<br>ps：特制独轮车, 速度离谱<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174213.png.png"><br>作为铁剑首位拥有者，赤壁强力输出<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174225.png.png"><br>字「机伯」<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174237.png.png"><br>反骨这头像很帅<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174246.png.png"><br>老将挺好用的，我都是打通关，不过好像很多人不喜欢用<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174256.png.png"><br>配上孟德新书，暗杀八卦并存的军师之选<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174312.png.png"><br>登山家，万金油武将，二马的兵力成长离谱<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174324.png.png"><br>活化石，季汉的见证者<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174334.png.png"><br>庞者，广大也，统者，总领也。惜哉<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174358.png.png"></p>
+<h4 id="西川"><a href="#西川" class="headerlink" title="西川"></a>西川</h4><p>入川强制武将，三维均衡吧，胜在速度快<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174405.png.png"><br>板凳之一<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174418.png.png"><br>西凉二马的面板真的非常好看，兵力也高<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174425.png.png"><br>马岱这个头像，我不知道怎么形容，脑海中总是闪烁“卖羊肉串”几个字<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174433.png.png"><br>川将基本大家很少用吧，毕竟可选太多，在最完美的修改版「吞食天地完全版」中，板凳们也要强制北伐南征，玩起来别有一番风味<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174439.png.png"><br>砍头便砍头，匹夫何怒也！(三国杀严颜折磨人)<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174452.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174459.png.png"><br>剧情工具人<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174509.png.png"><br>大舅子<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174516.png.png"></p>
+<h4 id="北伐"><a href="#北伐" class="headerlink" title="北伐"></a>北伐</h4><p>龙弟<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174529.png.png"><br>虎兄<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174536.png.png"><br>麒麟儿，终极天花板<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174550.png.png"><br>武圣表示欣慰(和颜良几分神似)<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174602.png.png"></p>
+]]></content>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>吞食天地-诸葛孔明传(装备篇)</title>
     <url>/2020/08/13/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E8%A3%85%E5%A4%87)/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/a1mjm-50r6e.png.png"></p>
@@ -694,22 +710,6 @@
 <h5 id="藤甲"><a href="#藤甲" class="headerlink" title="藤甲"></a>藤甲</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[第一章、第三章]曹操</span><br><span class="line"></span><br><span class="line">[第六章]夏侯威、夏侯尚、司马懿、司马昭、曹休、曹操、曹丕</span><br></pre></td></tr></table></figure>
 <h4 id="装备复制法"><a href="#装备复制法" class="headerlink" title="装备复制法"></a>装备复制法</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1, 将第一个武将的武器装备栏中装上欲复制的武器或防具。在总的道具栏中仅空出一个位置。</span><br><span class="line">2, 选定要复制的武器，解除装备后再装备一次。</span><br><span class="line">3, 丢弃此装备，再拾回，此时该武器在第一人道具栏的最后一排。再一次选定它后丢弃。可发现屏幕文字显示装备被丢弃，但实际此装备并未消失在道具栏中。再次在原地寻找则可找到另一件同样的装备，这时找到后的装备被自动移到后面人的道具栏中（因为第一人的道具栏是满的）。这样就会有同样的两件武器（装备）了。</span><br><span class="line">4, 如欲连续复制，则只需将之装备（第一件）→舍弃（第一件）→拾起（第一件）→舍弃（第二件）→拾起（第二件）→如此反复即可。</span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <tags>
-        <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>吞食天地-诸葛孔明传(我军武将篇)</title>
-    <url>/2020/07/14/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E6%88%91%E5%86%9B%E6%AD%A6%E5%B0%86%E7%AF%87)/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_173914.png.png"></p>
-<a id="more"></a>
-<p>没有算上吕布，杨怀这些 bug 将，或者 64 物复制将。</p>
-<h4 id="徐州"><a href="#徐州" class="headerlink" title="徐州"></a>徐州</h4><p>皇叔武力在 180 到 200 之间比较合理，常年在一线打拼的人<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174013.png.png"><br>看尔等插标卖首！<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174050.png.png"><br>俺也一样！<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174100.png.png"><br>工具人朱灵，路昭<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174106.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174113.png.png"><br>陈登智力有提升空间<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174122.png.png"></p>
-<h4 id="河北"><a href="#河北" class="headerlink" title="河北"></a>河北</h4><p>和许褚，典韦真的是一对<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174128.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174134.png.png"><br>为将军牵马执蹬，此生不悔！<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174139.png.png"><br>不多说了，枪兵幸运吸收者，天花板之一<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174157.png.png"><br>面板不公，不过胜在兵力加持<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174203.png.png"></p>
-<h4 id="荆州"><a href="#荆州" class="headerlink" title="荆州"></a>荆州</h4><p>束发读诗书,修德兼修身<br>仰观与俯查,韬略胸中存<br>ps：特制独轮车, 速度离谱<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174213.png.png"><br>作为铁剑首位拥有者，赤壁强力输出<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174225.png.png"><br>字「机伯」<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174237.png.png"><br>反骨这头像很帅<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174246.png.png"><br>老将挺好用的，我都是打通关，不过好像很多人不喜欢用<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174256.png.png"><br>配上孟德新书，暗杀八卦并存的军师之选<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174312.png.png"><br>登山家，万金油武将，二马的兵力成长离谱<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174324.png.png"><br>活化石，季汉的见证者<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174334.png.png"><br>庞者，广大也，统者，总领也。惜哉<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174358.png.png"></p>
-<h4 id="西川"><a href="#西川" class="headerlink" title="西川"></a>西川</h4><p>入川强制武将，三维均衡吧，胜在速度快<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174405.png.png"><br>板凳之一<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174418.png.png"><br>西凉二马的面板真的非常好看，兵力也高<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174425.png.png"><br>马岱这个头像，我不知道怎么形容，脑海中总是闪烁“卖羊肉串”几个字<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174433.png.png"><br>川将基本大家很少用吧，毕竟可选太多，在最完美的修改版「吞食天地完全版」中，板凳们也要强制北伐南征，玩起来别有一番风味<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174439.png.png"><br>砍头便砍头，匹夫何怒也！(三国杀严颜折磨人)<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174452.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174459.png.png"><br>剧情工具人<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174509.png.png"><br>大舅子<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174516.png.png"></p>
-<h4 id="北伐"><a href="#北伐" class="headerlink" title="北伐"></a>北伐</h4><p>龙弟<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174529.png.png"><br>虎兄<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174536.png.png"><br>麒麟儿，终极天花板<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174550.png.png"><br>武圣表示欣慰(和颜良几分神似)<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2020-09-13_174602.png.png"></p>
 ]]></content>
       <tags>
         <tag>游戏</tag>
@@ -807,26 +807,6 @@
       </tags>
   </entry>
   <entry>
-    <title>旁路由模式设置</title>
-    <url>/2019/04/09/%E6%97%81%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/==wZwpmLjBTOjhDZzAzYihzM4IzNkFDM09yX3MjMfBjM08CZmRXbk9SbvNmLnNXboFnL2A3LvoDc0RHa.jpg.jpg"></p>
-<a id="more"></a>
-<p>随便写写</p>
-<h4 id="系统刷写完成后重启-进入命令行"><a href="#系统刷写完成后重启-进入命令行" class="headerlink" title="系统刷写完成后重启,进入命令行"></a>系统刷写完成后重启,进入命令行</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 编辑文件</span><br><span class="line">vim &#x2F;etc&#x2F;config&#x2F;network</span><br></pre></td></tr></table></figure>
-
-<h4 id="给-lan-配置一个可用-ip"><a href="#给-lan-配置一个可用-ip" class="headerlink" title="给 lan 配置一个可用 ip"></a>给 lan 配置一个可用 ip</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 比如主路由 dhcp 分配在 192.168.11.2~192.168.11.254，我们可以给个 213</span><br><span class="line"></span><br><span class="line">192.168.11.213</span><br></pre></td></tr></table></figure>
-
-<h4 id="保存，reboot-重启，打开浏览器输入-192-168-11-213-进入后台，点击网络-接口-lan-修改"><a href="#保存，reboot-重启，打开浏览器输入-192-168-11-213-进入后台，点击网络-接口-lan-修改" class="headerlink" title="保存，reboot 重启，打开浏览器输入 192.168.11.213, 进入后台，点击网络 - 接口 - lan 修改"></a>保存，reboot 重启，打开浏览器输入 192.168.11.213, 进入后台，点击网络 - 接口 - lan 修改</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-40-50.png.png"></p>
-<h4 id="添加网关和-dns-服务器"><a href="#添加网关和-dns-服务器" class="headerlink" title="添加网关和 dns 服务器"></a>添加网关和 dns 服务器</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-41-38.png.png"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># dns 服务不配置好，有时候旁路由无法联网，可以多添加一些 dns，比如本地服务商提供的，或者公共服务，比如</span><br><span class="line"></span><br><span class="line">114.114.114.114</span><br><span class="line">180.76.76.76</span><br><span class="line">223.5.5.5</span><br></pre></td></tr></table></figure>
-
-<h4 id="关闭-lan-口-dhcp-服务"><a href="#关闭-lan-口-dhcp-服务" class="headerlink" title="关闭 lan 口 dhcp 服务"></a>关闭 lan 口 dhcp 服务</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-41-51.png.png"></p>
-<h4 id="旁路由模式下的-KMS"><a href="#旁路由模式下的-KMS" class="headerlink" title="旁路由模式下的 KMS"></a>旁路由模式下的 KMS</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">旁路由模式是无效的，需要注意</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>硬件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文件与目录权限操作</title>
     <url>/2016/04/16/%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E6%9D%83%E9%99%90%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/terminal_icon_logo.png.png"></p>
@@ -864,6 +844,26 @@
 ]]></content>
       <tags>
         <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>旁路由模式设置</title>
+    <url>/2019/04/09/%E6%97%81%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/==wZwpmLjBTOjhDZzAzYihzM4IzNkFDM09yX3MjMfBjM08CZmRXbk9SbvNmLnNXboFnL2A3LvoDc0RHa.jpg.jpg"></p>
+<a id="more"></a>
+<p>随便写写</p>
+<h4 id="系统刷写完成后重启-进入命令行"><a href="#系统刷写完成后重启-进入命令行" class="headerlink" title="系统刷写完成后重启,进入命令行"></a>系统刷写完成后重启,进入命令行</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 编辑文件</span><br><span class="line">vim &#x2F;etc&#x2F;config&#x2F;network</span><br></pre></td></tr></table></figure>
+
+<h4 id="给-lan-配置一个可用-ip"><a href="#给-lan-配置一个可用-ip" class="headerlink" title="给 lan 配置一个可用 ip"></a>给 lan 配置一个可用 ip</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 比如主路由 dhcp 分配在 192.168.11.2~192.168.11.254，我们可以给个 213</span><br><span class="line"></span><br><span class="line">192.168.11.213</span><br></pre></td></tr></table></figure>
+
+<h4 id="保存，reboot-重启，打开浏览器输入-192-168-11-213-进入后台，点击网络-接口-lan-修改"><a href="#保存，reboot-重启，打开浏览器输入-192-168-11-213-进入后台，点击网络-接口-lan-修改" class="headerlink" title="保存，reboot 重启，打开浏览器输入 192.168.11.213, 进入后台，点击网络 - 接口 - lan 修改"></a>保存，reboot 重启，打开浏览器输入 192.168.11.213, 进入后台，点击网络 - 接口 - lan 修改</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-40-50.png.png"></p>
+<h4 id="添加网关和-dns-服务器"><a href="#添加网关和-dns-服务器" class="headerlink" title="添加网关和 dns 服务器"></a>添加网关和 dns 服务器</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-41-38.png.png"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># dns 服务不配置好，有时候旁路由无法联网，可以多添加一些 dns，比如本地服务商提供的，或者公共服务，比如</span><br><span class="line"></span><br><span class="line">114.114.114.114</span><br><span class="line">180.76.76.76</span><br><span class="line">223.5.5.5</span><br></pre></td></tr></table></figure>
+
+<h4 id="关闭-lan-口-dhcp-服务"><a href="#关闭-lan-口-dhcp-服务" class="headerlink" title="关闭 lan 口 dhcp 服务"></a>关闭 lan 口 dhcp 服务</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-41-51.png.png"></p>
+<h4 id="旁路由模式下的-KMS"><a href="#旁路由模式下的-KMS" class="headerlink" title="旁路由模式下的 KMS"></a>旁路由模式下的 KMS</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">旁路由模式是无效的，需要注意</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>硬件</tag>
       </tags>
   </entry>
   <entry>
