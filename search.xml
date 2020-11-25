@@ -106,55 +106,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Terminal和OMZ</title>
-    <url>/2017/10/16/Oh-my-zsh%E7%9A%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/zsh-300x300.jpg.jpg"></p>
-<a id="more"></a>
-<h4 id="mac-安装-Iterm2"><a href="#mac-安装-Iterm2" class="headerlink" title="mac 安装 Iterm2"></a>mac 安装 Iterm2</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install iterm2</span><br></pre></td></tr></table></figure>
-<h4 id="查看系统内置shell"><a href="#查看系统内置shell" class="headerlink" title="查看系统内置shell"></a>查看系统内置shell</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat &#x2F;etc&#x2F;shells</span><br><span class="line"></span><br><span class="line">得到：</span><br><span class="line"></span><br><span class="line">&#x2F;bin&#x2F;bash</span><br><span class="line">&#x2F;bin&#x2F;csh</span><br><span class="line">&#x2F;bin&#x2F;ksh</span><br><span class="line">&#x2F;bin&#x2F;sh</span><br><span class="line">&#x2F;bin&#x2F;tcsh</span><br><span class="line">&#x2F;bin&#x2F;zsh</span><br></pre></td></tr></table></figure>
-<h4 id="设置-zsh-为默认shell"><a href="#设置-zsh-为默认shell" class="headerlink" title="设置 zsh 为默认shell"></a>设置 zsh 为默认shell</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chsh -s &#x2F;bin&#x2F;zsh</span><br></pre></td></tr></table></figure>
-<h4 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh-my-zsh"></a>安装 oh-my-zsh</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;robbyrussell&#x2F;oh-my-zsh.git ~&#x2F;.oh-my-zsh</span><br><span class="line"></span><br><span class="line">cp ~&#x2F;.oh-my-zsh&#x2F;templates&#x2F;zshrc.zsh-template ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
-<h4 id="修改配色主题"><a href="#修改配色主题" class="headerlink" title="修改配色主题"></a>修改配色主题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo nano ~&#x2F;.zshrc</span><br><span class="line"></span><br><span class="line">主题字段在 ZSH_THEME </span><br></pre></td></tr></table></figure>
-<h4 id="使配置生效"><a href="#使配置生效" class="headerlink" title="使配置生效"></a>使配置生效</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
-<h4 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 下载高亮插件</span><br><span class="line">cd ~&#x2F;.oh-my-zsh&#x2F;custom&#x2F;plugins</span><br><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;zsh-users&#x2F;zsh-syntax-highlighting.git</span><br><span class="line"></span><br><span class="line"># 配置</span><br><span class="line">plugins&#x3D;(</span><br><span class="line">zsh-syntax-highlighting</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># 配置生效</span><br><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="自定义一个命令例子"><a href="#自定义一个命令例子" class="headerlink" title="自定义一个命令例子"></a>自定义一个命令例子</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /User/minnie/demo/write_blog.sh    <span class="comment"># 很繁琐</span></span><br></pre></td></tr></table></figure>
-<!-- more -->
-
-<h5 id="1，修改系统变量"><a href="#1，修改系统变量" class="headerlink" title="1，修改系统变量"></a>1，修改系统变量</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑 ~/.bashrc 文件</span></span><br><span class="line"><span class="comment"># User/Minnie/demo 是我的脚本存储目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;User/Minnie/demo:<span class="variable">$PATH</span>&quot;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 source ~/.bashrc 使设置生效, 我们就可以这样执行脚本</span></span><br><span class="line"></span><br><span class="line">sh write_blog.sh    </span><br></pre></td></tr></table></figure>
-
-
-<h5 id="2，添加shebang声明"><a href="#2，添加shebang声明" class="headerlink" title="2，添加shebang声明"></a>2，添加shebang声明</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑脚本文件, 首行添加声明</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 现在我们可以这样执行脚本</span></span><br><span class="line"></span><br><span class="line">write_blog.sh</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="3，去除后缀名"><a href="#3，去除后缀名" class="headerlink" title="3，去除后缀名"></a>3，去除后缀名</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 后缀名也是没有意义的</span></span><br><span class="line"></span><br><span class="line">mv write_blog.sh write_blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 此时, 命令简化为</span></span><br><span class="line"></span><br><span class="line">write_blog</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="4，添加alias声明"><a href="#4，添加alias声明" class="headerlink" title="4，添加alias声明"></a>4，添加alias声明</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 再次编辑 ~/.bashrc 文件</span></span><br><span class="line"><span class="comment"># 添加 alias 命令</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> wb=<span class="string">&quot;write_blog&quot;</span>   </span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 _source ~/.bashrc_ 使设置生效, 最终成果</span></span><br><span class="line"></span><br><span class="line">wb</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="问题集锦"><a href="#问题集锦" class="headerlink" title="问题集锦"></a>问题集锦</h5><p>为什么不把脚本直接命名为wb, 而是使用alias</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">防止忘记了它的功能.</span><br></pre></td></tr></table></figure>
-
-<p>提示权限拒绝</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod +x write_blog</span><br></pre></td></tr></table></figure>
-
-<p>提示找不到文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shebang声明的路径不对</span><br></pre></td></tr></table></figure>
-
-<h5 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h5><p>自己的写博客脚本<code>bk.sh</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Users/minnie/hexo/blog</span><br><span class="line">hexo new <span class="variable">$1</span></span><br><span class="line">code ~/hexo/blog/<span class="built_in">source</span>/_posts/</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<p>发布博客脚本<code>fb.sh</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Users/minnie/hexo/blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Systemctl服务管理</title>
     <url>/2017/10/06/Systemctl%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_19-11-13.png.png"></p>
@@ -198,6 +149,55 @@
 <p> 禁止服务启动,解除禁止服务启动</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo systemctl mask 服务名</span><br><span class="line">sudo systemctl unmask 服务名</span><br></pre></td></tr></table></figure>
 
+
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Terminal和OMZ</title>
+    <url>/2017/10/16/Oh-my-zsh%E7%9A%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/zsh-300x300.jpg.jpg"></p>
+<a id="more"></a>
+<h4 id="mac-安装-Iterm2"><a href="#mac-安装-Iterm2" class="headerlink" title="mac 安装 Iterm2"></a>mac 安装 Iterm2</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install iterm2</span><br></pre></td></tr></table></figure>
+<h4 id="查看系统内置shell"><a href="#查看系统内置shell" class="headerlink" title="查看系统内置shell"></a>查看系统内置shell</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat &#x2F;etc&#x2F;shells</span><br><span class="line"></span><br><span class="line">得到：</span><br><span class="line"></span><br><span class="line">&#x2F;bin&#x2F;bash</span><br><span class="line">&#x2F;bin&#x2F;csh</span><br><span class="line">&#x2F;bin&#x2F;ksh</span><br><span class="line">&#x2F;bin&#x2F;sh</span><br><span class="line">&#x2F;bin&#x2F;tcsh</span><br><span class="line">&#x2F;bin&#x2F;zsh</span><br></pre></td></tr></table></figure>
+<h4 id="设置-zsh-为默认shell"><a href="#设置-zsh-为默认shell" class="headerlink" title="设置 zsh 为默认shell"></a>设置 zsh 为默认shell</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chsh -s &#x2F;bin&#x2F;zsh</span><br></pre></td></tr></table></figure>
+<h4 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh-my-zsh"></a>安装 oh-my-zsh</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;robbyrussell&#x2F;oh-my-zsh.git ~&#x2F;.oh-my-zsh</span><br><span class="line"></span><br><span class="line">cp ~&#x2F;.oh-my-zsh&#x2F;templates&#x2F;zshrc.zsh-template ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+<h4 id="修改配色主题"><a href="#修改配色主题" class="headerlink" title="修改配色主题"></a>修改配色主题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo nano ~&#x2F;.zshrc</span><br><span class="line"></span><br><span class="line">主题字段在 ZSH_THEME </span><br></pre></td></tr></table></figure>
+<h4 id="使配置生效"><a href="#使配置生效" class="headerlink" title="使配置生效"></a>使配置生效</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+<h4 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 下载高亮插件</span><br><span class="line">cd ~&#x2F;.oh-my-zsh&#x2F;custom&#x2F;plugins</span><br><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;zsh-users&#x2F;zsh-syntax-highlighting.git</span><br><span class="line"></span><br><span class="line"># 配置</span><br><span class="line">plugins&#x3D;(</span><br><span class="line">zsh-syntax-highlighting</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># 配置生效</span><br><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="自定义一个命令例子"><a href="#自定义一个命令例子" class="headerlink" title="自定义一个命令例子"></a>自定义一个命令例子</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /User/minnie/demo/write_blog.sh    <span class="comment"># 很繁琐</span></span><br></pre></td></tr></table></figure>
+<!-- more -->
+
+<h5 id="1，修改系统变量"><a href="#1，修改系统变量" class="headerlink" title="1，修改系统变量"></a>1，修改系统变量</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑 ~/.bashrc 文件</span></span><br><span class="line"><span class="comment"># User/Minnie/demo 是我的脚本存储目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;User/Minnie/demo:<span class="variable">$PATH</span>&quot;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 source ~/.bashrc 使设置生效, 我们就可以这样执行脚本</span></span><br><span class="line"></span><br><span class="line">sh write_blog.sh    </span><br></pre></td></tr></table></figure>
+
+
+<h5 id="2，添加shebang声明"><a href="#2，添加shebang声明" class="headerlink" title="2，添加shebang声明"></a>2，添加shebang声明</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑脚本文件, 首行添加声明</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 现在我们可以这样执行脚本</span></span><br><span class="line"></span><br><span class="line">write_blog.sh</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="3，去除后缀名"><a href="#3，去除后缀名" class="headerlink" title="3，去除后缀名"></a>3，去除后缀名</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 后缀名也是没有意义的</span></span><br><span class="line"></span><br><span class="line">mv write_blog.sh write_blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 此时, 命令简化为</span></span><br><span class="line"></span><br><span class="line">write_blog</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="4，添加alias声明"><a href="#4，添加alias声明" class="headerlink" title="4，添加alias声明"></a>4，添加alias声明</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 再次编辑 ~/.bashrc 文件</span></span><br><span class="line"><span class="comment"># 添加 alias 命令</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> wb=<span class="string">&quot;write_blog&quot;</span>   </span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 _source ~/.bashrc_ 使设置生效, 最终成果</span></span><br><span class="line"></span><br><span class="line">wb</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="问题集锦"><a href="#问题集锦" class="headerlink" title="问题集锦"></a>问题集锦</h5><p>为什么不把脚本直接命名为wb, 而是使用alias</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">防止忘记了它的功能.</span><br></pre></td></tr></table></figure>
+
+<p>提示权限拒绝</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod +x write_blog</span><br></pre></td></tr></table></figure>
+
+<p>提示找不到文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shebang声明的路径不对</span><br></pre></td></tr></table></figure>
+
+<h5 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h5><p>自己的写博客脚本<code>bk.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Users/minnie/hexo/blog</span><br><span class="line">hexo new <span class="variable">$1</span></span><br><span class="line">code ~/hexo/blog/<span class="built_in">source</span>/_posts/</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<p>发布博客脚本<code>fb.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Users/minnie/hexo/blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <tags>
@@ -436,45 +436,6 @@
       </tags>
   </entry>
   <entry>
-    <title>python包加速</title>
-    <url>/2017/01/12/python%E5%AE%89%E8%A3%85%E5%8C%85%E5%8A%A0%E9%80%9F/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_19-44-46.png.png"></p>
-<a id="more"></a>
-<h4 id="Python-pip（ubuntu）"><a href="#Python-pip（ubuntu）" class="headerlink" title="Python-pip（ubuntu）"></a>Python-pip（ubuntu）</h4><p>python2.7</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo easy_install pip</span><br></pre></td></tr></table></figure>
-
-<p>python3</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install python3-pip</span><br></pre></td></tr></table></figure>
-
-<h4 id="开启-sudo-命令进行安装"><a href="#开启-sudo-命令进行安装" class="headerlink" title="开启 sudo 命令进行安装"></a>开启 sudo 命令进行安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install &#96;包名&#96;</span><br></pre></td></tr></table></figure>
-<h4 id="手动设置豆瓣库进行安装"><a href="#手动设置豆瓣库进行安装" class="headerlink" title="手动设置豆瓣库进行安装"></a>手动设置豆瓣库进行安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple &#96;包名&#96;</span><br></pre></td></tr></table></figure>
-<h4 id="按照先-2-后-3-的顺序安装-，-可能出现未知bug-，大部分库都在向-3-进行迁移，-甚至出现不再支持的情况"><a href="#按照先-2-后-3-的顺序安装-，-可能出现未知bug-，大部分库都在向-3-进行迁移，-甚至出现不再支持的情况" class="headerlink" title="按照先 2 后 3 的顺序安装 ， 可能出现未知bug ，大部分库都在向 3 进行迁移， 甚至出现不再支持的情况"></a>按照先 2 后 3 的顺序安装 ， 可能出现未知bug ，大部分库都在向 3 进行迁移， 甚至出现不再支持的情况</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">flask , selenium ,jupyter 都出现了问题</span><br></pre></td></tr></table></figure>
-<h4 id="此时可以下载离线包进行安装"><a href="#此时可以下载离线包进行安装" class="headerlink" title="此时可以下载离线包进行安装"></a>此时可以下载离线包进行安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.lfd.uci.edu&#x2F;~gohlke&#x2F;pythonlibs&#x2F;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="插一个-python-2-和-3-的字符串差异表"><a href="#插一个-python-2-和-3-的字符串差异表" class="headerlink" title="插一个 python 2 和 3 的字符串差异表"></a>插一个 python 2 和 3 的字符串差异表</h4><table>
-<thead>
-<tr>
-<th></th>
-<th>字符串</th>
-<th>字节</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Python2</td>
-<td>Unicode</td>
-<td>Str</td>
-</tr>
-<tr>
-<td>Python3</td>
-<td>Str</td>
-<td>Byte</td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python的str方法记录</title>
     <url>/2017/04/16/python%E7%9A%84str%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p>占位。</p>
@@ -533,6 +494,45 @@
       </tags>
   </entry>
   <entry>
+    <title>python包加速</title>
+    <url>/2017/01/12/python%E5%AE%89%E8%A3%85%E5%8C%85%E5%8A%A0%E9%80%9F/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_19-44-46.png.png"></p>
+<a id="more"></a>
+<h4 id="Python-pip（ubuntu）"><a href="#Python-pip（ubuntu）" class="headerlink" title="Python-pip（ubuntu）"></a>Python-pip（ubuntu）</h4><p>python2.7</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo easy_install pip</span><br></pre></td></tr></table></figure>
+
+<p>python3</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install python3-pip</span><br></pre></td></tr></table></figure>
+
+<h4 id="开启-sudo-命令进行安装"><a href="#开启-sudo-命令进行安装" class="headerlink" title="开启 sudo 命令进行安装"></a>开启 sudo 命令进行安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install &#96;包名&#96;</span><br></pre></td></tr></table></figure>
+<h4 id="手动设置豆瓣库进行安装"><a href="#手动设置豆瓣库进行安装" class="headerlink" title="手动设置豆瓣库进行安装"></a>手动设置豆瓣库进行安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple &#96;包名&#96;</span><br></pre></td></tr></table></figure>
+<h4 id="按照先-2-后-3-的顺序安装-，-可能出现未知bug-，大部分库都在向-3-进行迁移，-甚至出现不再支持的情况"><a href="#按照先-2-后-3-的顺序安装-，-可能出现未知bug-，大部分库都在向-3-进行迁移，-甚至出现不再支持的情况" class="headerlink" title="按照先 2 后 3 的顺序安装 ， 可能出现未知bug ，大部分库都在向 3 进行迁移， 甚至出现不再支持的情况"></a>按照先 2 后 3 的顺序安装 ， 可能出现未知bug ，大部分库都在向 3 进行迁移， 甚至出现不再支持的情况</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">flask , selenium ,jupyter 都出现了问题</span><br></pre></td></tr></table></figure>
+<h4 id="此时可以下载离线包进行安装"><a href="#此时可以下载离线包进行安装" class="headerlink" title="此时可以下载离线包进行安装"></a>此时可以下载离线包进行安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.lfd.uci.edu&#x2F;~gohlke&#x2F;pythonlibs&#x2F;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="插一个-python-2-和-3-的字符串差异表"><a href="#插一个-python-2-和-3-的字符串差异表" class="headerlink" title="插一个 python 2 和 3 的字符串差异表"></a>插一个 python 2 和 3 的字符串差异表</h4><table>
+<thead>
+<tr>
+<th></th>
+<th>字符串</th>
+<th>字节</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Python2</td>
+<td>Unicode</td>
+<td>Str</td>
+</tr>
+<tr>
+<td>Python3</td>
+<td>Str</td>
+<td>Byte</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ufw防火墙</title>
     <url>/2017/03/06/ufw%E9%98%B2%E7%81%AB%E5%A2%99/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/ufw-ubuntu-firewall.jpg.jpg"></p>
@@ -568,6 +568,24 @@
       </tags>
   </entry>
   <entry>
+    <title>marginnote同步问题</title>
+    <url>/2020/01/16/%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-18_12-30-15.png.png"></p>
+<a id="more"></a>
+<p>我在软路由里提到过这个问题。</p>
+<h4 id="marginnote"><a href="#marginnote" class="headerlink" title="marginnote"></a>marginnote</h4><p>排除比如网络故障，DNS故障这些客观原因不谈，其实 icloud 的同步，在国内还是挺快的，自从在贵州建立服务器以来。</p>
+<p>最初我也不知道哪里出了问题，就一直用的隔空传送，不过还是不太方便。因为我路由日常就是全局白名单模式，突然想到，会不会是走了特别线路呢？</p>
+<p>在 xx 中，我尝试在黑名单中加入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*.apple.com</span><br></pre></td></tr></table></figure>
+
+<p>重启设备后，同步立马就成功了。</p>
+<h4 id="onedrive"><a href="#onedrive" class="headerlink" title="onedrive"></a>onedrive</h4><p>突然由 mn 同步这件事，不由自主就想到微软的云服务。不得不说，微软的云服务，真的是个很神奇的东西，不管你网络情况如何，都能保证不让你用的爽，和巨硬的软件简直五五开。</p>
+<h4 id="企业理念不同"><a href="#企业理念不同" class="headerlink" title="企业理念不同"></a>企业理念不同</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">苹果：开发者，我是你 D</span><br><span class="line"></span><br><span class="line">微软： 用户，我是你 D</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一些markdown客户端</title>
     <url>/2017/07/04/%E4%B8%80%E4%BA%9Bmarkdown%E5%AE%A2%E6%88%B7%E7%AB%AF/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/%E4%B8%8B%E8%BD%BD.png.png"></p>
@@ -597,24 +615,6 @@
 <h4 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h4><p>有道云，为知云这些笔记应用，是支持 MD 的。但是比较封闭，并不像印象笔记一样，得到第三方软件广泛的支持。同时个人觉得，其剪辑功能没有印象笔记效果好。</p>
 <p>依以往经验来看，国内大厂的软件都不太安分，不纯粹。保不定将来加点社交，推广什么的，这是我不太能接受的。</p>
 ]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>marginnote同步问题</title>
-    <url>/2020/01/16/%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-18_12-30-15.png.png"></p>
-<a id="more"></a>
-<p>我在软路由里提到过这个问题。</p>
-<h4 id="marginnote"><a href="#marginnote" class="headerlink" title="marginnote"></a>marginnote</h4><p>排除比如网络故障，DNS故障这些客观原因不谈，其实 icloud 的同步，在国内还是挺快的，自从在贵州建立服务器以来。</p>
-<p>最初我也不知道哪里出了问题，就一直用的隔空传送，不过还是不太方便。因为我路由日常就是全局白名单模式，突然想到，会不会是走了特别线路呢？</p>
-<p>在 xx 中，我尝试在黑名单中加入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*.apple.com</span><br></pre></td></tr></table></figure>
-
-<p>重启设备后，同步立马就成功了。</p>
-<h4 id="onedrive"><a href="#onedrive" class="headerlink" title="onedrive"></a>onedrive</h4><p>突然由 mn 同步这件事，不由自主就想到微软的云服务。不得不说，微软的云服务，真的是个很神奇的东西，不管你网络情况如何，都能保证不让你用的爽，和巨硬的软件简直五五开。</p>
-<h4 id="企业理念不同"><a href="#企业理念不同" class="headerlink" title="企业理念不同"></a>企业理念不同</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">苹果：开发者，我是你 D</span><br><span class="line"></span><br><span class="line">微软： 用户，我是你 D</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>软件</tag>
       </tags>
@@ -730,6 +730,25 @@
       </tags>
   </entry>
   <entry>
+    <title>技嘉bios删不掉的启动项</title>
+    <url>/2019/10/19/%E5%A4%9A%E5%87%BA%E7%9A%84%E5%90%AF%E5%8A%A8%E9%A1%B9/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/axf9f-dt6x7.png.png"><br>起因是，安装黑果后，bios 多出了一堆无效启动项。</p>
+<a id="more"></a>
+
+<p>搜了一下，好像出问题的都是技嘉主板，估计是 bug 吧。其实本来眼不见不净，结果因为无效启动项，导致我usb 启动盘的 uefi 启动项不显示了，这就很难受了</p>
+<h4 id="重置-bios"><a href="#重置-bios" class="headerlink" title="重置 bios"></a>重置 bios</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">无效</span><br></pre></td></tr></table></figure>
+<h4 id="拆主板电池"><a href="#拆主板电池" class="headerlink" title="拆主板电池"></a>拆主板电池</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">无效</span><br></pre></td></tr></table></figure>
+<h4 id="网搜说刷-bios"><a href="#网搜说刷-bios" class="headerlink" title="网搜说刷 bios"></a>网搜说刷 bios</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">饶了我吧，老b85主板了，别再把主板搞坏了(主要还是懒)</span><br></pre></td></tr></table></figure>
+<h4 id="查了一下，说是下载安装-easyuefi"><a href="#查了一下，说是下载安装-easyuefi" class="headerlink" title="查了一下，说是下载安装 easyuefi"></a>查了一下，说是下载安装 easyuefi</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">但是我 win 系统是临时用的，mbr 模式安装的，软件提示无法运行</span><br></pre></td></tr></table></figure>
+
+<h4 id="pe-工具里无意发现了可编辑工具"><a href="#pe-工具里无意发现了可编辑工具" class="headerlink" title="pe 工具里无意发现了可编辑工具"></a>pe 工具里无意发现了可编辑工具</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-28-03.png.png"></p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-28-21.png.png"></p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>图床踩坑</title>
     <url>/2017/04/06/%E5%9B%BE%E5%BA%8A/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/image.jpg.jpg"></p>
@@ -750,25 +769,6 @@
 <p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/20201109125117.png.png"></p>
 <h4 id="腾讯云"><a href="#腾讯云" class="headerlink" title="腾讯云"></a>腾讯云</h4><p>最近腾讯云对象存储一直在修改计费规则, 估计因为我白嫖时间比较早, 还付费过, 没有收到影响</p>
 <p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/20201122140021.png.png"></p>
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>技嘉bios删不掉的启动项</title>
-    <url>/2019/10/19/%E5%A4%9A%E5%87%BA%E7%9A%84%E5%90%AF%E5%8A%A8%E9%A1%B9/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/axf9f-dt6x7.png.png"><br>起因是，安装黑果后，bios 多出了一堆无效启动项。</p>
-<a id="more"></a>
-
-<p>搜了一下，好像出问题的都是技嘉主板，估计是 bug 吧。其实本来眼不见不净，结果因为无效启动项，导致我usb 启动盘的 uefi 启动项不显示了，这就很难受了</p>
-<h4 id="重置-bios"><a href="#重置-bios" class="headerlink" title="重置 bios"></a>重置 bios</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">无效</span><br></pre></td></tr></table></figure>
-<h4 id="拆主板电池"><a href="#拆主板电池" class="headerlink" title="拆主板电池"></a>拆主板电池</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">无效</span><br></pre></td></tr></table></figure>
-<h4 id="网搜说刷-bios"><a href="#网搜说刷-bios" class="headerlink" title="网搜说刷 bios"></a>网搜说刷 bios</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">饶了我吧，老b85主板了，别再把主板搞坏了(主要还是懒)</span><br></pre></td></tr></table></figure>
-<h4 id="查了一下，说是下载安装-easyuefi"><a href="#查了一下，说是下载安装-easyuefi" class="headerlink" title="查了一下，说是下载安装 easyuefi"></a>查了一下，说是下载安装 easyuefi</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">但是我 win 系统是临时用的，mbr 模式安装的，软件提示无法运行</span><br></pre></td></tr></table></figure>
-
-<h4 id="pe-工具里无意发现了可编辑工具"><a href="#pe-工具里无意发现了可编辑工具" class="headerlink" title="pe 工具里无意发现了可编辑工具"></a>pe 工具里无意发现了可编辑工具</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-28-03.png.png"></p>
-<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-28-21.png.png"></p>
 ]]></content>
       <tags>
         <tag>软件</tag>
@@ -878,6 +878,28 @@
 <h4 id="选高级选项"><a href="#选高级选项" class="headerlink" title="选高级选项"></a>选高级选项</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/6a600c338744ebf8c6fc35d8d2f9d72a6159a74c.jpg.jpg"></p>
 <h4 id="选命令提示符"><a href="#选命令提示符" class="headerlink" title="选命令提示符"></a>选命令提示符</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/9345d688d43f8794c53219c9d91b0ef41ad53a03.jpg.jpg"></p>
 <h4 id="会自动重启进入命令行"><a href="#会自动重启进入命令行" class="headerlink" title="会自动重启进入命令行"></a>会自动重启进入命令行</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 之前解压到了 D 盘， 进入 D 盘</span><br><span class="line"></span><br><span class="line">d:</span><br><span class="line"></span><br><span class="line"># 进入解压文件夹</span><br><span class="line"></span><br><span class="line">cd win</span><br><span class="line"></span><br><span class="line"># 进入 source 文件夹</span><br><span class="line"></span><br><span class="line">cd source</span><br><span class="line"></span><br><span class="line"># 运行 setup.exe</span><br><span class="line"></span><br><span class="line">.&#x2F;setup.exe</span><br><span class="line"></span><br><span class="line"># 进入正常的格盘安装流程</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>更改sip修复mac睡眠后安装软件出错</title>
+    <url>/2018/11/25/%E6%9B%B4%E6%94%B9sip%E4%BF%AE%E5%A4%8Dmac%E7%9D%A1%E7%9C%A0%E5%90%8E%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E5%87%BA%E9%94%99/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-25-32.png"></p>
+<a id="more"></a>
+
+<h4 id="mac-休眠问题"><a href="#mac-休眠问题" class="headerlink" title="mac 休眠问题"></a>mac 休眠问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 开机 commend R, 关闭sip</span><br><span class="line"></span><br><span class="line">csrutil disable</span><br><span class="line"></span><br><span class="line"># 查询休眠文件</span><br><span class="line"></span><br><span class="line">ioreg -l | grep board-id</span><br><span class="line"></span><br><span class="line"># 进入休眠文件放置的文件夹</span><br><span class="line"></span><br><span class="line">cd &#x2F;System&#x2F;Library&#x2F;Extensions&#x2F;IOPlatformPluginFamily.kext&#x2F;Contents&#x2F;PlugIns&#x2F;X86PlatformPlugin.kext&#x2F;Contents&#x2F;Resources</span><br><span class="line"></span><br><span class="line"># 修改休眠文件</span><br><span class="line"></span><br><span class="line">sudo nano xxx.plist</span><br><span class="line"></span><br><span class="line"># 修改内容如下</span><br><span class="line"></span><br><span class="line">&lt;key&gt;TCPKeepAliveDuringSleep&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;false&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">&lt;key&gt;NotificationWake&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;false&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">&lt;key&gt;DNDWhileDisplaySleeps&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;true&#x2F;&gt;</span><br><span class="line"></span><br><span class="line"># 解释</span><br><span class="line"></span><br><span class="line">TCPKeepAliveDuringSleep：睡眠的时候关闭TCP保持连接</span><br><span class="line"></span><br><span class="line">NotificationWake：随机唤醒然后检查提醒</span><br><span class="line"></span><br><span class="line">DNDWhileDisplaySleeps：关闭屏幕后电脑任然可用, 外接显示器的自己考虑是否关闭</span><br><span class="line"></span><br><span class="line"># 重启 commend R , 打开sip</span><br><span class="line"></span><br><span class="line">csrutil enable</span><br></pre></td></tr></table></figure>
+
+<h4 id="休眠问题结局-开机软件报错"><a href="#休眠问题结局-开机软件报错" class="headerlink" title="休眠问题结局, 开机软件报错"></a>休眠问题结局, 开机软件报错</h4><p>因为我就一个 virtualbox 可能和 oracle 甲骨文有关, 所以我尝试重装 virtualbox, 报错了</p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-38-38.png"></p>
+<p>解决过程1</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 关闭系统安全与隐私选项</span><br><span class="line"></span><br><span class="line">sudo spctl --master-disable</span><br><span class="line"></span><br><span class="line"># 【系统偏好设置】-【安全性与隐私】-【通用】- 会有 [允许] virtualbox 安装的提示, 点击允许</span><br><span class="line"></span><br><span class="line">失败, 报错和之前一样  [安装失败 “安装器遇到了一个错误，请联系软件制造商以获得帮助]</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-33-48.png"></p>
+<p>解决过程2</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 尝试重启, 重新安装</span><br><span class="line"></span><br><span class="line">brew cask reinstall virtualbox</span><br><span class="line"></span><br><span class="line"># 【系统偏好设置】-【安全性与隐私】-【通用】- 会有 [允许] virtualbox 安装的提示, 点击允许 . 不同的是, 命令行中, 也会提示输入管理员密码</span><br><span class="line"></span><br><span class="line">安装成功</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-33-38.png"></p>
+]]></content>
       <tags>
         <tag>软件</tag>
       </tags>
@@ -12343,28 +12365,6 @@
 ]]></content>
       <tags>
         <tag>看剧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>更改sip修复mac睡眠后安装软件出错</title>
-    <url>/2018/11/25/%E6%9B%B4%E6%94%B9sip%E4%BF%AE%E5%A4%8Dmac%E7%9D%A1%E7%9C%A0%E5%90%8E%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E5%87%BA%E9%94%99/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-25-32.png"></p>
-<a id="more"></a>
-
-<h4 id="mac-休眠问题"><a href="#mac-休眠问题" class="headerlink" title="mac 休眠问题"></a>mac 休眠问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 开机 commend R, 关闭sip</span><br><span class="line"></span><br><span class="line">csrutil disable</span><br><span class="line"></span><br><span class="line"># 查询休眠文件</span><br><span class="line"></span><br><span class="line">ioreg -l | grep board-id</span><br><span class="line"></span><br><span class="line"># 进入休眠文件放置的文件夹</span><br><span class="line"></span><br><span class="line">cd &#x2F;System&#x2F;Library&#x2F;Extensions&#x2F;IOPlatformPluginFamily.kext&#x2F;Contents&#x2F;PlugIns&#x2F;X86PlatformPlugin.kext&#x2F;Contents&#x2F;Resources</span><br><span class="line"></span><br><span class="line"># 修改休眠文件</span><br><span class="line"></span><br><span class="line">sudo nano xxx.plist</span><br><span class="line"></span><br><span class="line"># 修改内容如下</span><br><span class="line"></span><br><span class="line">&lt;key&gt;TCPKeepAliveDuringSleep&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;false&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">&lt;key&gt;NotificationWake&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;false&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">&lt;key&gt;DNDWhileDisplaySleeps&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;true&#x2F;&gt;</span><br><span class="line"></span><br><span class="line"># 解释</span><br><span class="line"></span><br><span class="line">TCPKeepAliveDuringSleep：睡眠的时候关闭TCP保持连接</span><br><span class="line"></span><br><span class="line">NotificationWake：随机唤醒然后检查提醒</span><br><span class="line"></span><br><span class="line">DNDWhileDisplaySleeps：关闭屏幕后电脑任然可用, 外接显示器的自己考虑是否关闭</span><br><span class="line"></span><br><span class="line"># 重启 commend R , 打开sip</span><br><span class="line"></span><br><span class="line">csrutil enable</span><br></pre></td></tr></table></figure>
-
-<h4 id="休眠问题结局-开机软件报错"><a href="#休眠问题结局-开机软件报错" class="headerlink" title="休眠问题结局, 开机软件报错"></a>休眠问题结局, 开机软件报错</h4><p>因为我就一个 virtualbox 可能和 oracle 甲骨文有关, 所以我尝试重装 virtualbox, 报错了</p>
-<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-38-38.png"></p>
-<p>解决过程1</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 关闭系统安全与隐私选项</span><br><span class="line"></span><br><span class="line">sudo spctl --master-disable</span><br><span class="line"></span><br><span class="line"># 【系统偏好设置】-【安全性与隐私】-【通用】- 会有 [允许] virtualbox 安装的提示, 点击允许</span><br><span class="line"></span><br><span class="line">失败, 报错和之前一样  [安装失败 “安装器遇到了一个错误，请联系软件制造商以获得帮助]</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-33-48.png"></p>
-<p>解决过程2</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 尝试重启, 重新安装</span><br><span class="line"></span><br><span class="line">brew cask reinstall virtualbox</span><br><span class="line"></span><br><span class="line"># 【系统偏好设置】-【安全性与隐私】-【通用】- 会有 [允许] virtualbox 安装的提示, 点击允许 . 不同的是, 命令行中, 也会提示输入管理员密码</span><br><span class="line"></span><br><span class="line">安装成功</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-33-38.png"></p>
-]]></content>
-      <tags>
-        <tag>软件</tag>
       </tags>
   </entry>
 </search>
