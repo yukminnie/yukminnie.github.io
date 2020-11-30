@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>BrowserSync浏览器同步</title>
-    <url>/2017/11/16/BrowserSync%E6%B5%8F%E8%A7%88%E5%99%A8%E5%90%8C%E6%AD%A5/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_20-44-01.png.png"></p>
-<a id="more"></a>
-<p>Browsersync 是一个可以同步浏览器变化的工具，实现同步浏览。</p>
-<h4 id="进入需要同步的目录，初始化（生成package-json-文件）"><a href="#进入需要同步的目录，初始化（生成package-json-文件）" class="headerlink" title="进入需要同步的目录，初始化（生成package.json 文件）"></a>进入需要同步的目录，初始化（生成package.json 文件）</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
-
-<h4 id="安装-会作为开发者依赖，包含到-package-json-中，完成后目录中会多出一个node-modules模块文件"><a href="#安装-会作为开发者依赖，包含到-package-json-中，完成后目录中会多出一个node-modules模块文件" class="headerlink" title="安装( 会作为开发者依赖，包含到 package.json 中，完成后目录中会多出一个node_modules模块文件)"></a>安装( 会作为开发者依赖，包含到 package.json 中，完成后目录中会多出一个node_modules模块文件)</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install  browser-sync --save-dev</span><br></pre></td></tr></table></figure>
-
-<h4 id="简单例子"><a href="#简单例子" class="headerlink" title="简单例子"></a>简单例子</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir zhangsan</span><br><span class="line">cd zhangsan</span><br><span class="line">browser-sync start --server zhangsan --files&#x3D;&quot;zhangsan&#x2F;css&#x2F;*.css&quot;</span><br></pre></td></tr></table></figure>
-<h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">browser-sync start --proxy&#x3D;&quot;localhost:8000&quot; --files&#x3D;&quot;*.html, css&#x2F;*.css&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>软件安装记录</title>
     <url>/2018/02/06/Chocolatey/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/brewsci-256x256.png.png"></p>
@@ -32,6 +13,11 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># install</span><br><span class="line">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol &#x3D; [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https:&#x2F;&#x2F;chocolatey.org&#x2F;install.ps1&#39;))</span><br><span class="line"></span><br><span class="line"># 旧的(例如win8.1)可能会报错, 提示 WMF 版本低之类, 解决方法如下(或者微软官网下载 WMF)</span><br><span class="line">choco install powershell</span><br><span class="line"></span><br><span class="line"># main</span><br><span class="line">choco install wox git nodejs youtube-dl aria2 greenshot ffmpeg atom 7zip postman potplayer bitvise-ssh-client vscode winscp pycharm-community docker mysql picgo avidemux joplin -y</span><br><span class="line"></span><br><span class="line"># proxy  使用基于网卡代理的软件接管流量效果比较好</span><br><span class="line">choco config set proxy http:&#x2F;&#x2F;localhost:8888</span><br><span class="line"></span><br><span class="line"># spider </span><br><span class="line">choco install streamlink fiddler selenium-chrome-driver phantomjs -y</span><br><span class="line"></span><br><span class="line"># sql</span><br><span class="line">choco install redis-64 mysql sqlite dbeaver</span><br><span class="line"></span><br><span class="line"># upanok</span><br><span class="line">rufus cpu-z.install  crystaldiskinfo sqlite </span><br><span class="line"></span><br><span class="line"># .net .vc 直接搜索版本就好, 例子如下</span><br><span class="line">choco install dotnet3.5</span><br><span class="line">choco install dotnet4.0</span><br><span class="line">choco install dotnet4.5</span><br><span class="line">choco install dotnet4.5.1</span><br><span class="line">choco install dotnet4.5.2</span><br><span class="line">choco install dotnet4.6</span><br><span class="line">choco install dotnet4.6.1</span><br><span class="line">choco install dotnet4.6.2</span><br><span class="line">choco install dotnet4.7</span><br><span class="line">choco install dotnet4.7.1</span><br><span class="line">choco install dotnet4.7.2</span><br><span class="line">choco install netfx-4.8</span><br><span class="line"></span><br><span class="line">choco install vcredist2005 vcredist2008 vcredist2010 vcredist2012</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># other</span><br><span class="line">choco install gitextensions poweriso anaconda3</span><br><span class="line"></span><br><span class="line"># ss</span><br><span class="line">choco install shadowsocksr-windows</span><br><span class="line">choco install shadowsocks</span><br><span class="line">choco install shadowsocks-qt5</span><br><span class="line">choco install openconnect-gui</span><br></pre></td></tr></table></figure>
 
 <h4 id="mac-其他软件"><a href="#mac-其他软件" class="headerlink" title="mac 其他软件"></a>mac 其他软件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Neat download manager</span><br><span class="line"></span><br><span class="line">SmoothScroll</span><br><span class="line"></span><br><span class="line">clover </span><br><span class="line"></span><br><span class="line">hackintool</span><br><span class="line"></span><br><span class="line">feem</span><br><span class="line"></span><br><span class="line">irreader</span><br><span class="line"></span><br><span class="line">pdf expert</span><br><span class="line"></span><br><span class="line">mellow</span><br><span class="line"></span><br><span class="line">paste(ccboard)</span><br><span class="line"></span><br><span class="line">cleanmymacx(柠檬清理)</span><br><span class="line"></span><br><span class="line">图压(tuya.xinxiao.tech)</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="日常浏览器插件"><a href="#日常浏览器插件" class="headerlink" title="日常浏览器插件"></a>日常浏览器插件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 沙拉查词</span><br><span class="line">18 年是发现的页面翻译软件, 干净好用</span><br><span class="line"></span><br><span class="line"># Web Clipper</span><br><span class="line">剪辑页面插件, 替代印象笔记, onenote 这些</span><br><span class="line"></span><br><span class="line"># Neat download manager </span><br><span class="line">代替 IDM</span><br><span class="line"></span><br><span class="line"># OneTab</span><br><span class="line">聊胜于无吧, 用了好多年了</span><br><span class="line"></span><br><span class="line"># 愉阅 vs ImageAssistant</span><br><span class="line">页面图片收集</span><br><span class="line"></span><br><span class="line"># SmoothScroll</span><br><span class="line">平滑滚动</span><br><span class="line"></span><br><span class="line"># adguard</span><br><span class="line">毕竟是商业公司的东西，个人觉得比 ublock 全面些</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-53-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-54-39.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-54-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-55-29.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-55-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-56-39.png.png"></p>
 ]]></content>
       <tags>
         <tag>软件</tag>
@@ -412,83 +398,10 @@
       </tags>
   </entry>
   <entry>
-    <title>mac 一些问题记录</title>
-    <url>/2018/10/16/homebrew%E5%9C%A810-13%E6%97%B6%E7%9A%84%E5%AE%89%E8%A3%85%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_19-56-56.png.png"></p>
-<a id="more"></a>
-
-<h4 id="homebrew安装软件-报错xcrun-error-invalid-active-developer-path"><a href="#homebrew安装软件-报错xcrun-error-invalid-active-developer-path" class="headerlink" title="homebrew安装软件 报错xcrun: error: invalid active developer path"></a>homebrew安装软件 报错xcrun: error: invalid active developer path</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">解决方法，重装xcode command line：</span><br><span class="line"></span><br><span class="line">xcode-select --install</span><br><span class="line"></span><br><span class="line">sudo xcode-select -switch &#x2F;</span><br></pre></td></tr></table></figure>
-
-<h4 id="homebrew安装软件-报错-usr-local-Cellar-is-not-writable"><a href="#homebrew安装软件-报错-usr-local-Cellar-is-not-writable" class="headerlink" title="homebrew安装软件 报错/usr/local/Cellar is not writable"></a>homebrew安装软件 报错/usr/local/Cellar is not writable</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar</span><br></pre></td></tr></table></figure>
-
-<h4 id="homebrew安装软件-报错-Library-not-loaded-usr-local-lib-libx264-142-dylib"><a href="#homebrew安装软件-报错-Library-not-loaded-usr-local-lib-libx264-142-dylib" class="headerlink" title="homebrew安装软件 报错 Library not loaded: /usr/local/lib/libx264.142.dylib"></a>homebrew安装软件 报错 Library not loaded: /usr/local/lib/libx264.142.dylib</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew doctor</span><br></pre></td></tr></table></figure>
-
-<h4 id="mac-右键-多了一些莫名其妙的打开方式"><a href="#mac-右键-多了一些莫名其妙的打开方式" class="headerlink" title="mac 右键, 多了一些莫名其妙的打开方式"></a>mac 右键, 多了一些莫名其妙的打开方式</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;CoreServices.framework&#x2F;Versions&#x2F;A&#x2F;Frameworks&#x2F;LaunchServices.framework&#x2F;Versions&#x2F;A&#x2F;Support&#x2F;lsregister -kill -r -domain local -domain user;killall Finder;echo “Open With has been rebuilt, Finder will relaunch</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="mac-os-隐藏与显示文件"><a href="#mac-os-隐藏与显示文件" class="headerlink" title="mac os 隐藏与显示文件"></a>mac os 隐藏与显示文件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python的str方法记录</title>
     <url>/2017/04/16/python%E7%9A%84str%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p>占位。</p>
 <a id="more"></a>]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ubuntu的一些初始化配置</title>
-    <url>/2018/04/18/ssh%E5%92%8Cscp%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/ubuntu-logo-EED17E0B9E-seeklogo.com.png.png"></p>
-<a id="more"></a>
-
-<p>16年入了台搬瓦工上的传家宝，一年/20刀，好好珍惜和爱护</p>
-<h4 id="免密登录"><a href="#免密登录" class="headerlink" title="免密登录"></a>免密登录</h4><p><strong>在本机生成 ssh key 公钥私钥</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -C mykey</span><br><span class="line"></span><br><span class="line">ssh-keygen.exe -C mykey  # windows</span><br></pre></td></tr></table></figure>
-<p><strong>会提示你生成的文件的地址, 并且让你输入密码, 你不要输入密码, 直接回车, 这样你就得到了一对 ssh-key</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">id_rsa 是私钥 自己保存 不要给别人</span><br><span class="line"></span><br><span class="line">id_rsa.pub 是公钥, 是要到处使用的</span><br></pre></td></tr></table></figure>
-<p><strong>把本机生成的 <code>id_rsa.pub</code> 添加到服务器 /root/.ssh/authorized_keys 文件中</strong></p>
-<p><strong>用 root 用户登录到服务器, 创建 .ssh 目录，创建authorized_keys文件</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;root</span><br><span class="line">mkdir .ssh</span><br><span class="line">touch authorized_keys</span><br></pre></td></tr></table></figure>
-
-<p><strong>编辑 authorized_keys 文件, 把刚才生成的 <code>id_rsa.pub</code> 文件里面的内容粘贴进去并保存退出, 这里可以粘贴多个 key, 一行一个</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano .ssh&#x2F;authorized_keys</span><br></pre></td></tr></table></figure>
-
-<p><strong>禁用密码登录</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano &#x2F;etc&#x2F;ssh&#x2F;sshd_config</span><br></pre></td></tr></table></figure>
-
-<p>把里面的 PasswordAuthentication 改成 no 值</p>
-<p><strong>重启 ssh 服务</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service ssh restart</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h4><p>单独记录了, 在博客内搜索 <code>ufw防火墙</code></p>
-<h4 id="linux-oh-my-zsh"><a href="#linux-oh-my-zsh" class="headerlink" title="linux oh-my-zsh"></a>linux oh-my-zsh</h4><p> <strong>安装 oh-my-zsh 配置(方便你使用命令行的配置)</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get install</span><br><span class="line"></span><br><span class="line">wget https:&#x2F;&#x2F;github.com&#x2F;robbyrussell&#x2F;oh-my-zsh&#x2F;raw&#x2F;master&#x2F;tools&#x2F;install.sh -O - | sh</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="服务器中文编码问题"><a href="#服务器中文编码问题" class="headerlink" title="服务器中文编码问题"></a>服务器中文编码问题</h4><p><strong>编辑下面的文件</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano &#x2F;etc&#x2F;environment</span><br></pre></td></tr></table></figure>
-
-<p><strong>加入下面的内容, 保存退出</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">LC_CTYPE&#x3D;&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_ALL&#x3D;&quot;en_US.UTF-8&quot;</span><br></pre></td></tr></table></figure>
-
-<h4 id="随便记些命令"><a href="#随便记些命令" class="headerlink" title="随便记些命令"></a>随便记些命令</h4><h5 id="ssh-和-scp"><a href="#ssh-和-scp" class="headerlink" title="ssh 和 scp"></a>ssh 和 scp</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># scp</span><br><span class="line"></span><br><span class="line">scp -P 29337 -r app root@ip:&#x2F;tmp</span><br><span class="line"></span><br><span class="line"># scp执行WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!错误解决</span><br><span class="line"></span><br><span class="line">1, 查看家目录下的.ssh&#x2F;know_hosts文件</span><br><span class="line">2, 删除对应的失效的客户端 ip</span><br><span class="line">cat ~&#x2F;.ssh&#x2F;known_hosts</span><br><span class="line"></span><br><span class="line"># ssh</span><br><span class="line">ssh -p 29337 root@你的ip</span><br></pre></td></tr></table></figure>
-
-<h5 id="cp-拷贝命令"><a href="#cp-拷贝命令" class="headerlink" title="cp 拷贝命令"></a>cp 拷贝命令</h5><p>使用指令”cp”将当前目录”test/“下的所有文件复制到新目录”newtest”下，输入如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cp –r test&#x2F; newtest        </span><br></pre></td></tr></table></figure>
-
-<h5 id="Linux-查找文件、文件夹"><a href="#Linux-查找文件、文件夹" class="headerlink" title="Linux 查找文件、文件夹"></a>Linux 查找文件、文件夹</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查找tomcat7文件夹所在的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;tomcat7&#39; -type d</span><br><span class="line"></span><br><span class="line"># 查找server.xml文件的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;server.xml&#39; -print</span><br></pre></td></tr></table></figure>
-]]></content>
       <tags>
         <tag>软件</tag>
       </tags>
@@ -547,40 +460,6 @@
 <h4 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ufw disable</span><br></pre></td></tr></table></figure>
 
 ]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win上的第三方命令行Cmder</title>
-    <url>/2017/04/11/win%E4%B8%8A%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E5%91%BD%E4%BB%A4%E8%A1%8CCmder/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_19-23-38.png.png"></p>
-<a id="more"></a>
-<p>其实我个人觉得 powershell 够用了。</p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">choco install cmder</span><br></pre></td></tr></table></figure>
-<h4 id="添加-Cmder-至-path-环境变量"><a href="#添加-Cmder-至-path-环境变量" class="headerlink" title="添加 Cmder 至 path 环境变量"></a>添加 Cmder 至 path 环境变量</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">电脑 &gt; 右键属性 &gt; 高级系统设置 &gt; 环境变量 &gt; 系统变量，在path中添加 cmder 路径</span><br></pre></td></tr></table></figure>
-
-<h4 id="添加到右键菜单-打开命令行"><a href="#添加到右键菜单-打开命令行" class="headerlink" title="添加到右键菜单, 打开命令行"></a>添加到右键菜单, 打开命令行</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure>
-<h4 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Startup &gt; Environment &gt; Set up environment variables</span><br><span class="line"></span><br><span class="line">set LANG&#x3D;zh_CN.UTF8</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>marginnote同步问题</title>
-    <url>/2020/01/16/%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-18_12-30-15.png.png"></p>
-<a id="more"></a>
-<p>我在软路由里提到过这个问题。</p>
-<h4 id="marginnote"><a href="#marginnote" class="headerlink" title="marginnote"></a>marginnote</h4><p>排除比如网络故障，DNS故障这些客观原因不谈，其实 icloud 的同步，在国内还是挺快的，自从在贵州建立服务器以来。</p>
-<p>最初我也不知道哪里出了问题，就一直用的隔空传送，不过还是不太方便。因为我路由日常就是全局白名单模式，突然想到，会不会是走了特别线路呢？</p>
-<p>在 xx 中，我尝试在黑名单中加入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*.apple.com</span><br></pre></td></tr></table></figure>
-
-<p>重启设备后，同步立马就成功了。</p>
-<h4 id="onedrive"><a href="#onedrive" class="headerlink" title="onedrive"></a>onedrive</h4><p>突然由 mn 同步这件事，不由自主就想到微软的云服务。不得不说，微软的云服务，真的是个很神奇的东西，不管你网络情况如何，都能保证不让你用的爽，和巨硬的软件简直五五开。</p>
-<h4 id="企业理念不同"><a href="#企业理念不同" class="headerlink" title="企业理念不同"></a>企业理念不同</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">苹果：开发者，我是你 D</span><br><span class="line"></span><br><span class="line">微软： 用户，我是你 D</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>软件</tag>
       </tags>
@@ -713,20 +592,6 @@
 ]]></content>
       <tags>
         <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谷歌商店插件</title>
-    <url>/2018/09/06/%E5%95%86%E5%BA%97%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/chrome-web-store-icon-chrome-web-store-logo-png-transparent-png-chrome-web-store-png-820_524.png.png"></p>
-<a id="more"></a>
-
-<h4 id="日常用"><a href="#日常用" class="headerlink" title="日常用"></a>日常用</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 沙拉查词</span><br><span class="line">18 年是发现的页面翻译软件, 干净好用</span><br><span class="line"></span><br><span class="line"># Web Clipper</span><br><span class="line">剪辑页面插件, 替代印象笔记, onenote 这些</span><br><span class="line"></span><br><span class="line"># Neat download manager </span><br><span class="line">代替 IDM</span><br><span class="line"></span><br><span class="line"># OneTab</span><br><span class="line">聊胜于无吧, 用了好多年了</span><br><span class="line"></span><br><span class="line"># 愉阅 vs ImageAssistant</span><br><span class="line">页面图片收集</span><br><span class="line"></span><br><span class="line"># SmoothScroll</span><br><span class="line">平滑滚动</span><br><span class="line"></span><br><span class="line"># adguard</span><br><span class="line">毕竟是商业公司的东西，个人觉得比 ublock 全面些</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-53-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-54-39.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-54-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-55-29.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-55-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-56-39.png.png"></p>
-]]></content>
-      <tags>
-        <tag>软件</tag>
       </tags>
   </entry>
   <entry>
@@ -864,44 +729,6 @@
 <h4 id="旁路由模式下的-KMS"><a href="#旁路由模式下的-KMS" class="headerlink" title="旁路由模式下的 KMS"></a>旁路由模式下的 KMS</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">旁路由模式是无效的，需要注意</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>硬件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>无U盘情况下抹盘安装原版镜像</title>
-    <url>/2018/02/14/%E6%97%A0U%E7%9B%98%E6%83%85%E5%86%B5%E4%B8%8B%E6%91%B8%E7%9B%98%E5%AE%89%E8%A3%85%E5%8E%9F%E7%89%88%E9%95%9C%E5%83%8F/</url>
-    <content><![CDATA[<p>想要抹盘纯净重装，而不是升级方式，避免升级方式出问题，刚巧手上没 U盘</p>
-<a id="more"></a>
-
-<h4 id="原版系统镜像"><a href="#原版系统镜像" class="headerlink" title="原版系统镜像"></a>原版系统镜像</h4><p>解压到非系统盘，例子假设解压在了 D 盘，可以给解压后的文件夹起个好记的名字，比如 win</p>
-<h4 id="设置，更新和安全"><a href="#设置，更新和安全" class="headerlink" title="设置，更新和安全"></a>设置，更新和安全</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/e1fe9925bc315c6018c53a0886b1cb1348547780.jpg.jpg"></p>
-<h4 id="高级启动，立即重启"><a href="#高级启动，立即重启" class="headerlink" title="高级启动，立即重启"></a>高级启动，立即重启</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/8d5494eef01f3a290a2584299225bc315d607c63.jpg.jpg"></p>
-<h4 id="选高级选项"><a href="#选高级选项" class="headerlink" title="选高级选项"></a>选高级选项</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/6a600c338744ebf8c6fc35d8d2f9d72a6159a74c.jpg.jpg"></p>
-<h4 id="选命令提示符"><a href="#选命令提示符" class="headerlink" title="选命令提示符"></a>选命令提示符</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/9345d688d43f8794c53219c9d91b0ef41ad53a03.jpg.jpg"></p>
-<h4 id="会自动重启进入命令行"><a href="#会自动重启进入命令行" class="headerlink" title="会自动重启进入命令行"></a>会自动重启进入命令行</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 之前解压到了 D 盘， 进入 D 盘</span><br><span class="line"></span><br><span class="line">d:</span><br><span class="line"></span><br><span class="line"># 进入解压文件夹</span><br><span class="line"></span><br><span class="line">cd win</span><br><span class="line"></span><br><span class="line"># 进入 source 文件夹</span><br><span class="line"></span><br><span class="line">cd source</span><br><span class="line"></span><br><span class="line"># 运行 setup.exe</span><br><span class="line"></span><br><span class="line">.&#x2F;setup.exe</span><br><span class="line"></span><br><span class="line"># 进入正常的格盘安装流程</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>更改sip修复mac睡眠后安装软件出错</title>
-    <url>/2018/11/25/%E6%9B%B4%E6%94%B9sip%E4%BF%AE%E5%A4%8Dmac%E7%9D%A1%E7%9C%A0%E5%90%8E%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E5%87%BA%E9%94%99/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-25-32.png"></p>
-<a id="more"></a>
-
-<h4 id="mac-休眠问题"><a href="#mac-休眠问题" class="headerlink" title="mac 休眠问题"></a>mac 休眠问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 开机 commend R, 关闭sip</span><br><span class="line"></span><br><span class="line">csrutil disable</span><br><span class="line"></span><br><span class="line"># 查询休眠文件</span><br><span class="line"></span><br><span class="line">ioreg -l | grep board-id</span><br><span class="line"></span><br><span class="line"># 进入休眠文件放置的文件夹</span><br><span class="line"></span><br><span class="line">cd &#x2F;System&#x2F;Library&#x2F;Extensions&#x2F;IOPlatformPluginFamily.kext&#x2F;Contents&#x2F;PlugIns&#x2F;X86PlatformPlugin.kext&#x2F;Contents&#x2F;Resources</span><br><span class="line"></span><br><span class="line"># 修改休眠文件</span><br><span class="line"></span><br><span class="line">sudo nano xxx.plist</span><br><span class="line"></span><br><span class="line"># 修改内容如下</span><br><span class="line"></span><br><span class="line">&lt;key&gt;TCPKeepAliveDuringSleep&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;false&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">&lt;key&gt;NotificationWake&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;false&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">&lt;key&gt;DNDWhileDisplaySleeps&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;true&#x2F;&gt;</span><br><span class="line"></span><br><span class="line"># 解释</span><br><span class="line"></span><br><span class="line">TCPKeepAliveDuringSleep：睡眠的时候关闭TCP保持连接</span><br><span class="line"></span><br><span class="line">NotificationWake：随机唤醒然后检查提醒</span><br><span class="line"></span><br><span class="line">DNDWhileDisplaySleeps：关闭屏幕后电脑任然可用, 外接显示器的自己考虑是否关闭</span><br><span class="line"></span><br><span class="line"># 重启 commend R , 打开sip</span><br><span class="line"></span><br><span class="line">csrutil enable</span><br></pre></td></tr></table></figure>
-
-<h4 id="休眠问题结局-开机软件报错"><a href="#休眠问题结局-开机软件报错" class="headerlink" title="休眠问题结局, 开机软件报错"></a>休眠问题结局, 开机软件报错</h4><p>因为我就一个 virtualbox 可能和 oracle 甲骨文有关, 所以我尝试重装 virtualbox, 报错了</p>
-<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-38-38.png"></p>
-<p>解决过程1</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 关闭系统安全与隐私选项</span><br><span class="line"></span><br><span class="line">sudo spctl --master-disable</span><br><span class="line"></span><br><span class="line"># 【系统偏好设置】-【安全性与隐私】-【通用】- 会有 [允许] virtualbox 安装的提示, 点击允许</span><br><span class="line"></span><br><span class="line">失败, 报错和之前一样  [安装失败 “安装器遇到了一个错误，请联系软件制造商以获得帮助]</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-33-48.png"></p>
-<p>解决过程2</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 尝试重启, 重新安装</span><br><span class="line"></span><br><span class="line">brew cask reinstall virtualbox</span><br><span class="line"></span><br><span class="line"># 【系统偏好设置】-【安全性与隐私】-【通用】- 会有 [允许] virtualbox 安装的提示, 点击允许 . 不同的是, 命令行中, 也会提示输入管理员密码</span><br><span class="line"></span><br><span class="line">安装成功</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-33-38.png"></p>
-]]></content>
-      <tags>
-        <tag>软件</tag>
       </tags>
   </entry>
   <entry>
@@ -12371,5 +12198,127 @@
       <tags>
         <tag>看剧</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>mac 一些问题记录</title>
+    <url>/2018/10/16/mac%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_19-56-56.png.png"></p>
+<a id="more"></a>
+
+<h4 id="homebrew安装软件-报错xcrun-error-invalid-active-developer-path"><a href="#homebrew安装软件-报错xcrun-error-invalid-active-developer-path" class="headerlink" title="homebrew安装软件 报错xcrun: error: invalid active developer path"></a>homebrew安装软件 报错xcrun: error: invalid active developer path</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">解决方法，重装xcode command line：</span><br><span class="line"></span><br><span class="line">xcode-select --install</span><br><span class="line"></span><br><span class="line">sudo xcode-select -switch &#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="homebrew安装软件-报错-usr-local-Cellar-is-not-writable"><a href="#homebrew安装软件-报错-usr-local-Cellar-is-not-writable" class="headerlink" title="homebrew安装软件 报错/usr/local/Cellar is not writable"></a>homebrew安装软件 报错/usr/local/Cellar is not writable</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar</span><br></pre></td></tr></table></figure>
+
+<h4 id="homebrew安装软件-报错-Library-not-loaded-usr-local-lib-libx264-142-dylib"><a href="#homebrew安装软件-报错-Library-not-loaded-usr-local-lib-libx264-142-dylib" class="headerlink" title="homebrew安装软件 报错 Library not loaded: /usr/local/lib/libx264.142.dylib"></a>homebrew安装软件 报错 Library not loaded: /usr/local/lib/libx264.142.dylib</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew doctor</span><br></pre></td></tr></table></figure>
+
+<h4 id="mac-右键-多了一些莫名其妙的打开方式"><a href="#mac-右键-多了一些莫名其妙的打开方式" class="headerlink" title="mac 右键, 多了一些莫名其妙的打开方式"></a>mac 右键, 多了一些莫名其妙的打开方式</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;CoreServices.framework&#x2F;Versions&#x2F;A&#x2F;Frameworks&#x2F;LaunchServices.framework&#x2F;Versions&#x2F;A&#x2F;Support&#x2F;lsregister -kill -r -domain local -domain user;killall Finder;echo “Open With has been rebuilt, Finder will relaunch</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="mac-os-隐藏与显示文件"><a href="#mac-os-隐藏与显示文件" class="headerlink" title="mac os 隐藏与显示文件"></a>mac os 隐藏与显示文件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-18_12-30-15.png.png"></p>
+<h4 id="marginnote同步问题"><a href="#marginnote同步问题" class="headerlink" title="marginnote同步问题"></a>marginnote同步问题</h4><p>排除比如网络故障，DNS故障这些客观原因不谈，其实 icloud 的同步，在国内还是挺快的</p>
+<p>最初我也不知道哪里出了问题，就一直用的隔空传送，不过还是不太方便。因为我路由日常就是全局白名单模式，突然想到，会不会是走了特别线路呢？</p>
+<p>在 xx 中，我尝试在黑名单中加入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*.apple.com</span><br></pre></td></tr></table></figure>
+
+<p>重启设备后，同步立马就成功了。</p>
+<h4 id="mac-休眠问题"><a href="#mac-休眠问题" class="headerlink" title="mac 休眠问题"></a>mac 休眠问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 开机 commend R, 关闭sip</span><br><span class="line"></span><br><span class="line">csrutil disable</span><br><span class="line"></span><br><span class="line"># 查询休眠文件</span><br><span class="line"></span><br><span class="line">ioreg -l | grep board-id</span><br><span class="line"></span><br><span class="line"># 进入休眠文件放置的文件夹</span><br><span class="line"></span><br><span class="line">cd &#x2F;System&#x2F;Library&#x2F;Extensions&#x2F;IOPlatformPluginFamily.kext&#x2F;Contents&#x2F;PlugIns&#x2F;X86PlatformPlugin.kext&#x2F;Contents&#x2F;Resources</span><br><span class="line"></span><br><span class="line"># 修改休眠文件</span><br><span class="line"></span><br><span class="line">sudo nano xxx.plist</span><br><span class="line"></span><br><span class="line"># 修改内容如下</span><br><span class="line"></span><br><span class="line">&lt;key&gt;TCPKeepAliveDuringSleep&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;false&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">&lt;key&gt;NotificationWake&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;false&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">&lt;key&gt;DNDWhileDisplaySleeps&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;true&#x2F;&gt;</span><br><span class="line"></span><br><span class="line"># 解释</span><br><span class="line"></span><br><span class="line">TCPKeepAliveDuringSleep：睡眠的时候关闭TCP保持连接</span><br><span class="line"></span><br><span class="line">NotificationWake：随机唤醒然后检查提醒</span><br><span class="line"></span><br><span class="line">DNDWhileDisplaySleeps：关闭屏幕后电脑任然可用, 外接显示器的自己考虑是否关闭</span><br><span class="line"></span><br><span class="line"># 重启 commend R , 打开sip</span><br><span class="line"></span><br><span class="line">csrutil enable</span><br></pre></td></tr></table></figure>
+
+<h4 id="休眠问题结局-开机软件报错"><a href="#休眠问题结局-开机软件报错" class="headerlink" title="休眠问题结局, 开机软件报错"></a>休眠问题结局, 开机软件报错</h4><p>因为我就一个 virtualbox 可能和 oracle 甲骨文有关, 所以我尝试重装 virtualbox, 报错了</p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-38-38.png"></p>
+<p>解决过程1</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 关闭系统安全与隐私选项</span><br><span class="line"></span><br><span class="line">sudo spctl --master-disable</span><br><span class="line"></span><br><span class="line"># 【系统偏好设置】-【安全性与隐私】-【通用】- 会有 [允许] virtualbox 安装的提示, 点击允许</span><br><span class="line"></span><br><span class="line">失败, 报错和之前一样  [安装失败 “安装器遇到了一个错误，请联系软件制造商以获得帮助]</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-33-48.png"></p>
+<p>解决过程2</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 尝试重启, 重新安装</span><br><span class="line"></span><br><span class="line">brew cask reinstall virtualbox</span><br><span class="line"></span><br><span class="line"># 【系统偏好设置】-【安全性与隐私】-【通用】- 会有 [允许] virtualbox 安装的提示, 点击允许 . 不同的是, 命令行中, 也会提示输入管理员密码</span><br><span class="line"></span><br><span class="line">安装成功</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-33-38.png"></p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ubuntu的一些初始化配置</title>
+    <url>/2018/04/18/ubuntu%E7%9A%84%E4%B8%80%E4%BA%9B%E5%88%9D%E5%A7%8B%E5%8C%96/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/ubuntu-logo-EED17E0B9E-seeklogo.com.png.png"></p>
+<a id="more"></a>
+
+<p>16年入了台搬瓦工上的传家宝，一年/20刀，好好珍惜和爱护</p>
+<h4 id="免密登录"><a href="#免密登录" class="headerlink" title="免密登录"></a>免密登录</h4><p><strong>在本机生成 ssh key 公钥私钥</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -C mykey</span><br><span class="line"></span><br><span class="line">ssh-keygen.exe -C mykey  # windows</span><br></pre></td></tr></table></figure>
+<p><strong>会提示你生成的文件的地址, 并且让你输入密码, 你不要输入密码, 直接回车, 这样你就得到了一对 ssh-key</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">id_rsa 是私钥 自己保存 不要给别人</span><br><span class="line"></span><br><span class="line">id_rsa.pub 是公钥, 是要到处使用的</span><br></pre></td></tr></table></figure>
+<p><strong>把本机生成的 <code>id_rsa.pub</code> 添加到服务器 /root/.ssh/authorized_keys 文件中</strong></p>
+<p><strong>用 root 用户登录到服务器, 创建 .ssh 目录，创建authorized_keys文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;root</span><br><span class="line">mkdir .ssh</span><br><span class="line">touch authorized_keys</span><br></pre></td></tr></table></figure>
+
+<p><strong>编辑 authorized_keys 文件, 把刚才生成的 <code>id_rsa.pub</code> 文件里面的内容粘贴进去并保存退出, 这里可以粘贴多个 key, 一行一个</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano .ssh&#x2F;authorized_keys</span><br></pre></td></tr></table></figure>
+
+<p><strong>禁用密码登录</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano &#x2F;etc&#x2F;ssh&#x2F;sshd_config</span><br></pre></td></tr></table></figure>
+
+<p>把里面的 PasswordAuthentication 改成 no 值</p>
+<p><strong>重启 ssh 服务</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service ssh restart</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h4><p>单独记录了, 在博客内搜索 <code>ufw防火墙</code></p>
+<h4 id="linux-oh-my-zsh"><a href="#linux-oh-my-zsh" class="headerlink" title="linux oh-my-zsh"></a>linux oh-my-zsh</h4><p> <strong>安装 oh-my-zsh 配置(方便你使用命令行的配置)</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get install</span><br><span class="line"></span><br><span class="line">wget https:&#x2F;&#x2F;github.com&#x2F;robbyrussell&#x2F;oh-my-zsh&#x2F;raw&#x2F;master&#x2F;tools&#x2F;install.sh -O - | sh</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="服务器中文编码问题"><a href="#服务器中文编码问题" class="headerlink" title="服务器中文编码问题"></a>服务器中文编码问题</h4><p><strong>编辑下面的文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nano &#x2F;etc&#x2F;environment</span><br></pre></td></tr></table></figure>
+
+<p><strong>加入下面的内容, 保存退出</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">LC_CTYPE&#x3D;&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_ALL&#x3D;&quot;en_US.UTF-8&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="随便记些命令"><a href="#随便记些命令" class="headerlink" title="随便记些命令"></a>随便记些命令</h4><h5 id="ssh-和-scp"><a href="#ssh-和-scp" class="headerlink" title="ssh 和 scp"></a>ssh 和 scp</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># scp</span><br><span class="line"></span><br><span class="line">scp -P 29337 -r app root@ip:&#x2F;tmp</span><br><span class="line"></span><br><span class="line"># scp执行WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!错误解决</span><br><span class="line"></span><br><span class="line">1, 查看家目录下的.ssh&#x2F;know_hosts文件</span><br><span class="line">2, 删除对应的失效的客户端 ip</span><br><span class="line">cat ~&#x2F;.ssh&#x2F;known_hosts</span><br><span class="line"></span><br><span class="line"># ssh</span><br><span class="line">ssh -p 29337 root@你的ip</span><br></pre></td></tr></table></figure>
+
+<h5 id="cp-拷贝命令"><a href="#cp-拷贝命令" class="headerlink" title="cp 拷贝命令"></a>cp 拷贝命令</h5><p>使用指令”cp”将当前目录”test/“下的所有文件复制到新目录”newtest”下，输入如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cp –r test&#x2F; newtest        </span><br></pre></td></tr></table></figure>
+
+<h5 id="Linux-查找文件、文件夹"><a href="#Linux-查找文件、文件夹" class="headerlink" title="Linux 查找文件、文件夹"></a>Linux 查找文件、文件夹</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查找tomcat7文件夹所在的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;tomcat7&#39; -type d</span><br><span class="line"></span><br><span class="line"># 查找server.xml文件的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;server.xml&#39; -print</span><br></pre></td></tr></table></figure>
+
+<p>记录一些命令行工具</p>
+<h4 id="Browsersync"><a href="#Browsersync" class="headerlink" title="Browsersync"></a>Browsersync</h4><h5 id="进入需要同步的目录，初始化（生成package-json-文件）"><a href="#进入需要同步的目录，初始化（生成package-json-文件）" class="headerlink" title="进入需要同步的目录，初始化（生成package.json 文件）"></a>进入需要同步的目录，初始化（生成package.json 文件）</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
+
+<h5 id="安装-会作为开发者依赖，包含到-package-json-中，完成后目录中会多出一个node-modules模块文件"><a href="#安装-会作为开发者依赖，包含到-package-json-中，完成后目录中会多出一个node-modules模块文件" class="headerlink" title="安装( 会作为开发者依赖，包含到 package.json 中，完成后目录中会多出一个node_modules模块文件)"></a>安装( 会作为开发者依赖，包含到 package.json 中，完成后目录中会多出一个node_modules模块文件)</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install  browser-sync --save-dev</span><br></pre></td></tr></table></figure>
+
+<h5 id="简单例子"><a href="#简单例子" class="headerlink" title="简单例子"></a>简单例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir zhangsan</span><br><span class="line">cd zhangsan</span><br><span class="line">browser-sync start --server zhangsan --files&#x3D;&quot;zhangsan&#x2F;css&#x2F;*.css&quot;</span><br></pre></td></tr></table></figure>
+<h5 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">browser-sync start --proxy&#x3D;&quot;localhost:8000&quot; --files&#x3D;&quot;*.html, css&#x2F;*.css&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="tldr"><a href="#tldr" class="headerlink" title="tldr"></a>tldr</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g tldr</span><br></pre></td></tr></table></figure>
+
+<h4 id="待续"><a href="#待续" class="headerlink" title="待续"></a>待续</h4>]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>window一些配置</title>
+    <url>/2018/01/30/window%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/landing-medium.jpg.jpg"></p>
+<a id="more"></a>
+
+<h4 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># install</span><br><span class="line">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol &#x3D; [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https:&#x2F;&#x2F;chocolatey.org&#x2F;install.ps1&#39;))</span><br><span class="line"></span><br><span class="line"># 旧的(例如win8.1)可能会报错, 提示 WMF 版本低之类, 解决方法如下(或者微软官网下载 WMF)</span><br><span class="line">choco install powershell</span><br><span class="line"></span><br><span class="line"># main</span><br><span class="line">choco install wox git nodejs youtube-dl aria2 greenshot ffmpeg atom 7zip postman potplayer bitvise-ssh-client vscode winscp pycharm-community docker mysql picgo avidemux joplin -y</span><br><span class="line"></span><br><span class="line"># proxy  使用基于网卡代理的软件接管流量效果比较好</span><br><span class="line">choco config set proxy http:&#x2F;&#x2F;localhost:8888</span><br><span class="line"></span><br><span class="line"># spider </span><br><span class="line">choco install streamlink fiddler selenium-chrome-driver phantomjs -y</span><br><span class="line"></span><br><span class="line"># sql</span><br><span class="line">choco install redis-64 mysql sqlite dbeaver</span><br><span class="line"></span><br><span class="line"># upanok</span><br><span class="line">rufus cpu-z.install  crystaldiskinfo sqlite </span><br><span class="line"></span><br><span class="line"># .net .vc 直接搜索版本就好, 例子如下</span><br><span class="line">choco install dotnet3.5</span><br><span class="line">choco install dotnet4.0</span><br><span class="line">choco install dotnet4.5</span><br><span class="line">choco install dotnet4.5.1</span><br><span class="line">choco install dotnet4.5.2</span><br><span class="line">choco install dotnet4.6</span><br><span class="line">choco install dotnet4.6.1</span><br><span class="line">choco install dotnet4.6.2</span><br><span class="line">choco install dotnet4.7</span><br><span class="line">choco install dotnet4.7.1</span><br><span class="line">choco install dotnet4.7.2</span><br><span class="line">choco install netfx-4.8</span><br><span class="line"></span><br><span class="line">choco install vcredist2005 vcredist2008 vcredist2010 vcredist2012</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># other</span><br><span class="line">choco install gitextensions poweriso anaconda3</span><br><span class="line"></span><br><span class="line"># ss</span><br><span class="line">choco install shadowsocksr-windows</span><br><span class="line">choco install shadowsocks</span><br><span class="line">choco install shadowsocks-qt5</span><br><span class="line">choco install openconnect-gui</span><br></pre></td></tr></table></figure>
+
+<h4 id="无U盘抹盘重装"><a href="#无U盘抹盘重装" class="headerlink" title="无U盘抹盘重装"></a>无U盘抹盘重装</h4><h5 id="原版系统镜像"><a href="#原版系统镜像" class="headerlink" title="原版系统镜像"></a>原版系统镜像</h5><p>解压到非系统盘，例子假设解压在了 D 盘，可以给解压后的文件夹起个好记的名字，比如 win</p>
+<h5 id="设置，更新和安全"><a href="#设置，更新和安全" class="headerlink" title="设置，更新和安全"></a>设置，更新和安全</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/e1fe9925bc315c6018c53a0886b1cb1348547780.jpg.jpg"></p>
+<h5 id="高级启动，立即重启"><a href="#高级启动，立即重启" class="headerlink" title="高级启动，立即重启"></a>高级启动，立即重启</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/8d5494eef01f3a290a2584299225bc315d607c63.jpg.jpg"></p>
+<h5 id="选高级选项"><a href="#选高级选项" class="headerlink" title="选高级选项"></a>选高级选项</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/6a600c338744ebf8c6fc35d8d2f9d72a6159a74c.jpg.jpg"></p>
+<h5 id="选命令提示符"><a href="#选命令提示符" class="headerlink" title="选命令提示符"></a>选命令提示符</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/9345d688d43f8794c53219c9d91b0ef41ad53a03.jpg.jpg"></p>
+<h5 id="会自动重启进入命令行"><a href="#会自动重启进入命令行" class="headerlink" title="会自动重启进入命令行"></a>会自动重启进入命令行</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 之前解压到了 D 盘， 进入 D 盘</span><br><span class="line"></span><br><span class="line">d:</span><br><span class="line"></span><br><span class="line"># 进入解压文件夹</span><br><span class="line"></span><br><span class="line">cd win</span><br><span class="line"></span><br><span class="line"># 进入 source 文件夹</span><br><span class="line"></span><br><span class="line">cd source</span><br><span class="line"></span><br><span class="line"># 运行 setup.exe</span><br><span class="line"></span><br><span class="line">.&#x2F;setup.exe</span><br><span class="line"></span><br><span class="line"># 进入正常的格盘安装流程</span><br></pre></td></tr></table></figure>
+
+<h4 id="cmder命令行工具（其实我个人觉得-powershell-够用了）"><a href="#cmder命令行工具（其实我个人觉得-powershell-够用了）" class="headerlink" title="cmder命令行工具（其实我个人觉得 powershell 够用了）"></a>cmder命令行工具（其实我个人觉得 powershell 够用了）</h4><h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">choco install cmder</span><br></pre></td></tr></table></figure>
+<h5 id="添加-Cmder-至-path-环境变量"><a href="#添加-Cmder-至-path-环境变量" class="headerlink" title="添加 Cmder 至 path 环境变量"></a>添加 Cmder 至 path 环境变量</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">电脑 &gt; 右键属性 &gt; 高级系统设置 &gt; 环境变量 &gt; 系统变量，在path中添加 cmder 路径</span><br></pre></td></tr></table></figure>
+
+<h5 id="添加到右键菜单-打开命令行"><a href="#添加到右键菜单-打开命令行" class="headerlink" title="添加到右键菜单, 打开命令行"></a>添加到右键菜单, 打开命令行</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure>
+<h5 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Startup &gt; Environment &gt; Set up environment variables</span><br><span class="line"></span><br><span class="line">set LANG&#x3D;zh_CN.UTF8</span><br></pre></td></tr></table></figure>
+]]></content>
   </entry>
 </search>
