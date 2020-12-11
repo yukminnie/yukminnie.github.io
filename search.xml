@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>软件安装记录</title>
-    <url>/2018/02/06/Chocolatey/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/brewsci-256x256.png.png"></p>
-<a id="more"></a>
-
-<h4 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/landing-medium-1.jpg.jpg"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># brew</span><br><span class="line">&#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install.sh)&quot;</span><br><span class="line"></span><br><span class="line"># git</span><br><span class="line">brew install git</span><br><span class="line"></span><br><span class="line"># oh-my-zsh</span><br><span class="line">sh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.github.com&#x2F;ohmyzsh&#x2F;ohmyzsh&#x2F;master&#x2F;tools&#x2F;install.sh)&quot;</span><br><span class="line"></span><br><span class="line"># cask</span><br><span class="line">brew cask install  visual-studio-code mweb picgo  telegram postman alfred the-unarchiver anki avidemux foxmail iina webstorm feem baidunetdisk google-chrome downie marginnote baiduinput</span><br><span class="line"></span><br><span class="line"># bash</span><br><span class="line">brew install nodejs npm ffmpeg youtube-dl</span><br><span class="line"></span><br><span class="line"># other </span><br><span class="line">tuxera-ntfs</span><br></pre></td></tr></table></figure>
-
-<h4 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/landing-medium.jpg.jpg"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># install</span><br><span class="line">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol &#x3D; [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https:&#x2F;&#x2F;chocolatey.org&#x2F;install.ps1&#39;))</span><br><span class="line"></span><br><span class="line"># 旧的(例如win8.1)可能会报错, 提示 WMF 版本低之类, 解决方法如下(或者微软官网下载 WMF)</span><br><span class="line">choco install powershell</span><br><span class="line"></span><br><span class="line"># main</span><br><span class="line">choco install wox git nodejs youtube-dl aria2 greenshot ffmpeg atom 7zip postman potplayer bitvise-ssh-client vscode winscp pycharm-community docker mysql picgo avidemux joplin -y</span><br><span class="line"></span><br><span class="line"># proxy  使用基于网卡代理的软件接管流量效果比较好</span><br><span class="line">choco config set proxy http:&#x2F;&#x2F;localhost:8888</span><br><span class="line"></span><br><span class="line"># spider </span><br><span class="line">choco install streamlink fiddler selenium-chrome-driver phantomjs -y</span><br><span class="line"></span><br><span class="line"># sql</span><br><span class="line">choco install redis-64 mysql sqlite dbeaver</span><br><span class="line"></span><br><span class="line"># upanok</span><br><span class="line">rufus cpu-z.install  crystaldiskinfo sqlite </span><br><span class="line"></span><br><span class="line"># .net .vc 直接搜索版本就好, 例子如下</span><br><span class="line">choco install dotnet3.5</span><br><span class="line">choco install dotnet4.0</span><br><span class="line">choco install dotnet4.5</span><br><span class="line">choco install dotnet4.5.1</span><br><span class="line">choco install dotnet4.5.2</span><br><span class="line">choco install dotnet4.6</span><br><span class="line">choco install dotnet4.6.1</span><br><span class="line">choco install dotnet4.6.2</span><br><span class="line">choco install dotnet4.7</span><br><span class="line">choco install dotnet4.7.1</span><br><span class="line">choco install dotnet4.7.2</span><br><span class="line">choco install netfx-4.8</span><br><span class="line"></span><br><span class="line">choco install vcredist2005 vcredist2008 vcredist2010 vcredist2012</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># other</span><br><span class="line">choco install gitextensions poweriso anaconda3</span><br><span class="line"></span><br><span class="line"># ss</span><br><span class="line">choco install shadowsocksr-windows</span><br><span class="line">choco install shadowsocks</span><br><span class="line">choco install shadowsocks-qt5</span><br><span class="line">choco install openconnect-gui</span><br></pre></td></tr></table></figure>
-
-<h4 id="mac-其他软件"><a href="#mac-其他软件" class="headerlink" title="mac 其他软件"></a>mac 其他软件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Neat download manager</span><br><span class="line"></span><br><span class="line">SmoothScroll</span><br><span class="line"></span><br><span class="line">clover </span><br><span class="line"></span><br><span class="line">hackintool</span><br><span class="line"></span><br><span class="line">feem</span><br><span class="line"></span><br><span class="line">irreader</span><br><span class="line"></span><br><span class="line">pdf expert</span><br><span class="line"></span><br><span class="line">mellow</span><br><span class="line"></span><br><span class="line">paste(ccboard)</span><br><span class="line"></span><br><span class="line">cleanmymacx(柠檬清理)</span><br><span class="line"></span><br><span class="line">图压(tuya.xinxiao.tech)</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="日常浏览器插件"><a href="#日常浏览器插件" class="headerlink" title="日常浏览器插件"></a>日常浏览器插件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 沙拉查词</span><br><span class="line">18 年是发现的页面翻译软件, 干净好用</span><br><span class="line"></span><br><span class="line"># Web Clipper</span><br><span class="line">剪辑页面插件, 替代印象笔记, onenote 这些</span><br><span class="line"></span><br><span class="line"># Neat download manager </span><br><span class="line">代替 IDM</span><br><span class="line"></span><br><span class="line"># OneTab</span><br><span class="line">聊胜于无吧, 用了好多年了</span><br><span class="line"></span><br><span class="line"># 愉阅 vs ImageAssistant</span><br><span class="line">页面图片收集</span><br><span class="line"></span><br><span class="line"># SmoothScroll</span><br><span class="line">平滑滚动</span><br><span class="line"></span><br><span class="line"># adguard</span><br><span class="line">毕竟是商业公司的东西，个人觉得比 ublock 全面些</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-53-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-54-39.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-54-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-55-29.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-55-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-56-39.png.png"></p>
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>FFmpeg日常用法</title>
     <url>/2019/06/06/FFmpeg/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/1_M991891hzkJrFHyMzWrhSg.jpeg.jpeg"></p>
@@ -92,105 +69,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Systemctl服务管理</title>
-    <url>/2017/10/06/Systemctl%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_19-11-13.png.png"></p>
-<a id="more"></a>
-<p>systemctl 是针对于 systemd的管理工具 ，直接管理的对象称之为单元 units</p>
-<h4 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h4><p>查看当前系统载入的单元</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl list-units</span><br></pre></td></tr></table></figure>
-<p>查看所有单元</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl list-unit-files</span><br></pre></td></tr></table></figure>
-<p>查看包含某个关键词的单元文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl list-unit-files | grep mail</span><br></pre></td></tr></table></figure>
-<p>只查看服务类型的单元</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl list-unit-files --type&#x3D;service</span><br></pre></td></tr></table></figure>
-
-<p>查看某个服务是否是运行状态</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl is-active 服务名</span><br></pre></td></tr></table></figure>
-
-<p>查看某个服务是否是开机启动</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl is-enabled 服务名</span><br></pre></td></tr></table></figure>
-
-<p>查看某个服务的详细状态(添加 sudo -l 命令可以查看全部的信息)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl status 服务名</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="管理-需要管理员权限"><a href="#管理-需要管理员权限" class="headerlink" title="管理(需要管理员权限)"></a>管理(需要管理员权限)</h4><p>尝试安装一个邮件服务</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install sendmail -y</span><br></pre></td></tr></table></figure>
-
-<p>启动</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo systemctl start 服务名</span><br></pre></td></tr></table></figure>
-
-<p>停止</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo systemctl stop 服务名</span><br></pre></td></tr></table></figure>
-
-<p>开机自启</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo systemctl enable 服务名</span><br><span class="line">sudo systemctl disable 服务名</span><br></pre></td></tr></table></figure>
-
-<p>重启与重新载入(优先选择)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo systemctl restart 服务名</span><br><span class="line">sudo systemctl reload 服务名</span><br></pre></td></tr></table></figure>
-
-<p> 禁止服务启动,解除禁止服务启动</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo systemctl mask 服务名</span><br><span class="line">sudo systemctl unmask 服务名</span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Terminal和OMZ</title>
-    <url>/2017/10/16/Oh-my-zsh%E7%9A%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/zsh-300x300.jpg.jpg"></p>
-<a id="more"></a>
-<h4 id="mac-安装-Iterm2"><a href="#mac-安装-Iterm2" class="headerlink" title="mac 安装 Iterm2"></a>mac 安装 Iterm2</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install iterm2</span><br></pre></td></tr></table></figure>
-<h4 id="查看系统内置shell"><a href="#查看系统内置shell" class="headerlink" title="查看系统内置shell"></a>查看系统内置shell</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat &#x2F;etc&#x2F;shells</span><br><span class="line"></span><br><span class="line">得到：</span><br><span class="line"></span><br><span class="line">&#x2F;bin&#x2F;bash</span><br><span class="line">&#x2F;bin&#x2F;csh</span><br><span class="line">&#x2F;bin&#x2F;ksh</span><br><span class="line">&#x2F;bin&#x2F;sh</span><br><span class="line">&#x2F;bin&#x2F;tcsh</span><br><span class="line">&#x2F;bin&#x2F;zsh</span><br></pre></td></tr></table></figure>
-<h4 id="设置-zsh-为默认shell"><a href="#设置-zsh-为默认shell" class="headerlink" title="设置 zsh 为默认shell"></a>设置 zsh 为默认shell</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chsh -s &#x2F;bin&#x2F;zsh</span><br></pre></td></tr></table></figure>
-<h4 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh-my-zsh"></a>安装 oh-my-zsh</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;robbyrussell&#x2F;oh-my-zsh.git ~&#x2F;.oh-my-zsh</span><br><span class="line"></span><br><span class="line">cp ~&#x2F;.oh-my-zsh&#x2F;templates&#x2F;zshrc.zsh-template ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
-<h4 id="修改配色主题"><a href="#修改配色主题" class="headerlink" title="修改配色主题"></a>修改配色主题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo nano ~&#x2F;.zshrc</span><br><span class="line"></span><br><span class="line">主题字段在 ZSH_THEME </span><br></pre></td></tr></table></figure>
-<h4 id="使配置生效"><a href="#使配置生效" class="headerlink" title="使配置生效"></a>使配置生效</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
-<h4 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 下载高亮插件</span><br><span class="line">cd ~&#x2F;.oh-my-zsh&#x2F;custom&#x2F;plugins</span><br><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;zsh-users&#x2F;zsh-syntax-highlighting.git</span><br><span class="line"></span><br><span class="line"># 配置</span><br><span class="line">plugins&#x3D;(</span><br><span class="line">zsh-syntax-highlighting</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># 配置生效</span><br><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="自定义一个命令例子"><a href="#自定义一个命令例子" class="headerlink" title="自定义一个命令例子"></a>自定义一个命令例子</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /User/minnie/demo/write_blog.sh    <span class="comment"># 很繁琐</span></span><br></pre></td></tr></table></figure>
-<!-- more -->
-
-<h5 id="1，修改系统变量"><a href="#1，修改系统变量" class="headerlink" title="1，修改系统变量"></a>1，修改系统变量</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑 ~/.bashrc 文件</span></span><br><span class="line"><span class="comment"># User/Minnie/demo 是我的脚本存储目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;User/Minnie/demo:<span class="variable">$PATH</span>&quot;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 source ~/.bashrc 使设置生效, 我们就可以这样执行脚本</span></span><br><span class="line"></span><br><span class="line">sh write_blog.sh    </span><br></pre></td></tr></table></figure>
-
-
-<h5 id="2，添加shebang声明"><a href="#2，添加shebang声明" class="headerlink" title="2，添加shebang声明"></a>2，添加shebang声明</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑脚本文件, 首行添加声明</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 现在我们可以这样执行脚本</span></span><br><span class="line"></span><br><span class="line">write_blog.sh</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="3，去除后缀名"><a href="#3，去除后缀名" class="headerlink" title="3，去除后缀名"></a>3，去除后缀名</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 后缀名也是没有意义的</span></span><br><span class="line"></span><br><span class="line">mv write_blog.sh write_blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 此时, 命令简化为</span></span><br><span class="line"></span><br><span class="line">write_blog</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="4，添加alias声明"><a href="#4，添加alias声明" class="headerlink" title="4，添加alias声明"></a>4，添加alias声明</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 再次编辑 ~/.bashrc 文件</span></span><br><span class="line"><span class="comment"># 添加 alias 命令</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> wb=<span class="string">&quot;write_blog&quot;</span>   </span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 _source ~/.bashrc_ 使设置生效, 最终成果</span></span><br><span class="line"></span><br><span class="line">wb</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="问题集锦"><a href="#问题集锦" class="headerlink" title="问题集锦"></a>问题集锦</h5><p>为什么不把脚本直接命名为wb, 而是使用alias</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">防止忘记了它的功能.</span><br></pre></td></tr></table></figure>
-
-<p>提示权限拒绝</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod +x write_blog</span><br></pre></td></tr></table></figure>
-
-<p>提示找不到文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shebang声明的路径不对</span><br></pre></td></tr></table></figure>
-
-<h5 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h5><p>自己的写博客脚本<code>bk.sh</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Users/minnie/hexo/blog</span><br><span class="line">hexo new <span class="variable">$1</span></span><br><span class="line">code ~/hexo/blog/<span class="built_in">source</span>/_posts/</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<p>发布博客脚本<code>fb.sh</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Users/minnie/hexo/blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vaagrant虚拟机管理</title>
     <url>/2018/09/16/Vaagrant%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/49997.png.png"></p>
@@ -241,85 +119,6 @@
       </tags>
   </entry>
   <entry>
-    <title>docker笔记-dockerfile</title>
-    <url>/2018/10/18/docker%E7%AC%94%E8%AE%B0-dockerfile/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/1_yKGxIarKT7_Ug6vbWz6f_Q.png.png"></p>
-<a id="more"></a>
-
-<h4 id="Dockerfile文件"><a href="#Dockerfile文件" class="headerlink" title="Dockerfile文件"></a>Dockerfile文件</h4><p>通过 Dockerfile 配置文件来执行 docker 相关操作, 比如构建自定义Docker镜像, 取代安装软件, 执行服务等相关操作</p>
-<p>./Dockerfile</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">FROM ubuntu:18.04</span><br><span class="line">RUN apt update</span><br><span class="line">RUN apt -y install python3 python3-pip</span><br><span class="line">RUN apt pip3 install flask</span><br><span class="line">COPY app.py &#x2F;code&#x2F;app.py</span><br><span class="line">WORKDIR &#x2F;code</span><br><span class="line">CMD [&quot;python3&quot;, &quot;app.py&quot;]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<!-- more -->
-
-<p>FROM 指定基础镜像<br>RUN 构建镜像时要执行的命令<br>COPY 拷贝当前目录文件, 到docker容器中, 不同于命令 docker cp, COPY会自动在docker创建不存在的文件夹<br>WORKDIR 命令运行的默认目录<br>CMD 容器运行后要执行的命令, 值得注意的是, 这些命令都是在 WORKDIR 指定的默认目录中运行的</p>
-<p>常用命令中还有个ENTRYPOINT命令, 用于指定容器运行后的入口程序, 意义比较小</p>
-<h4 id="使用Dockerfile"><a href="#使用Dockerfile" class="headerlink" title="使用Dockerfile"></a>使用Dockerfile</h4><p>1, 在编辑好的Dockerfile文件目录下(要进行拷贝的app.py文件也要拷贝到当前目录), 我们运行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker build -p webimage .</span><br></pre></td></tr></table></figure>
-
-<p>build 构建<br>-p webimage 指定构建的镜像名字, 方便以后使用<br>. 当前目录为执行环境</p>
-<p>2, 完成后, 我们使用下面的命令, 查看目前所拥有的镜像</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
-
-<p>3, 使用创建好的镜像,启动一个容器, 我们叫它 demo2</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d -t -p 3333:8000 --name demo2 webimage</span><br></pre></td></tr></table></figure>
-
-<p>至此, 我们就将之前的操作, 全部封装到了一个 叫 webimage 的镜像中, 下次我们在进行这些操作时, 只需要使用这个镜像, 去启动一个容器即可</p>
-<h4 id="服务器简单上传部署"><a href="#服务器简单上传部署" class="headerlink" title="服务器简单上传部署"></a>服务器简单上传部署</h4><p>1, 使用 scp 命令上传文件夹(文件夹内包含Dockerfile, a.py 等 )</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp -P 29337 -r app root@ip:&#x2F;tmp</span><br></pre></td></tr></table></figure>
-
-<p>-P 29337 指定ssh端口(默认是22的不需要指定, 注意P是大写)</p>
-<p>2, 然后 ssh 登陆</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -p 29337 root@ip</span><br></pre></td></tr></table></figure>
-<p>-p 29337 指定ssh端口(默认是22的不需要指定, 注意p是小写)</p>
-<p>3, 进入/tmp/app目录, 执行命令生成 webimage 镜像(服务器上操作需要添加 sudo)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo docker build -t webimage .</span><br></pre></td></tr></table></figure>
-
-<p>4, 最后使用 webimage 镜像生成容器</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sodo docker run -d -p 8000:5000 --name serverdemo webimage</span><br></pre></td></tr></table></figure>
-
-<p>5, 最后, 我们可以打开本地浏览器, 可以访问 服务器ip:8000</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>这样生成容器是方便了, 但是每次都要手动把文件上传, 很繁琐, 暂且搁下, 在说这个之前, 先说一下 docker 的数据共享问题</p>
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>docker笔记-dockervolume</title>
-    <url>/2018/10/19/docker%E7%AC%94%E8%AE%B0-dockervolume/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/types-of-mounts-tmpfs.png.png"></p>
-<a id="more"></a>
-
-<h4 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h4><p>1, 容器之间数据是不通的, 删除容器后数据都会丢失, 所以docker引入了数据卷(volume)</p>
-<p>2, 不同容器可以使用, 同一数据卷存储, 备份, 共享数据</p>
-<p>3, 删除容器后, 挂载的数据卷不会删除</p>
-<!-- more -->
-
-<h4 id="数据卷使用"><a href="#数据卷使用" class="headerlink" title="数据卷使用"></a>数据卷使用</h4><p>1, 创建, 删除, 列举数据卷</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker volume create web</span><br><span class="line">docker volume rm web</span><br><span class="line">docker volume ls</span><br></pre></td></tr></table></figure>
-
-<p>2, 挂载数据卷</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name serverdemo2 --mount source&#x3D;web,target&#x3D;&#x2F;volume webimage</span><br></pre></td></tr></table></figure>
-
-<p>source=web  使用叫web的这个数据卷<br>target=/volume 挂在到/volume目录下</p>
-<h4 id="数据卷特性演示"><a href="#数据卷特性演示" class="headerlink" title="数据卷特性演示"></a>数据卷特性演示</h4><p>1, 现在生成一个容器, 叫做demo, 并挂载一个数据卷 web到 volume目录下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name demo --mount source&#x3D;web,target&#x3D;volume webimage</span><br></pre></td></tr></table></figure>
-
-<p>2, 我们使用两种不同的方式保存demo产生的数据</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec demo sh -c &quot;date &gt; &#x2F;b.txt&quot;</span><br><span class="line">docker exec demo sh -c &quot;date &gt; &#x2F;volume&#x2F;c.txt&quot;</span><br></pre></td></tr></table></figure>
-
-<p>3, 当我们删除容器demo后, b.txt也会被删除, 但是c.txt不会被删除, 我们可以打印出来</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec demo sh -c &quot;cat &#x2F;volume&#x2F;c.txt&quot;</span><br></pre></td></tr></table></figure>
-
-<p>4, 多容器共享数据, 我们只需要这样声明新容器 demo2</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name demo2 --mount source&#x3D;web,target&#x3D;v2 webimage</span><br></pre></td></tr></table></figure>
-<p>这时候, 尽管demo2还没有生成数据, 但是执行下面的cat命令, 却打印出了数据<br>docker exec demo2 sh -c “cat /v2/c.txt”</p>
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>docker笔记</title>
     <url>/2018/10/16/docker%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Docker-Logo-White-RGB_Vertical-BG_0.png.png"></p>
@@ -356,6 +155,65 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps 列举</span><br><span class="line">docker ps -a 列举所有</span><br><span class="line">docker start 运行容器(容器正在运行, 再次运行这个命令并不会报错)</span><br></pre></td></tr></table></figure>
 
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>用脚本重复上面的步骤也是很繁琐的, 后面我们开始用 Dockerfile 来配置这些重复操作</p>
+<hr>
+<h4 id="Dockerfile文件"><a href="#Dockerfile文件" class="headerlink" title="Dockerfile文件"></a>Dockerfile文件</h4><p>通过 Dockerfile 配置文件来执行 docker 相关操作, 比如构建自定义Docker镜像, 取代安装软件, 执行服务等相关操作</p>
+<p>./Dockerfile</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">FROM ubuntu:18.04</span><br><span class="line">RUN apt update</span><br><span class="line">RUN apt -y install python3 python3-pip</span><br><span class="line">RUN apt pip3 install flask</span><br><span class="line">COPY app.py &#x2F;code&#x2F;app.py</span><br><span class="line">WORKDIR &#x2F;code</span><br><span class="line">CMD [&quot;python3&quot;, &quot;app.py&quot;]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<!-- more -->
+
+<p>FROM 指定基础镜像<br>RUN 构建镜像时要执行的命令<br>COPY 拷贝当前目录文件, 到docker容器中, 不同于命令 docker cp, COPY会自动在docker创建不存在的文件夹<br>WORKDIR 命令运行的默认目录<br>CMD 容器运行后要执行的命令, 值得注意的是, 这些命令都是在 WORKDIR 指定的默认目录中运行的</p>
+<p>常用命令中还有个ENTRYPOINT命令, 用于指定容器运行后的入口程序, 意义比较小</p>
+<h4 id="使用Dockerfile"><a href="#使用Dockerfile" class="headerlink" title="使用Dockerfile"></a>使用Dockerfile</h4><p>1, 在编辑好的Dockerfile文件目录下(要进行拷贝的app.py文件也要拷贝到当前目录), 我们运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker build -p webimage .</span><br></pre></td></tr></table></figure>
+
+<p>build 构建<br>-p webimage 指定构建的镜像名字, 方便以后使用<br>. 当前目录为执行环境</p>
+<p>2, 完成后, 我们使用下面的命令, 查看目前所拥有的镜像</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p>3, 使用创建好的镜像,启动一个容器, 我们叫它 demo2</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d -t -p 3333:8000 --name demo2 webimage</span><br></pre></td></tr></table></figure>
+
+<p>至此, 我们就将之前的操作, 全部封装到了一个 叫 webimage 的镜像中, 下次我们在进行这些操作时, 只需要使用这个镜像, 去启动一个容器即可</p>
+<h4 id="服务器简单上传部署"><a href="#服务器简单上传部署" class="headerlink" title="服务器简单上传部署"></a>服务器简单上传部署</h4><p>1, 使用 scp 命令上传文件夹(文件夹内包含Dockerfile, a.py 等 )</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp -P 29337 -r app root@ip:&#x2F;tmp</span><br></pre></td></tr></table></figure>
+
+<p>-P 29337 指定ssh端口(默认是22的不需要指定, 注意P是大写)</p>
+<p>2, 然后 ssh 登陆</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -p 29337 root@ip</span><br></pre></td></tr></table></figure>
+<p>-p 29337 指定ssh端口(默认是22的不需要指定, 注意p是小写)</p>
+<p>3, 进入/tmp/app目录, 执行命令生成 webimage 镜像(服务器上操作需要添加 sudo)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo docker build -t webimage .</span><br></pre></td></tr></table></figure>
+
+<p>4, 最后使用 webimage 镜像生成容器</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sodo docker run -d -p 8000:5000 --name serverdemo webimage</span><br></pre></td></tr></table></figure>
+
+<p>5, 最后, 我们可以打开本地浏览器, 可以访问 服务器ip:8000</p>
+<h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p>这样生成容器是方便了, 但是每次都要手动把文件上传, 很繁琐, 暂且搁下, 在说这个之前, 先说一下 docker 的数据共享问题</p>
+<hr>
+<h4 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h4><p>1, 容器之间数据是不通的, 删除容器后数据都会丢失, 所以docker引入了数据卷(volume)</p>
+<p>2, 不同容器可以使用, 同一数据卷存储, 备份, 共享数据</p>
+<p>3, 删除容器后, 挂载的数据卷不会删除</p>
+<!-- more -->
+
+<h4 id="数据卷使用"><a href="#数据卷使用" class="headerlink" title="数据卷使用"></a>数据卷使用</h4><p>1, 创建, 删除, 列举数据卷</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker volume create web</span><br><span class="line">docker volume rm web</span><br><span class="line">docker volume ls</span><br></pre></td></tr></table></figure>
+
+<p>2, 挂载数据卷</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name serverdemo2 --mount source&#x3D;web,target&#x3D;&#x2F;volume webimage</span><br></pre></td></tr></table></figure>
+
+<p>source=web  使用叫web的这个数据卷<br>target=/volume 挂在到/volume目录下</p>
+<h4 id="数据卷特性演示"><a href="#数据卷特性演示" class="headerlink" title="数据卷特性演示"></a>数据卷特性演示</h4><p>1, 现在生成一个容器, 叫做demo, 并挂载一个数据卷 web到 volume目录下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name demo --mount source&#x3D;web,target&#x3D;volume webimage</span><br></pre></td></tr></table></figure>
+
+<p>2, 我们使用两种不同的方式保存demo产生的数据</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec demo sh -c &quot;date &gt; &#x2F;b.txt&quot;</span><br><span class="line">docker exec demo sh -c &quot;date &gt; &#x2F;volume&#x2F;c.txt&quot;</span><br></pre></td></tr></table></figure>
+
+<p>3, 当我们删除容器demo后, b.txt也会被删除, 但是c.txt不会被删除, 我们可以打印出来</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker exec demo sh -c &quot;cat &#x2F;volume&#x2F;c.txt&quot;</span><br></pre></td></tr></table></figure>
+
+<p>4, 多容器共享数据, 我们只需要这样声明新容器 demo2</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name demo2 --mount source&#x3D;web,target&#x3D;v2 webimage</span><br></pre></td></tr></table></figure>
+<p>这时候, 尽管demo2还没有生成数据, 但是执行下面的cat命令, 却打印出了数据<br>docker exec demo2 sh -c “cat /v2/c.txt”</p>
 ]]></content>
       <tags>
         <tag>软件</tag>
@@ -381,84 +239,6 @@
 <p>拿走 explainshell.com</p>
 </blockquote>
 <p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/yukminnie_2018-08-03_15-05-48.jpg"></p>
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>gljm 改键工具</title>
-    <url>/2017/05/16/gua%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>一个改键工具，提高输入效率</p>
-<a id="more"></a>
-<h4 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h4><p><a href="https://blog-file-1253466367.cos.ap-beijing.myqcloud.com/gljm.exe">点击下载gljm</a></p>
-<h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">约定：</span><br><span class="line">        C为Ctrl键</span><br><span class="line">        W为Win键</span><br><span class="line">        S为Shift键</span><br><span class="line">    移动光标：</span><br><span class="line">        C-f     光标右(forward)</span><br><span class="line">        C-b     光标左(backward)</span><br><span class="line">        C-p     光标上(previous)</span><br><span class="line">        C-n     光标下(next)</span><br><span class="line">        C-W-f   往右一个单词</span><br><span class="line">        C-W-b   往左一个单词</span><br><span class="line">        C-a     光标移动到行首</span><br><span class="line">        C-e     光标移动到行尾</span><br><span class="line">    删除：</span><br><span class="line">        C-h     删除光标左边的一个字符</span><br><span class="line">        C-d     删除光标右边的一个字符</span><br><span class="line">        C-W-h   删除光标左边的一个单词</span><br><span class="line">        C-W-d   删除光标右边的一个单词</span><br><span class="line">        C-k     删除从当前光标到行尾的所有内容</span><br><span class="line">        C-u     删除从当前光标到行首的所有内容</span><br><span class="line">    重新利用被占用热键：</span><br><span class="line">        W-f     C-f（搜索）</span><br><span class="line">        W-S-f   C-S-f（全局搜索）</span><br><span class="line">        W-n     C-n（新建）</span><br><span class="line">        W-a     C-a（全选）</span><br><span class="line">        W-h     C-h（chrome的历史记录）</span><br><span class="line">        W-e     C-e（用于 Flying Logic 中的热键）</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python的str方法记录</title>
-    <url>/2017/04/16/python%E7%9A%84str%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>占位。</p>
-<a id="more"></a>]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python包加速</title>
-    <url>/2017/01/12/python%E5%AE%89%E8%A3%85%E5%8C%85%E5%8A%A0%E9%80%9F/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_19-44-46.png.png"></p>
-<a id="more"></a>
-<h4 id="Python-pip（ubuntu）"><a href="#Python-pip（ubuntu）" class="headerlink" title="Python-pip（ubuntu）"></a>Python-pip（ubuntu）</h4><p>python2.7</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo easy_install pip</span><br></pre></td></tr></table></figure>
-
-<p>python3</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install python3-pip</span><br></pre></td></tr></table></figure>
-
-<h4 id="开启-sudo-命令进行安装"><a href="#开启-sudo-命令进行安装" class="headerlink" title="开启 sudo 命令进行安装"></a>开启 sudo 命令进行安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install &#96;包名&#96;</span><br></pre></td></tr></table></figure>
-<h4 id="手动设置豆瓣库进行安装"><a href="#手动设置豆瓣库进行安装" class="headerlink" title="手动设置豆瓣库进行安装"></a>手动设置豆瓣库进行安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple &#96;包名&#96;</span><br></pre></td></tr></table></figure>
-<h4 id="按照先-2-后-3-的顺序安装-，-可能出现未知bug-，大部分库都在向-3-进行迁移，-甚至出现不再支持的情况"><a href="#按照先-2-后-3-的顺序安装-，-可能出现未知bug-，大部分库都在向-3-进行迁移，-甚至出现不再支持的情况" class="headerlink" title="按照先 2 后 3 的顺序安装 ， 可能出现未知bug ，大部分库都在向 3 进行迁移， 甚至出现不再支持的情况"></a>按照先 2 后 3 的顺序安装 ， 可能出现未知bug ，大部分库都在向 3 进行迁移， 甚至出现不再支持的情况</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">flask , selenium ,jupyter 都出现了问题</span><br></pre></td></tr></table></figure>
-<h4 id="此时可以下载离线包进行安装"><a href="#此时可以下载离线包进行安装" class="headerlink" title="此时可以下载离线包进行安装"></a>此时可以下载离线包进行安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.lfd.uci.edu&#x2F;~gohlke&#x2F;pythonlibs&#x2F;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="插一个-python-2-和-3-的字符串差异表"><a href="#插一个-python-2-和-3-的字符串差异表" class="headerlink" title="插一个 python 2 和 3 的字符串差异表"></a>插一个 python 2 和 3 的字符串差异表</h4><table>
-<thead>
-<tr>
-<th></th>
-<th>字符串</th>
-<th>字节</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Python2</td>
-<td>Unicode</td>
-<td>Str</td>
-</tr>
-<tr>
-<td>Python3</td>
-<td>Str</td>
-<td>Byte</td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ufw防火墙</title>
-    <url>/2017/03/06/ufw%E9%98%B2%E7%81%AB%E5%A2%99/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/ufw-ubuntu-firewall.jpg.jpg"></p>
-<a id="more"></a>
-<p>简单替代 iptables 服务。</p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install ufw</span><br></pre></td></tr></table></figure>
-
-<h4 id="允许和阻止端口"><a href="#允许和阻止端口" class="headerlink" title="允许和阻止端口"></a>允许和阻止端口</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 允许</span><br><span class="line">ufw allow 22</span><br><span class="line">ufw allow 80</span><br><span class="line">ufw allow 443</span><br><span class="line"></span><br><span class="line"># 拒绝</span><br><span class="line">ufw deny 8080</span><br></pre></td></tr></table></figure>
-<h4 id="默认规则"><a href="#默认规则" class="headerlink" title="默认规则"></a>默认规则</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 默认拒绝所有接入</span><br><span class="line">ufw default deny incoming</span><br><span class="line"></span><br><span class="line"># 默认接受所有输出</span><br><span class="line">ufw default allow outgoing</span><br></pre></td></tr></table></figure>
-<h4 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ufw status verbose</span><br></pre></td></tr></table></figure>
-<h4 id="开启"><a href="#开启" class="headerlink" title="开启"></a>开启</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ufw enable</span><br></pre></td></tr></table></figure>
-<h4 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ufw disable</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <tags>
         <tag>软件</tag>
@@ -595,25 +375,6 @@
       </tags>
   </entry>
   <entry>
-    <title>技嘉bios删不掉的启动项</title>
-    <url>/2019/10/19/%E5%A4%9A%E5%87%BA%E7%9A%84%E5%90%AF%E5%8A%A8%E9%A1%B9/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/axf9f-dt6x7.png.png"><br>起因是，安装黑果后，bios 多出了一堆无效启动项。</p>
-<a id="more"></a>
-
-<p>搜了一下，好像出问题的都是技嘉主板，估计是 bug 吧。其实本来眼不见不净，结果因为无效启动项，导致我usb 启动盘的 uefi 启动项不显示了，这就很难受了</p>
-<h4 id="重置-bios"><a href="#重置-bios" class="headerlink" title="重置 bios"></a>重置 bios</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">无效</span><br></pre></td></tr></table></figure>
-<h4 id="拆主板电池"><a href="#拆主板电池" class="headerlink" title="拆主板电池"></a>拆主板电池</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">无效</span><br></pre></td></tr></table></figure>
-<h4 id="网搜说刷-bios"><a href="#网搜说刷-bios" class="headerlink" title="网搜说刷 bios"></a>网搜说刷 bios</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">饶了我吧，老b85主板了，别再把主板搞坏了(主要还是懒)</span><br></pre></td></tr></table></figure>
-<h4 id="查了一下，说是下载安装-easyuefi"><a href="#查了一下，说是下载安装-easyuefi" class="headerlink" title="查了一下，说是下载安装 easyuefi"></a>查了一下，说是下载安装 easyuefi</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">但是我 win 系统是临时用的，mbr 模式安装的，软件提示无法运行</span><br></pre></td></tr></table></figure>
-
-<h4 id="pe-工具里无意发现了可编辑工具"><a href="#pe-工具里无意发现了可编辑工具" class="headerlink" title="pe 工具里无意发现了可编辑工具"></a>pe 工具里无意发现了可编辑工具</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-28-03.png.png"></p>
-<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-28-21.png.png"></p>
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>图床踩坑</title>
     <url>/2017/04/06/%E5%9B%BE%E5%BA%8A/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/image.jpg.jpg"></p>
@@ -669,94 +430,6 @@
 ]]></content>
       <tags>
         <tag>硬件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文件与目录权限操作</title>
-    <url>/2016/04/16/%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E6%9D%83%E9%99%90%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/terminal_icon_logo.png.png"></p>
-<a id="more"></a>
-
-<h4 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Permissions 权限</span><br><span class="line"></span><br><span class="line">owner   -&gt; u</span><br><span class="line">group   -&gt; g</span><br><span class="line">others  -&gt; o</span><br><span class="line"></span><br><span class="line">read    -&gt; r    -&gt; 4</span><br><span class="line">write   -&gt; w    -&gt; 2</span><br><span class="line">execute -&gt; x     -&gt;1</span><br></pre></td></tr></table></figure>
-
-<h4 id="root"><a href="#root" class="headerlink" title="root"></a>root</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su  -&gt; switch user 切换到root用户</span><br><span class="line">exit    -&gt; 退出root用户</span><br><span class="line">sudo 不切换root用户，执行系统命令</span><br></pre></td></tr></table></figure>
-
-<h4 id="user"><a href="#user" class="headerlink" title="user"></a>user</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo useradd zhangsan  创建用户张三</span><br><span class="line">sudo passwd zhangsanpwd  创建密码</span><br><span class="line">sudo userdel zhangsan   删除张三</span><br><span class="line">sudo userdel zhangsan -r   删除张三及其主目录</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 添加用户到wheel群组，就可以使用sudo命令了</span><br><span class="line">sudo gpasswd -a zhangsan wheel  </span><br><span class="line"></span><br><span class="line">groups zhangsan  查看其所在用户组</span><br><span class="line"></span><br><span class="line">sudo lid -g wheel 查看群组下的所有用户</span><br><span class="line"></span><br><span class="line">2. 更改&#x2F;etc&#x2F;sudoers.d 下的同名文件，写入</span><br><span class="line">%zhangsan ALL&#x3D;(ALL) NOPASSWD: ALL</span><br></pre></td></tr></table></figure>
-
-<h4 id="rwx"><a href="#rwx" class="headerlink" title="rwx"></a>rwx</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 创建一个txt文件</span><br><span class="line">touch hello.txt</span><br><span class="line"></span><br><span class="line">2. 权限为</span><br><span class="line">ls -l</span><br><span class="line">-rw-rw-r--</span><br><span class="line"></span><br><span class="line">3. 尝试写入内容</span><br><span class="line">echo &#39;hello world&#39; &gt; hello.txt</span><br><span class="line"></span><br><span class="line">4. 尝试读取内容</span><br><span class="line">cat hello.txt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="chmod-操作文件"><a href="#chmod-操作文件" class="headerlink" title="chmod(操作文件)"></a>chmod(操作文件)</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. chomod(change mod)  数字方式改变权限</span><br><span class="line">chmod 660 hello.txt</span><br><span class="line"></span><br><span class="line">2. 查看权限</span><br><span class="line">ls -l</span><br><span class="line">-rw-rw----</span><br><span class="line"></span><br><span class="line">3. 字母方式改变权限 </span><br><span class="line">chmod o+r hello.txt</span><br><span class="line">chood g-w hello.txt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="chmod-操作目录"><a href="#chmod-操作目录" class="headerlink" title="chmod(操作目录)"></a>chmod(操作目录)</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 创建一个目录查看其权限,为775</span><br><span class="line"></span><br><span class="line">mkdir app</span><br><span class="line">ls -l</span><br><span class="line">drwxrwxr-x</span><br><span class="line"></span><br><span class="line">2. 切换用户，并捎带查询命令，会提示没有权限</span><br><span class="line"></span><br><span class="line">su zhangsan -c &#39;ls app&#39;</span><br><span class="line">此时的目录laowang的权限为700</span><br><span class="line">drwx------</span><br><span class="line"></span><br><span class="line">3. 切换到app目录，执行查询命令就可以成功，写入命令失败</span><br><span class="line"></span><br><span class="line">su zhangsan -c &#39;ls&#39;     成功</span><br><span class="line">su zhangsan -c &#39;toucu file.txt&#39;   失败</span><br><span class="line"></span><br><span class="line">4. 此时我们需要使用 laowang 用户，修改权限, zhangsan 就可以正常写入</span><br><span class="line"></span><br><span class="line">chmod o+w app</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="管理用户所属的用户组"><a href="#管理用户所属的用户组" class="headerlink" title="管理用户所属的用户组"></a>管理用户所属的用户组</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">管理用户组需要用到 sudo 权限，并使用新的命令usermod</span><br><span class="line"></span><br><span class="line">sudo usermod -aG vagrant zhangsan</span><br><span class="line"></span><br><span class="line">解释：-a  -&gt; append   G    -&gt; groups</span><br></pre></td></tr></table></figure>
-
-<h4 id="文件的执行权限"><a href="#文件的执行权限" class="headerlink" title="文件的执行权限"></a>文件的执行权限</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">直接创建一个文件的时候，任何人都没有执行权限的</span><br><span class="line">echo &#39;hello world&#39;  &gt;  say-hello.sh</span><br><span class="line">.&#x2F;say-hello.sh</span><br><span class="line">-rw-rw-r-- </span><br><span class="line"></span><br><span class="line">修改权限</span><br><span class="line">chmod u+x say-hello.sh</span><br></pre></td></tr></table></figure>
-
-<h4 id="读取写入执行总结"><a href="#读取写入执行总结" class="headerlink" title="读取写入执行总结"></a>读取写入执行总结</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">读取 </span><br><span class="line">决定了能否查看目录，具体的内容是查看不到的</span><br><span class="line"></span><br><span class="line">执行</span><br><span class="line">决定了能否看到具体内容，能否编辑具体内容，决定了你能否进入这个目录</span><br><span class="line"></span><br><span class="line">写入</span><br><span class="line">可以创建目录，创建文件</span><br></pre></td></tr></table></figure>
-
-<h4 id="chown-更改目录拥有者"><a href="#chown-更改目录拥有者" class="headerlink" title="chown(更改目录拥有者)"></a>chown(更改目录拥有者)</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-R 表示递归</span><br><span class="line">sudo chown -R zhangsan:vagrant files </span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>旁路由模式设置</title>
-    <url>/2019/04/09/%E6%97%81%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/==wZwpmLjBTOjhDZzAzYihzM4IzNkFDM09yX3MjMfBjM08CZmRXbk9SbvNmLnNXboFnL2A3LvoDc0RHa.jpg.jpg"></p>
-<a id="more"></a>
-<p>随便写写</p>
-<h4 id="系统刷写完成后重启-进入命令行"><a href="#系统刷写完成后重启-进入命令行" class="headerlink" title="系统刷写完成后重启,进入命令行"></a>系统刷写完成后重启,进入命令行</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 编辑文件</span><br><span class="line">vim &#x2F;etc&#x2F;config&#x2F;network</span><br></pre></td></tr></table></figure>
-
-<h4 id="给-lan-配置一个可用-ip"><a href="#给-lan-配置一个可用-ip" class="headerlink" title="给 lan 配置一个可用 ip"></a>给 lan 配置一个可用 ip</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 比如主路由 dhcp 分配在 192.168.11.2~192.168.11.254，我们可以给个 213</span><br><span class="line"></span><br><span class="line">192.168.11.213</span><br></pre></td></tr></table></figure>
-
-<h4 id="保存，reboot-重启，打开浏览器输入-192-168-11-213-进入后台，点击网络-接口-lan-修改"><a href="#保存，reboot-重启，打开浏览器输入-192-168-11-213-进入后台，点击网络-接口-lan-修改" class="headerlink" title="保存，reboot 重启，打开浏览器输入 192.168.11.213, 进入后台，点击网络 - 接口 - lan 修改"></a>保存，reboot 重启，打开浏览器输入 192.168.11.213, 进入后台，点击网络 - 接口 - lan 修改</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-40-50.png.png"></p>
-<h4 id="添加网关和-dns-服务器"><a href="#添加网关和-dns-服务器" class="headerlink" title="添加网关和 dns 服务器"></a>添加网关和 dns 服务器</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-41-38.png.png"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># dns 服务不配置好，有时候旁路由无法联网，可以多添加一些 dns，比如本地服务商提供的，或者公共服务，比如</span><br><span class="line"></span><br><span class="line">114.114.114.114</span><br><span class="line">180.76.76.76</span><br><span class="line">223.5.5.5</span><br></pre></td></tr></table></figure>
-
-<h4 id="关闭-lan-口-dhcp-服务"><a href="#关闭-lan-口-dhcp-服务" class="headerlink" title="关闭 lan 口 dhcp 服务"></a>关闭 lan 口 dhcp 服务</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-41-51.png.png"></p>
-<h4 id="旁路由模式下的-KMS"><a href="#旁路由模式下的-KMS" class="headerlink" title="旁路由模式下的 KMS"></a>旁路由模式下的 KMS</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">旁路由模式是无效的，需要注意</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>硬件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>正则表达式记录</title>
-    <url>/2017/10/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E9%9A%8F%E4%BE%BF%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/regular-expressions.jpg.jpg"></p>
-<a id="more"></a>
-<p>简单记录</p>
-<h4 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F; ...  &#x2F; 包裹内容</span><br></pre></td></tr></table></figure>
-
-<h4 id="匹配模式"><a href="#匹配模式" class="headerlink" title="匹配模式"></a>匹配模式</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">. 表示通配符</span><br><span class="line">^表示开始符</span><br><span class="line">$ 表示结束符</span><br><span class="line">\ 表示转义符</span><br></pre></td></tr></table></figure>
-
-<h4 id="字符集（用于表示可能包含某种字符）"><a href="#字符集（用于表示可能包含某种字符）" class="headerlink" title="字符集（用于表示可能包含某种字符）"></a>字符集（用于表示可能包含某种字符）</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[] 表示字符集，字符集中的字符，除了[]外，都不用转义</span><br><span class="line">[^] 表示否定字符集</span><br><span class="line"></span><br><span class="line">例子：</span><br><span class="line">[\d] 所有数字      反例[\D]</span><br><span class="line">[\w]数字，字母，下划线     反例[\W]</span><br><span class="line">[\s]空白内容(空格，回车，换行，tab)  等用于[ \r\n\t]    反例[\S] </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">？表示之前的字符或字符集，至多出现一次，或者可以不出现</span><br><span class="line">*  表示之前的字符或字符集，可以不出现，或者可以出现多次</span><br><span class="line">+  表示之前的字符或字符集，至少出现一次，或者可以出现多次</span><br><span class="line">&#123;&#125; 设置出现的次数</span><br></pre></td></tr></table></figure>
-<h4 id="群组"><a href="#群组" class="headerlink" title="群组"></a>群组</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">() 表示群组匹配</span><br><span class="line"></span><br><span class="line">例子：</span><br><span class="line">&#x2F;[\w]+\.(jpg|png|gif)&#x2F;</span><br><span class="line">匹配到了： logo.png sunrise.jpg smile.gif</span><br></pre></td></tr></table></figure>
-
-<h4 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在上个例子中</span><br><span class="line">&#x2F;([\w]+)\.(jpg|png|gif)&#x2F;</span><br><span class="line"></span><br><span class="line">我们使用$1 可以得到：logo sunrise smile</span><br><span class="line">我们使用$2 可以得到：png jpg gif</span><br><span class="line">我们使用$&amp; 可以得到： logo png sunrise jpg smile gif</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-]]></content>
-      <tags>
-        <tag>软件</tag>
       </tags>
   </entry>
   <entry>
@@ -874,7 +547,7 @@
       </tags>
   </entry>
   <entry>
-    <title>软路由踩坑</title>
+    <title>软路由记录</title>
     <url>/2018/03/03/%E8%BD%AF%E8%B7%AF%E7%94%B1/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/LEDE-OpenWRT.png.png"></p>
 <a id="more"></a>
@@ -915,6 +588,18 @@
 <h5 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">拓展很多了, 比如 gogs, jupyter, 本地 markdown服务, webdev之类</span><br></pre></td></tr></table></figure>
 <h5 id="广告过滤"><a href="#广告过滤" class="headerlink" title="广告过滤"></a>广告过滤</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">不推荐使用, 效果不太好, 如果有外版电视盒子需要屏蔽油管广告之类的, 可以尝试一下广告屏蔽大师plus+, koolproxyR这些, adguardhome也不好用</span><br></pre></td></tr></table></figure>
 
+<h4 id="旁路由模式设置"><a href="#旁路由模式设置" class="headerlink" title="旁路由模式设置"></a>旁路由模式设置</h4><h5 id="系统刷写完成后重启-进入命令行"><a href="#系统刷写完成后重启-进入命令行" class="headerlink" title="系统刷写完成后重启,进入命令行"></a>系统刷写完成后重启,进入命令行</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 编辑文件</span><br><span class="line">vim &#x2F;etc&#x2F;config&#x2F;network</span><br></pre></td></tr></table></figure>
+
+<h5 id="给-lan-配置一个可用-ip"><a href="#给-lan-配置一个可用-ip" class="headerlink" title="给 lan 配置一个可用 ip"></a>给 lan 配置一个可用 ip</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 比如主路由 dhcp 分配在 192.168.11.2~192.168.11.254，我们可以给个 213</span><br><span class="line"></span><br><span class="line">192.168.11.213</span><br></pre></td></tr></table></figure>
+
+<h5 id="保存，reboot-重启，打开浏览器输入-192-168-11-213-进入后台，点击网络-接口-lan-修改"><a href="#保存，reboot-重启，打开浏览器输入-192-168-11-213-进入后台，点击网络-接口-lan-修改" class="headerlink" title="保存，reboot 重启，打开浏览器输入 192.168.11.213, 进入后台，点击网络 - 接口 - lan 修改"></a>保存，reboot 重启，打开浏览器输入 192.168.11.213, 进入后台，点击网络 - 接口 - lan 修改</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-40-50.png.png"></p>
+<h5 id="添加网关和-dns-服务器"><a href="#添加网关和-dns-服务器" class="headerlink" title="添加网关和 dns 服务器"></a>添加网关和 dns 服务器</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-41-38.png.png"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># dns 服务不配置好，有时候旁路由无法联网，可以多添加一些 dns，比如本地服务商提供的，或者公共服务，比如</span><br><span class="line"></span><br><span class="line">114.114.114.114</span><br><span class="line">180.76.76.76</span><br><span class="line">223.5.5.5</span><br></pre></td></tr></table></figure>
+
+<h5 id="关闭-lan-口-dhcp-服务"><a href="#关闭-lan-口-dhcp-服务" class="headerlink" title="关闭 lan 口 dhcp 服务"></a>关闭 lan 口 dhcp 服务</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-41-51.png.png"></p>
+<h5 id="旁路由模式下的-KMS"><a href="#旁路由模式下的-KMS" class="headerlink" title="旁路由模式下的 KMS"></a>旁路由模式下的 KMS</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">旁路由模式是无效的，需要注意</span><br></pre></td></tr></table></figure>
+
+
 <h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><h5 id="lean-源码编译的固件"><a href="#lean-源码编译的固件" class="headerlink" title="lean 源码编译的固件"></a>lean 源码编译的固件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 在防火墙加入规则, 不然白名单模式会有问题</span><br><span class="line"></span><br><span class="line">iptables -t nat -I POSTROUTING -j MASQUERADE</span><br><span class="line"></span><br><span class="line"># xxr 黑名单加入苹果服务，不然部分依赖 icloud 同步的软件会出问题</span><br><span class="line"></span><br><span class="line">*.apple.com</span><br></pre></td></tr></table></figure>
 <h5 id="koolxx"><a href="#koolxx" class="headerlink" title="koolxx"></a>koolxx</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 建议关闭节点检测和自动切换</span><br><span class="line"></span><br><span class="line"># 订阅节点时, 会把 baidu.com 作为混淆, 建议修改为根据订阅节点设置</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
@@ -922,27 +607,7 @@
       </tags>
   </entry>
   <entry>
-    <title>飞机搭建</title>
-    <url>/2017/11/21/%E9%A3%9E%E6%9C%BA%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_17-44-31.png.png"></p>
-<a id="more"></a>
-<h2 id="alias-xx-“ss”"><a href="#alias-xx-“ss”" class="headerlink" title="alias xx = “ss”"></a>alias xx = “ss”</h2><h4 id="更新系统"><a href="#更新系统" class="headerlink" title="更新系统"></a>更新系统</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
-
-<h4 id="安装-pip"><a href="#安装-pip" class="headerlink" title="安装 pip"></a>安装 pip</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install python3-pip</span><br></pre></td></tr></table></figure>
-
-<h4 id="安装-xx"><a href="#安装-xx" class="headerlink" title="安装 xx"></a>安装 xx</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip3 install https:&#x2F;&#x2F;github.com&#x2F;shadowsocks&#x2F;shadowsocks&#x2F;archive&#x2F;master.zip</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="创建配置文件，并修改"><a href="#创建配置文件，并修改" class="headerlink" title="创建配置文件，并修改"></a>创建配置文件，并修改</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mkdir &#x2F;etc&#x2F;shadowsocks</span><br><span class="line"></span><br><span class="line">sudo nano &#x2F;etc&#x2F;shadowsocks&#x2F;config.json</span><br><span class="line"></span><br><span class="line"># 修改 config.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;::&quot;,</span><br><span class="line">    &quot;server_port&quot;:8989,</span><br><span class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">    &quot;local_port&quot;:1080,</span><br><span class="line">    &quot;password&quot;:&quot;mypassword&quot;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="配置-Systemd-管理-xx"><a href="#配置-Systemd-管理-xx" class="headerlink" title="配置 Systemd 管理 xx"></a>配置 Systemd 管理 xx</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 新建管理文件并打开</span><br><span class="line"></span><br><span class="line">sudo nano &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;shadowsocks-server.service</span><br><span class="line"></span><br><span class="line"># 粘贴以下配置文件</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description&#x3D;Shadowsocks Server</span><br><span class="line">After&#x3D;network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">ExecStart&#x3D;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;ssserver -c &#x2F;etc&#x2F;shadowsocks&#x2F;config.json</span><br><span class="line">Restart&#x3D;on-abort</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy&#x3D;multi-user.target</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="设置自启动-xx"><a href="#设置自启动-xx" class="headerlink" title="设置自启动 xx"></a>设置自启动 xx</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 启动</span><br><span class="line"></span><br><span class="line">sudo systemctl start shadowsocks-server</span><br><span class="line"></span><br><span class="line"># 设置开机启动</span><br><span class="line"></span><br><span class="line">sudo systemctl enable shadowsocks-server</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>黑苹果踩坑</title>
+    <title>黑苹果记录</title>
     <url>/2019/05/06/%E9%BB%91%E8%8B%B9%E6%9E%9C/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Hackintosh_Wallpaper_KathaBuzzDotCom-2.jpg.jpg"></p>
 <a id="more"></a>
@@ -987,6 +652,14 @@
 
 <h4 id="核显缓冲帧补丁"><a href="#核显缓冲帧补丁" class="headerlink" title="核显缓冲帧补丁"></a>核显缓冲帧补丁</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 黑果小兵博客</span><br><span class="line">https:&#x2F;&#x2F;blog.daliansky.net&#x2F;Intel-FB-Patcher-tutorial-and-insertion-pose.html</span><br></pre></td></tr></table></figure>
 <p><a href="https://blog-file-1253466367.cos.ap-beijing.myqcloud.com/Hackintool(%E5%8E%9FIntel%20FB-Patcher)%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%E5%8F%8A%E6%8F%92%E5%85%A5%E5%A7%BF%E5%8A%BF%20_%20%E9%BB%91%E6%9E%9C%E5%B0%8F%E5%85%B5%E7%9A%84%E9%83%A8%E8%90%BD%E9%98%81.pdf">缓冲帧补丁离线md备份</a></p>
+<h4 id="安装黑果后，bios-多出了一堆无效启动项。"><a href="#安装黑果后，bios-多出了一堆无效启动项。" class="headerlink" title="安装黑果后，bios 多出了一堆无效启动项。"></a>安装黑果后，bios 多出了一堆无效启动项。</h4><p>搜了一下，好像出问题的都是技嘉主板，估计是 bug 吧。其实本来眼不见不净，结果因为无效启动项，导致我usb 启动盘的 uefi 启动项不显示了，这就很难受了</p>
+<h5 id="重置-bios"><a href="#重置-bios" class="headerlink" title="重置 bios"></a>重置 bios</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">无效</span><br></pre></td></tr></table></figure>
+<h5 id="拆主板电池"><a href="#拆主板电池" class="headerlink" title="拆主板电池"></a>拆主板电池</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">无效</span><br></pre></td></tr></table></figure>
+<h5 id="网搜说刷-bios"><a href="#网搜说刷-bios" class="headerlink" title="网搜说刷 bios"></a>网搜说刷 bios</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">饶了我吧，老b85主板了，别再把主板搞坏了(主要还是懒)</span><br></pre></td></tr></table></figure>
+<h5 id="查了一下，说是下载安装-easyuefi"><a href="#查了一下，说是下载安装-easyuefi" class="headerlink" title="查了一下，说是下载安装 easyuefi"></a>查了一下，说是下载安装 easyuefi</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">但是我 win 系统是临时用的，mbr 模式安装的，软件提示无法运行</span><br></pre></td></tr></table></figure>
+
+<h5 id="pe-工具里无意发现了可编辑工具"><a href="#pe-工具里无意发现了可编辑工具" class="headerlink" title="pe 工具里无意发现了可编辑工具"></a>pe 工具里无意发现了可编辑工具</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-28-03.png.png"></p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_18-28-21.png.png"></p>
 ]]></content>
       <tags>
         <tag>硬件</tag>
@@ -996,8 +669,7 @@
     <title>《我们第一次战败》</title>
     <url>/2020/07/05/%E3%80%8A%E6%88%91%E4%BB%AC%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%88%98%E8%B4%A5%E3%80%8B/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-18_00-52-23.png.png"></p>
-<p>观网发现了此书，看了比较感慨，做了笔记。全书看下来，除了双方对伤亡数字有较大争执以外，整体还是比较客观。作者贝文·亚历山大关于停战的看法，应该代表了大多数美国人，他们认为联合国军是“不想陷入和红色中国的斗争泥潭”中，他们有更重要的事情要做(苏联)，所以才主动请求停战。</p>
-<p>如果你有把握快速战胜这些“泥腿子”，这不多余嘛？</p>
+<p>观网发现了此书，看了比较感慨，做了笔记。全书看下来，除了双方对伤亡数字有较大争执以外，整体相对比较客观。</p>
 <a id="more"></a>
 <h4 id="铁拳砸了下来-35章"><a href="#铁拳砸了下来-35章" class="headerlink" title="铁拳砸了下来(35章)"></a>铁拳砸了下来(35章)</h4><h5 id="南朝鲜军"><a href="#南朝鲜军" class="headerlink" title="南朝鲜军"></a>南朝鲜军</h5><ul>
 <li>身份不明的中共军队似乎不费吹灰之力就能够穿越高山,在南朝鲜军的背后建立起攻不破的路障。 在南朝鲜士兵看来,他们的侧翼成了可怕的东西,因为中共军队随时都会从那里出现。</li>
@@ -12200,7 +11872,7 @@
       </tags>
   </entry>
   <entry>
-    <title>mac 一些问题记录</title>
+    <title>mac 一些配置</title>
     <url>/2018/10/16/mac%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_19-56-56.png.png"></p>
 <a id="more"></a>
@@ -12240,8 +11912,34 @@
       </tags>
   </entry>
   <entry>
-    <title>ubuntu的一些初始化配置</title>
-    <url>/2018/04/18/ubuntu%E7%9A%84%E4%B8%80%E4%BA%9B%E5%88%9D%E5%A7%8B%E5%8C%96/</url>
+    <title>window一些配置</title>
+    <url>/2018/01/30/window%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/landing-medium.jpg.jpg"></p>
+<a id="more"></a>
+
+
+<h4 id="无U盘抹盘重装"><a href="#无U盘抹盘重装" class="headerlink" title="无U盘抹盘重装"></a>无U盘抹盘重装</h4><h5 id="原版系统镜像"><a href="#原版系统镜像" class="headerlink" title="原版系统镜像"></a>原版系统镜像</h5><p>解压到非系统盘，例子假设解压在了 D 盘，可以给解压后的文件夹起个好记的名字，比如 win</p>
+<h5 id="设置，更新和安全"><a href="#设置，更新和安全" class="headerlink" title="设置，更新和安全"></a>设置，更新和安全</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/e1fe9925bc315c6018c53a0886b1cb1348547780.jpg.jpg"></p>
+<h5 id="高级启动，立即重启"><a href="#高级启动，立即重启" class="headerlink" title="高级启动，立即重启"></a>高级启动，立即重启</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/8d5494eef01f3a290a2584299225bc315d607c63.jpg.jpg"></p>
+<h5 id="选高级选项"><a href="#选高级选项" class="headerlink" title="选高级选项"></a>选高级选项</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/6a600c338744ebf8c6fc35d8d2f9d72a6159a74c.jpg.jpg"></p>
+<h5 id="选命令提示符"><a href="#选命令提示符" class="headerlink" title="选命令提示符"></a>选命令提示符</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/9345d688d43f8794c53219c9d91b0ef41ad53a03.jpg.jpg"></p>
+<h5 id="会自动重启进入命令行"><a href="#会自动重启进入命令行" class="headerlink" title="会自动重启进入命令行"></a>会自动重启进入命令行</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 之前解压到了 D 盘， 进入 D 盘</span><br><span class="line"></span><br><span class="line">d:</span><br><span class="line"></span><br><span class="line"># 进入解压文件夹</span><br><span class="line"></span><br><span class="line">cd win</span><br><span class="line"></span><br><span class="line"># 进入 source 文件夹</span><br><span class="line"></span><br><span class="line">cd source</span><br><span class="line"></span><br><span class="line"># 运行 setup.exe</span><br><span class="line"></span><br><span class="line">.&#x2F;setup.exe</span><br><span class="line"></span><br><span class="line"># 进入正常的格盘安装流程</span><br></pre></td></tr></table></figure>
+
+<h4 id="cmder命令行工具（其实我个人觉得-powershell-够用了）"><a href="#cmder命令行工具（其实我个人觉得-powershell-够用了）" class="headerlink" title="cmder命令行工具（其实我个人觉得 powershell 够用了）"></a>cmder命令行工具（其实我个人觉得 powershell 够用了）</h4><h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">choco install cmder</span><br></pre></td></tr></table></figure>
+<h5 id="添加-Cmder-至-path-环境变量"><a href="#添加-Cmder-至-path-环境变量" class="headerlink" title="添加 Cmder 至 path 环境变量"></a>添加 Cmder 至 path 环境变量</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">电脑 &gt; 右键属性 &gt; 高级系统设置 &gt; 环境变量 &gt; 系统变量，在path中添加 cmder 路径</span><br></pre></td></tr></table></figure>
+
+<h5 id="添加到右键菜单-打开命令行"><a href="#添加到右键菜单-打开命令行" class="headerlink" title="添加到右键菜单, 打开命令行"></a>添加到右键菜单, 打开命令行</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure>
+<h5 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Startup &gt; Environment &gt; Set up environment variables</span><br><span class="line"></span><br><span class="line">set LANG&#x3D;zh_CN.UTF8</span><br></pre></td></tr></table></figure>
+
+<h4 id="Chocolatey软件安装"><a href="#Chocolatey软件安装" class="headerlink" title="Chocolatey软件安装"></a>Chocolatey软件安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># install</span><br><span class="line">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol &#x3D; [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https:&#x2F;&#x2F;chocolatey.org&#x2F;install.ps1&#39;))</span><br><span class="line"></span><br><span class="line"># 旧的(例如win8.1)可能会报错, 提示 WMF 版本低之类, 解决方法如下(或者微软官网下载 WMF)</span><br><span class="line">choco install powershell</span><br><span class="line"></span><br><span class="line"># main</span><br><span class="line">choco install wox git nodejs youtube-dl aria2 greenshot ffmpeg atom 7zip postman potplayer bitvise-ssh-client vscode winscp pycharm-community docker mysql picgo avidemux joplin -y</span><br><span class="line"></span><br><span class="line"># proxy  使用基于网卡代理的软件接管流量效果比较好</span><br><span class="line">choco config set proxy http:&#x2F;&#x2F;localhost:8888</span><br><span class="line"></span><br><span class="line"># spider </span><br><span class="line">choco install streamlink fiddler selenium-chrome-driver phantomjs -y</span><br><span class="line"></span><br><span class="line"># sql</span><br><span class="line">choco install redis-64 mysql sqlite dbeaver</span><br><span class="line"></span><br><span class="line"># upanok</span><br><span class="line">rufus cpu-z.install  crystaldiskinfo sqlite </span><br><span class="line"></span><br><span class="line"># .net .vc 直接搜索版本就好, 例子如下</span><br><span class="line">choco install dotnet3.5</span><br><span class="line">choco install dotnet4.0</span><br><span class="line">choco install dotnet4.5</span><br><span class="line">choco install dotnet4.5.1</span><br><span class="line">choco install dotnet4.5.2</span><br><span class="line">choco install dotnet4.6</span><br><span class="line">choco install dotnet4.6.1</span><br><span class="line">choco install dotnet4.6.2</span><br><span class="line">choco install dotnet4.7</span><br><span class="line">choco install dotnet4.7.1</span><br><span class="line">choco install dotnet4.7.2</span><br><span class="line">choco install netfx-4.8</span><br><span class="line"></span><br><span class="line">choco install vcredist2005 vcredist2008 vcredist2010 vcredist2012</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># other</span><br><span class="line">choco install gitextensions poweriso anaconda3</span><br><span class="line"></span><br><span class="line"># ss</span><br><span class="line">choco install shadowsocksr-windows</span><br><span class="line">choco install shadowsocks</span><br><span class="line">choco install shadowsocks-qt5</span><br><span class="line">choco install openconnect-gui</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="改建工具"><a href="#改建工具" class="headerlink" title="改建工具"></a>改建工具</h4><p><a href="https://blog-file-1253466367.cos.ap-beijing.myqcloud.com/gljm.exe">点击下载gljm</a></p>
+<h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">约定：</span><br><span class="line">        C为Ctrl键</span><br><span class="line">        W为Win键</span><br><span class="line">        S为Shift键</span><br><span class="line">    移动光标：</span><br><span class="line">        C-f     光标右(forward)</span><br><span class="line">        C-b     光标左(backward)</span><br><span class="line">        C-p     光标上(previous)</span><br><span class="line">        C-n     光标下(next)</span><br><span class="line">        C-W-f   往右一个单词</span><br><span class="line">        C-W-b   往左一个单词</span><br><span class="line">        C-a     光标移动到行首</span><br><span class="line">        C-e     光标移动到行尾</span><br><span class="line">    删除：</span><br><span class="line">        C-h     删除光标左边的一个字符</span><br><span class="line">        C-d     删除光标右边的一个字符</span><br><span class="line">        C-W-h   删除光标左边的一个单词</span><br><span class="line">        C-W-d   删除光标右边的一个单词</span><br><span class="line">        C-k     删除从当前光标到行尾的所有内容</span><br><span class="line">        C-u     删除从当前光标到行首的所有内容</span><br><span class="line">    重新利用被占用热键：</span><br><span class="line">        W-f     C-f（搜索）</span><br><span class="line">        W-S-f   C-S-f（全局搜索）</span><br><span class="line">        W-n     C-n（新建）</span><br><span class="line">        W-a     C-a（全选）</span><br><span class="line">        W-h     C-h（chrome的历史记录）</span><br><span class="line">        W-e     C-e（用于 Flying Logic 中的热键）</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>ubuntu的一些配置</title>
+    <url>/2018/04/18/ubuntu%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/ubuntu-logo-EED17E0B9E-seeklogo.com.png.png"></p>
 <a id="more"></a>
 
@@ -12265,7 +11963,15 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service ssh restart</span><br></pre></td></tr></table></figure>
 
 
-<h4 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h4><p>单独记录了, 在博客内搜索 <code>ufw防火墙</code></p>
+<h4 id="ufw-防火墙"><a href="#ufw-防火墙" class="headerlink" title="ufw 防火墙"></a>ufw 防火墙</h4><h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install ufw</span><br></pre></td></tr></table></figure>
+
+<h5 id="允许和阻止端口"><a href="#允许和阻止端口" class="headerlink" title="允许和阻止端口"></a>允许和阻止端口</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 允许</span><br><span class="line">ufw allow 22</span><br><span class="line">ufw allow 80</span><br><span class="line">ufw allow 443</span><br><span class="line"></span><br><span class="line"># 拒绝</span><br><span class="line">ufw deny 8080</span><br></pre></td></tr></table></figure>
+<h5 id="默认规则"><a href="#默认规则" class="headerlink" title="默认规则"></a>默认规则</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 默认拒绝所有接入</span><br><span class="line">ufw default deny incoming</span><br><span class="line"></span><br><span class="line"># 默认接受所有输出</span><br><span class="line">ufw default allow outgoing</span><br></pre></td></tr></table></figure>
+<h5 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ufw status verbose</span><br></pre></td></tr></table></figure>
+<h5 id="开启"><a href="#开启" class="headerlink" title="开启"></a>开启</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ufw enable</span><br></pre></td></tr></table></figure>
+<h5 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ufw disable</span><br></pre></td></tr></table></figure>
+
+
 <h4 id="linux-oh-my-zsh"><a href="#linux-oh-my-zsh" class="headerlink" title="linux oh-my-zsh"></a>linux oh-my-zsh</h4><p> <strong>安装 oh-my-zsh 配置(方便你使用命令行的配置)</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get install</span><br><span class="line"></span><br><span class="line">wget https:&#x2F;&#x2F;github.com&#x2F;robbyrussell&#x2F;oh-my-zsh&#x2F;raw&#x2F;master&#x2F;tools&#x2F;install.sh -O - | sh</span><br></pre></td></tr></table></figure>
 
@@ -12277,14 +11983,121 @@
 <p><strong>加入下面的内容, 保存退出</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">LC_CTYPE&#x3D;&quot;en_US.UTF-8&quot;</span><br><span class="line">LC_ALL&#x3D;&quot;en_US.UTF-8&quot;</span><br></pre></td></tr></table></figure>
 
+<h4 id="systemctl-是针对于-systemd的管理工具-，直接管理的对象称之为单元-units"><a href="#systemctl-是针对于-systemd的管理工具-，直接管理的对象称之为单元-units" class="headerlink" title="systemctl 是针对于 systemd的管理工具 ，直接管理的对象称之为单元 units"></a>systemctl 是针对于 systemd的管理工具 ，直接管理的对象称之为单元 units</h4><h5 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h5><p>查看当前系统载入的单元</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl list-units</span><br></pre></td></tr></table></figure>
+<p>查看所有单元</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl list-unit-files</span><br></pre></td></tr></table></figure>
+<p>查看包含某个关键词的单元文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl list-unit-files | grep mail</span><br></pre></td></tr></table></figure>
+<p>只查看服务类型的单元</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl list-unit-files --type&#x3D;service</span><br></pre></td></tr></table></figure>
+
+<p>查看某个服务是否是运行状态</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl is-active 服务名</span><br></pre></td></tr></table></figure>
+
+<p>查看某个服务是否是开机启动</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl is-enabled 服务名</span><br></pre></td></tr></table></figure>
+
+<p>查看某个服务的详细状态(添加 sudo -l 命令可以查看全部的信息)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl status 服务名</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="管理-需要管理员权限"><a href="#管理-需要管理员权限" class="headerlink" title="管理(需要管理员权限)"></a>管理(需要管理员权限)</h5><p>尝试安装一个邮件服务</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install sendmail -y</span><br></pre></td></tr></table></figure>
+
+<p>启动</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo systemctl start 服务名</span><br></pre></td></tr></table></figure>
+
+<p>停止</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo systemctl stop 服务名</span><br></pre></td></tr></table></figure>
+
+<p>开机自启</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo systemctl enable 服务名</span><br><span class="line">sudo systemctl disable 服务名</span><br></pre></td></tr></table></figure>
+
+<p>重启与重新载入(优先选择)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo systemctl restart 服务名</span><br><span class="line">sudo systemctl reload 服务名</span><br></pre></td></tr></table></figure>
+
+<p> 禁止服务启动,解除禁止服务启动</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo systemctl mask 服务名</span><br><span class="line">sudo systemctl unmask 服务名</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装飞机"><a href="#安装飞机" class="headerlink" title="安装飞机"></a>安装飞机</h4><p>alias xx = ‘ss’</p>
+<h5 id="更新系统"><a href="#更新系统" class="headerlink" title="更新系统"></a>更新系统</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
+
+<h5 id="安装-pip"><a href="#安装-pip" class="headerlink" title="安装 pip"></a>安装 pip</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install python3-pip</span><br></pre></td></tr></table></figure>
+
+<h5 id="安装-xx"><a href="#安装-xx" class="headerlink" title="安装 xx"></a>安装 xx</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip3 install https:&#x2F;&#x2F;github.com&#x2F;shadowsocks&#x2F;shadowsocks&#x2F;archive&#x2F;master.zip</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="创建配置文件，并修改"><a href="#创建配置文件，并修改" class="headerlink" title="创建配置文件，并修改"></a>创建配置文件，并修改</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mkdir &#x2F;etc&#x2F;shadowsocks</span><br><span class="line"></span><br><span class="line">sudo nano &#x2F;etc&#x2F;shadowsocks&#x2F;config.json</span><br><span class="line"></span><br><span class="line"># 修改 config.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;::&quot;,</span><br><span class="line">    &quot;server_port&quot;:8989,</span><br><span class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">    &quot;local_port&quot;:1080,</span><br><span class="line">    &quot;password&quot;:&quot;mypassword&quot;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="配置-Systemd-管理-xx"><a href="#配置-Systemd-管理-xx" class="headerlink" title="配置 Systemd 管理 xx"></a>配置 Systemd 管理 xx</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 新建管理文件并打开</span><br><span class="line"></span><br><span class="line">sudo nano &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;shadowsocks-server.service</span><br><span class="line"></span><br><span class="line"># 粘贴以下配置文件</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description&#x3D;Shadowsocks Server</span><br><span class="line">After&#x3D;network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">ExecStart&#x3D;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;ssserver -c &#x2F;etc&#x2F;shadowsocks&#x2F;config.json</span><br><span class="line">Restart&#x3D;on-abort</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy&#x3D;multi-user.target</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="设置自启动-xx"><a href="#设置自启动-xx" class="headerlink" title="设置自启动 xx"></a>设置自启动 xx</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 启动</span><br><span class="line"></span><br><span class="line">sudo systemctl start shadowsocks-server</span><br><span class="line"></span><br><span class="line"># 设置开机启动</span><br><span class="line"></span><br><span class="line">sudo systemctl enable shadowsocks-server</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <h4 id="随便记些命令"><a href="#随便记些命令" class="headerlink" title="随便记些命令"></a>随便记些命令</h4><h5 id="ssh-和-scp"><a href="#ssh-和-scp" class="headerlink" title="ssh 和 scp"></a>ssh 和 scp</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># scp</span><br><span class="line"></span><br><span class="line">scp -P 29337 -r app root@ip:&#x2F;tmp</span><br><span class="line"></span><br><span class="line"># scp执行WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!错误解决</span><br><span class="line"></span><br><span class="line">1, 查看家目录下的.ssh&#x2F;know_hosts文件</span><br><span class="line">2, 删除对应的失效的客户端 ip</span><br><span class="line">cat ~&#x2F;.ssh&#x2F;known_hosts</span><br><span class="line"></span><br><span class="line"># ssh</span><br><span class="line">ssh -p 29337 root@你的ip</span><br></pre></td></tr></table></figure>
 
-<h5 id="cp-拷贝命令"><a href="#cp-拷贝命令" class="headerlink" title="cp 拷贝命令"></a>cp 拷贝命令</h5><p>使用指令”cp”将当前目录”test/“下的所有文件复制到新目录”newtest”下，输入如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cp –r test&#x2F; newtest        </span><br></pre></td></tr></table></figure>
 
 <h5 id="Linux-查找文件、文件夹"><a href="#Linux-查找文件、文件夹" class="headerlink" title="Linux 查找文件、文件夹"></a>Linux 查找文件、文件夹</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查找tomcat7文件夹所在的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;tomcat7&#39; -type d</span><br><span class="line"></span><br><span class="line"># 查找server.xml文件的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;server.xml&#39; -print</span><br></pre></td></tr></table></figure>
 
-<p>记录一些命令行工具</p>
+
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用工具配置</title>
+    <url>/2017/10/16/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/zsh-300x300.jpg.jpg"></p>
+<a id="more"></a>
+<h4 id="mac-安装-Iterm2"><a href="#mac-安装-Iterm2" class="headerlink" title="mac 安装 Iterm2"></a>mac 安装 Iterm2</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install iterm2</span><br></pre></td></tr></table></figure>
+<h4 id="查看系统内置shell"><a href="#查看系统内置shell" class="headerlink" title="查看系统内置shell"></a>查看系统内置shell</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat &#x2F;etc&#x2F;shells</span><br><span class="line"></span><br><span class="line">得到：</span><br><span class="line"></span><br><span class="line">&#x2F;bin&#x2F;bash</span><br><span class="line">&#x2F;bin&#x2F;csh</span><br><span class="line">&#x2F;bin&#x2F;ksh</span><br><span class="line">&#x2F;bin&#x2F;sh</span><br><span class="line">&#x2F;bin&#x2F;tcsh</span><br><span class="line">&#x2F;bin&#x2F;zsh</span><br></pre></td></tr></table></figure>
+<h4 id="设置-zsh-为默认shell"><a href="#设置-zsh-为默认shell" class="headerlink" title="设置 zsh 为默认shell"></a>设置 zsh 为默认shell</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chsh -s &#x2F;bin&#x2F;zsh</span><br></pre></td></tr></table></figure>
+<h4 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh-my-zsh"></a>安装 oh-my-zsh</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;robbyrussell&#x2F;oh-my-zsh.git ~&#x2F;.oh-my-zsh</span><br><span class="line"></span><br><span class="line">cp ~&#x2F;.oh-my-zsh&#x2F;templates&#x2F;zshrc.zsh-template ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+<h4 id="修改配色主题"><a href="#修改配色主题" class="headerlink" title="修改配色主题"></a>修改配色主题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo nano ~&#x2F;.zshrc</span><br><span class="line"></span><br><span class="line">主题字段在 ZSH_THEME </span><br></pre></td></tr></table></figure>
+<h4 id="使配置生效"><a href="#使配置生效" class="headerlink" title="使配置生效"></a>使配置生效</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+<h4 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 下载高亮插件</span><br><span class="line">cd ~&#x2F;.oh-my-zsh&#x2F;custom&#x2F;plugins</span><br><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;zsh-users&#x2F;zsh-syntax-highlighting.git</span><br><span class="line"></span><br><span class="line"># 配置</span><br><span class="line">plugins&#x3D;(</span><br><span class="line">zsh-syntax-highlighting</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># 配置生效</span><br><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="自定义一个命令例子"><a href="#自定义一个命令例子" class="headerlink" title="自定义一个命令例子"></a>自定义一个命令例子</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /User/minnie/demo/write_blog.sh    <span class="comment"># 很繁琐</span></span><br></pre></td></tr></table></figure>
+<!-- more -->
+
+<h5 id="1，修改系统变量"><a href="#1，修改系统变量" class="headerlink" title="1，修改系统变量"></a>1，修改系统变量</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑 ~/.bashrc 文件</span></span><br><span class="line"><span class="comment"># User/Minnie/demo 是我的脚本存储目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;User/Minnie/demo:<span class="variable">$PATH</span>&quot;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 source ~/.bashrc 使设置生效, 我们就可以这样执行脚本</span></span><br><span class="line"></span><br><span class="line">sh write_blog.sh    </span><br></pre></td></tr></table></figure>
+
+
+<h5 id="2，添加shebang声明"><a href="#2，添加shebang声明" class="headerlink" title="2，添加shebang声明"></a>2，添加shebang声明</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑脚本文件, 首行添加声明</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 现在我们可以这样执行脚本</span></span><br><span class="line"></span><br><span class="line">write_blog.sh</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="3，去除后缀名"><a href="#3，去除后缀名" class="headerlink" title="3，去除后缀名"></a>3，去除后缀名</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 后缀名也是没有意义的</span></span><br><span class="line"></span><br><span class="line">mv write_blog.sh write_blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 此时, 命令简化为</span></span><br><span class="line"></span><br><span class="line">write_blog</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="4，添加alias声明"><a href="#4，添加alias声明" class="headerlink" title="4，添加alias声明"></a>4，添加alias声明</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 再次编辑 ~/.bashrc 文件</span></span><br><span class="line"><span class="comment"># 添加 alias 命令</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> wb=<span class="string">&quot;write_blog&quot;</span>   </span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 _source ~/.bashrc_ 使设置生效, 最终成果</span></span><br><span class="line"></span><br><span class="line">wb</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="问题集锦"><a href="#问题集锦" class="headerlink" title="问题集锦"></a>问题集锦</h5><p>为什么不把脚本直接命名为wb, 而是使用alias</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">防止忘记了它的功能.</span><br></pre></td></tr></table></figure>
+
+<p>提示权限拒绝</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod +x write_blog</span><br></pre></td></tr></table></figure>
+
+<p>提示找不到文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shebang声明的路径不对</span><br></pre></td></tr></table></figure>
+
+<h5 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h5><p>自己的写博客脚本<code>bk.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Users/minnie/hexo/blog</span><br><span class="line">hexo new <span class="variable">$1</span></span><br><span class="line">code ~/hexo/blog/<span class="built_in">source</span>/_posts/</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<p>发布博客脚本<code>fb.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Users/minnie/hexo/blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Python-pip（ubuntu）"><a href="#Python-pip（ubuntu）" class="headerlink" title="Python-pip（ubuntu）"></a>Python-pip（ubuntu）</h4><p>python2.7</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo easy_install pip</span><br></pre></td></tr></table></figure>
+
+<p>python3</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install python3-pip</span><br></pre></td></tr></table></figure>
+
+<h5 id="开启-sudo-命令进行安装"><a href="#开启-sudo-命令进行安装" class="headerlink" title="开启 sudo 命令进行安装"></a>开启 sudo 命令进行安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install &#96;包名&#96;</span><br></pre></td></tr></table></figure>
+<h5 id="手动设置豆瓣库进行安装"><a href="#手动设置豆瓣库进行安装" class="headerlink" title="手动设置豆瓣库进行安装"></a>手动设置豆瓣库进行安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple &#96;包名&#96;</span><br></pre></td></tr></table></figure>
+<h5 id="按照先-2-后-3-的顺序安装-，-可能出现未知bug-，大部分库都在向-3-进行迁移，-甚至出现不再支持的情况"><a href="#按照先-2-后-3-的顺序安装-，-可能出现未知bug-，大部分库都在向-3-进行迁移，-甚至出现不再支持的情况" class="headerlink" title="按照先 2 后 3 的顺序安装 ， 可能出现未知bug ，大部分库都在向 3 进行迁移， 甚至出现不再支持的情况"></a>按照先 2 后 3 的顺序安装 ， 可能出现未知bug ，大部分库都在向 3 进行迁移， 甚至出现不再支持的情况</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">flask , selenium ,jupyter 都出现了问题</span><br></pre></td></tr></table></figure>
+<h5 id="此时windows可以下载离线包进行安装"><a href="#此时windows可以下载离线包进行安装" class="headerlink" title="此时windows可以下载离线包进行安装"></a>此时windows可以下载离线包进行安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.lfd.uci.edu&#x2F;~gohlke&#x2F;pythonlibs&#x2F;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <h4 id="Browsersync"><a href="#Browsersync" class="headerlink" title="Browsersync"></a>Browsersync</h4><h5 id="进入需要同步的目录，初始化（生成package-json-文件）"><a href="#进入需要同步的目录，初始化（生成package-json-文件）" class="headerlink" title="进入需要同步的目录，初始化（生成package.json 文件）"></a>进入需要同步的目录，初始化（生成package.json 文件）</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
 
 <h5 id="安装-会作为开发者依赖，包含到-package-json-中，完成后目录中会多出一个node-modules模块文件"><a href="#安装-会作为开发者依赖，包含到-package-json-中，完成后目录中会多出一个node-modules模块文件" class="headerlink" title="安装( 会作为开发者依赖，包含到 package.json 中，完成后目录中会多出一个node_modules模块文件)"></a>安装( 会作为开发者依赖，包含到 package.json 中，完成后目录中会多出一个node_modules模块文件)</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install  browser-sync --save-dev</span><br></pre></td></tr></table></figure>
@@ -12293,32 +12106,81 @@
 <h5 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">browser-sync start --proxy&#x3D;&quot;localhost:8000&quot; --files&#x3D;&quot;*.html, css&#x2F;*.css&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h4 id="tldr"><a href="#tldr" class="headerlink" title="tldr"></a>tldr</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g tldr</span><br></pre></td></tr></table></figure>
-
-<h4 id="待续"><a href="#待续" class="headerlink" title="待续"></a>待续</h4>]]></content>
+]]></content>
       <tags>
         <tag>软件</tag>
       </tags>
   </entry>
   <entry>
-    <title>window一些配置</title>
-    <url>/2018/01/30/window%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/landing-medium.jpg.jpg"></p>
+    <title>正则和文件目录权限记录</title>
+    <url>/2017/10/16/%E6%AD%A3%E5%88%99%E5%92%8C%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E6%9D%83%E9%99%90%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/regular-expressions.jpg.jpg"></p>
 <a id="more"></a>
 
-<h4 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># install</span><br><span class="line">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol &#x3D; [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https:&#x2F;&#x2F;chocolatey.org&#x2F;install.ps1&#39;))</span><br><span class="line"></span><br><span class="line"># 旧的(例如win8.1)可能会报错, 提示 WMF 版本低之类, 解决方法如下(或者微软官网下载 WMF)</span><br><span class="line">choco install powershell</span><br><span class="line"></span><br><span class="line"># main</span><br><span class="line">choco install wox git nodejs youtube-dl aria2 greenshot ffmpeg atom 7zip postman potplayer bitvise-ssh-client vscode winscp pycharm-community docker mysql picgo avidemux joplin -y</span><br><span class="line"></span><br><span class="line"># proxy  使用基于网卡代理的软件接管流量效果比较好</span><br><span class="line">choco config set proxy http:&#x2F;&#x2F;localhost:8888</span><br><span class="line"></span><br><span class="line"># spider </span><br><span class="line">choco install streamlink fiddler selenium-chrome-driver phantomjs -y</span><br><span class="line"></span><br><span class="line"># sql</span><br><span class="line">choco install redis-64 mysql sqlite dbeaver</span><br><span class="line"></span><br><span class="line"># upanok</span><br><span class="line">rufus cpu-z.install  crystaldiskinfo sqlite </span><br><span class="line"></span><br><span class="line"># .net .vc 直接搜索版本就好, 例子如下</span><br><span class="line">choco install dotnet3.5</span><br><span class="line">choco install dotnet4.0</span><br><span class="line">choco install dotnet4.5</span><br><span class="line">choco install dotnet4.5.1</span><br><span class="line">choco install dotnet4.5.2</span><br><span class="line">choco install dotnet4.6</span><br><span class="line">choco install dotnet4.6.1</span><br><span class="line">choco install dotnet4.6.2</span><br><span class="line">choco install dotnet4.7</span><br><span class="line">choco install dotnet4.7.1</span><br><span class="line">choco install dotnet4.7.2</span><br><span class="line">choco install netfx-4.8</span><br><span class="line"></span><br><span class="line">choco install vcredist2005 vcredist2008 vcredist2010 vcredist2012</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># other</span><br><span class="line">choco install gitextensions poweriso anaconda3</span><br><span class="line"></span><br><span class="line"># ss</span><br><span class="line">choco install shadowsocksr-windows</span><br><span class="line">choco install shadowsocks</span><br><span class="line">choco install shadowsocks-qt5</span><br><span class="line">choco install openconnect-gui</span><br></pre></td></tr></table></figure>
+<h4 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F; ...  &#x2F; 包裹内容</span><br></pre></td></tr></table></figure>
 
-<h4 id="无U盘抹盘重装"><a href="#无U盘抹盘重装" class="headerlink" title="无U盘抹盘重装"></a>无U盘抹盘重装</h4><h5 id="原版系统镜像"><a href="#原版系统镜像" class="headerlink" title="原版系统镜像"></a>原版系统镜像</h5><p>解压到非系统盘，例子假设解压在了 D 盘，可以给解压后的文件夹起个好记的名字，比如 win</p>
-<h5 id="设置，更新和安全"><a href="#设置，更新和安全" class="headerlink" title="设置，更新和安全"></a>设置，更新和安全</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/e1fe9925bc315c6018c53a0886b1cb1348547780.jpg.jpg"></p>
-<h5 id="高级启动，立即重启"><a href="#高级启动，立即重启" class="headerlink" title="高级启动，立即重启"></a>高级启动，立即重启</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/8d5494eef01f3a290a2584299225bc315d607c63.jpg.jpg"></p>
-<h5 id="选高级选项"><a href="#选高级选项" class="headerlink" title="选高级选项"></a>选高级选项</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/6a600c338744ebf8c6fc35d8d2f9d72a6159a74c.jpg.jpg"></p>
-<h5 id="选命令提示符"><a href="#选命令提示符" class="headerlink" title="选命令提示符"></a>选命令提示符</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/9345d688d43f8794c53219c9d91b0ef41ad53a03.jpg.jpg"></p>
-<h5 id="会自动重启进入命令行"><a href="#会自动重启进入命令行" class="headerlink" title="会自动重启进入命令行"></a>会自动重启进入命令行</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 之前解压到了 D 盘， 进入 D 盘</span><br><span class="line"></span><br><span class="line">d:</span><br><span class="line"></span><br><span class="line"># 进入解压文件夹</span><br><span class="line"></span><br><span class="line">cd win</span><br><span class="line"></span><br><span class="line"># 进入 source 文件夹</span><br><span class="line"></span><br><span class="line">cd source</span><br><span class="line"></span><br><span class="line"># 运行 setup.exe</span><br><span class="line"></span><br><span class="line">.&#x2F;setup.exe</span><br><span class="line"></span><br><span class="line"># 进入正常的格盘安装流程</span><br></pre></td></tr></table></figure>
+<h4 id="匹配模式"><a href="#匹配模式" class="headerlink" title="匹配模式"></a>匹配模式</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">. 表示通配符</span><br><span class="line">^表示开始符</span><br><span class="line">$ 表示结束符</span><br><span class="line">\ 表示转义符</span><br></pre></td></tr></table></figure>
 
-<h4 id="cmder命令行工具（其实我个人觉得-powershell-够用了）"><a href="#cmder命令行工具（其实我个人觉得-powershell-够用了）" class="headerlink" title="cmder命令行工具（其实我个人觉得 powershell 够用了）"></a>cmder命令行工具（其实我个人觉得 powershell 够用了）</h4><h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">choco install cmder</span><br></pre></td></tr></table></figure>
-<h5 id="添加-Cmder-至-path-环境变量"><a href="#添加-Cmder-至-path-环境变量" class="headerlink" title="添加 Cmder 至 path 环境变量"></a>添加 Cmder 至 path 环境变量</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">电脑 &gt; 右键属性 &gt; 高级系统设置 &gt; 环境变量 &gt; 系统变量，在path中添加 cmder 路径</span><br></pre></td></tr></table></figure>
+<h4 id="字符集（用于表示可能包含某种字符）"><a href="#字符集（用于表示可能包含某种字符）" class="headerlink" title="字符集（用于表示可能包含某种字符）"></a>字符集（用于表示可能包含某种字符）</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[] 表示字符集，字符集中的字符，除了[]外，都不用转义</span><br><span class="line">[^] 表示否定字符集</span><br><span class="line"></span><br><span class="line">例子：</span><br><span class="line">[\d] 所有数字      反例[\D]</span><br><span class="line">[\w]数字，字母，下划线     反例[\W]</span><br><span class="line">[\s]空白内容(空格，回车，换行，tab)  等用于[ \r\n\t]    反例[\S] </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">？表示之前的字符或字符集，至多出现一次，或者可以不出现</span><br><span class="line">*  表示之前的字符或字符集，可以不出现，或者可以出现多次</span><br><span class="line">+  表示之前的字符或字符集，至少出现一次，或者可以出现多次</span><br><span class="line">&#123;&#125; 设置出现的次数</span><br></pre></td></tr></table></figure>
+<h4 id="群组"><a href="#群组" class="headerlink" title="群组"></a>群组</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">() 表示群组匹配</span><br><span class="line"></span><br><span class="line">例子：</span><br><span class="line">&#x2F;[\w]+\.(jpg|png|gif)&#x2F;</span><br><span class="line">匹配到了： logo.png sunrise.jpg smile.gif</span><br></pre></td></tr></table></figure>
 
-<h5 id="添加到右键菜单-打开命令行"><a href="#添加到右键菜单-打开命令行" class="headerlink" title="添加到右键菜单, 打开命令行"></a>添加到右键菜单, 打开命令行</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure>
-<h5 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Startup &gt; Environment &gt; Set up environment variables</span><br><span class="line"></span><br><span class="line">set LANG&#x3D;zh_CN.UTF8</span><br></pre></td></tr></table></figure>
+<h4 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在上个例子中</span><br><span class="line">&#x2F;([\w]+)\.(jpg|png|gif)&#x2F;</span><br><span class="line"></span><br><span class="line">我们使用$1 可以得到：logo sunrise smile</span><br><span class="line">我们使用$2 可以得到：png jpg gif</span><br><span class="line">我们使用$&amp; 可以得到： logo png sunrise jpg smile gif</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="文件目录权限"><a href="#文件目录权限" class="headerlink" title="文件目录权限"></a>文件目录权限</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Permissions 权限</span><br><span class="line"></span><br><span class="line">owner   -&gt; u</span><br><span class="line">group   -&gt; g</span><br><span class="line">others  -&gt; o</span><br><span class="line"></span><br><span class="line">read    -&gt; r    -&gt; 4</span><br><span class="line">write   -&gt; w    -&gt; 2</span><br><span class="line">execute -&gt; x     -&gt;1</span><br></pre></td></tr></table></figure>
+
+<h4 id="root"><a href="#root" class="headerlink" title="root"></a>root</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su  -&gt; switch user 切换到root用户</span><br><span class="line">exit    -&gt; 退出root用户</span><br><span class="line">sudo 不切换root用户，执行系统命令</span><br></pre></td></tr></table></figure>
+
+<h4 id="user"><a href="#user" class="headerlink" title="user"></a>user</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo useradd zhangsan  创建用户张三</span><br><span class="line">sudo passwd zhangsanpwd  创建密码</span><br><span class="line">sudo userdel zhangsan   删除张三</span><br><span class="line">sudo userdel zhangsan -r   删除张三及其主目录</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 添加用户到wheel群组，就可以使用sudo命令了</span><br><span class="line">sudo gpasswd -a zhangsan wheel  </span><br><span class="line"></span><br><span class="line">groups zhangsan  查看其所在用户组</span><br><span class="line"></span><br><span class="line">sudo lid -g wheel 查看群组下的所有用户</span><br><span class="line"></span><br><span class="line">2. 更改&#x2F;etc&#x2F;sudoers.d 下的同名文件，写入</span><br><span class="line">%zhangsan ALL&#x3D;(ALL) NOPASSWD: ALL</span><br></pre></td></tr></table></figure>
+
+<h4 id="rwx"><a href="#rwx" class="headerlink" title="rwx"></a>rwx</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 创建一个txt文件</span><br><span class="line">touch hello.txt</span><br><span class="line"></span><br><span class="line">2. 权限为</span><br><span class="line">ls -l</span><br><span class="line">-rw-rw-r--</span><br><span class="line"></span><br><span class="line">3. 尝试写入内容</span><br><span class="line">echo &#39;hello world&#39; &gt; hello.txt</span><br><span class="line"></span><br><span class="line">4. 尝试读取内容</span><br><span class="line">cat hello.txt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="chmod-操作文件"><a href="#chmod-操作文件" class="headerlink" title="chmod(操作文件)"></a>chmod(操作文件)</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. chomod(change mod)  数字方式改变权限</span><br><span class="line">chmod 660 hello.txt</span><br><span class="line"></span><br><span class="line">2. 查看权限</span><br><span class="line">ls -l</span><br><span class="line">-rw-rw----</span><br><span class="line"></span><br><span class="line">3. 字母方式改变权限 </span><br><span class="line">chmod o+r hello.txt</span><br><span class="line">chood g-w hello.txt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="chmod-操作目录"><a href="#chmod-操作目录" class="headerlink" title="chmod(操作目录)"></a>chmod(操作目录)</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 创建一个目录查看其权限,为775</span><br><span class="line"></span><br><span class="line">mkdir app</span><br><span class="line">ls -l</span><br><span class="line">drwxrwxr-x</span><br><span class="line"></span><br><span class="line">2. 切换用户，并捎带查询命令，会提示没有权限</span><br><span class="line"></span><br><span class="line">su zhangsan -c &#39;ls app&#39;</span><br><span class="line">此时的目录laowang的权限为700</span><br><span class="line">drwx------</span><br><span class="line"></span><br><span class="line">3. 切换到app目录，执行查询命令就可以成功，写入命令失败</span><br><span class="line"></span><br><span class="line">su zhangsan -c &#39;ls&#39;     成功</span><br><span class="line">su zhangsan -c &#39;toucu file.txt&#39;   失败</span><br><span class="line"></span><br><span class="line">4. 此时我们需要使用 laowang 用户，修改权限, zhangsan 就可以正常写入</span><br><span class="line"></span><br><span class="line">chmod o+w app</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="管理用户所属的用户组"><a href="#管理用户所属的用户组" class="headerlink" title="管理用户所属的用户组"></a>管理用户所属的用户组</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">管理用户组需要用到 sudo 权限，并使用新的命令usermod</span><br><span class="line"></span><br><span class="line">sudo usermod -aG vagrant zhangsan</span><br><span class="line"></span><br><span class="line">解释：-a  -&gt; append   G    -&gt; groups</span><br></pre></td></tr></table></figure>
+
+<h4 id="文件的执行权限"><a href="#文件的执行权限" class="headerlink" title="文件的执行权限"></a>文件的执行权限</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">直接创建一个文件的时候，任何人都没有执行权限的</span><br><span class="line">echo &#39;hello world&#39;  &gt;  say-hello.sh</span><br><span class="line">.&#x2F;say-hello.sh</span><br><span class="line">-rw-rw-r-- </span><br><span class="line"></span><br><span class="line">修改权限</span><br><span class="line">chmod u+x say-hello.sh</span><br></pre></td></tr></table></figure>
+
+<h4 id="读取写入执行总结"><a href="#读取写入执行总结" class="headerlink" title="读取写入执行总结"></a>读取写入执行总结</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">读取 </span><br><span class="line">决定了能否查看目录，具体的内容是查看不到的</span><br><span class="line"></span><br><span class="line">执行</span><br><span class="line">决定了能否看到具体内容，能否编辑具体内容，决定了你能否进入这个目录</span><br><span class="line"></span><br><span class="line">写入</span><br><span class="line">可以创建目录，创建文件</span><br></pre></td></tr></table></figure>
+
+<h4 id="chown-更改目录拥有者"><a href="#chown-更改目录拥有者" class="headerlink" title="chown(更改目录拥有者)"></a>chown(更改目录拥有者)</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-R 表示递归</span><br><span class="line">sudo chown -R zhangsan:vagrant files </span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
 ]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件安装记录</title>
+    <url>/2018/02/06/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/brewsci-256x256.png.png"></p>
+<a id="more"></a>
+
+<h4 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/landing-medium-1.jpg.jpg"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># brew</span><br><span class="line">&#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install.sh)&quot;</span><br><span class="line"></span><br><span class="line"># git</span><br><span class="line">brew install git</span><br><span class="line"></span><br><span class="line"># oh-my-zsh</span><br><span class="line">sh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.github.com&#x2F;ohmyzsh&#x2F;ohmyzsh&#x2F;master&#x2F;tools&#x2F;install.sh)&quot;</span><br><span class="line"></span><br><span class="line"># cask</span><br><span class="line">brew cask install  visual-studio-code mweb picgo  telegram postman alfred the-unarchiver anki avidemux foxmail iina webstorm feem baidunetdisk google-chrome downie marginnote baiduinput</span><br><span class="line"></span><br><span class="line"># bash</span><br><span class="line">brew install nodejs npm ffmpeg youtube-dl</span><br><span class="line"></span><br><span class="line"># other </span><br><span class="line">tuxera-ntfs</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="mac-其他软件"><a href="#mac-其他软件" class="headerlink" title="mac 其他软件"></a>mac 其他软件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Neat download manager</span><br><span class="line"></span><br><span class="line">SmoothScroll</span><br><span class="line"></span><br><span class="line">clover </span><br><span class="line"></span><br><span class="line">hackintool</span><br><span class="line"></span><br><span class="line">feem</span><br><span class="line"></span><br><span class="line">irreader</span><br><span class="line"></span><br><span class="line">pdf expert</span><br><span class="line"></span><br><span class="line">mellow</span><br><span class="line"></span><br><span class="line">paste(ccboard)</span><br><span class="line"></span><br><span class="line">cleanmymacx(柠檬清理)</span><br><span class="line"></span><br><span class="line">图压(tuya.xinxiao.tech)</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="日常浏览器插件"><a href="#日常浏览器插件" class="headerlink" title="日常浏览器插件"></a>日常浏览器插件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 沙拉查词</span><br><span class="line">18 年是发现的页面翻译软件, 干净好用</span><br><span class="line"></span><br><span class="line"># Web Clipper</span><br><span class="line">剪辑页面插件, 替代印象笔记, onenote 这些</span><br><span class="line"></span><br><span class="line"># Neat download manager </span><br><span class="line">代替 IDM</span><br><span class="line"></span><br><span class="line"># OneTab</span><br><span class="line">聊胜于无吧, 用了好多年了</span><br><span class="line"></span><br><span class="line"># 愉阅 vs ImageAssistant</span><br><span class="line">页面图片收集</span><br><span class="line"></span><br><span class="line"># SmoothScroll</span><br><span class="line">平滑滚动</span><br><span class="line"></span><br><span class="line"># adguard</span><br><span class="line">毕竟是商业公司的东西，个人觉得比 ublock 全面些</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-53-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-54-39.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-54-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-55-29.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-55-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-56-39.png.png"></p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
   </entry>
 </search>
