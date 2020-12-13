@@ -12242,7 +12242,10 @@
   <entry>
     <title>BrowserSync工具</title>
     <url>/2018/03/13/BrowserSync%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<h4 id="Browsersync"><a href="#Browsersync" class="headerlink" title="Browsersync"></a>Browsersync</h4><h5 id="进入需要同步的目录，初始化（生成package-json-文件）"><a href="#进入需要同步的目录，初始化（生成package-json-文件）" class="headerlink" title="进入需要同步的目录，初始化（生成package.json 文件）"></a>进入需要同步的目录，初始化（生成package.json 文件）</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<p>Browsersync </p>
+<a id="more"></a>
+
+<h4 id="Browsersync"><a href="#Browsersync" class="headerlink" title="Browsersync"></a>Browsersync</h4><h5 id="进入需要同步的目录，初始化（生成package-json-文件）"><a href="#进入需要同步的目录，初始化（生成package-json-文件）" class="headerlink" title="进入需要同步的目录，初始化（生成package.json 文件）"></a>进入需要同步的目录，初始化（生成package.json 文件）</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
 
 <h5 id="安装-会作为开发者依赖，包含到-package-json-中，完成后目录中会多出一个node-modules模块文件"><a href="#安装-会作为开发者依赖，包含到-package-json-中，完成后目录中会多出一个node-modules模块文件" class="headerlink" title="安装( 会作为开发者依赖，包含到 package.json 中，完成后目录中会多出一个node_modules模块文件)"></a>安装( 会作为开发者依赖，包含到 package.json 中，完成后目录中会多出一个node_modules模块文件)</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install  browser-sync --save-dev</span><br></pre></td></tr></table></figure>
 
