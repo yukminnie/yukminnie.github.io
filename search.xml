@@ -11798,47 +11798,7 @@
       </tags>
   </entry>
   <entry>
-    <title>mac 一些配置</title>
-    <url>/2018/10/16/mac%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_19-56-56.png.png"></p>
-<a id="more"></a>
-
-<h4 id="homebrew安装软件-报错xcrun-error-invalid-active-developer-path"><a href="#homebrew安装软件-报错xcrun-error-invalid-active-developer-path" class="headerlink" title="homebrew安装软件 报错xcrun: error: invalid active developer path"></a>homebrew安装软件 报错xcrun: error: invalid active developer path</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">解决方法，重装xcode command line：</span><br><span class="line"></span><br><span class="line">xcode-select --install</span><br><span class="line"></span><br><span class="line">sudo xcode-select -switch &#x2F;</span><br></pre></td></tr></table></figure>
-
-<h4 id="homebrew安装软件-报错-usr-local-Cellar-is-not-writable"><a href="#homebrew安装软件-报错-usr-local-Cellar-is-not-writable" class="headerlink" title="homebrew安装软件 报错/usr/local/Cellar is not writable"></a>homebrew安装软件 报错/usr/local/Cellar is not writable</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar</span><br></pre></td></tr></table></figure>
-
-<h4 id="homebrew安装软件-报错-Library-not-loaded-usr-local-lib-libx264-142-dylib"><a href="#homebrew安装软件-报错-Library-not-loaded-usr-local-lib-libx264-142-dylib" class="headerlink" title="homebrew安装软件 报错 Library not loaded: /usr/local/lib/libx264.142.dylib"></a>homebrew安装软件 报错 Library not loaded: /usr/local/lib/libx264.142.dylib</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew doctor</span><br></pre></td></tr></table></figure>
-
-<h4 id="mac-右键-多了一些莫名其妙的打开方式"><a href="#mac-右键-多了一些莫名其妙的打开方式" class="headerlink" title="mac 右键, 多了一些莫名其妙的打开方式"></a>mac 右键, 多了一些莫名其妙的打开方式</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;CoreServices.framework&#x2F;Versions&#x2F;A&#x2F;Frameworks&#x2F;LaunchServices.framework&#x2F;Versions&#x2F;A&#x2F;Support&#x2F;lsregister -kill -r -domain local -domain user;killall Finder;echo “Open With has been rebuilt, Finder will relaunch</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="mac-os-隐藏与显示文件"><a href="#mac-os-隐藏与显示文件" class="headerlink" title="mac os 隐藏与显示文件"></a>mac os 隐藏与显示文件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-18_12-30-15.png.png"></p>
-<h4 id="marginnote同步问题"><a href="#marginnote同步问题" class="headerlink" title="marginnote同步问题"></a>marginnote同步问题</h4><p>排除比如网络故障，DNS故障这些客观原因不谈，其实 icloud 的同步，在国内还是挺快的</p>
-<p>最初我也不知道哪里出了问题，就一直用的隔空传送，不过还是不太方便。因为我路由日常就是全局白名单模式，突然想到，会不会是走了特别线路呢？</p>
-<p>在 xx 中，我尝试在黑名单中加入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*.apple.com</span><br></pre></td></tr></table></figure>
-
-<p>重启设备后，同步立马就成功了。</p>
-<h4 id="mac-休眠问题"><a href="#mac-休眠问题" class="headerlink" title="mac 休眠问题"></a>mac 休眠问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 开机 commend R, 关闭sip</span><br><span class="line"></span><br><span class="line">csrutil disable</span><br><span class="line"></span><br><span class="line"># 查询休眠文件</span><br><span class="line"></span><br><span class="line">ioreg -l | grep board-id</span><br><span class="line"></span><br><span class="line"># 进入休眠文件放置的文件夹</span><br><span class="line"></span><br><span class="line">cd &#x2F;System&#x2F;Library&#x2F;Extensions&#x2F;IOPlatformPluginFamily.kext&#x2F;Contents&#x2F;PlugIns&#x2F;X86PlatformPlugin.kext&#x2F;Contents&#x2F;Resources</span><br><span class="line"></span><br><span class="line"># 修改休眠文件</span><br><span class="line"></span><br><span class="line">sudo nano xxx.plist</span><br><span class="line"></span><br><span class="line"># 修改内容如下</span><br><span class="line"></span><br><span class="line">&lt;key&gt;TCPKeepAliveDuringSleep&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;false&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">&lt;key&gt;NotificationWake&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;false&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">&lt;key&gt;DNDWhileDisplaySleeps&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;true&#x2F;&gt;</span><br><span class="line"></span><br><span class="line"># 解释</span><br><span class="line"></span><br><span class="line">TCPKeepAliveDuringSleep：睡眠的时候关闭TCP保持连接</span><br><span class="line"></span><br><span class="line">NotificationWake：随机唤醒然后检查提醒</span><br><span class="line"></span><br><span class="line">DNDWhileDisplaySleeps：关闭屏幕后电脑任然可用, 外接显示器的自己考虑是否关闭</span><br><span class="line"></span><br><span class="line"># 重启 commend R , 打开sip</span><br><span class="line"></span><br><span class="line">csrutil enable</span><br></pre></td></tr></table></figure>
-
-<h4 id="休眠问题结局-开机软件报错"><a href="#休眠问题结局-开机软件报错" class="headerlink" title="休眠问题结局, 开机软件报错"></a>休眠问题结局, 开机软件报错</h4><p>因为我就一个 virtualbox 可能和 oracle 甲骨文有关, 所以我尝试重装 virtualbox, 报错了</p>
-<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-38-38.png"></p>
-<p>解决过程1</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 关闭系统安全与隐私选项</span><br><span class="line"></span><br><span class="line">sudo spctl --master-disable</span><br><span class="line"></span><br><span class="line"># 【系统偏好设置】-【安全性与隐私】-【通用】- 会有 [允许] virtualbox 安装的提示, 点击允许</span><br><span class="line"></span><br><span class="line">失败, 报错和之前一样  [安装失败 “安装器遇到了一个错误，请联系软件制造商以获得帮助]</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-33-48.png"></p>
-<p>解决过程2</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 尝试重启, 重新安装</span><br><span class="line"></span><br><span class="line">brew cask reinstall virtualbox</span><br><span class="line"></span><br><span class="line"># 【系统偏好设置】-【安全性与隐私】-【通用】- 会有 [允许] virtualbox 安装的提示, 点击允许 . 不同的是, 命令行中, 也会提示输入管理员密码</span><br><span class="line"></span><br><span class="line">安装成功</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-33-38.png"></p>
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>window一些配置</title>
+    <title>window高级启动重做系统</title>
     <url>/2018/01/30/window%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/landing-medium.jpg.jpg"></p>
 <a id="more"></a>
@@ -11851,17 +11811,12 @@
 <h5 id="选命令提示符"><a href="#选命令提示符" class="headerlink" title="选命令提示符"></a>选命令提示符</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/9345d688d43f8794c53219c9d91b0ef41ad53a03.jpg.jpg"></p>
 <h5 id="会自动重启进入命令行"><a href="#会自动重启进入命令行" class="headerlink" title="会自动重启进入命令行"></a>会自动重启进入命令行</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 之前解压到了 D 盘， 进入 D 盘</span><br><span class="line"></span><br><span class="line">d:</span><br><span class="line"></span><br><span class="line"># 进入解压文件夹</span><br><span class="line"></span><br><span class="line">cd win</span><br><span class="line"></span><br><span class="line"># 进入 source 文件夹</span><br><span class="line"></span><br><span class="line">cd source</span><br><span class="line"></span><br><span class="line"># 运行 setup.exe</span><br><span class="line"></span><br><span class="line">.&#x2F;setup.exe</span><br><span class="line"></span><br><span class="line"># 进入正常的格盘安装流程</span><br></pre></td></tr></table></figure>
 
-<h4 id="cmder命令行工具（其实我个人觉得-powershell-够用了）"><a href="#cmder命令行工具（其实我个人觉得-powershell-够用了）" class="headerlink" title="cmder命令行工具（其实我个人觉得 powershell 够用了）"></a>cmder命令行工具（其实我个人觉得 powershell 够用了）</h4><h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">choco install cmder</span><br></pre></td></tr></table></figure>
-<h5 id="添加-Cmder-至-path-环境变量"><a href="#添加-Cmder-至-path-环境变量" class="headerlink" title="添加 Cmder 至 path 环境变量"></a>添加 Cmder 至 path 环境变量</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">电脑 &gt; 右键属性 &gt; 高级系统设置 &gt; 环境变量 &gt; 系统变量，在path中添加 cmder 路径</span><br></pre></td></tr></table></figure>
-
-<h5 id="添加到右键菜单-打开命令行"><a href="#添加到右键菜单-打开命令行" class="headerlink" title="添加到右键菜单, 打开命令行"></a>添加到右键菜单, 打开命令行</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure>
-<h5 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Startup &gt; Environment &gt; Set up environment variables</span><br><span class="line"></span><br><span class="line">set LANG&#x3D;zh_CN.UTF8</span><br></pre></td></tr></table></figure>
-
-<h4 id="Chocolatey软件安装"><a href="#Chocolatey软件安装" class="headerlink" title="Chocolatey软件安装"></a>Chocolatey软件安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># install</span><br><span class="line">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol &#x3D; [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https:&#x2F;&#x2F;chocolatey.org&#x2F;install.ps1&#39;))</span><br><span class="line"></span><br><span class="line"># 旧的(例如win8.1)可能会报错, 提示 WMF 版本低之类, 解决方法如下(或者微软官网下载 WMF)</span><br><span class="line">choco install powershell</span><br><span class="line"></span><br><span class="line"># main</span><br><span class="line">choco install wox git nodejs youtube-dl aria2 greenshot ffmpeg atom 7zip postman potplayer bitvise-ssh-client vscode winscp pycharm-community docker mysql picgo avidemux joplin -y</span><br><span class="line"></span><br><span class="line"># proxy  使用基于网卡代理的软件接管流量效果比较好</span><br><span class="line">choco config set proxy http:&#x2F;&#x2F;localhost:8888</span><br><span class="line"></span><br><span class="line"># spider </span><br><span class="line">choco install streamlink fiddler selenium-chrome-driver phantomjs -y</span><br><span class="line"></span><br><span class="line"># sql</span><br><span class="line">choco install redis-64 mysql sqlite dbeaver</span><br><span class="line"></span><br><span class="line"># upanok</span><br><span class="line">rufus cpu-z.install  crystaldiskinfo sqlite </span><br><span class="line"></span><br><span class="line"># .net .vc 直接搜索版本就好, 例子如下</span><br><span class="line">choco install dotnet3.5</span><br><span class="line">choco install dotnet4.0</span><br><span class="line">choco install dotnet4.5</span><br><span class="line">choco install dotnet4.5.1</span><br><span class="line">choco install dotnet4.5.2</span><br><span class="line">choco install dotnet4.6</span><br><span class="line">choco install dotnet4.6.1</span><br><span class="line">choco install dotnet4.6.2</span><br><span class="line">choco install dotnet4.7</span><br><span class="line">choco install dotnet4.7.1</span><br><span class="line">choco install dotnet4.7.2</span><br><span class="line">choco install netfx-4.8</span><br><span class="line"></span><br><span class="line">choco install vcredist2005 vcredist2008 vcredist2010 vcredist2012</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># other</span><br><span class="line">choco install gitextensions poweriso anaconda3</span><br><span class="line"></span><br><span class="line"># ss</span><br><span class="line">choco install shadowsocksr-windows</span><br><span class="line">choco install shadowsocks</span><br><span class="line">choco install shadowsocks-qt5</span><br><span class="line">choco install openconnect-gui</span><br></pre></td></tr></table></figure>
 
 
-<h4 id="改建工具"><a href="#改建工具" class="headerlink" title="改建工具"></a>改建工具</h4><p><a href="https://blog-file-1253466367.cos.ap-beijing.myqcloud.com/gljm.exe">点击下载gljm</a></p>
-<h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">约定：</span><br><span class="line">        C为Ctrl键</span><br><span class="line">        W为Win键</span><br><span class="line">        S为Shift键</span><br><span class="line">    移动光标：</span><br><span class="line">        C-f     光标右(forward)</span><br><span class="line">        C-b     光标左(backward)</span><br><span class="line">        C-p     光标上(previous)</span><br><span class="line">        C-n     光标下(next)</span><br><span class="line">        C-W-f   往右一个单词</span><br><span class="line">        C-W-b   往左一个单词</span><br><span class="line">        C-a     光标移动到行首</span><br><span class="line">        C-e     光标移动到行尾</span><br><span class="line">    删除：</span><br><span class="line">        C-h     删除光标左边的一个字符</span><br><span class="line">        C-d     删除光标右边的一个字符</span><br><span class="line">        C-W-h   删除光标左边的一个单词</span><br><span class="line">        C-W-d   删除光标右边的一个单词</span><br><span class="line">        C-k     删除从当前光标到行尾的所有内容</span><br><span class="line">        C-u     删除从当前光标到行首的所有内容</span><br><span class="line">    重新利用被占用热键：</span><br><span class="line">        W-f     C-f（搜索）</span><br><span class="line">        W-S-f   C-S-f（全局搜索）</span><br><span class="line">        W-n     C-n（新建）</span><br><span class="line">        W-a     C-a（全选）</span><br><span class="line">        W-h     C-h（chrome的历史记录）</span><br><span class="line">        W-e     C-e（用于 Flying Logic 中的热键）</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
   </entry>
   <entry>
     <title>ubuntu的一些配置</title>
@@ -11964,74 +11919,6 @@
 <h5 id="Linux-查找文件、文件夹"><a href="#Linux-查找文件、文件夹" class="headerlink" title="Linux 查找文件、文件夹"></a>Linux 查找文件、文件夹</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查找tomcat7文件夹所在的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;tomcat7&#39; -type d</span><br><span class="line"></span><br><span class="line"># 查找server.xml文件的位置</span><br><span class="line"></span><br><span class="line">find &#x2F; -name &#39;server.xml&#39; -print</span><br></pre></td></tr></table></figure>
 
 
-]]></content>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用工具配置</title>
-    <url>/2017/10/16/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/zsh-300x300.jpg.jpg"></p>
-<a id="more"></a>
-<h4 id="mac-安装-Iterm2"><a href="#mac-安装-Iterm2" class="headerlink" title="mac 安装 Iterm2"></a>mac 安装 Iterm2</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install iterm2</span><br></pre></td></tr></table></figure>
-<h4 id="查看系统内置shell"><a href="#查看系统内置shell" class="headerlink" title="查看系统内置shell"></a>查看系统内置shell</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat &#x2F;etc&#x2F;shells</span><br><span class="line"></span><br><span class="line">得到：</span><br><span class="line"></span><br><span class="line">&#x2F;bin&#x2F;bash</span><br><span class="line">&#x2F;bin&#x2F;csh</span><br><span class="line">&#x2F;bin&#x2F;ksh</span><br><span class="line">&#x2F;bin&#x2F;sh</span><br><span class="line">&#x2F;bin&#x2F;tcsh</span><br><span class="line">&#x2F;bin&#x2F;zsh</span><br></pre></td></tr></table></figure>
-<h4 id="设置-zsh-为默认shell"><a href="#设置-zsh-为默认shell" class="headerlink" title="设置 zsh 为默认shell"></a>设置 zsh 为默认shell</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chsh -s &#x2F;bin&#x2F;zsh</span><br></pre></td></tr></table></figure>
-<h4 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh-my-zsh"></a>安装 oh-my-zsh</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;robbyrussell&#x2F;oh-my-zsh.git ~&#x2F;.oh-my-zsh</span><br><span class="line"></span><br><span class="line">cp ~&#x2F;.oh-my-zsh&#x2F;templates&#x2F;zshrc.zsh-template ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
-<h4 id="修改配色主题"><a href="#修改配色主题" class="headerlink" title="修改配色主题"></a>修改配色主题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo nano ~&#x2F;.zshrc</span><br><span class="line"></span><br><span class="line">主题字段在 ZSH_THEME </span><br></pre></td></tr></table></figure>
-<h4 id="使配置生效"><a href="#使配置生效" class="headerlink" title="使配置生效"></a>使配置生效</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
-<h4 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 下载高亮插件</span><br><span class="line">cd ~&#x2F;.oh-my-zsh&#x2F;custom&#x2F;plugins</span><br><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;zsh-users&#x2F;zsh-syntax-highlighting.git</span><br><span class="line"></span><br><span class="line"># 配置</span><br><span class="line">plugins&#x3D;(</span><br><span class="line">zsh-syntax-highlighting</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># 配置生效</span><br><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="自定义一个命令例子"><a href="#自定义一个命令例子" class="headerlink" title="自定义一个命令例子"></a>自定义一个命令例子</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /User/minnie/demo/write_blog.sh    <span class="comment"># 很繁琐</span></span><br></pre></td></tr></table></figure>
-<!-- more -->
-
-<h5 id="1，修改系统变量"><a href="#1，修改系统变量" class="headerlink" title="1，修改系统变量"></a>1，修改系统变量</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑 ~/.bashrc 文件</span></span><br><span class="line"><span class="comment"># User/Minnie/demo 是我的脚本存储目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;User/Minnie/demo:<span class="variable">$PATH</span>&quot;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 source ~/.bashrc 使设置生效, 我们就可以这样执行脚本</span></span><br><span class="line"></span><br><span class="line">sh write_blog.sh    </span><br></pre></td></tr></table></figure>
-
-
-<h5 id="2，添加shebang声明"><a href="#2，添加shebang声明" class="headerlink" title="2，添加shebang声明"></a>2，添加shebang声明</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑脚本文件, 首行添加声明</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 现在我们可以这样执行脚本</span></span><br><span class="line"></span><br><span class="line">write_blog.sh</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="3，去除后缀名"><a href="#3，去除后缀名" class="headerlink" title="3，去除后缀名"></a>3，去除后缀名</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 后缀名也是没有意义的</span></span><br><span class="line"></span><br><span class="line">mv write_blog.sh write_blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 此时, 命令简化为</span></span><br><span class="line"></span><br><span class="line">write_blog</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="4，添加alias声明"><a href="#4，添加alias声明" class="headerlink" title="4，添加alias声明"></a>4，添加alias声明</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 再次编辑 ~/.bashrc 文件</span></span><br><span class="line"><span class="comment"># 添加 alias 命令</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> wb=<span class="string">&quot;write_blog&quot;</span>   </span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 _source ~/.bashrc_ 使设置生效, 最终成果</span></span><br><span class="line"></span><br><span class="line">wb</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="问题集锦"><a href="#问题集锦" class="headerlink" title="问题集锦"></a>问题集锦</h5><p>为什么不把脚本直接命名为wb, 而是使用alias</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">防止忘记了它的功能.</span><br></pre></td></tr></table></figure>
-
-<p>提示权限拒绝</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod +x write_blog</span><br></pre></td></tr></table></figure>
-
-<p>提示找不到文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shebang声明的路径不对</span><br></pre></td></tr></table></figure>
-
-<h5 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h5><p>自己的写博客脚本<code>bk.sh</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Users/minnie/hexo/blog</span><br><span class="line">hexo new <span class="variable">$1</span></span><br><span class="line">code ~/hexo/blog/<span class="built_in">source</span>/_posts/</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<p>发布博客脚本<code>fb.sh</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Users/minnie/hexo/blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="Python-pip（ubuntu）"><a href="#Python-pip（ubuntu）" class="headerlink" title="Python-pip（ubuntu）"></a>Python-pip（ubuntu）</h4><p>python2.7</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo easy_install pip</span><br></pre></td></tr></table></figure>
-
-<p>python3</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install python3-pip</span><br></pre></td></tr></table></figure>
-
-<h5 id="开启-sudo-命令进行安装"><a href="#开启-sudo-命令进行安装" class="headerlink" title="开启 sudo 命令进行安装"></a>开启 sudo 命令进行安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install &#96;包名&#96;</span><br></pre></td></tr></table></figure>
-<h5 id="手动设置豆瓣库进行安装"><a href="#手动设置豆瓣库进行安装" class="headerlink" title="手动设置豆瓣库进行安装"></a>手动设置豆瓣库进行安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple &#96;包名&#96;</span><br></pre></td></tr></table></figure>
-<h5 id="按照先-2-后-3-的顺序安装-，-可能出现未知bug-，大部分库都在向-3-进行迁移，-甚至出现不再支持的情况"><a href="#按照先-2-后-3-的顺序安装-，-可能出现未知bug-，大部分库都在向-3-进行迁移，-甚至出现不再支持的情况" class="headerlink" title="按照先 2 后 3 的顺序安装 ， 可能出现未知bug ，大部分库都在向 3 进行迁移， 甚至出现不再支持的情况"></a>按照先 2 后 3 的顺序安装 ， 可能出现未知bug ，大部分库都在向 3 进行迁移， 甚至出现不再支持的情况</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">flask , selenium ,jupyter 都出现了问题</span><br></pre></td></tr></table></figure>
-<h5 id="此时windows可以下载离线包进行安装"><a href="#此时windows可以下载离线包进行安装" class="headerlink" title="此时windows可以下载离线包进行安装"></a>此时windows可以下载离线包进行安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.lfd.uci.edu&#x2F;~gohlke&#x2F;pythonlibs&#x2F;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="Browsersync"><a href="#Browsersync" class="headerlink" title="Browsersync"></a>Browsersync</h4><h5 id="进入需要同步的目录，初始化（生成package-json-文件）"><a href="#进入需要同步的目录，初始化（生成package-json-文件）" class="headerlink" title="进入需要同步的目录，初始化（生成package.json 文件）"></a>进入需要同步的目录，初始化（生成package.json 文件）</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
-
-<h5 id="安装-会作为开发者依赖，包含到-package-json-中，完成后目录中会多出一个node-modules模块文件"><a href="#安装-会作为开发者依赖，包含到-package-json-中，完成后目录中会多出一个node-modules模块文件" class="headerlink" title="安装( 会作为开发者依赖，包含到 package.json 中，完成后目录中会多出一个node_modules模块文件)"></a>安装( 会作为开发者依赖，包含到 package.json 中，完成后目录中会多出一个node_modules模块文件)</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install  browser-sync --save-dev</span><br></pre></td></tr></table></figure>
-
-<h5 id="简单例子"><a href="#简单例子" class="headerlink" title="简单例子"></a>简单例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir zhangsan</span><br><span class="line">cd zhangsan</span><br><span class="line">browser-sync start --server zhangsan --files&#x3D;&quot;zhangsan&#x2F;css&#x2F;*.css&quot;</span><br></pre></td></tr></table></figure>
-<h5 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">browser-sync start --proxy&#x3D;&quot;localhost:8000&quot; --files&#x3D;&quot;*.html, css&#x2F;*.css&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="tldr"><a href="#tldr" class="headerlink" title="tldr"></a>tldr</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g tldr</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>软件</tag>
@@ -12170,6 +12057,240 @@
 ]]></content>
       <tags>
         <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Chocolatey配置</title>
+    <url>/2018/01/13/Chocolatey%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>Chocolatey</p>
+<a id="more"></a>
+<h4 id="Chocolatey软件安装"><a href="#Chocolatey软件安装" class="headerlink" title="Chocolatey软件安装"></a>Chocolatey软件安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># install</span><br><span class="line">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol &#x3D; [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https:&#x2F;&#x2F;chocolatey.org&#x2F;install.ps1&#39;))</span><br><span class="line"></span><br><span class="line"># 旧的(例如win8.1)可能会报错, 提示 WMF 版本低之类, 解决方法如下(或者微软官网下载 WMF)</span><br><span class="line">choco install powershell</span><br><span class="line"></span><br><span class="line"># main</span><br><span class="line">choco install wox git nodejs youtube-dl aria2 greenshot ffmpeg atom 7zip postman potplayer bitvise-ssh-client vscode winscp pycharm-community docker mysql picgo avidemux joplin -y</span><br><span class="line"></span><br><span class="line"># proxy  使用基于网卡代理的软件接管流量效果比较好</span><br><span class="line">choco config set proxy http:&#x2F;&#x2F;localhost:8888</span><br><span class="line"></span><br><span class="line"># spider </span><br><span class="line">choco install streamlink fiddler selenium-chrome-driver phantomjs -y</span><br><span class="line"></span><br><span class="line"># sql</span><br><span class="line">choco install redis-64 mysql sqlite dbeaver</span><br><span class="line"></span><br><span class="line"># upanok</span><br><span class="line">rufus cpu-z.install  crystaldiskinfo sqlite </span><br><span class="line"></span><br><span class="line"># .net .vc 直接搜索版本就好, 例子如下</span><br><span class="line">choco install dotnet3.5</span><br><span class="line">choco install dotnet4.0</span><br><span class="line">choco install dotnet4.5</span><br><span class="line">choco install dotnet4.5.1</span><br><span class="line">choco install dotnet4.5.2</span><br><span class="line">choco install dotnet4.6</span><br><span class="line">choco install dotnet4.6.1</span><br><span class="line">choco install dotnet4.6.2</span><br><span class="line">choco install dotnet4.7</span><br><span class="line">choco install dotnet4.7.1</span><br><span class="line">choco install dotnet4.7.2</span><br><span class="line">choco install netfx-4.8</span><br><span class="line"></span><br><span class="line">choco install vcredist2005 vcredist2008 vcredist2010 vcredist2012</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># other</span><br><span class="line">choco install gitextensions poweriso anaconda3</span><br><span class="line"></span><br><span class="line"># ss</span><br><span class="line">choco install shadowsocksr-windows</span><br><span class="line">choco install shadowsocks</span><br><span class="line">choco install shadowsocks-qt5</span><br><span class="line">choco install openconnect-gui</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cmder工具</title>
+    <url>/2017/08/10/Cmder%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>Cmder</p>
+<a id="more"></a>
+<h4 id="cmder命令行工具（其实我个人觉得-powershell-够用了）"><a href="#cmder命令行工具（其实我个人觉得-powershell-够用了）" class="headerlink" title="cmder命令行工具（其实我个人觉得 powershell 够用了）"></a>cmder命令行工具（其实我个人觉得 powershell 够用了）</h4><h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">choco install cmder</span><br></pre></td></tr></table></figure>
+<h5 id="添加-Cmder-至-path-环境变量"><a href="#添加-Cmder-至-path-环境变量" class="headerlink" title="添加 Cmder 至 path 环境变量"></a>添加 Cmder 至 path 环境变量</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">电脑 &gt; 右键属性 &gt; 高级系统设置 &gt; 环境变量 &gt; 系统变量，在path中添加 cmder 路径</span><br></pre></td></tr></table></figure>
+
+<h5 id="添加到右键菜单-打开命令行"><a href="#添加到右键菜单-打开命令行" class="headerlink" title="添加到右键菜单, 打开命令行"></a>添加到右键菜单, 打开命令行</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure>
+<h5 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Startup &gt; Environment &gt; Set up environment variables</span><br><span class="line"></span><br><span class="line">set LANG&#x3D;zh_CN.UTF8</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Marginnote同步问题</title>
+    <url>/2019/10/13/Marginnote%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>marginnote</p>
+<a id="more"></a>
+<h4 id="marginnote同步问题"><a href="#marginnote同步问题" class="headerlink" title="marginnote同步问题"></a>marginnote同步问题</h4><p>排除比如网络故障，DNS故障这些客观原因不谈，其实 icloud 的同步，在国内还是挺快的</p>
+<p>最初我也不知道哪里出了问题，就一直用的隔空传送，不过还是不太方便。因为我路由日常就是全局白名单模式，突然想到，会不会是走了特别线路呢？</p>
+<p>在 xx 中，我尝试在黑名单中加入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*.apple.com</span><br></pre></td></tr></table></figure>
+
+<p>重启设备后，同步立马就成功了。</p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>OMZ配置</title>
+    <url>/2017/02/13/OMZ%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/zsh-300x300.jpg.jpg"></p>
+<a id="more"></a>
+<h4 id="mac-安装-Iterm2"><a href="#mac-安装-Iterm2" class="headerlink" title="mac 安装 Iterm2"></a>mac 安装 Iterm2</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install iterm2</span><br></pre></td></tr></table></figure>
+<h4 id="查看系统内置shell"><a href="#查看系统内置shell" class="headerlink" title="查看系统内置shell"></a>查看系统内置shell</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat &#x2F;etc&#x2F;shells</span><br><span class="line"></span><br><span class="line">得到：</span><br><span class="line"></span><br><span class="line">&#x2F;bin&#x2F;bash</span><br><span class="line">&#x2F;bin&#x2F;csh</span><br><span class="line">&#x2F;bin&#x2F;ksh</span><br><span class="line">&#x2F;bin&#x2F;sh</span><br><span class="line">&#x2F;bin&#x2F;tcsh</span><br><span class="line">&#x2F;bin&#x2F;zsh</span><br></pre></td></tr></table></figure>
+<h4 id="设置-zsh-为默认shell"><a href="#设置-zsh-为默认shell" class="headerlink" title="设置 zsh 为默认shell"></a>设置 zsh 为默认shell</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chsh -s &#x2F;bin&#x2F;zsh</span><br></pre></td></tr></table></figure>
+<h4 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh-my-zsh"></a>安装 oh-my-zsh</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;robbyrussell&#x2F;oh-my-zsh.git ~&#x2F;.oh-my-zsh</span><br><span class="line"></span><br><span class="line">cp ~&#x2F;.oh-my-zsh&#x2F;templates&#x2F;zshrc.zsh-template ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+<h4 id="修改配色主题"><a href="#修改配色主题" class="headerlink" title="修改配色主题"></a>修改配色主题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo nano ~&#x2F;.zshrc</span><br><span class="line"></span><br><span class="line">主题字段在 ZSH_THEME </span><br></pre></td></tr></table></figure>
+<h4 id="使配置生效"><a href="#使配置生效" class="headerlink" title="使配置生效"></a>使配置生效</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+<h4 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 下载高亮插件</span><br><span class="line">cd ~&#x2F;.oh-my-zsh&#x2F;custom&#x2F;plugins</span><br><span class="line">git clone git:&#x2F;&#x2F;github.com&#x2F;zsh-users&#x2F;zsh-syntax-highlighting.git</span><br><span class="line"></span><br><span class="line"># 配置</span><br><span class="line">plugins&#x3D;(</span><br><span class="line">zsh-syntax-highlighting</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># 配置生效</span><br><span class="line">source ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="自定义一个命令例子"><a href="#自定义一个命令例子" class="headerlink" title="自定义一个命令例子"></a>自定义一个命令例子</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /User/minnie/demo/write_blog.sh    <span class="comment"># 很繁琐</span></span><br></pre></td></tr></table></figure>
+<!-- more -->
+
+<h5 id="1，修改系统变量"><a href="#1，修改系统变量" class="headerlink" title="1，修改系统变量"></a>1，修改系统变量</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑 ~/.bashrc 文件</span></span><br><span class="line"><span class="comment"># User/Minnie/demo 是我的脚本存储目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;User/Minnie/demo:<span class="variable">$PATH</span>&quot;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 source ~/.bashrc 使设置生效, 我们就可以这样执行脚本</span></span><br><span class="line"></span><br><span class="line">sh write_blog.sh    </span><br></pre></td></tr></table></figure>
+
+
+<h5 id="2，添加shebang声明"><a href="#2，添加shebang声明" class="headerlink" title="2，添加shebang声明"></a>2，添加shebang声明</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑脚本文件, 首行添加声明</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 现在我们可以这样执行脚本</span></span><br><span class="line"></span><br><span class="line">write_blog.sh</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="3，去除后缀名"><a href="#3，去除后缀名" class="headerlink" title="3，去除后缀名"></a>3，去除后缀名</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 后缀名也是没有意义的</span></span><br><span class="line"></span><br><span class="line">mv write_blog.sh write_blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 此时, 命令简化为</span></span><br><span class="line"></span><br><span class="line">write_blog</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="4，添加alias声明"><a href="#4，添加alias声明" class="headerlink" title="4，添加alias声明"></a>4，添加alias声明</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 再次编辑 ~/.bashrc 文件</span></span><br><span class="line"><span class="comment"># 添加 alias 命令</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> wb=<span class="string">&quot;write_blog&quot;</span>   </span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 _source ~/.bashrc_ 使设置生效, 最终成果</span></span><br><span class="line"></span><br><span class="line">wb</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="问题集锦"><a href="#问题集锦" class="headerlink" title="问题集锦"></a>问题集锦</h5><p>为什么不把脚本直接命名为wb, 而是使用alias</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">防止忘记了它的功能.</span><br></pre></td></tr></table></figure>
+
+<p>提示权限拒绝</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod +x write_blog</span><br></pre></td></tr></table></figure>
+
+<p>提示找不到文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shebang声明的路径不对</span><br></pre></td></tr></table></figure>
+
+<h5 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h5><p>自己的写博客脚本<code>bk.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Users/minnie/hexo/blog</span><br><span class="line">hexo new <span class="variable">$1</span></span><br><span class="line">code ~/hexo/blog/<span class="built_in">source</span>/_posts/</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<p>发布博客脚本<code>fb.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Users/minnie/hexo/blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>aria2服务未连接</title>
+    <url>/2020/12/11/aria2%E6%9C%8D%E5%8A%A1%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD/</url>
+    <content><![CDATA[<p>aria2 服务未连接</p>
+<a id="more"></a>
+
+<p>平时用aria2，基本都是手动配合youtube-dl时使用</p>
+<p>偶尔用到一次百度网盘，想不开会员下载个东西，还是挺麻烦的。之前配合油猴插件，用idm（ndm）是可用的，最近不行了，得导出到aria2。</p>
+<p>根据《工具一般到真正需要的时候就不灵了》定律，果然出错了，一直提示服务未连接。</p>
+<h4 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h4><p>用这个功能必须开启防火墙好像，开启后，安装aria2gui，会提示“是否让aria2c服务通过防火墙”，点击允许以后</p>
+<h4 id="10-14"><a href="#10-14" class="headerlink" title="10.14"></a>10.14</h4><p>aria2会提示服务已连接，但是实测下载链接可以正常发送，但是无法下载</p>
+<h4 id="big-sur"><a href="#big-sur" class="headerlink" title="big sur"></a>big sur</h4><p>一点反应没有，aria2仍然是，未连接状态</p>
+<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 命令行手动开启 aria2c 服务</span><br><span class="line"></span><br><span class="line">sudo aria2c --enable-rpc --rpc-listen-all&#x3D;true --rpc-allow-origin-all</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>glim改键工具</title>
+    <url>/2017/04/11/glim%E6%94%B9%E9%94%AE%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>glim</p>
+<a id="more"></a>
+<h4 id="改建工具"><a href="#改建工具" class="headerlink" title="改建工具"></a>改建工具</h4><p><a href="https://blog-file-1253466367.cos.ap-beijing.myqcloud.com/gljm.exe">点击下载gljm</a></p>
+<h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">约定：</span><br><span class="line">        C为Ctrl键</span><br><span class="line">        W为Win键</span><br><span class="line">        S为Shift键</span><br><span class="line">    移动光标：</span><br><span class="line">        C-f     光标右(forward)</span><br><span class="line">        C-b     光标左(backward)</span><br><span class="line">        C-p     光标上(previous)</span><br><span class="line">        C-n     光标下(next)</span><br><span class="line">        C-W-f   往右一个单词</span><br><span class="line">        C-W-b   往左一个单词</span><br><span class="line">        C-a     光标移动到行首</span><br><span class="line">        C-e     光标移动到行尾</span><br><span class="line">    删除：</span><br><span class="line">        C-h     删除光标左边的一个字符</span><br><span class="line">        C-d     删除光标右边的一个字符</span><br><span class="line">        C-W-h   删除光标左边的一个单词</span><br><span class="line">        C-W-d   删除光标右边的一个单词</span><br><span class="line">        C-k     删除从当前光标到行尾的所有内容</span><br><span class="line">        C-u     删除从当前光标到行首的所有内容</span><br><span class="line">    重新利用被占用热键：</span><br><span class="line">        W-f     C-f（搜索）</span><br><span class="line">        W-S-f   C-S-f（全局搜索）</span><br><span class="line">        W-n     C-n（新建）</span><br><span class="line">        W-a     C-a（全选）</span><br><span class="line">        W-h     C-h（chrome的历史记录）</span><br><span class="line">        W-e     C-e（用于 Flying Logic 中的热键）</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>升级系统后homebrew安装软件报错</title>
+    <url>/2018/10/16/homebrew%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_19-56-56.png.png"></p>
+<a id="more"></a>
+
+<h4 id="homebrew安装软件-报错xcrun-error-invalid-active-developer-path"><a href="#homebrew安装软件-报错xcrun-error-invalid-active-developer-path" class="headerlink" title="homebrew安装软件 报错xcrun: error: invalid active developer path"></a>homebrew安装软件 报错xcrun: error: invalid active developer path</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">解决方法，重装xcode command line：</span><br><span class="line"></span><br><span class="line">xcode-select --install</span><br><span class="line"></span><br><span class="line">sudo xcode-select -switch &#x2F;</span><br></pre></td></tr></table></figure>
+
+<h4 id="homebrew安装软件-报错-usr-local-Cellar-is-not-writable"><a href="#homebrew安装软件-报错-usr-local-Cellar-is-not-writable" class="headerlink" title="homebrew安装软件 报错/usr/local/Cellar is not writable"></a>homebrew安装软件 报错/usr/local/Cellar is not writable</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo chown -R $(whoami) &#x2F;usr&#x2F;local&#x2F;Cellar</span><br></pre></td></tr></table></figure>
+
+<h4 id="homebrew安装软件-报错-Library-not-loaded-usr-local-lib-libx264-142-dylib"><a href="#homebrew安装软件-报错-Library-not-loaded-usr-local-lib-libx264-142-dylib" class="headerlink" title="homebrew安装软件 报错 Library not loaded: /usr/local/lib/libx264.142.dylib"></a>homebrew安装软件 报错 Library not loaded: /usr/local/lib/libx264.142.dylib</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew doctor</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mac休眠耗电问题</title>
+    <url>/2018/12/20/mac%E4%BC%91%E7%9C%A0%E8%80%97%E7%94%B5%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>mac休眠耗电</p>
+<a id="more"></a>
+<h4 id="mac-休眠问题"><a href="#mac-休眠问题" class="headerlink" title="mac 休眠问题"></a>mac 休眠问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 开机 commend R, 关闭sip</span><br><span class="line"></span><br><span class="line">csrutil disable</span><br><span class="line"></span><br><span class="line"># 查询休眠文件</span><br><span class="line"></span><br><span class="line">ioreg -l | grep board-id</span><br><span class="line"></span><br><span class="line"># 进入休眠文件放置的文件夹</span><br><span class="line"></span><br><span class="line">cd &#x2F;System&#x2F;Library&#x2F;Extensions&#x2F;IOPlatformPluginFamily.kext&#x2F;Contents&#x2F;PlugIns&#x2F;X86PlatformPlugin.kext&#x2F;Contents&#x2F;Resources</span><br><span class="line"></span><br><span class="line"># 修改休眠文件</span><br><span class="line"></span><br><span class="line">sudo nano xxx.plist</span><br><span class="line"></span><br><span class="line"># 修改内容如下</span><br><span class="line"></span><br><span class="line">&lt;key&gt;TCPKeepAliveDuringSleep&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;false&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">&lt;key&gt;NotificationWake&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;false&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">&lt;key&gt;DNDWhileDisplaySleeps&lt;&#x2F;key&gt;</span><br><span class="line"></span><br><span class="line">&lt;true&#x2F;&gt;</span><br><span class="line"></span><br><span class="line"># 解释</span><br><span class="line"></span><br><span class="line">TCPKeepAliveDuringSleep：睡眠的时候关闭TCP保持连接</span><br><span class="line"></span><br><span class="line">NotificationWake：随机唤醒然后检查提醒</span><br><span class="line"></span><br><span class="line">DNDWhileDisplaySleeps：关闭屏幕后电脑任然可用, 外接显示器的自己考虑是否关闭</span><br><span class="line"></span><br><span class="line"># 重启 commend R , 打开sip</span><br><span class="line"></span><br><span class="line">csrutil enable</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mac硬盘格式化</title>
+    <url>/2020/02/23/mac%E7%A1%AC%E7%9B%98%E6%A0%BC%E5%BC%8F%E5%8C%96/</url>
+    <content><![CDATA[<p>无脑格式化</p>
+<a id="more"></a>
+
+<p>偶尔用到一次，想快速格盘是真的难，在有隐藏分区的情况下，自带的磁盘工具，操作逻辑如同睿智。就mac这个生态，可能那天格盘也要收费了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查找外置硬盘盘名</span><br><span class="line">sudo diskutil list</span><br><span class="line"></span><br><span class="line"># 格式化</span><br><span class="line">diskutil partitiondisk 盘名 JHFS+ newdisk 100% </span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pip库修改</title>
+    <url>/2017/10/16/pip%E5%BA%93/</url>
+    <content><![CDATA[<h4 id="Python-pip（ubuntu）"><a href="#Python-pip（ubuntu）" class="headerlink" title="Python-pip（ubuntu）"></a>Python-pip（ubuntu）</h4><p>python2.7</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo easy_install pip</span><br></pre></td></tr></table></figure>
+
+<p>python3</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install python3-pip</span><br></pre></td></tr></table></figure>
+
+<h5 id="开启-sudo-命令进行安装"><a href="#开启-sudo-命令进行安装" class="headerlink" title="开启 sudo 命令进行安装"></a>开启 sudo 命令进行安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install &#96;包名&#96;</span><br></pre></td></tr></table></figure>
+<h5 id="手动设置豆瓣库进行安装"><a href="#手动设置豆瓣库进行安装" class="headerlink" title="手动设置豆瓣库进行安装"></a>手动设置豆瓣库进行安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple &#96;包名&#96;</span><br></pre></td></tr></table></figure>
+<h5 id="按照先-2-后-3-的顺序安装-，-可能出现未知bug-，大部分库都在向-3-进行迁移，-甚至出现不再支持的情况"><a href="#按照先-2-后-3-的顺序安装-，-可能出现未知bug-，大部分库都在向-3-进行迁移，-甚至出现不再支持的情况" class="headerlink" title="按照先 2 后 3 的顺序安装 ， 可能出现未知bug ，大部分库都在向 3 进行迁移， 甚至出现不再支持的情况"></a>按照先 2 后 3 的顺序安装 ， 可能出现未知bug ，大部分库都在向 3 进行迁移， 甚至出现不再支持的情况</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">flask , selenium ,jupyter 都出现了问题</span><br></pre></td></tr></table></figure>
+<h5 id="此时windows可以下载离线包进行安装"><a href="#此时windows可以下载离线包进行安装" class="headerlink" title="此时windows可以下载离线包进行安装"></a>此时windows可以下载离线包进行安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.lfd.uci.edu&#x2F;~gohlke&#x2F;pythonlibs&#x2F;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BrowserSync工具</title>
+    <url>/2018/03/13/BrowserSync%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<h4 id="Browsersync"><a href="#Browsersync" class="headerlink" title="Browsersync"></a>Browsersync</h4><h5 id="进入需要同步的目录，初始化（生成package-json-文件）"><a href="#进入需要同步的目录，初始化（生成package-json-文件）" class="headerlink" title="进入需要同步的目录，初始化（生成package.json 文件）"></a>进入需要同步的目录，初始化（生成package.json 文件）</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
+
+<h5 id="安装-会作为开发者依赖，包含到-package-json-中，完成后目录中会多出一个node-modules模块文件"><a href="#安装-会作为开发者依赖，包含到-package-json-中，完成后目录中会多出一个node-modules模块文件" class="headerlink" title="安装( 会作为开发者依赖，包含到 package.json 中，完成后目录中会多出一个node_modules模块文件)"></a>安装( 会作为开发者依赖，包含到 package.json 中，完成后目录中会多出一个node_modules模块文件)</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install  browser-sync --save-dev</span><br></pre></td></tr></table></figure>
+
+<h5 id="简单例子"><a href="#简单例子" class="headerlink" title="简单例子"></a>简单例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir zhangsan</span><br><span class="line">cd zhangsan</span><br><span class="line">browser-sync start --server zhangsan --files&#x3D;&quot;zhangsan&#x2F;css&#x2F;*.css&quot;</span><br></pre></td></tr></table></figure>
+<h5 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">browser-sync start --proxy&#x3D;&quot;localhost:8000&quot; --files&#x3D;&quot;*.html, css&#x2F;*.css&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mac不常用命令记录</title>
+    <url>/2019/05/13/mac%E4%B8%8D%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>Terminal</p>
+<a id="more"></a>
+
+<h4 id="mac-右键-多了一些莫名其妙的打开方式"><a href="#mac-右键-多了一些莫名其妙的打开方式" class="headerlink" title="mac 右键, 多了一些莫名其妙的打开方式"></a>mac 右键, 多了一些莫名其妙的打开方式</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;CoreServices.framework&#x2F;Versions&#x2F;A&#x2F;Frameworks&#x2F;LaunchServices.framework&#x2F;Versions&#x2F;A&#x2F;Support&#x2F;lsregister -kill -r -domain local -domain user;killall Finder;echo “Open With has been rebuilt, Finder will relaunch</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="mac-os-隐藏与显示文件"><a href="#mac-os-隐藏与显示文件" class="headerlink" title="mac os 隐藏与显示文件"></a>mac os 隐藏与显示文件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="加载隐藏分区"><a href="#加载隐藏分区" class="headerlink" title="加载隐藏分区"></a>加载隐藏分区</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo diskutil list</span><br><span class="line"></span><br><span class="line">sudo diskutil mount 盘名</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>开关sip导致虚拟机出错</title>
+    <url>/2020/11/09/%E5%BC%80%E5%85%B3sip%E5%AF%BC%E8%87%B4%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%87%BA%E9%94%99/</url>
+    <content><![CDATA[<p>virtualbox</p>
+<a id="more"></a>
+<h4 id="开机弹窗报错"><a href="#开机弹窗报错" class="headerlink" title="开机弹窗报错"></a>开机弹窗报错</h4><p>因为我就一个 virtualbox 可能和 oracle 甲骨文有关, 所以我尝试重装 virtualbox, 报错了</p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-38-38.png"></p>
+<h4 id="解决过程1"><a href="#解决过程1" class="headerlink" title="解决过程1"></a>解决过程1</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 关闭系统安全与隐私选项</span><br><span class="line"></span><br><span class="line">sudo spctl --master-disable</span><br><span class="line"></span><br><span class="line"># 【系统偏好设置】-【安全性与隐私】-【通用】- 会有 [允许] virtualbox 安装的提示, 点击允许</span><br><span class="line"></span><br><span class="line">失败, 报错和之前一样  [安装失败 “安装器遇到了一个错误，请联系软件制造商以获得帮助]</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-33-48.png"></p>
+<h4 id="尝试重启-重新安装"><a href="#尝试重启-重新安装" class="headerlink" title="尝试重启, 重新安装"></a>尝试重启, 重新安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask reinstall virtualbox</span><br><span class="line"></span><br><span class="line"># 【系统偏好设置】-【安全性与隐私】-【通用】- 会有 [允许] virtualbox 安装的提示, 点击允许 . 不同的是, 命令行中, 也会提示输入管理员密码，但是安装成功</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-25_11-33-38.png"></p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
       </tags>
   </entry>
 </search>
