@@ -12159,7 +12159,7 @@
 <h4 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h4><p>用这个功能必须开启防火墙好像，开启后，安装aria2gui，会提示“是否让aria2c服务通过防火墙”，点击允许以后</p>
 <h4 id="10-14"><a href="#10-14" class="headerlink" title="10.14"></a>10.14</h4><p>aria2会提示服务已连接，但是实测下载链接可以正常发送，但是无法下载</p>
 <h4 id="big-sur"><a href="#big-sur" class="headerlink" title="big sur"></a>big sur</h4><p>一点反应没有，aria2仍然是，未连接状态</p>
-<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 命令行手动开启 aria2c 服务</span><br><span class="line"></span><br><span class="line">sudo aria2c --enable-rpc --rpc-listen-all&#x3D;true --rpc-allow-origin-all</span><br></pre></td></tr></table></figure>
+<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 命令行手动开启 aria2c 服务</span><br><span class="line"></span><br><span class="line">aria2c --enable-rpc --rpc-listen-all&#x3D;true --rpc-allow-origin-all</span><br><span class="line"></span><br><span class="line"># 后台运行</span><br><span class="line"></span><br><span class="line">nohup aria2c --enable-rpc --rpc-listen-all&#x3D;true --rpc-allow-origin-all &amp;</span><br></pre></td></tr></table></figure>
 
 
 ]]></content>
