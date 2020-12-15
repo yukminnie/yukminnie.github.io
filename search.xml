@@ -12317,4 +12317,25 @@
         <tag>软件</tag>
       </tags>
   </entry>
+  <entry>
+    <title>big-sur您没有权限运行该应用</title>
+    <url>/2020/11/20/sur%E6%82%A8%E6%B2%A1%E6%9C%89%E6%9D%83%E9%99%90%E8%BF%90%E8%A1%8C%E8%AF%A5%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<p>Paste 2.5.4</p>
+<a id="more"></a>
+
+<p>Paste是之前买的，用了好几年了，不想换，big sur上直接打不开了</p>
+<h4 id="upx"><a href="#upx" class="headerlink" title="upx"></a>upx</h4><p>参考到可以用upx进行解包操作，试了一下无效，不过好多人反应这个是可用的</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Install upx with brew:</span><br><span class="line"></span><br><span class="line">brew install upx</span><br><span class="line"># now run this command:</span><br><span class="line"></span><br><span class="line">sudo upx -d &#x2F;Applications&#x2F;my_app.app&#x2F;Contents&#x2F;MacOS&#x2F;my_app</span><br></pre></td></tr></table></figure>
+
+<h4 id="xattr"><a href="#xattr" class="headerlink" title="xattr"></a>xattr</h4><p>也是无效的</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo xattr -rd com.apple.quarantine &#x2F;Applications&#x2F;my_app.app</span><br></pre></td></tr></table></figure>
+
+<h4 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h4><p>看了一Paste本身就是有执行<code>rwxr*xr*x</code>权限的</p>
+<h4 id="csrutil-和-spctl-–master-disable"><a href="#csrutil-和-spctl-–master-disable" class="headerlink" title="csrutil 和 spctl –master-disable"></a>csrutil 和 spctl –master-disable</h4><p>这个默认就是关闭了</p>
+<h4 id="没有结果"><a href="#没有结果" class="headerlink" title="没有结果"></a>没有结果</h4><p>商店有个CCboard的免费剪贴板软件，试了一下蛮好用的。</p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
 </search>
