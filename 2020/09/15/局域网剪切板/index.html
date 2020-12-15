@@ -20,15 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":350,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":true,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Yukminnie">
-<meta property="og:url" content="http://example.com/archives/2019/11/index.html">
+  <meta name="description" content="ezshare">
+<meta property="og:type" content="article">
+<meta property="og:title" content="局域网共享与剪切板">
+<meta property="og:url" content="http://example.com/2020/09/15/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%89%AA%E5%88%87%E6%9D%BF/index.html">
 <meta property="og:site_name" content="Yukminnie">
+<meta property="og:description" content="ezshare">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-15T06:25:13.000Z">
+<meta property="article:modified_time" content="2020-12-15T06:38:59.731Z">
 <meta property="article:author" content="Yukminnie">
+<meta property="article:tag" content="软件">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/archives/2019/11/">
+<link rel="canonical" href="http://example.com/2020/09/15/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%89%AA%E5%88%87%E6%9D%BF/">
 
 
 <script id="page-configurations">
@@ -36,12 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Archive | Yukminnie</title>
+  <title>局域网共享与剪切板 | Yukminnie</title>
   
 
 
@@ -172,77 +177,115 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/15/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%89%AA%E5%88%87%E6%9D%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yukminnie">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yukminnie">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          局域网共享与剪切板
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-09-15 14:25:13" itemprop="dateCreated datePublished" datetime="2020-09-15T14:25:13+08:00">2020-09-15</time>
+            </span>
+
+          
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        
-        <span class="collection-header">OK! 39 posts in total. Keep on posting.</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/09/15/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%89%AA%E5%88%87%E6%9D%BF/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/15/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%89%AA%E5%88%87%E6%9D%BF/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2019</span>
-    </div>
+        <p>ezshare</p>
+<a id="more"></a>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<h4 id="python"><a href="#python" class="headerlink" title="python"></a>python</h4><p>日常简单文件共享的话，就一直python这个简单的共享命令，不太稳定。python还有个ftp共享，相对来说不错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python3 -m http.server</span><br><span class="line"></span><br><span class="line">python3 -m pyftpdlib -p 8000</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-11-06T18:28:06+08:00"
-              content="2019-11-06">
-          11-06
-        </time>
-      </div>
+<h4 id="feem"><a href="#feem" class="headerlink" title="feem"></a>feem</h4><p>同时剪贴板共享，就一直用feem这个软件，优点是方便，也不需要注册登录。</p>
+<p>后来发现弹窗特别烦，并且在iphone上也是无法使用的，就一直想找个可用的工具。</p>
+<h4 id="ezshare"><a href="#ezshare" class="headerlink" title="ezshare"></a>ezshare</h4><p>最近发现ezshare这个nodejs库，可上传，可下载，可剪贴板分享，只通过浏览器通用性好</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g ezshare</span><br></pre></td></tr></table></figure>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/11/06/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E5%9C%B0%E5%9B%BE)/" itemprop="url">
-            <span itemprop="name">吞食天地-诸葛孔明传(地图篇)</span>
-          </a>
-      </div>
 
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-11-06T18:20:43+08:00"
-              content="2019-11-06">
-          11-06
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/11/06/%E5%B0%84%E9%9B%95%E5%89%A7%E6%9C%AC/" itemprop="url">
-            <span itemprop="name">03射雕剧本</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
 
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag"># 软件</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/14/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E4%BA%BA%E7%89%A9%E8%A3%85%E5%A4%87%E7%AF%87)/" rel="prev" title="吞食天地-诸葛孔明传(人物与装备篇)">
+      <i class="fa fa-chevron-left"></i> 吞食天地-诸葛孔明传(人物与装备篇)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/10/10/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0-%E8%AF%B8%E8%91%9B%E5%AD%94%E6%98%8E%E4%BC%A0(%E6%95%8C%E5%B0%86%E7%AF%871)/" rel="next" title="吞食天地-诸葛孔明传(敌将-龙虎风云篇)">
+      吞食天地-诸葛孔明传(敌将-龙虎风云篇) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -289,6 +332,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#python"><span class="nav-number">1.</span> <span class="nav-text">python</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#feem"><span class="nav-number">2.</span> <span class="nav-text">feem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ezshare"><span class="nav-number">3.</span> <span class="nav-text">ezshare</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

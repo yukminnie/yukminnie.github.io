@@ -12296,4 +12296,25 @@
         <tag>软件</tag>
       </tags>
   </entry>
+  <entry>
+    <title>局域网共享与剪切板</title>
+    <url>/2020/09/15/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%89%AA%E5%88%87%E6%9D%BF/</url>
+    <content><![CDATA[<p>ezshare</p>
+<a id="more"></a>
+
+<h4 id="python"><a href="#python" class="headerlink" title="python"></a>python</h4><p>日常简单文件共享的话，就一直python这个简单的共享命令，不太稳定。python还有个ftp共享，相对来说不错</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python3 -m http.server</span><br><span class="line"></span><br><span class="line">python3 -m pyftpdlib -p 8000</span><br></pre></td></tr></table></figure>
+
+<h4 id="feem"><a href="#feem" class="headerlink" title="feem"></a>feem</h4><p>同时剪贴板共享，就一直用feem这个软件，优点是方便，也不需要注册登录。</p>
+<p>后来发现弹窗特别烦，并且在iphone上也是无法使用的，就一直想找个可用的工具。</p>
+<h4 id="ezshare"><a href="#ezshare" class="headerlink" title="ezshare"></a>ezshare</h4><p>最近发现ezshare这个nodejs库，可上传，可下载，可剪贴板分享，只通过浏览器通用性好</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g ezshare</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
 </search>
