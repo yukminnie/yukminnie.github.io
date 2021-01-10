@@ -12393,7 +12393,18 @@
   <entry>
     <title>fcpx补帧</title>
     <url>/2021/01/10/fcpx%E8%A1%A5%E5%B8%A7/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>Twixtor</p>
+<a id="more"></a>
+
+<h4 id="安装插件-Twixtor"><a href="#安装插件-Twixtor" class="headerlink" title="安装插件 Twixtor"></a>安装插件 Twixtor</h4><h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><p>1, 新建一个同源视频相同分辨率的 60 帧项目<br>2, 视频拖动到时间线, 右键分离音频, 选中素材, 定时器选择自动速度, 然后视频时间线会被压缩<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/iShot2021-01-1020.50.05.png"></p>
+<p>3, 此时点击字幕和发生器, 拖动一个黑色背景到视频后, 然后同时选中视频和黑色背景, 右键, 新建复合片段<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/iShot2021-01-1020.54.31.png"></p>
+<p>4, 最后点击插件, 选择 gpu 加速, 更改速度为 50%<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/iShot2021-01-1020.57.57.png"></p>
+<h4 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">速度 &#x3D; 原视频帧率 &#x2F; 60</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/iShot2021-01-1020.56.38.png"></p>
+]]></content>
+      <tags>
+        <tag>实则虚之</tag>
+      </tags>
   </entry>
   <entry>
     <title>jupyter多语言内核</title>
