@@ -12301,7 +12301,7 @@
       </tags>
   </entry>
   <entry>
-    <title>局域网共享与剪切板</title>
+    <title>Ezshare局域网共享与剪切板</title>
     <url>/2020/09/15/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%89%AA%E5%88%87%E6%9D%BF/</url>
     <content><![CDATA[<p>ezshare</p>
 <a id="more"></a>
@@ -12312,7 +12312,7 @@
 <h4 id="feem"><a href="#feem" class="headerlink" title="feem"></a>feem</h4><p>同时剪贴板共享，就一直用feem这个软件，优点是方便，也不需要注册登录。</p>
 <p>后来发现弹窗特别烦，并且在iphone上也是无法使用的，就一直想找个可用的工具。</p>
 <h4 id="ezshare"><a href="#ezshare" class="headerlink" title="ezshare"></a>ezshare</h4><p>最近发现ezshare这个nodejs库，可上传，可下载，可剪贴板分享，只通过浏览器通用性好</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g ezshare</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 安装</span><br><span class="line">npm install -g ezshare</span><br><span class="line"></span><br><span class="line"># 使用</span><br><span class="line">ezshare</span><br></pre></td></tr></table></figure>
 
 
 
@@ -12369,6 +12369,62 @@
 ]]></content>
       <tags>
         <tag>实则虚之</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo-node-admin</title>
+    <url>/2021/01/10/hexo-node-admin/</url>
+    <content><![CDATA[<p>hexo-node-admin</p>
+<a id="more"></a>
+
+<p>之前有个 hexo-admin 不支持 next 新版了, 偶尔需要局域网其他电脑编辑文档, 还是挺麻烦的, 后来找到了 hexo-node-admin</p>
+<h4 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;quincyyhuang&#x2F;hexo-node-admin</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;quincyyhuang&#x2F;hexo-node-admin</span><br><span class="line">cd hexo-node-admin</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 要开启局域网电脑访问, host 要设置为 0.0.0.0</span><br><span class="line"># hexo_dir 设置为博客的绝对路径</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/iShot2021-01-1016.21.38.png"></p>
+]]></content>
+      <tags>
+        <tag>实则虚之</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>fcpx补帧</title>
+    <url>/2021/01/10/fcpx%E8%A1%A5%E5%B8%A7/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>jupyter多语言内核</title>
+    <url>/2021/01/10/jupyter%E5%A4%9A%E8%AF%AD%E8%A8%80%E5%86%85%E6%A0%B8/</url>
+    <content><![CDATA[<p>JavaScript</p>
+<a id="more"></a>
+
+<h4 id="各语言入口"><a href="#各语言入口" class="headerlink" title="各语言入口"></a>各语言入口</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;jupyter&#x2F;jupyter&#x2F;wiki&#x2F;Jupyter-kernels</span><br></pre></td></tr></table></figure>
+<h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br><span class="line">brew install pkg-config node zeromq</span><br><span class="line">sudo easy_install pip</span><br><span class="line">pip install --upgrade pyzmq jupyter</span><br><span class="line">npm install -g ijavascript</span><br><span class="line">ijsinstall</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/iShot2021-01-1015.32.23.png"></p>
+]]></content>
+      <tags>
+        <tag>实者虚之</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>罗技flow的小问题</title>
+    <url>/2021/01/10/%E7%BD%97%E6%8A%80flow%E7%9A%84%E5%B0%8F%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>罗技 flow</p>
+<a id="more"></a>
+
+<p>设备间互相切换, 粘贴剪切板以及文件</p>
+<h4 id="只能单向-flow"><a href="#只能单向-flow" class="headerlink" title="只能单向 flow"></a>只能单向 flow</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">罗技 option 安装好后, 一定要重启才能生效</span><br></pre></td></tr></table></figure>
+<h4 id="切换很慢"><a href="#切换很慢" class="headerlink" title="切换很慢"></a>切换很慢</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">接收器切换到蓝牙, 有可能卡顿, 实测两台设备都用接收器, 很顺滑</span><br></pre></td></tr></table></figure>
+<h4 id="完全无法-flow"><a href="#完全无法-flow" class="headerlink" title="完全无法 flow"></a>完全无法 flow</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">多台设备混乱了, flow 页面查看设备名, 删除后重新搜索匹配</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/iShot2021-01-1019.56.04.png"></p>
+]]></content>
+      <tags>
+        <tag>虚者实之</tag>
       </tags>
   </entry>
 </search>
