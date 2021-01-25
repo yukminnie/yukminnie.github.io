@@ -12413,12 +12413,12 @@
 <a id="more"></a>
 
 <h4 id="各语言入口"><a href="#各语言入口" class="headerlink" title="各语言入口"></a>各语言入口</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;jupyter&#x2F;jupyter&#x2F;wiki&#x2F;Jupyter-kernels</span><br></pre></td></tr></table></figure>
-<h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br><span class="line">brew install pkg-config node zeromq</span><br><span class="line">sudo easy_install pip</span><br><span class="line">pip install --upgrade pyzmq jupyter</span><br><span class="line">npm install -g ijavascript</span><br><span class="line">ijsinstall</span><br></pre></td></tr></table></figure>
+<h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ruby -e <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>&quot;</span></span><br><span class="line">brew install pkg-config node zeromq</span><br><span class="line">sudo easy_install pip</span><br><span class="line">pip install --upgrade pyzmq jupyter</span><br><span class="line">npm install -g ijavascript</span><br><span class="line">ijsinstall</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/iShot2021-01-1015.32.23.png"></p>
 ]]></content>
       <tags>
-        <tag>实者虚之</tag>
+        <tag>实则虚之</tag>
       </tags>
   </entry>
   <entry>
@@ -12435,7 +12435,7 @@
 <p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/iShot2021-01-1019.56.04.png"></p>
 ]]></content>
       <tags>
-        <tag>虚者实之</tag>
+        <tag>虚则实之</tag>
       </tags>
   </entry>
 </search>
