@@ -69,7 +69,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Vaagrant虚拟机管理</title>
+    <title>Vagrant虚拟机管理</title>
     <url>/2018/09/16/Vaagrant%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/49997.png.png"></p>
 <a id="more"></a>
@@ -84,7 +84,7 @@
 
 <h4 id="配置额外共享目录"><a href="#配置额外共享目录" class="headerlink" title="配置额外共享目录"></a>配置额外共享目录</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1. 查找config.vm.synced_folder 选项，解除注释</span><br><span class="line"></span><br><span class="line">2. 开启默认功能，并设置虚拟机共享目录权限(注意默认行后面要添加逗号)</span><br><span class="line">create: true, owner: &#39;root&#39;, group: &#39;root&#39;</span><br><span class="line"></span><br><span class="line">3. 重启虚拟机</span><br></pre></td></tr></table></figure>
 
-<h4 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1. 在Vagrantfile文件中搜索 private 或者 public 字样，进行注释或者解除注释</span><br><span class="line"></span><br><span class="line">2. vagrant reload 重启虚拟机</span><br><span class="line"></span><br><span class="line">3. vagrant ssh 登录虚拟机</span><br><span class="line"></span><br><span class="line">4. ifconfig 查看虚拟机ip</span><br><span class="line"></span><br><span class="line">5. 通过浏览器或者ping命令进行检查，和虚拟机是否畅通</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1. 在Vagrantfile文件中搜索 private 或者 public 字样，进行注释或者解除注释</span><br><span class="line"></span><br><span class="line">2. vagrant reload 重启虚拟机</span><br><span class="line"></span><br><span class="line">3. vagrant ssh 登录虚拟机</span><br><span class="line"></span><br><span class="line">4. ifconfig 查看虚拟机ip</span><br><span class="line"></span><br><span class="line">5. 通过浏览器或者ping命令进行检查，和虚拟机是否畅通</span><br></pre></td></tr></table></figure>
 
 <h4 id="重新打包"><a href="#重新打包" class="headerlink" title="重新打包"></a>重新打包</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">1. 打包前删除虚拟机下 &#x2F;etc&#x2F;udev&#x2F;rules.d&#x2F; 的配置文件</span><br><span class="line"></span><br><span class="line">2. 退出虚拟机，执行 vagrant package , 就会在当前目录下生成打包好的 package.box 文件</span><br></pre></td></tr></table></figure>
 
