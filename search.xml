@@ -12469,4 +12469,20 @@
         <tag>实则虚之</tag>
       </tags>
   </entry>
+  <entry>
+    <title>华为多屏协同(非官方版)安装时电脑蓝屏</title>
+    <url>/2021/01/27/%E5%8D%8E%E4%B8%BA%E5%A4%9A%E5%B1%8F%E5%8D%8F%E5%90%8C-%E9%9D%9E%E5%AE%98%E6%96%B9%E7%89%88-%E5%AE%89%E8%A3%85%E6%97%B6%E7%94%B5%E8%84%91%E8%93%9D%E5%B1%8F/</url>
+    <content><![CDATA[<p>蓝屏的好喝的</p>
+<a id="more"></a>
+<h4 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 修改系统时间</span><br><span class="line">7月2日：D25BC6</span><br><span class="line">7月16日：F3DCC2</span><br><span class="line">7月23日：6E278B</span><br><span class="line"></span><br><span class="line"># 下载华为电脑管家</span><br><span class="line">https:&#x2F;&#x2F;consumer.huawei.com&#x2F;cn&#x2F;support&#x2F;pc-manager&#x2F;</span><br><span class="line"></span><br><span class="line"># 安装 </span><br><span class="line">PCManagerMgr打开，粘贴华为电脑管家路径，粘贴对应时间的6位代码，安装</span><br><span class="line"></span><br><span class="line"># 提示</span><br><span class="line">不同的官方管家安装包，对机型的设置不同，NFC贴纸制作好了之后，如果再次重装，选择的管家版本不同，可能导致贴纸无法正常工作</span><br></pre></td></tr></table></figure>
+
+<h4 id="普通的x86"><a href="#普通的x86" class="headerlink" title="普通的x86"></a>普通的x86</h4><p>基本上没有什么问题， intel和amd的普通处理器，只要具备无线网卡和蓝牙，都能顺利安装</p>
+<h4 id="凌动"><a href="#凌动" class="headerlink" title="凌动"></a>凌动</h4><p>基本都是卡在95%， 然后直接蓝屏， 出错文件为 HwOS2EC10x64.sys。搜了一圈，没发现有这个问题的，难道就我中奖了？</p>
+<p>后来用谷歌后，才在花粉俱乐部看见了同样问题的帖子，显示被管理员屏蔽，没热度啊怪不得搜不到。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 花粉俱乐部中提到的方法</span><br><span class="line">1，用早期的替换dll文件的方法</span><br><span class="line"></span><br><span class="line"># 我自己测试可用的方法</span><br><span class="line">2，安装最新11版的电脑管家</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>虚则实之</tag>
+      </tags>
+  </entry>
 </search>
