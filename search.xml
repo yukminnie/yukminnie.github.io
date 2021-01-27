@@ -12456,4 +12456,17 @@
         <tag>实则虚之</tag>
       </tags>
   </entry>
+  <entry>
+    <title>aria2-ng-gui和code-server</title>
+    <url>/2021/01/27/aria2-ng-gui%E5%92%8Ccode-server/</url>
+    <content><![CDATA[<p>其实这两个没什么关系</p>
+<a id="more"></a>
+<h4 id="aria2-ng-gui"><a href="#aria2-ng-gui" class="headerlink" title="aria2-ng-gui"></a>aria2-ng-gui</h4><p>aria2-ng-gui是一个windows上可用的aria2客户端，为什么要说这个东西呢，因为之前mac上安装aria2后需要命令行手动启动，切换到win上后，发现启动方式都是各种魔改exe，无意间就发现了这个js客户端，因为方便好用（软件启动时连带aria2服务一起启动的），就记了一下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 地址</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Xmader&#x2F;aria-ng-gui</span><br><span class="line"></span><br><span class="line"># 安装</span><br><span class="line">npm i -g aria-ng-gui</span><br><span class="line"></span><br><span class="line"># 运行</span><br><span class="line">AriaNgGUI</span><br><span class="line"></span><br><span class="line"># 更新</span><br><span class="line">npm update -g aria-ng-gui</span><br></pre></td></tr></table></figure>
+<h4 id="code-server"><a href="#code-server" class="headerlink" title="code-server"></a>code-server</h4><p>局域网内可用的vscode服务，如果有vps的话，也可以搭建到vps上，不过说实在话，如果想要全网使用的话，可以用coding.net提供的在线服务，省事稳定</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 地址</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;cdr&#x2F;code-server</span><br><span class="line"></span><br><span class="line"># 安装</span><br><span class="line">curl -fsSL https:&#x2F;&#x2F;code-server.dev&#x2F;install.sh | sh -s -- --dry-run</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>实则虚之</tag>
+      </tags>
+  </entry>
 </search>
