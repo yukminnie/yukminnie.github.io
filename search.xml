@@ -12529,7 +12529,7 @@
 <h4 id="Aegisub"><a href="#Aegisub" class="headerlink" title="Aegisub"></a>Aegisub</h4><p>有时候想在视频中，插入一些有意思的片段，总要把视频拿出来，一段一段的进行查找，进行裁剪，有些自动裁剪软件，可以方便做到。</p>
 <p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/2021.png"></p>
 <p>根据频谱裁剪，比较适合个人录制的，较为简单的视频。对于已有的影视，如果有字幕文件，或者可以下载到字幕文件，根据字幕剪辑，相对来说比较实用。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 字幕下载网站</span><br><span class="line">https:&#x2F;&#x2F;subhd.tv&#x2F;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 字幕下载网站</span><br><span class="line">http:&#x2F;&#x2F;zmk.pw&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;subhd.tv&#x2F;</span><br></pre></td></tr></table></figure>
 
 <p>有合适的字幕时，如果和视频有偏移，可以用Aegisub这款软件，进行调整</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 字幕调整软件安装</span><br><span class="line">choco install Aegisub</span><br></pre></td></tr></table></figure>
