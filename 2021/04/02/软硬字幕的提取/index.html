@@ -28,9 +28,10 @@
 <meta property="og:description" content="字幕">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/pot.png">
+<meta property="og:image" content="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/subtitleEdit.gif">
 <meta property="og:image" content="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8.png">
 <meta property="article:published_time" content="2021-04-02T10:42:29.000Z">
-<meta property="article:modified_time" content="2021-04-03T06:23:37.158Z">
+<meta property="article:modified_time" content="2021-04-03T12:43:30.893Z">
 <meta property="article:author" content="Yukminnie">
 <meta property="article:tag" content="实则虚之">
 <meta name="twitter:card" content="summary">
@@ -247,9 +248,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mkv -map 0:s:0 out.ass</span><br><span class="line"></span><br><span class="line">使用0:s:1导出第二轨道，0:s:2导出第三轨道，依次</span><br><span class="line"></span><br><span class="line">字幕格式可以自定义srt或者ass</span><br></pre></td></tr></table></figure>
 <p>其实我感觉，potplayer就够用了</p>
 <p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/pot.png"></p>
-<h4 id="硬字幕"><a href="#硬字幕" class="headerlink" title="硬字幕"></a>硬字幕</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 先安装ocr识别引擎</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;UB-Mannheim&#x2F;tesseract&#x2F;wiki</span><br><span class="line"></span><br><span class="line"># 再安装</span><br><span class="line">pip install videocr</span><br><span class="line"></span><br><span class="line"># 安装python-Levenshtein 会报错 error: Microsoft Visual C++ 14.0 is required. Get it with &quot;Build Tools for Visual Studio&quot;: https:&#x2F;&#x2F;visualstudio.microsoft.com&#x2F;downloads&#x2F;</span><br><span class="line"></span><br><span class="line">手动安装库（推荐） https:&#x2F;&#x2F;www.lfd.uci.edu&#x2F;~gohlke&#x2F;pythonlibs&#x2F;</span><br><span class="line">自动安装库</span><br><span class="line">https:&#x2F;&#x2F;visualstudio.microsoft.com&#x2F;zh-hans&#x2F;visual-cpp-build-tools&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;go.microsoft.com&#x2F;fwlink&#x2F;?LinkId&#x3D;691126</span><br><span class="line"></span><br><span class="line"># 只提供了命令行运行，基本指定好视频文件位置，就能用了，过程中消耗大量的cpu，并且需要在线识别，所以有流量走动</span><br></pre></td></tr></table></figure>
-
-<p>需要注意的是，程序会被自带杀毒软件扫描，杀毒软件会占用大量cpu，所以建议关闭windows defender 自动扫描</p>
+<h4 id="硬字幕"><a href="#硬字幕" class="headerlink" title="硬字幕"></a>硬字幕</h4><h5 id="videocor"><a href="#videocor" class="headerlink" title="videocor"></a>videocor</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 先安装ocr识别引擎</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;UB-Mannheim&#x2F;tesseract&#x2F;wiki</span><br><span class="line"></span><br><span class="line"># 再安装</span><br><span class="line">pip install videocr</span><br><span class="line"></span><br><span class="line"># 安装python-Levenshtein 会报错 error: Microsoft Visual C++ 14.0 is required. Get it with &quot;Build Tools for Visual Studio&quot;: https:&#x2F;&#x2F;visualstudio.microsoft.com&#x2F;downloads&#x2F;</span><br><span class="line"></span><br><span class="line">手动安装库（推荐） https:&#x2F;&#x2F;www.lfd.uci.edu&#x2F;~gohlke&#x2F;pythonlibs&#x2F;</span><br><span class="line">自动安装库</span><br><span class="line">https:&#x2F;&#x2F;visualstudio.microsoft.com&#x2F;zh-hans&#x2F;visual-cpp-build-tools&#x2F;</span><br><span class="line">http:&#x2F;&#x2F;go.microsoft.com&#x2F;fwlink&#x2F;?LinkId&#x3D;691126</span><br><span class="line"></span><br><span class="line"># 只提供了命令行运行，基本指定好视频文件位置，就能用了，过程中消耗大量的cpu，并且需要在线识别，所以有流量走动</span><br></pre></td></tr></table></figure>
+<h5 id="subtitle-edit"><a href="#subtitle-edit" class="headerlink" title="subtitle edit"></a>subtitle edit</h5><p>不具体写了, 如下图<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/subtitleEdit.gif"></p>
+<p>需要注意的是，videocor 这个软件会被自带杀毒软件扫描，杀毒软件会占用大量cpu，所以建议关闭windows defender 自动扫描</p>
 <p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8.png"></p>
 <p>至于效果嘛, 如果是sub图像字幕, 识别率还可以, 后面手动调整一下, 不是的话, 就很感人, 建议还是能找字幕, 就找字幕吧.</p>
 
@@ -336,7 +337,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#软字幕"><span class="nav-number">1.</span> <span class="nav-text">软字幕</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#硬字幕"><span class="nav-number">2.</span> <span class="nav-text">硬字幕</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#软字幕"><span class="nav-number">1.</span> <span class="nav-text">软字幕</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#硬字幕"><span class="nav-number">2.</span> <span class="nav-text">硬字幕</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#videocor"><span class="nav-number">2.1.</span> <span class="nav-text">videocor</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#subtitle-edit"><span class="nav-number">2.2.</span> <span class="nav-text">subtitle edit</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
