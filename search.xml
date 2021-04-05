@@ -301,7 +301,7 @@
       </tags>
   </entry>
   <entry>
-    <title>图床踩坑</title>
+    <title>图床踩坑记录</title>
     <url>/2017/04/06/%E5%9B%BE%E5%BA%8A/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/image.jpg.jpg"></p>
 <a id="more"></a>
@@ -327,7 +327,7 @@
       </tags>
   </entry>
   <entry>
-    <title>微动和轴</title>
+    <title>微动和轴的个人看法</title>
     <url>/2018/08/07/%E5%BE%AE%E5%8A%A8%E5%92%8C%E8%BD%B4/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/u=2915443138,610379945&fm=26&gp=0.jpg.jpg"></p>
 <a id="more"></a>
@@ -398,7 +398,7 @@
       </tags>
   </entry>
   <entry>
-    <title>网件刷回官方固件记录</title>
+    <title>网件r6400刷回官方固件记录</title>
     <url>/2018/10/14/%E7%BD%91%E4%BB%B6%E5%88%B7%E5%9B%9E%E5%AE%98%E6%96%B9%E5%9B%BA%E4%BB%B6/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/netgear-logo.jpg.jpg"></p>
 <a id="more"></a>
@@ -406,7 +406,7 @@
 <h4 id="nmrpflash-项目地址"><a href="#nmrpflash-项目地址" class="headerlink" title="nmrpflash 项目地址"></a>nmrpflash 项目地址</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 页面介绍是 Netgear Unbrick Utility</span><br><span class="line"># 看实际效果某些品牌比如华硕也可以用</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;jclehner&#x2F;nmrpflash</span><br></pre></td></tr></table></figure>
 
 <h4 id="查询连接的路由端口"><a href="#查询连接的路由端口" class="headerlink" title="查询连接的路由端口"></a>查询连接的路由端口</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Jietu20190810-182709.jpg.jpg"></p>
-<h4 id="基础恢复命令操作"><a href="#基础恢复命令操作" class="headerlink" title="基础恢复命令操作"></a>基础恢复命令操作</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -i 指定连接的物理端口</span><br><span class="line"># -f 指定要恢复的官方固件, 以 chk 和 img 为后缀的文件</span><br><span class="line"># 这个 reset.chk 是我自己改了个好输入的名字</span><br><span class="line"></span><br><span class="line"># 下面是官方项目页介绍的用法</span><br><span class="line"></span><br><span class="line">Usage: nmrpflash [OPTIONS...]</span><br><span class="line"></span><br><span class="line">Options (-i, and -f or -c are mandatory):</span><br><span class="line"> -a &lt;ipaddr&gt;     IP address to assign to target device</span><br><span class="line"> -A &lt;ipaddr&gt;     IP address to assign to selected interface</span><br><span class="line"> -B              Blind mode (don&#39;t wait for response packets)</span><br><span class="line"> -c &lt;command&gt;    Command to run before (or instead of) TFTP upload</span><br><span class="line"> -f &lt;firmware&gt;   Firmware file</span><br><span class="line"> -F &lt;filename&gt;   Remote filename to use during TFTP upload</span><br><span class="line"> -i &lt;interface&gt;  Network interface directly connected to device</span><br><span class="line"> -m &lt;mac&gt;        MAC address of target device (xx:xx:xx:xx:xx:xx)</span><br><span class="line"> -M &lt;netmask&gt;    Subnet mask to assign to target device</span><br><span class="line"> -t &lt;timeout&gt;    Timeout (in milliseconds) for NMRP packets</span><br><span class="line"> -T &lt;timeout&gt;    Time (seconds) to wait after successfull TFTP upload</span><br><span class="line"> -p &lt;port&gt;       Port to use for TFTP upload</span><br><span class="line"> -R &lt;region&gt;     Set device region (NA, WW, GR, PR, RU, BZ, IN, KO, JP)</span><br><span class="line"> -v              Be verbose</span><br><span class="line"> -V              Print version and exit</span><br><span class="line"> -L              List network interfaces</span><br><span class="line"> -h              Show this screen</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="基础恢复命令操作"><a href="#基础恢复命令操作" class="headerlink" title="基础恢复命令操作"></a>基础恢复命令操作</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -i 指定连接的物理端口</span><br><span class="line"># -f 指定要恢复的官方固件, 以 chk 和 img 为后缀的文件</span><br><span class="line"># 这个 reset.chk 是我自己改了个好输入的名字</span><br><span class="line"></span><br><span class="line"># 下面是官方项目页介绍的用法</span><br><span class="line"></span><br><span class="line">Usage: nmrpflash [OPTIONS...]</span><br><span class="line"></span><br><span class="line">Options (-i, and -f or -c are mandatory):</span><br><span class="line"> -a &lt;ipaddr&gt;     IP address to assign to target device</span><br><span class="line"> -A &lt;ipaddr&gt;     IP address to assign to selected interface</span><br><span class="line"> -B              Blind mode (don&#39;t wait for response packets)</span><br><span class="line"> -c &lt;command&gt;    Command to run before (or instead of) TFTP upload</span><br><span class="line"> -f &lt;firmware&gt;   Firmware file</span><br><span class="line"> -F &lt;filename&gt;   Remote filename to use during TFTP upload</span><br><span class="line"> -i &lt;interface&gt;  Network interface directly connected to device</span><br><span class="line"> -m &lt;mac&gt;        MAC address of target device (xx:xx:xx:xx:xx:xx)</span><br><span class="line"> -M &lt;netmask&gt;    Subnet mask to assign to target device</span><br><span class="line"> -t &lt;timeout&gt;    Timeout (in milliseconds) for NMRP packets</span><br><span class="line"> -T &lt;timeout&gt;    Time (seconds) to wait after successfull TFTP upload</span><br><span class="line"> -p &lt;port&gt;       Port to use for TFTP upload</span><br><span class="line"> -R &lt;region&gt;     Set device region (NA, WW, GR, PR, RU, BZ, IN, KO, JP)</span><br><span class="line"> -v              Be verbose</span><br><span class="line"> -V              Print version and exit</span><br><span class="line"> -L              List network interfaces</span><br><span class="line"> -h              Show this screen</span><br></pre></td></tr></table></figure>
 
 <h4 id="恢复失败-1"><a href="#恢复失败-1" class="headerlink" title="恢复失败 1"></a>恢复失败 1</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Timeout while waiting for TFTP_UL_REQ</span><br><span class="line"></span><br><span class="line">报这个错误，基本就是操作出了问题，六步走</span><br><span class="line"></span><br><span class="line">1, 将电脑 ip 设置为 192.168.1.2</span><br><span class="line">2, 连接路由和电脑, 用 -L 命令查询路由连接端口</span><br><span class="line">3, 输入下面的恢复命令, 不要动(注意替换端口)</span><br><span class="line">4, 路由断电, 按住路由重置键不要动</span><br><span class="line">5, 考验手眼协调的关键一步: 给路由器通电1s 后, 松开手中的重置键, 然后电脑上命令行回车</span><br><span class="line">6, 电脑会报下图的错误, 不要急, 重复复制上面的命令, 继续回车, ok</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Jietu20190810-182439.jpg.jpg"></p>
@@ -473,7 +473,7 @@
       </tags>
   </entry>
   <entry>
-    <title>软路由记录</title>
+    <title>软路由记录(基于j1900)</title>
     <url>/2018/03/03/%E8%BD%AF%E8%B7%AF%E7%94%B1/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/LEDE-OpenWRT.png.png"></p>
 <a id="more"></a>
@@ -533,7 +533,7 @@
       </tags>
   </entry>
   <entry>
-    <title>黑苹果记录</title>
+    <title>黑苹果历程记录(基于clover)</title>
     <url>/2019/05/06/%E9%BB%91%E8%8B%B9%E6%9E%9C/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Hackintosh_Wallpaper_KathaBuzzDotCom-2.jpg.jpg"></p>
 <a id="more"></a>
@@ -567,7 +567,7 @@
 
 <h4 id="声卡问题"><a href="#声卡问题" class="headerlink" title="声卡问题"></a>声卡问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># applealc.kext 安装仿冒声卡</span><br><span class="line">不同的版本可能仿冒 id 会有变化</span><br><span class="line"></span><br><span class="line"># VodooHDA.kext 万能驱动</span><br><span class="line">整体来说比较完善了, 不过还是建议通过 applealc.kext 驱动</span><br><span class="line"></span><br><span class="line"># 安装好了有杂音, 尝试更换上述软件版本</span><br><span class="line"></span><br><span class="line"># 说到底, 还是最开始所说, 先查询别人同样硬件的安装先例, 不给自己找麻烦</span><br></pre></td></tr></table></figure>
 
-<h4 id="独立显卡问题"><a href="#独立显卡问题" class="headerlink" title="独立显卡问题"></a>独立显卡问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 建议560xt</span><br><span class="line">性价比高, 和rx580 2304p性能差距很小, 没有矿卡</span><br><span class="line"></span><br><span class="line"># 买了rx580 2048p的</span><br><span class="line">刷rx570 Bios才能免驱</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="独立显卡问题"><a href="#独立显卡问题" class="headerlink" title="独立显卡问题"></a>独立显卡问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 建议560xt</span><br><span class="line">性价比高, 和rx580 2304p性能差距很小, 没有矿卡</span><br><span class="line"></span><br><span class="line"># 买了rx580 2048p的</span><br><span class="line">刷rx570 Bios才能免驱</span><br></pre></td></tr></table></figure>
 
 <h4 id="核芯显卡问题"><a href="#核芯显卡问题" class="headerlink" title="核芯显卡问题"></a>核芯显卡问题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># hd4000, 4400, 4600</span><br><span class="line">这些虽然可以和独显共存, 但是加速效果不明显, 打缓冲帧不方便</span><br><span class="line"></span><br><span class="line"># 五六代英特尔之后的核显, 例如uhd630这种集显最好驱动</span><br><span class="line">和独立显卡兼容性最好, 打缓冲帧最方便</span><br><span class="line"></span><br><span class="line"># 后面会说到核显对系统稳定性的影响</span><br></pre></td></tr></table></figure>
 
@@ -577,7 +577,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 如果选择了imac 14.2 这种核显独显共存的机型</span><br><span class="line">但是你屏蔽了核显, 或者核显没有正确驱动, 这种机型打开图片默认是使用核显的, 然后图片程序就崩溃了。同时, fcpx 导出阶段也会调用核显进行加速, 因为核显是不可用状态, 会导致视频花屏</span><br><span class="line"></span><br><span class="line"># 选择imac pro 1.1</span><br><span class="line">视频实时渲染, a卡独显驱动后, 预览效果流畅; 视频导出阶段, 核芯显卡驱动后, 虽然可以实现加速, 但是主要还是靠CPU（如果不是 uhd630 这种有特殊优化的核显）, 意义不大。所以如果是 hd4xxx 这些老核显, 建议 bios屏蔽, 选择 imac pro 1.1 这种不带核显的机型, 可以避免很多问题</span><br><span class="line"></span><br><span class="line"># 看上图具体问题具体分析</span><br><span class="line">比如你买了一个 nuc, 当然选 macmini 机型是比较好的</span><br></pre></td></tr></table></figure>
 
 <h4 id="核显缓冲帧补丁"><a href="#核显缓冲帧补丁" class="headerlink" title="核显缓冲帧补丁"></a>核显缓冲帧补丁</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 黑果小兵博客</span><br><span class="line">https:&#x2F;&#x2F;blog.daliansky.net&#x2F;Intel-FB-Patcher-tutorial-and-insertion-pose.html</span><br></pre></td></tr></table></figure>
-<p><a href="https://blog-file-1253466367.cos.ap-beijing.myqcloud.com/Hackintool(%E5%8E%9FIntel%20FB-Patcher)%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%E5%8F%8A%E6%8F%92%E5%85%A5%E5%A7%BF%E5%8A%BF%20_%20%E9%BB%91%E6%9E%9C%E5%B0%8F%E5%85%B5%E7%9A%84%E9%83%A8%E8%90%BD%E9%98%81.pdf">缓冲帧补丁离线md备份</a></p>
+<p><a href="https://blog-file-1253466367.cos.ap-beijing.myqcloud.com/Hackintool(%E5%8E%9FIntel%20FB-Patcher)%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%E5%8F%8A%E6%8F%92%E5%85%A5%E5%A7%BF%E5%8A%BF%20_%20%E9%BB%91%E6%9E%9C%E5%B0%8F%E5%85%B5%E7%9A%84%E9%83%A8%E8%90%BD%E9%98%81.pdf" target="_blank" rel="noopener">缓冲帧补丁离线md备份</a></p>
 <h4 id="安装黑果后，bios-多出了一堆无效启动项。"><a href="#安装黑果后，bios-多出了一堆无效启动项。" class="headerlink" title="安装黑果后，bios 多出了一堆无效启动项。"></a>安装黑果后，bios 多出了一堆无效启动项。</h4><p>搜了一下，好像出问题的都是技嘉主板，估计是 bug 吧。其实本来眼不见不净，结果因为无效启动项，导致我usb 启动盘的 uefi 启动项不显示了，这就很难受了</p>
 <h5 id="重置-bios"><a href="#重置-bios" class="headerlink" title="重置 bios"></a>重置 bios</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">无效</span><br></pre></td></tr></table></figure>
 <h5 id="拆主板电池"><a href="#拆主板电池" class="headerlink" title="拆主板电池"></a>拆主板电池</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">无效</span><br></pre></td></tr></table></figure>
@@ -11976,7 +11976,7 @@
       </tags>
   </entry>
   <entry>
-    <title>软件安装记录</title>
+    <title>win-mac软件库安装记录</title>
     <url>/2018/02/06/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/brewsci-256x256.png.png"></p>
 <a id="more"></a>
@@ -11988,7 +11988,7 @@
 <h4 id="mac-其他软件"><a href="#mac-其他软件" class="headerlink" title="mac 其他软件"></a>mac 其他软件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Neat download manager</span><br><span class="line"></span><br><span class="line">SmoothScroll</span><br><span class="line"></span><br><span class="line">clover </span><br><span class="line"></span><br><span class="line">hackintool</span><br><span class="line"></span><br><span class="line">feem</span><br><span class="line"></span><br><span class="line">irreader</span><br><span class="line"></span><br><span class="line">pdf expert</span><br><span class="line"></span><br><span class="line">mellow</span><br><span class="line"></span><br><span class="line">paste(ccboard)</span><br><span class="line"></span><br><span class="line">cleanmymacx(柠檬清理)</span><br><span class="line"></span><br><span class="line">图压(tuya.xinxiao.tech)</span><br></pre></td></tr></table></figure>
 
 
-<h4 id="日常浏览器插件"><a href="#日常浏览器插件" class="headerlink" title="日常浏览器插件"></a>日常浏览器插件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 沙拉查词</span><br><span class="line">18 年是发现的页面翻译软件, 干净好用</span><br><span class="line"></span><br><span class="line"># Web Clipper</span><br><span class="line">剪辑页面插件, 替代印象笔记, onenote 这些</span><br><span class="line"></span><br><span class="line"># Neat download manager </span><br><span class="line">代替 IDM</span><br><span class="line"></span><br><span class="line"># OneTab</span><br><span class="line">聊胜于无吧, 用了好多年了</span><br><span class="line"></span><br><span class="line"># 愉阅 vs ImageAssistant</span><br><span class="line">页面图片收集</span><br><span class="line"></span><br><span class="line"># SmoothScroll</span><br><span class="line">平滑滚动</span><br><span class="line"></span><br><span class="line"># adguard</span><br><span class="line">毕竟是商业公司的东西，个人觉得比 ublock 全面些</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="日常浏览器插件"><a href="#日常浏览器插件" class="headerlink" title="日常浏览器插件"></a>日常浏览器插件</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 沙拉查词</span><br><span class="line">18 年是发现的页面翻译软件, 干净好用</span><br><span class="line"></span><br><span class="line"># Web Clipper</span><br><span class="line">剪辑页面插件, 替代印象笔记, onenote 这些</span><br><span class="line"></span><br><span class="line"># Neat download manager </span><br><span class="line">代替 IDM</span><br><span class="line"></span><br><span class="line"># OneTab</span><br><span class="line">聊胜于无吧, 用了好多年了</span><br><span class="line"></span><br><span class="line"># 愉阅 vs ImageAssistant</span><br><span class="line">页面图片收集</span><br><span class="line"></span><br><span class="line"># SmoothScroll</span><br><span class="line">平滑滚动</span><br><span class="line"></span><br><span class="line"># adguard</span><br><span class="line">毕竟是商业公司的东西，个人觉得比 ublock 全面些</span><br></pre></td></tr></table></figure>
 
 <h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-53-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-54-39.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-54-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-55-29.png.png"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-55-58.png.png"><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-14_12-56-39.png.png"></p>
 ]]></content>
@@ -12070,7 +12070,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Cmder工具</title>
+    <title>Cmder工具(弃置,powershell足够)</title>
     <url>/2017/08/10/Cmder%E5%B7%A5%E5%85%B7/</url>
     <content><![CDATA[<p>Cmder</p>
 <a id="more"></a>
@@ -12148,7 +12148,7 @@
       </tags>
   </entry>
   <entry>
-    <title>aria2服务未连接</title>
+    <title>aria2服务未连接(win和mac)</title>
     <url>/2020/12/11/aria2%E6%9C%8D%E5%8A%A1%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD/</url>
     <content><![CDATA[<p>aria2 服务未连接</p>
 <a id="more"></a>
@@ -12161,7 +12161,7 @@
 <h4 id="big-sur"><a href="#big-sur" class="headerlink" title="big sur"></a>big sur</h4><p>一点反应没有，aria2仍然是，未连接状态</p>
 <h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 命令行手动开启 aria2c 服务</span><br><span class="line"></span><br><span class="line">aria2c --enable-rpc --rpc-listen-all&#x3D;true --rpc-allow-origin-all</span><br><span class="line"></span><br><span class="line"># 后台运行</span><br><span class="line"></span><br><span class="line">nohup aria2c --enable-rpc --rpc-listen-all&#x3D;true --rpc-allow-origin-all &amp;</span><br></pre></td></tr></table></figure>
 
-
+<h4 id="win"><a href="#win" class="headerlink" title="win"></a>win</h4><p>博客内搜索 aria2-ng-gui</p>
 ]]></content>
       <tags>
         <tag>虚则实之</tag>
@@ -12213,19 +12213,19 @@
       </tags>
   </entry>
   <entry>
-    <title>mac硬盘格式化</title>
+    <title>mac外置硬盘快速格式化(无视隐藏分区)</title>
     <url>/2020/02/23/mac%E7%A1%AC%E7%9B%98%E6%A0%BC%E5%BC%8F%E5%8C%96/</url>
     <content><![CDATA[<p>无脑格式化</p>
 <a id="more"></a>
 
 <p>偶尔用到一次，想快速格盘是真的难，在有隐藏分区的情况下，自带的磁盘工具，操作逻辑如同睿智。就mac这个生态，可能那天格盘也要收费了。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查找外置硬盘盘名</span><br><span class="line">sudo diskutil list</span><br><span class="line"></span><br><span class="line"># 格式化</span><br><span class="line">diskutil partitiondisk 盘名 JHFS+ newdisk 100% </span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查找外置硬盘盘名</span><br><span class="line">sudo diskutil list</span><br><span class="line"></span><br><span class="line"># 格式化</span><br><span class="line">diskutil partitiondisk 盘名 JHFS+ newdisk 100%</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>虚则实之</tag>
       </tags>
   </entry>
   <entry>
-    <title>pip库修改</title>
+    <title>pip库的源修改以及离线包</title>
     <url>/2017/10/16/pip%E5%BA%93/</url>
     <content><![CDATA[<h4 id="Python-pip（ubuntu）"><a href="#Python-pip（ubuntu）" class="headerlink" title="Python-pip（ubuntu）"></a>Python-pip（ubuntu）</h4><p>python2.7</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo easy_install pip</span><br></pre></td></tr></table></figure>
@@ -12236,7 +12236,7 @@
 <h5 id="开启-sudo-命令进行安装"><a href="#开启-sudo-命令进行安装" class="headerlink" title="开启 sudo 命令进行安装"></a>开启 sudo 命令进行安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install &#96;包名&#96;</span><br></pre></td></tr></table></figure>
 <h5 id="手动设置豆瓣库进行安装"><a href="#手动设置豆瓣库进行安装" class="headerlink" title="手动设置豆瓣库进行安装"></a>手动设置豆瓣库进行安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple &#96;包名&#96;</span><br></pre></td></tr></table></figure>
 <h5 id="按照先-2-后-3-的顺序安装-，-可能出现未知bug-，大部分库都在向-3-进行迁移，-甚至出现不再支持的情况"><a href="#按照先-2-后-3-的顺序安装-，-可能出现未知bug-，大部分库都在向-3-进行迁移，-甚至出现不再支持的情况" class="headerlink" title="按照先 2 后 3 的顺序安装 ， 可能出现未知bug ，大部分库都在向 3 进行迁移， 甚至出现不再支持的情况"></a>按照先 2 后 3 的顺序安装 ， 可能出现未知bug ，大部分库都在向 3 进行迁移， 甚至出现不再支持的情况</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">flask , selenium ,jupyter 都出现了问题</span><br></pre></td></tr></table></figure>
-<h5 id="此时windows可以下载离线包进行安装"><a href="#此时windows可以下载离线包进行安装" class="headerlink" title="此时windows可以下载离线包进行安装"></a>此时windows可以下载离线包进行安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.lfd.uci.edu&#x2F;~gohlke&#x2F;pythonlibs&#x2F;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="此时windows可以下载离线包进行安装"><a href="#此时windows可以下载离线包进行安装" class="headerlink" title="此时windows可以下载离线包进行安装"></a>此时windows可以下载离线包进行安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.lfd.uci.edu&#x2F;~gohlke&#x2F;pythonlibs&#x2F;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <tags>
@@ -12244,7 +12244,7 @@
       </tags>
   </entry>
   <entry>
-    <title>BrowserSync工具</title>
+    <title>BrowserSync工具(弃置,vscode自带)</title>
     <url>/2018/03/13/BrowserSync%E5%B7%A5%E5%85%B7/</url>
     <content><![CDATA[<p>Browsersync </p>
 <a id="more"></a>
@@ -12254,7 +12254,7 @@
 <h5 id="安装-会作为开发者依赖，包含到-package-json-中，完成后目录中会多出一个node-modules模块文件"><a href="#安装-会作为开发者依赖，包含到-package-json-中，完成后目录中会多出一个node-modules模块文件" class="headerlink" title="安装( 会作为开发者依赖，包含到 package.json 中，完成后目录中会多出一个node_modules模块文件)"></a>安装( 会作为开发者依赖，包含到 package.json 中，完成后目录中会多出一个node_modules模块文件)</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install  browser-sync --save-dev</span><br></pre></td></tr></table></figure>
 
 <h5 id="简单例子"><a href="#简单例子" class="headerlink" title="简单例子"></a>简单例子</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir zhangsan</span><br><span class="line">cd zhangsan</span><br><span class="line">browser-sync start --server zhangsan --files&#x3D;&quot;zhangsan&#x2F;css&#x2F;*.css&quot;</span><br></pre></td></tr></table></figure>
-<h5 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">browser-sync start --proxy&#x3D;&quot;localhost:8000&quot; --files&#x3D;&quot;*.html, css&#x2F;*.css&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">browser-sync start --proxy&#x3D;&quot;localhost:8000&quot; --files&#x3D;&quot;*.html, css&#x2F;*.css&quot;</span><br></pre></td></tr></table></figure>
 
 
 ]]></content>
@@ -12263,7 +12263,7 @@
       </tags>
   </entry>
   <entry>
-    <title>开关sip导致虚拟机出错</title>
+    <title>开关sip导致虚拟机报错</title>
     <url>/2020/11/09/%E5%BC%80%E5%85%B3sip%E5%AF%BC%E8%87%B4%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%87%BA%E9%94%99/</url>
     <content><![CDATA[<p>virtualbox</p>
 <a id="more"></a>
@@ -12281,7 +12281,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Ezshare局域网共享与剪切板</title>
+    <title>Ezshare局域网共享与剪切板(弃置,罗技flow替代)</title>
     <url>/2020/09/15/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%89%AA%E5%88%87%E6%9D%BF/</url>
     <content><![CDATA[<p>ezshare</p>
 <a id="more"></a>
@@ -12352,7 +12352,7 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo-node-admin</title>
+    <title>hexo-node-admin替代hexo-admin</title>
     <url>/2021/01/10/hexo-node-admin/</url>
     <content><![CDATA[<p>hexo-node-admin</p>
 <a id="more"></a>
@@ -12371,7 +12371,7 @@
       </tags>
   </entry>
   <entry>
-    <title>fcpx补帧</title>
+    <title>fcpx配合Twixtor的补帧方法</title>
     <url>/2021/01/10/fcpx%E8%A1%A5%E5%B8%A7/</url>
     <content><![CDATA[<p>Twixtor</p>
 <a id="more"></a>
@@ -12470,7 +12470,7 @@
       </tags>
   </entry>
   <entry>
-    <title>华为多屏协同(非官方版)电脑蓝屏</title>
+    <title>凌动处理器多屏协同(非官方版)电脑死机解决</title>
     <url>/2021/01/27/%E5%8D%8E%E4%B8%BA%E5%A4%9A%E5%B1%8F%E5%8D%8F%E5%90%8C-%E9%9D%9E%E5%AE%98%E6%96%B9%E7%89%88-%E5%AE%89%E8%A3%85%E6%97%B6%E7%94%B5%E8%84%91%E8%93%9D%E5%B1%8F/</url>
     <content><![CDATA[<p>蓝屏的好喝的</p>
 <a id="more"></a>
@@ -12486,7 +12486,7 @@
       </tags>
   </entry>
   <entry>
-    <title>openwrt(原版)安装openclash</title>
+    <title>openclash的安装和使用</title>
     <url>/2021/03/21/openwrt-%E5%8E%9F%E7%89%88-%E5%AE%89%E8%A3%85openclash/</url>
     <content><![CDATA[<p>openclash</p>
 <a id="more"></a>
@@ -12521,7 +12521,7 @@
       </tags>
   </entry>
   <entry>
-    <title>视频素材裁剪器</title>
+    <title>视频素材批量裁剪记录</title>
     <url>/2021/04/02/%E8%A7%86%E9%A2%91%E7%B4%A0%E6%9D%90%E8%A3%81%E5%89%AA%E5%99%A8/</url>
     <content><![CDATA[<p>视频大拍档</p>
 <a id="more"></a>
@@ -12554,7 +12554,7 @@
       </tags>
   </entry>
   <entry>
-    <title>软硬字幕的提取</title>
+    <title>软硬字幕的提取方法</title>
     <url>/2021/04/02/%E8%BD%AF%E7%A1%AC%E5%AD%97%E5%B9%95%E7%9A%84%E6%8F%90%E5%8F%96/</url>
     <content><![CDATA[<p>字幕</p>
 <a id="more"></a>
