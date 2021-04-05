@@ -11798,7 +11798,7 @@
       </tags>
   </entry>
   <entry>
-    <title>window高级启动</title>
+    <title>window高级启动碰到的问题</title>
     <url>/2018/01/30/window%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/landing-medium.jpg.jpg"></p>
 <a id="more"></a>
@@ -11811,7 +11811,9 @@
 <h5 id="选命令提示符"><a href="#选命令提示符" class="headerlink" title="选命令提示符"></a>选命令提示符</h5><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/9345d688d43f8794c53219c9d91b0ef41ad53a03.jpg.jpg"></p>
 <h5 id="会自动重启进入命令行"><a href="#会自动重启进入命令行" class="headerlink" title="会自动重启进入命令行"></a>会自动重启进入命令行</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 之前解压到了 D 盘， 进入 D 盘</span><br><span class="line"></span><br><span class="line">d:</span><br><span class="line"></span><br><span class="line"># 进入解压文件夹</span><br><span class="line"></span><br><span class="line">cd win</span><br><span class="line"></span><br><span class="line"># 进入 source 文件夹</span><br><span class="line"></span><br><span class="line">cd source</span><br><span class="line"></span><br><span class="line"># 运行 setup.exe</span><br><span class="line"></span><br><span class="line">.&#x2F;setup.exe</span><br><span class="line"></span><br><span class="line"># 进入正常的格盘安装流程</span><br></pre></td></tr></table></figure>
 
+<h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><h5 id="运行setup-exe后直接报错"><a href="#运行setup-exe后直接报错" class="headerlink" title="运行setup.exe后直接报错"></a>运行setup.exe后直接报错</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">解压后的镜像, 要放到系统的内置硬盘上, 不要放到外接硬盘</span><br></pre></td></tr></table></figure>
 
+<h5 id="系统分区界面-提示无法安装"><a href="#系统分区界面-提示无法安装" class="headerlink" title="系统分区界面, 提示无法安装"></a>系统分区界面, 提示无法安装</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">系统中的其他硬盘包含启动分区, 先拔掉其他硬盘</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <tags>
@@ -12180,7 +12182,7 @@
       </tags>
   </entry>
   <entry>
-    <title>升级系统后homebrew安装报错</title>
+    <title>升级系统后homebrew的几种报错</title>
     <url>/2018/10/16/homebrew%E6%8A%A5%E9%94%99/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-16_19-56-56.png.png"></p>
 <a id="more"></a>
