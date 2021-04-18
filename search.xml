@@ -12440,7 +12440,7 @@
   <entry>
     <title>youtube-dl的format参数</title>
     <url>/2021/01/27/youtube-dl%E7%9A%84format%E5%8F%82%E6%95%B0/</url>
-    <content><![CDATA[<p>-f</p>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/20210418142141.png"></p>
 <a id="more"></a>
 
 <h4 id="默认"><a href="#默认" class="headerlink" title="默认"></a>默认</h4><p>youtube-dl不带f参数时,默认是下载最高的画质,不过偶尔不是太智能. </p>
