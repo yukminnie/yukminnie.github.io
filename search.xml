@@ -12152,7 +12152,7 @@
   <entry>
     <title>aria2服务未连接(win和mac)</title>
     <url>/2020/12/11/aria2%E6%9C%8D%E5%8A%A1%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD/</url>
-    <content><![CDATA[<p>aria2 服务未连接</p>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/images.png"></p>
 <a id="more"></a>
 
 <p>平时用aria2，基本都是手动配合youtube-dl时使用</p>
@@ -12215,7 +12215,7 @@
       </tags>
   </entry>
   <entry>
-    <title>mac外置硬盘快速格式化(无视隐藏分区)</title>
+    <title>mac外置硬盘格式化的问题</title>
     <url>/2020/02/23/mac%E7%A1%AC%E7%9B%98%E6%A0%BC%E5%BC%8F%E5%8C%96/</url>
     <content><![CDATA[<p>无脑格式化</p>
 <a id="more"></a>
@@ -12356,7 +12356,7 @@
   <entry>
     <title>hexo-node-admin替代hexo-admin</title>
     <url>/2021/01/10/hexo-node-admin/</url>
-    <content><![CDATA[<p>hexo-node-admin</p>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/20210418135704.png"></p>
 <a id="more"></a>
 
 <p>之前有个 hexo-admin 不支持 next 新版了, 偶尔需要局域网其他电脑编辑文档, 还是挺麻烦的, 后来找到了 hexo-node-admin</p>
@@ -12375,7 +12375,7 @@
   <entry>
     <title>fcpx配合Twixtor的补帧方法</title>
     <url>/2021/01/10/fcpx%E8%A1%A5%E5%B8%A7/</url>
-    <content><![CDATA[<p>Twixtor</p>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/convert-to-60fps.jpeg"></p>
 <a id="more"></a>
 
 <h4 id="安装插件-Twixtor"><a href="#安装插件-Twixtor" class="headerlink" title="安装插件 Twixtor"></a>安装插件 Twixtor</h4><h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><p>1, 新建一个同源视频相同分辨率的 60 帧项目<br>2, 视频拖动到时间线, 右键分离音频, 选中素材, 定时器选择自动速度, 然后视频时间线会被压缩<br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/iShot2021-01-1020.50.05.png"></p>
@@ -12490,7 +12490,7 @@
   <entry>
     <title>openclash的安装和使用</title>
     <url>/2021/03/21/openwrt-%E5%8E%9F%E7%89%88-%E5%AE%89%E8%A3%85openclash/</url>
-    <content><![CDATA[<p>openclash</p>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/20200929141428.jpeg"></p>
 <a id="more"></a>
 
 <h4 id="依赖库"><a href="#依赖库" class="headerlink" title="依赖库"></a>依赖库</h4><p>ssh登陆后，先opkg update 升级， 然后安装依赖库，大部分都很顺利，最新依赖库列表在这里 <a href="https://github.com/vernesong/OpenClash" target="_blank" rel="noopener">https://github.com/vernesong/OpenClash</a></p>
@@ -12525,7 +12525,7 @@
   <entry>
     <title>视频素材批量裁剪记录</title>
     <url>/2021/04/02/%E8%A7%86%E9%A2%91%E7%B4%A0%E6%9D%90%E8%A3%81%E5%89%AA%E5%99%A8/</url>
-    <content><![CDATA[<p>视频大拍档</p>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/ShellView.png"></p>
 <a id="more"></a>
 
 <h4 id="Aegisub"><a href="#Aegisub" class="headerlink" title="Aegisub"></a>Aegisub</h4><p>有时候想在视频中，插入一些有意思的片段，总要把视频拿出来，一段一段的进行查找，进行裁剪，有些自动裁剪软件，可以方便做到。</p>
@@ -12558,7 +12558,7 @@
   <entry>
     <title>软硬字幕的提取方法</title>
     <url>/2021/04/02/%E8%BD%AF%E7%A1%AC%E5%AD%97%E5%B9%95%E7%9A%84%E6%8F%90%E5%8F%96/</url>
-    <content><![CDATA[<p>字幕</p>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/subtitleEdit.gif"></p>
 <a id="more"></a>
 
 <h4 id="软字幕"><a href="#软字幕" class="headerlink" title="软字幕"></a>软字幕</h4><h5 id="mkvtoolnix-好多人推荐这个，试了一下感觉没有什么过人之处"><a href="#mkvtoolnix-好多人推荐这个，试了一下感觉没有什么过人之处" class="headerlink" title="mkvtoolnix 好多人推荐这个，试了一下感觉没有什么过人之处"></a>mkvtoolnix 好多人推荐这个，试了一下感觉没有什么过人之处</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">choco install gmkvextractgui</span><br><span class="line"></span><br><span class="line">choco install mkvtoolnix</span><br></pre></td></tr></table></figure>
