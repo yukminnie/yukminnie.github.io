@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 5.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -378,6 +378,13 @@
             </span>
 
           
+            <span id="/2020/11/06/94%E4%B8%89%E5%9B%BD-1/" class="post-meta-item leancloud_visitors" data-flag-title="虎扑三国-群雄逐鹿" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
   
   <span class="post-meta-item">
     
@@ -470,7 +477,7 @@
 <p>21.   鲍国安老师在山东省话剧团演完电视剧水浒之后已上京，担任中戏教授…出演曹操时44岁，正当年… </p>
 <p>  </p>
 <p>22.   孟德献刀之前有一处精彩加戏，曹操与王允在密室对话，曹操援引要离刺庆忌的典故来说服王允…再次给编剧撒花… </p>
-<p><a href="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/ia_300011466_%E7%BB%93%E6%9E%9C.png.png" target="_blank" rel="noopener"></a></p>
+<p><a target="_blank" rel="noopener" href="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/ia_300011466_%E7%BB%93%E6%9E%9C.png.png"></a></p>
 <p> <br>23.   第一个陈宫的扮演者李建义也是人艺的演员，同时也是很有名的配音演员（有心的朋友可以数一数94三国一共启用了多少人艺演员），他为94三国的陈宫，鲁肃以及很多文官配音…后来二张拍央视水浒的时候，他给李逵配音… </p>
 <p><code>李建义老师大家应该很熟悉了.. 李建义老师配音的经典角色, 实在太多, 就不列举了</code><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/054101015E7C61A35A50FC9419363DE6.jpeg.jpeg"><br><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2020-11-21_17-37-46.png.png"></p>
 <p> <br>24.   顺口说一句无根之流言，据说三爷李靖飞日常生活中很细致，且酷爱烹饪，剧中董太师等人吃的蒸肉啥的，凡是能吃的道具菜肴都是三爷做的…（此流言后来在三国再聚首得到片面证实） </p>
@@ -985,7 +992,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-count">55</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1042,6 +1049,97 @@
 
 
 
+<script data-pjax>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = decodeURI(visitors.id);
+      var title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              Counter('post', '/classes/Counter', { title, url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.error('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            let target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    let { app_id, app_key, server_url } = {"enable":true,"app_id":"rpBRGEoXmrJ9fHlfoKzzD3V4-gzGzoHsz","app_key":"M2lmKKKUD0z7S0z6OceadDsk","server_url":"https://funnie.cc","security":false};
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    let api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
 
 
       </div>
