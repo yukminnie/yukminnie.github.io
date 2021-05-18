@@ -13752,4 +13752,34 @@ NoSuchElementException: Message: no such element: Unable to locate element: &#12
         <tag>实则虚之</tag>
       </tags>
   </entry>
+  <entry>
+    <title>python with 方法踩坑2</title>
+    <url>/2017/04/17/python-with-%E6%96%B9%E6%B3%95%E8%B8%A9%E5%9D%912/</url>
+    <content><![CDATA[<h4 id="引入文件报错2-FileNotFoundError"><a href="#引入文件报错2-FileNotFoundError" class="headerlink" title="引入文件报错2   FileNotFoundError"></a>引入文件报错2   FileNotFoundError</h4><p>用绝对路径，某些编辑器，对相对路径支持不完善</p>
+]]></content>
+      <tags>
+        <tag>实则虚之</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python with方法踩坑1</title>
+    <url>/2017/04/17/python-with%E6%96%B9%E6%B3%95%E8%B8%A9%E5%9D%91/</url>
+    <content><![CDATA[<p>with</p>
+<a id="more"></a>
+
+<h4 id="引入文件报错-unicodeescape’-codec-can’t-decode-bytes-in-position"><a href="#引入文件报错-unicodeescape’-codec-can’t-decode-bytes-in-position" class="headerlink" title="引入文件报错  unicodeescape’ codec can’t decode bytes in position"></a>引入文件报错  unicodeescape’ codec can’t decode bytes in position</h4><p>\是转义符，\u表示其后是UNICODE编码，在字符串前面加个r表示就可以了</p>
+]]></content>
+      <tags>
+        <tag>实则虚之</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python with 方法踩坑3</title>
+    <url>/2017/04/17/python-with-%E6%96%B9%E6%B3%95%E8%B8%A9%E5%9D%913/</url>
+    <content><![CDATA[<h4 id="io-UnsupportedOperation-not-writable"><a href="#io-UnsupportedOperation-not-writable" class="headerlink" title="io.UnsupportedOperation: not writable"></a>io.UnsupportedOperation: not writable</h4><p>权限写错</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># with 第二个参数含义</span><br><span class="line"></span><br><span class="line">r 只能读 （带r的文件必须先存在）</span><br><span class="line"></span><br><span class="line">r+ 可读可写 不会创建不存在的文件 从顶部开始写 会覆盖之前此位置的内容 </span><br><span class="line"></span><br><span class="line">w+ 可读可写 如果文件存在 则覆盖整个文件不存在则创建  &#x2F;&#x2F;要close 之后才算完成写入</span><br><span class="line"></span><br><span class="line">w 只能写 覆盖整个文件 不存在则创建 </span><br><span class="line"></span><br><span class="line">a 只能写 从文件底部添加内容 不存在则创建 </span><br><span class="line"></span><br><span class="line">a+ 可读可写 从文件顶部读取内容 从文件底部添加内容 不存在则创建  </span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>实则虚之</tag>
+      </tags>
+  </entry>
 </search>
