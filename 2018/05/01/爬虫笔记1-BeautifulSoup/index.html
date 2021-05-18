@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":350,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":true,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="BeautifulSoup">
+<meta property="og:type" content="article">
+<meta property="og:title" content="爬虫库笔记1-BeautifulSoup">
+<meta property="og:url" content="http://example.com/2018/05/01/%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B01-BeautifulSoup/index.html">
+<meta property="og:site_name" content="两小时先生">
+<meta property="og:description" content="BeautifulSoup">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-05-01T08:05:56.000Z">
+<meta property="article:modified_time" content="2021-05-18T08:10:38.008Z">
+<meta property="article:author" content="Yukminnie">
+<meta property="article:tag" content="实则虚之">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2018/05/01/%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B01-BeautifulSoup/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>爬虫库笔记1-BeautifulSoup | 两小时先生</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">两小时先生</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/05/01/%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B01-BeautifulSoup/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yukminnie">
+      <meta itemprop="description" content="2点醒一次 4点醒一次 6点醒一次">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="两小时先生">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          爬虫库笔记1-BeautifulSoup
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-05-01 16:05:56" itemprop="dateCreated datePublished" datetime="2018-05-01T16:05:56+08:00">2018-05-01</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2018/05/01/%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B01-BeautifulSoup/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2018/05/01/%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B01-BeautifulSoup/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>BeautifulSoup</p>
+<a id="more"></a>
+
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;title&quot; name=&quot;dromouse&quot;&gt;&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;&lt;!-- Elsie --&gt;&lt;/a&gt;,</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span></span><br><span class="line"><span class="string">and they lived at the bottom of a well.&lt;/p&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.prettify())</span><br><span class="line">print(soup.title.string)</span><br></pre></td></tr></table></figure>
+
+<pre><code>&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;
+   The Dormouse&#39;s story
+  &lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p class=&quot;title&quot; name=&quot;dromouse&quot;&gt;
+   &lt;b&gt;
+    The Dormouse&#39;s story
+   &lt;/b&gt;
+  &lt;/p&gt;
+  &lt;p class=&quot;story&quot;&gt;
+   Once upon a time there were three little sisters; and their names were
+   &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;
+    &lt;!-- Elsie --&gt;
+   &lt;/a&gt;
+   ,
+   &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;
+    Lacie
+   &lt;/a&gt;
+   and
+   &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;
+    Tillie
+   &lt;/a&gt;
+   ;
+and they lived at the bottom of a well.
+  &lt;/p&gt;
+  &lt;p class=&quot;story&quot;&gt;
+   ...
+  &lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+The Dormouse&#39;s story</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h2><h3 id="选择元素"><a href="#选择元素" class="headerlink" title="选择元素"></a>选择元素</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;title&quot; name=&quot;dromouse&quot;&gt;&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;&lt;!-- Elsie --&gt;&lt;/a&gt;,</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span></span><br><span class="line"><span class="string">and they lived at the bottom of a well.&lt;/p&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.title)</span><br><span class="line">print(<span class="built_in">type</span>(soup.title))</span><br><span class="line">print(soup.head)</span><br><span class="line">print(soup.p)       <span class="comment">#标签选择器只返回第一个结果</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;
+&lt;class &#39;bs4.element.Tag&#39;&gt;
+&lt;head&gt;&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;&lt;/head&gt;
+&lt;p class=&quot;title&quot; name=&quot;dromouse&quot;&gt;&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;&lt;/p&gt;</code></pre>
+<h3 id="获取名称"><a href="#获取名称" class="headerlink" title="获取名称"></a>获取名称</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;title&quot; name=&quot;dromouse&quot;&gt;&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;&lt;!-- Elsie --&gt;&lt;/a&gt;,</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span></span><br><span class="line"><span class="string">and they lived at the bottom of a well.&lt;/p&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.title.name)</span><br></pre></td></tr></table></figure>
+
+<pre><code>title</code></pre>
+<h3 id="获取属性"><a href="#获取属性" class="headerlink" title="获取属性"></a>获取属性</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;title&quot; name=&quot;dromouse&quot;&gt;&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;&lt;!-- Elsie --&gt;&lt;/a&gt;,</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span></span><br><span class="line"><span class="string">and they lived at the bottom of a well.&lt;/p&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.p.attrs[<span class="string">&#x27;name&#x27;</span>])</span><br><span class="line">print(soup.p[<span class="string">&#x27;name&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<pre><code>dromouse
+dromouse</code></pre>
+<h3 id="获取内容"><a href="#获取内容" class="headerlink" title="获取内容"></a>获取内容</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">&lt;p clss=&quot;title&quot; name=&quot;dromouse&quot;&gt;&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;&lt;!-- Elsie --&gt;&lt;/a&gt;,</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span></span><br><span class="line"><span class="string">and they lived at the bottom of a well.&lt;/p&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.p.string)</span><br></pre></td></tr></table></figure>
+
+<pre><code>The Dormouse&#39;s story</code></pre>
+<h3 id="嵌套选择"><a href="#嵌套选择" class="headerlink" title="嵌套选择"></a>嵌套选择</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;title&quot; name=&quot;dromouse&quot;&gt;&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;&lt;!-- Elsie --&gt;&lt;/a&gt;,</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span></span><br><span class="line"><span class="string">and they lived at the bottom of a well.&lt;/p&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.head.title.string)</span><br></pre></td></tr></table></figure>
+
+<pre><code>The Dormouse&#39;s story</code></pre>
+<h3 id="子节点和子孙节点"><a href="#子节点和子孙节点" class="headerlink" title="子节点和子孙节点"></a>子节点和子孙节点</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;</span></span><br><span class="line"><span class="string">    &lt;head&gt;</span></span><br><span class="line"><span class="string">        &lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;</span></span><br><span class="line"><span class="string">    &lt;/head&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">        &lt;p class=&quot;story&quot;&gt;</span></span><br><span class="line"><span class="string">            Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;span&gt;Elsie&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; </span></span><br><span class="line"><span class="string">            and</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;</span></span><br><span class="line"><span class="string">            and they lived at the bottom of a well.</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.p.contents)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[&#39;\n            Once upon a time there were three little sisters; and their names were\n            &#39;, &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;
+&lt;span&gt;Elsie&lt;/span&gt;
+&lt;/a&gt;, &#39;\n&#39;, &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;, &#39; \n            and\n            &#39;, &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;, &#39;\n            and they lived at the bottom of a well.\n        &#39;]</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;</span></span><br><span class="line"><span class="string">    &lt;head&gt;</span></span><br><span class="line"><span class="string">        &lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;</span></span><br><span class="line"><span class="string">    &lt;/head&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">        &lt;p class=&quot;story&quot;&gt;</span></span><br><span class="line"><span class="string">            Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;span&gt;Elsie&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; </span></span><br><span class="line"><span class="string">            and</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;</span></span><br><span class="line"><span class="string">            and they lived at the bottom of a well.</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.p.children)</span><br><span class="line"><span class="keyword">for</span> i, child <span class="keyword">in</span> <span class="built_in">enumerate</span>(soup.p.children):</span><br><span class="line">    print(i, child)</span><br></pre></td></tr></table></figure>
+
+<pre><code>&lt;list_iterator object at 0x1064f7dd8&gt;
+0 
+            Once upon a time there were three little sisters; and their names were
+
+1 &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;
+&lt;span&gt;Elsie&lt;/span&gt;
+&lt;/a&gt;
+2 
+
+3 &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;
+4  
+            and
+
+5 &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;
+6 
+            and they lived at the bottom of a well.</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;</span></span><br><span class="line"><span class="string">    &lt;head&gt;</span></span><br><span class="line"><span class="string">        &lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;</span></span><br><span class="line"><span class="string">    &lt;/head&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">        &lt;p class=&quot;story&quot;&gt;</span></span><br><span class="line"><span class="string">            Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;span&gt;Elsie&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; </span></span><br><span class="line"><span class="string">            and</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;</span></span><br><span class="line"><span class="string">            and they lived at the bottom of a well.</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.p.descendants)</span><br><span class="line"><span class="keyword">for</span> i, child <span class="keyword">in</span> <span class="built_in">enumerate</span>(soup.p.descendants):</span><br><span class="line">    print(i, child)</span><br></pre></td></tr></table></figure>
+
+<pre><code>&lt;generator object descendants at 0x10650e678&gt;
+0 
+            Once upon a time there were three little sisters; and their names were
+
+1 &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;
+&lt;span&gt;Elsie&lt;/span&gt;
+&lt;/a&gt;
+2 
+
+3 &lt;span&gt;Elsie&lt;/span&gt;
+4 Elsie
+5 
+
+6 
+
+7 &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;
+8 Lacie
+9  
+            and
+
+10 &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;
+11 Tillie
+12 
+            and they lived at the bottom of a well.</code></pre>
+<h3 id="父节点和祖先节点"><a href="#父节点和祖先节点" class="headerlink" title="父节点和祖先节点"></a>父节点和祖先节点</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;</span></span><br><span class="line"><span class="string">    &lt;head&gt;</span></span><br><span class="line"><span class="string">        &lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;</span></span><br><span class="line"><span class="string">    &lt;/head&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">        &lt;p class=&quot;story&quot;&gt;</span></span><br><span class="line"><span class="string">            Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;span&gt;Elsie&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; </span></span><br><span class="line"><span class="string">            and</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;</span></span><br><span class="line"><span class="string">            and they lived at the bottom of a well.</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.a.parent)</span><br></pre></td></tr></table></figure>
+
+<pre><code>&lt;p class=&quot;story&quot;&gt;
+            Once upon a time there were three little sisters; and their names were
+            &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;
+&lt;span&gt;Elsie&lt;/span&gt;
+&lt;/a&gt;
+&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; 
+            and
+            &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;
+            and they lived at the bottom of a well.
+        &lt;/p&gt;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;</span></span><br><span class="line"><span class="string">    &lt;head&gt;</span></span><br><span class="line"><span class="string">        &lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;</span></span><br><span class="line"><span class="string">    &lt;/head&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">        &lt;p class=&quot;story&quot;&gt;</span></span><br><span class="line"><span class="string">            Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;span&gt;Elsie&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; </span></span><br><span class="line"><span class="string">            and</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;</span></span><br><span class="line"><span class="string">            and they lived at the bottom of a well.</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(<span class="built_in">list</span>(<span class="built_in">enumerate</span>(soup.a.parents)))</span><br></pre></td></tr></table></figure>
+
+<pre><code>[(0, &lt;p class=&quot;story&quot;&gt;
+            Once upon a time there were three little sisters; and their names were
+            &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;
+&lt;span&gt;Elsie&lt;/span&gt;
+&lt;/a&gt;
+&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; 
+            and
+            &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;
+            and they lived at the bottom of a well.
+        &lt;/p&gt;), (1, &lt;body&gt;
+&lt;p class=&quot;story&quot;&gt;
+            Once upon a time there were three little sisters; and their names were
+            &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;
+&lt;span&gt;Elsie&lt;/span&gt;
+&lt;/a&gt;
+&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; 
+            and
+            &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;
+            and they lived at the bottom of a well.
+        &lt;/p&gt;
+&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;
+&lt;/body&gt;), (2, &lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p class=&quot;story&quot;&gt;
+            Once upon a time there were three little sisters; and their names were
+            &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;
+&lt;span&gt;Elsie&lt;/span&gt;
+&lt;/a&gt;
+&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; 
+            and
+            &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;
+            and they lived at the bottom of a well.
+        &lt;/p&gt;
+&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;), (3, &lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p class=&quot;story&quot;&gt;
+            Once upon a time there were three little sisters; and their names were
+            &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;
+&lt;span&gt;Elsie&lt;/span&gt;
+&lt;/a&gt;
+&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; 
+            and
+            &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;
+            and they lived at the bottom of a well.
+        &lt;/p&gt;
+&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;)]</code></pre>
+<h3 id="兄弟节点"><a href="#兄弟节点" class="headerlink" title="兄弟节点"></a>兄弟节点</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">html = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;</span></span><br><span class="line"><span class="string">    &lt;head&gt;</span></span><br><span class="line"><span class="string">        &lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;</span></span><br><span class="line"><span class="string">    &lt;/head&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">        &lt;p class=&quot;story&quot;&gt;</span></span><br><span class="line"><span class="string">            Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;span&gt;Elsie&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; </span></span><br><span class="line"><span class="string">            and</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;</span></span><br><span class="line"><span class="string">            and they lived at the bottom of a well.</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(<span class="built_in">list</span>(<span class="built_in">enumerate</span>(soup.a.next_siblings)))</span><br><span class="line">print(<span class="built_in">list</span>(<span class="built_in">enumerate</span>(soup.a.previous_siblings)))</span><br></pre></td></tr></table></figure>
+
+<pre><code>[(0, &#39;\n&#39;), (1, &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;), (2, &#39; \n            and\n            &#39;), (3, &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;), (4, &#39;\n            and they lived at the bottom of a well.\n        &#39;)]
+[(0, &#39;\n            Once upon a time there were three little sisters; and their names were\n            &#39;)]</code></pre>
+<h2 id="标准选择器"><a href="#标准选择器" class="headerlink" title="标准选择器"></a>标准选择器</h2><h3 id="find-all-name-attrs-recursive-text-kwargs"><a href="#find-all-name-attrs-recursive-text-kwargs" class="headerlink" title="find_all( name , attrs , recursive , text , **kwargs )"></a>find_all( name , attrs , recursive , text , **kwargs )</h3><p>可根据标签名、属性、内容查找文档</p>
+<h4 id="name"><a href="#name" class="headerlink" title="name"></a>name</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">html=<span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&lt;div class=&quot;panel&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-heading&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4&gt;Hello&lt;/h4&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-body&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.find_all(<span class="string">&#x27;ul&#x27;</span>))</span><br><span class="line">print(<span class="built_in">type</span>(soup.find_all(<span class="string">&#x27;ul&#x27;</span>)[<span class="number">0</span>]))</span><br></pre></td></tr></table></figure>
+
+<pre><code>[&lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;
+&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+&lt;/ul&gt;, &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;
+&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+&lt;/ul&gt;]
+&lt;class &#39;bs4.element.Tag&#39;&gt;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">html=<span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&lt;div class=&quot;panel&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-heading&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4&gt;Hello&lt;/h4&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-body&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> ul <span class="keyword">in</span> soup.find_all(<span class="string">&#x27;ul&#x27;</span>):</span><br><span class="line">    print(ul.find_all(<span class="string">&#x27;li&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<pre><code>[&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;]
+[&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;]</code></pre>
+<h4 id="attrs"><a href="#attrs" class="headerlink" title="attrs"></a>attrs</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">html=<span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&lt;div class=&quot;panel&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-heading&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4&gt;Hello&lt;/h4&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-body&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot; name=&quot;elements&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.find_all(attrs=&#123;<span class="string">&#x27;id&#x27;</span>: <span class="string">&#x27;list-1&#x27;</span>&#125;))</span><br><span class="line">print(soup.find_all(attrs=&#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;elements&#x27;</span>&#125;))</span><br></pre></td></tr></table></figure>
+
+<pre><code>[&lt;ul class=&quot;list&quot; id=&quot;list-1&quot; name=&quot;elements&quot;&gt;
+&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+&lt;/ul&gt;]
+[&lt;ul class=&quot;list&quot; id=&quot;list-1&quot; name=&quot;elements&quot;&gt;
+&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+&lt;/ul&gt;]</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">html=<span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&lt;div class=&quot;panel&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-heading&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4&gt;Hello&lt;/h4&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-body&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.find_all(<span class="built_in">id</span>=<span class="string">&#x27;list-1&#x27;</span>))</span><br><span class="line">print(soup.find_all(class_=<span class="string">&#x27;element&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<pre><code>[&lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;
+&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+&lt;/ul&gt;]
+[&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;]</code></pre>
+<h4 id="text"><a href="#text" class="headerlink" title="text"></a>text</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">html=<span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&lt;div class=&quot;panel&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-heading&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4&gt;Hello&lt;/h4&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-body&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.find_all(text=<span class="string">&#x27;Foo&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<pre><code>[&#39;Foo&#39;, &#39;Foo&#39;]</code></pre>
+<h3 id="find-name-attrs-recursive-text-kwargs"><a href="#find-name-attrs-recursive-text-kwargs" class="headerlink" title="find( name , attrs , recursive , text , **kwargs )"></a>find( name , attrs , recursive , text , **kwargs )</h3><p>find返回单个元素，find_all返回所有元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">html=<span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&lt;div class=&quot;panel&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-heading&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4&gt;Hello&lt;/h4&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-body&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.find(<span class="string">&#x27;ul&#x27;</span>))</span><br><span class="line">print(<span class="built_in">type</span>(soup.find(<span class="string">&#x27;ul&#x27;</span>)))</span><br><span class="line">print(soup.find(<span class="string">&#x27;page&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<pre><code>&lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;
+&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;
+&lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;
+&lt;/ul&gt;
+&lt;class &#39;bs4.element.Tag&#39;&gt;
+None</code></pre>
+<h3 id="find-parents-find-parent"><a href="#find-parents-find-parent" class="headerlink" title="find_parents()  find_parent()"></a>find_parents()  find_parent()</h3><p>find_parents()返回所有祖先节点，find_parent()返回直接父节点。</p>
+<h3 id="find-next-siblings-find-next-sibling"><a href="#find-next-siblings-find-next-sibling" class="headerlink" title="find_next_siblings()  find_next_sibling()"></a>find_next_siblings()  find_next_sibling()</h3><p>find_next_siblings()返回后面所有兄弟节点，find_next_sibling()返回后面第一个兄弟节点。</p>
+<h3 id="find-previous-siblings-find-previous-sibling"><a href="#find-previous-siblings-find-previous-sibling" class="headerlink" title="find_previous_siblings()  find_previous_sibling()"></a>find_previous_siblings()  find_previous_sibling()</h3><p>find_previous_siblings()返回前面所有兄弟节点，find_previous_sibling()返回前面第一个兄弟节点。</p>
+<h3 id="find-all-next-find-next"><a href="#find-all-next-find-next" class="headerlink" title="find_all_next()  find_next()"></a>find_all_next()  find_next()</h3><p>find_all_next()返回节点后所有符合条件的节点, find_next()返回第一个符合条件的节点</p>
+<h3 id="find-all-previous-和-find-previous"><a href="#find-all-previous-和-find-previous" class="headerlink" title="find_all_previous() 和 find_previous()"></a>find_all_previous() 和 find_previous()</h3><p>find_all_previous()返回节点后所有符合条件的节点, find_previous()返回第一个符合条件的节点</p>
+<h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><p>通过select()直接传入CSS选择器即可完成选择</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">html=<span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&lt;div class=&quot;panel&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-heading&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4&gt;Hello&lt;/h4&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-body&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">print(soup.select(<span class="string">&#x27;.panel .panel-heading&#x27;</span>))</span><br><span class="line">print(soup.select(<span class="string">&#x27;ul li&#x27;</span>))</span><br><span class="line">print(soup.select(<span class="string">&#x27;#list-2 .element&#x27;</span>))</span><br><span class="line">print(<span class="built_in">type</span>(soup.select(<span class="string">&#x27;ul&#x27;</span>)[<span class="number">0</span>]))</span><br></pre></td></tr></table></figure>
+
+<pre><code>[&lt;div class=&quot;panel-heading&quot;&gt;
+&lt;h4&gt;Hello&lt;/h4&gt;
+&lt;/div&gt;]
+[&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;]
+[&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;]
+&lt;class &#39;bs4.element.Tag&#39;&gt;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">html=<span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&lt;div class=&quot;panel&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-heading&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4&gt;Hello&lt;/h4&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-body&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> ul <span class="keyword">in</span> soup.select(<span class="string">&#x27;ul&#x27;</span>):</span><br><span class="line">    print(ul.select(<span class="string">&#x27;li&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<pre><code>[&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;]
+[&lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;, &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;]</code></pre>
+<h3 id="获取属性-1"><a href="#获取属性-1" class="headerlink" title="获取属性"></a>获取属性</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">html=<span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&lt;div class=&quot;panel&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-heading&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4&gt;Hello&lt;/h4&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-body&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> ul <span class="keyword">in</span> soup.select(<span class="string">&#x27;ul&#x27;</span>):</span><br><span class="line">    print(ul[<span class="string">&#x27;id&#x27;</span>])</span><br><span class="line">    print(ul.attrs[<span class="string">&#x27;id&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<pre><code>list-1
+list-1
+list-2
+list-2</code></pre>
+<h3 id="获取内容-1"><a href="#获取内容-1" class="headerlink" title="获取内容"></a>获取内容</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">html=<span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&lt;div class=&quot;panel&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-heading&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;h4&gt;Hello&lt;/h4&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;panel-body&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list&quot; id=&quot;list-1&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Jay&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">        &lt;ul class=&quot;list list-small&quot; id=&quot;list-2&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Foo&lt;/li&gt;</span></span><br><span class="line"><span class="string">            &lt;li class=&quot;element&quot;&gt;Bar&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> li <span class="keyword">in</span> soup.select(<span class="string">&#x27;li&#x27;</span>):</span><br><span class="line">    print(li.get_text())</span><br></pre></td></tr></table></figure>
+
+<pre><code>Foo
+Bar
+Jay
+Foo
+Bar</code></pre>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>推荐使用lxml解析库，必要时使用html.parser</li>
+<li>标签选择筛选功能弱但是速度快</li>
+<li>建议使用find()、find_all() 查询匹配单个结果或者多个结果</li>
+<li>如果对CSS选择器熟悉建议使用select()</li>
+<li>记住常用的获取属性和文本值的</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AE%9E%E5%88%99%E8%99%9A%E4%B9%8B/" rel="tag"># 实则虚之</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/04/18/ubuntu%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE/" rel="prev" title="ubuntu的一些配置">
+      <i class="fa fa-chevron-left"></i> ubuntu的一些配置
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/05/03/%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B02-pyquery/" rel="next" title="爬虫库笔记2-Pyquery">
+      爬虫库笔记2-Pyquery <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">基本使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.</span> <span class="nav-text">标签选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0"><span class="nav-number">2.1.</span> <span class="nav-text">选择元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%90%8D%E7%A7%B0"><span class="nav-number">2.2.</span> <span class="nav-text">获取名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%B1%9E%E6%80%A7"><span class="nav-number">2.3.</span> <span class="nav-text">获取属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%86%85%E5%AE%B9"><span class="nav-number">2.4.</span> <span class="nav-text">获取内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B5%8C%E5%A5%97%E9%80%89%E6%8B%A9"><span class="nav-number">2.5.</span> <span class="nav-text">嵌套选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%90%E8%8A%82%E7%82%B9%E5%92%8C%E5%AD%90%E5%AD%99%E8%8A%82%E7%82%B9"><span class="nav-number">2.6.</span> <span class="nav-text">子节点和子孙节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%88%B6%E8%8A%82%E7%82%B9%E5%92%8C%E7%A5%96%E5%85%88%E8%8A%82%E7%82%B9"><span class="nav-number">2.7.</span> <span class="nav-text">父节点和祖先节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%84%E5%BC%9F%E8%8A%82%E7%82%B9"><span class="nav-number">2.8.</span> <span class="nav-text">兄弟节点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">标准选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#find-all-name-attrs-recursive-text-kwargs"><span class="nav-number">3.1.</span> <span class="nav-text">find_all( name , attrs , recursive , text , **kwargs )</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#name"><span class="nav-number">3.1.1.</span> <span class="nav-text">name</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#attrs"><span class="nav-number">3.1.2.</span> <span class="nav-text">attrs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#text"><span class="nav-number">3.1.3.</span> <span class="nav-text">text</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-name-attrs-recursive-text-kwargs"><span class="nav-number">3.2.</span> <span class="nav-text">find( name , attrs , recursive , text , **kwargs )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-parents-find-parent"><span class="nav-number">3.3.</span> <span class="nav-text">find_parents()  find_parent()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-next-siblings-find-next-sibling"><span class="nav-number">3.4.</span> <span class="nav-text">find_next_siblings()  find_next_sibling()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-previous-siblings-find-previous-sibling"><span class="nav-number">3.5.</span> <span class="nav-text">find_previous_siblings()  find_previous_sibling()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-all-next-find-next"><span class="nav-number">3.6.</span> <span class="nav-text">find_all_next()  find_next()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-all-previous-%E5%92%8C-find-previous"><span class="nav-number">3.7.</span> <span class="nav-text">find_all_previous() 和 find_previous()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">4.</span> <span class="nav-text">CSS选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%B1%9E%E6%80%A7-1"><span class="nav-number">4.1.</span> <span class="nav-text">获取属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%86%85%E5%AE%B9-1"><span class="nav-number">4.2.</span> <span class="nav-text">获取内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Yukminnie</p>
+  <div class="site-description" itemprop="description">2点醒一次 4点醒一次 6点醒一次</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">61</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:yukminnie@hotmail.com" title="E-Mail → mailto:yukminnie@hotmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://music.163.com/#/user/home?id=3504124" title="我的网易云 → https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;3504124" rel="noopener" target="_blank"><i class="fab fa-music fa-fw"></i>我的网易云</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=524543708&auto=1&height=66"></iframe>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yukminnie</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'rpBRGEoXmrJ9fHlfoKzzD3V4-gzGzoHsz',
+      appKey     : 'M2lmKKKUD0z7S0z6OceadDsk',
+      placeholder: "我有一言, 请诸位静听~",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>
