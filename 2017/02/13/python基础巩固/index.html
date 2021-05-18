@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":350,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":true,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="巩固">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础巩固">
+<meta property="og:url" content="http://example.com/2017/02/13/python%E5%9F%BA%E7%A1%80%E5%B7%A9%E5%9B%BA/index.html">
+<meta property="og:site_name" content="两小时先生">
+<meta property="og:description" content="巩固">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-02-13T08:52:36.000Z">
+<meta property="article:modified_time" content="2021-05-18T08:58:54.678Z">
+<meta property="article:author" content="Yukminnie">
+<meta property="article:tag" content="实则虚之">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2017/02/13/python%E5%9F%BA%E7%A1%80%E5%B7%A9%E5%9B%BA/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>python基础巩固 | 两小时先生</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">两小时先生</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2017/02/13/python%E5%9F%BA%E7%A1%80%E5%B7%A9%E5%9B%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yukminnie">
+      <meta itemprop="description" content="2点醒一次 4点醒一次 6点醒一次">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="两小时先生">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          python基础巩固
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-02-13 16:52:36" itemprop="dateCreated datePublished" datetime="2017-02-13T16:52:36+08:00">2017-02-13</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2017/02/13/python%E5%9F%BA%E7%A1%80%E5%B7%A9%E5%9B%BA/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/02/13/python%E5%9F%BA%E7%A1%80%E5%B7%A9%E5%9B%BA/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>巩固</p>
+<a id="more"></a>
+
+<h4 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br></pre></td><td class="code"><pre><span class="line"># coding: utf-8</span><br><span class="line"># # Python 常用内置函数</span><br><span class="line"># ## 数字</span><br><span class="line"># In[1]:</span><br><span class="line">#绝对值：</span><br><span class="line">abs(-12.4)</span><br><span class="line">#取整：</span><br><span class="line">round(21.6)</span><br><span class="line">#最大最小值：</span><br><span class="line">min(2, 3, 4, 5)</span><br><span class="line">max(2, 4, 3)</span><br><span class="line"># In[2]:</span><br><span class="line"># 强制类型转换</span><br><span class="line">int(12.324)</span><br><span class="line">float(1)</span><br><span class="line"># In[3]:</span><br><span class="line"># 原地计算 In-place</span><br><span class="line">b &#x3D; 2.5</span><br><span class="line">b +&#x3D; 2</span><br><span class="line">b</span><br><span class="line"># In[4]:</span><br><span class="line"># 常用的比较符号包括：</span><br><span class="line"># &lt;, &gt;, &lt;&#x3D;, &gt;&#x3D;, &#x3D;&#x3D;, !&#x3D;</span><br><span class="line"># **Python**支持链式比较：</span><br><span class="line">x &#x3D; 2</span><br><span class="line">1 &lt; x &lt;&#x3D; 3</span><br><span class="line"># ## 字符串</span><br><span class="line"># In[5]:</span><br><span class="line"># 加法：</span><br><span class="line">s &#x3D; &#39;hello &#39; + &#39;world&#39;</span><br><span class="line"># 字符串与数字相乘：</span><br><span class="line">&quot;fuck&quot; * 3</span><br><span class="line"># 字符串长度：</span><br><span class="line">len(s)</span><br><span class="line"># In[6]:</span><br><span class="line"># s.split()将s按照空格（包括多个空格，制表符\t，换行符\n等）分割，并返回所有分割得到的字符串。</span><br><span class="line">line &#x3D; &quot;1 2 3 4 5&quot;</span><br><span class="line">numbers &#x3D; line.split()</span><br><span class="line"># In[7]:</span><br><span class="line">line &#x3D; &quot;1,2,3,4,5&quot;</span><br><span class="line">numbers &#x3D; line.split(&#39;,&#39;)</span><br><span class="line"># In[8]:</span><br><span class="line"># 与分割相反，s.join(str_sequence)的作用是以s为连接符将字符串序列str_sequence中的元素连接起来，并返回连接后得到的新字符串：</span><br><span class="line">s &#x3D; &#39; &#39;</span><br><span class="line">s.join(numbers)</span><br><span class="line"># In[9]:</span><br><span class="line">s &#x3D; &#39;,&#39;</span><br><span class="line">s.join(numbers)</span><br><span class="line"># In[10]:</span><br><span class="line"># s.replace(part1, part2)将字符串s中指定的部分part1替换成想要的部分part2，并返回新的字符串。</span><br><span class="line">s &#x3D; &quot;hello world&quot;</span><br><span class="line">s.replace(&#39;world&#39;, &#39;python&#39;)</span><br><span class="line"># In[11]:</span><br><span class="line"># s.upper()方法返回一个将s中的字母全部大写的新字符串。</span><br><span class="line">&quot;hello world&quot;.upper()</span><br><span class="line"># s.lower()方法返回一个将s中的字母全部小写的新字符串。</span><br><span class="line">&quot;WTF&quot;.lower()</span><br><span class="line"># In[12]:</span><br><span class="line">dir(s) # 查看更多内置方法</span><br><span class="line"># In[13]:</span><br><span class="line"># 具体用法如下，字符串中花括号 &#123;&#125; 的部分会被format传入的参数替代，传入的值可以是字符串，也可以是数字或者别的对象。</span><br><span class="line">&#39;&#123;2&#125; &#123;1&#125; &#123;0&#125;&#39;.format(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;)</span><br><span class="line">&#39;&#123;color&#125; &#123;n&#125; &#123;x&#125;&#39;.format(n&#x3D;10, x&#x3D;1.5, color&#x3D;&#39;blue&#39;)</span><br><span class="line"># 旧方式：</span><br><span class="line">s &#x3D; &quot;some numbers:&quot;</span><br><span class="line">x &#x3D; 1.34</span><br><span class="line">y &#x3D; 2</span><br><span class="line"># 用百分号隔开，括号括起来</span><br><span class="line">t &#x3D; &quot;%s %f, %d&quot; % (s, x, y)</span><br><span class="line"># ## 索引和切片</span><br><span class="line"># In[14]:</span><br><span class="line">s &#x3D; &quot;hello world&quot;</span><br><span class="line">s[0]# 索引</span><br><span class="line">s[4]</span><br><span class="line">s[-2]</span><br><span class="line">s[11]</span><br><span class="line"># In[ ]:</span><br><span class="line">s[1:3] # 切片</span><br><span class="line">s[1:-2]</span><br><span class="line">s[-3:]</span><br><span class="line">s[::2]</span><br><span class="line">s[::-1] # 字符串反序</span><br><span class="line"># ## 列表</span><br><span class="line"># In[ ]:</span><br><span class="line"># 列表加法，懒人法则</span><br><span class="line">a &#x3D; [1, 2, 3]</span><br><span class="line">b &#x3D; [3.2, &#39;hello&#39;]</span><br><span class="line">a + b</span><br><span class="line"># In[ ]:</span><br><span class="line"># 索引和切片同字符串</span><br><span class="line"># In[ ]:</span><br><span class="line"># 从属关系</span><br><span class="line">a &#x3D; [10, 11, 12, 13, 14]</span><br><span class="line">10 in a</span><br><span class="line"># In[ ]:</span><br><span class="line"># count(ob) 返回列表中元素 ob 出现的次数。</span><br><span class="line">a &#x3D; [11, 12, 13, 12, 11]</span><br><span class="line">a.count(11)</span><br><span class="line"># In[ ]:</span><br><span class="line"># sort() 会将列表中的元素按照一定的规则排序：</span><br><span class="line">a &#x3D; [10, 1, 11, 13, 11, 2]</span><br><span class="line">a.sort()</span><br><span class="line"># 如果不想改变原来列表中的值，可以使用 sorted 函数：</span><br><span class="line">a &#x3D; [10, 1, 11, 13, 11, 2]</span><br><span class="line">b &#x3D; sorted(a)</span><br><span class="line"># In[ ]:</span><br><span class="line"># 列表反向</span><br><span class="line">a &#x3D; [1, 2, 3, 4, 5, 6]</span><br><span class="line">a.reverse()</span><br><span class="line"># ## 元组、集合</span><br><span class="line"># In[15]:</span><br><span class="line"># 与列表相似，元组Tuple也是个有序序列，但是元组是不可变的，用()生成。</span><br><span class="line"># In[16]:</span><br><span class="line"># 列表和字符串都是一种有序序列，而集合 set 是一种无序的序列。</span><br><span class="line">a &#x3D; [10, 1, 11, 13, 11, 2] # 集合列表去重</span><br><span class="line">b &#x3D; list(set(a))</span><br><span class="line"># ## 字典</span><br><span class="line"># In[17]:</span><br><span class="line">a &#x3D; &#123;&#125; # 获取值</span><br><span class="line">a[&quot;one&quot;] &#x3D; &quot;this is number 1&quot;</span><br><span class="line">a[&quot;two&quot;] &#x3D; &quot;this is number 2&quot;</span><br><span class="line">a[&quot;three&quot;]</span><br><span class="line"># In[ ]:</span><br><span class="line">a.pop(&quot;two&quot;) # 删除元素</span><br><span class="line"># In[ ]:</span><br><span class="line"># 更新元素</span><br><span class="line">person &#x3D; &#123;&#125;</span><br><span class="line">person[&#39;first&#39;] &#x3D; &quot;Jmes&quot;</span><br><span class="line">person[&#39;last&#39;] &#x3D; &quot;Maxwell&quot;</span><br><span class="line">person[&#39;born&#39;] &#x3D; 1831</span><br><span class="line">person_modifications &#x3D; &#123;&#39;first&#39;: &#39;James&#39;, &#39;middle&#39;: &#39;Clerk&#39;&#125;</span><br><span class="line">person.update(person_modifications)</span><br><span class="line"># In[ ]:</span><br><span class="line"># 是否存在</span><br><span class="line">barn &#x3D; &#123;&#39;cows&#39;: 1, &#39;dogs&#39;: 5, &#39;cats&#39;: 3&#125;</span><br><span class="line">&#39;chickens&#39; in barn</span><br><span class="line"># In[ ]:</span><br><span class="line"># &#96;keys&#96; 方法，&#96;values&#96; 方法和&#96;items&#96; 方法</span><br><span class="line">barn.keys()</span><br><span class="line">barn.values()</span><br><span class="line">barn.items()</span><br><span class="line"># # 基本语法</span><br><span class="line"># In[ ]:</span><br><span class="line"># if判断</span><br><span class="line">x &#x3D; 0</span><br><span class="line">if x &gt; 0:</span><br><span class="line">print (&quot;x is positive&quot;)</span><br><span class="line">elif x &#x3D;&#x3D; 0:</span><br><span class="line">print(&quot;x is zero&quot;)</span><br><span class="line">else:</span><br><span class="line">print (&quot;x is negative&quot;)</span><br><span class="line"># In[ ]:</span><br><span class="line"># for 循环continue 语句,在循环中忽略一些特定的值</span><br><span class="line">values &#x3D; [7, 6, 4, 7, 19, 2, 1]</span><br><span class="line">for i in values:</span><br><span class="line">if i % 2 !&#x3D; 0:</span><br><span class="line"># 忽略奇数</span><br><span class="line">continue</span><br><span class="line">print (i&#x2F;2)</span><br><span class="line"># In[ ]:</span><br><span class="line"># for 循环break 语句,跳出循环</span><br><span class="line">command_list &#x3D; [&#39;start&#39;,</span><br><span class="line">&#39;process&#39;,</span><br><span class="line">&#39;process&#39;,</span><br><span class="line">&#39;process&#39;,</span><br><span class="line">&#39;stop&#39;,</span><br><span class="line">&#39;start&#39;,</span><br><span class="line">&#39;process&#39;,</span><br><span class="line">&#39;stop&#39;]</span><br><span class="line">while command_list:</span><br><span class="line">command &#x3D; command_list.pop(0)</span><br><span class="line">if command &#x3D;&#x3D; &#39;stop&#39;:</span><br><span class="line">break</span><br><span class="line">print(command)</span><br><span class="line"># In[ ]:</span><br><span class="line"># while 语句</span><br><span class="line">i &#x3D; 0</span><br><span class="line">total &#x3D; 0</span><br><span class="line">while i &lt; 1000000:</span><br><span class="line">total +&#x3D; i</span><br><span class="line">i +&#x3D; 1</span><br><span class="line">print (total)</span><br><span class="line"># In[ ]:</span><br><span class="line"># 列表推导式</span><br><span class="line">values &#x3D; [10, 21, 4, 7, 12]</span><br><span class="line">squares &#x3D; [x**2 for x in values]</span><br><span class="line">squares</span><br><span class="line"># In[ ]:</span><br><span class="line">values &#x3D; [10, 21, 4, 7, 12]</span><br><span class="line">squares &#x3D; [x**2 for x in values if x &lt;&#x3D; 10]</span><br><span class="line">squares</span><br><span class="line"># In[ ]:</span><br><span class="line">def add(x, y): # 带参数函数</span><br><span class="line">&quot;&quot;&quot;Add two numbers&quot;&quot;&quot;</span><br><span class="line">a &#x3D; x + y</span><br><span class="line">return a</span><br><span class="line"># In[ ]:</span><br><span class="line">def foo(*args, **kwargs): # 可选参数函数,注意对应关系</span><br><span class="line">print (args, kwargs)</span><br><span class="line">foo(2, 3, x&#x3D;&#39;bar&#39;, z&#x3D;10)</span><br><span class="line"># In[ ]:</span><br><span class="line">from math import atan2</span><br><span class="line">def to_polar(x, y): # 返回多个值</span><br><span class="line">r &#x3D; (x**2 + y**2) ** 0.5</span><br><span class="line">theta &#x3D; atan2(y, x)</span><br><span class="line">return r, theta</span><br><span class="line">r, theta &#x3D; to_polar(3, 4)</span><br><span class="line">r, theta</span><br><span class="line"># In[ ]:</span><br><span class="line">def add(x, y): # map函数</span><br><span class="line">return x + y</span><br><span class="line">a &#x3D; (2,3,4)</span><br><span class="line">b &#x3D; [10,5,3]</span><br><span class="line">print( list(map(add,a,b)))</span><br><span class="line"># # 常用的标准库</span><br><span class="line">#</span><br><span class="line"># re 正则表达式</span><br><span class="line"># copy 复制</span><br><span class="line"># math, cmath 数学</span><br><span class="line"># decimal, fraction</span><br><span class="line"># sqlite3 数据库</span><br><span class="line"># os, os.path 文件系统</span><br><span class="line"># gzip, bz2, zipfile, tarfile 压缩文件</span><br><span class="line"># csv, netrc 各种文件格式</span><br><span class="line"># xml</span><br><span class="line"># htmllib</span><br><span class="line"># ftplib, socket</span><br><span class="line"># cmd 命令行</span><br><span class="line"># pdb</span><br><span class="line"># profile, cProfile, timeit</span><br><span class="line"># collections, heapq, bisect 数据结构</span><br><span class="line"># mmap</span><br><span class="line"># threading, Queue 并行</span><br><span class="line"># multiprocessing</span><br><span class="line"># subprocess</span><br><span class="line"># pickle, cPickle</span><br><span class="line"># struct</span><br><span class="line">#</span><br><span class="line">#</span><br><span class="line"># # 异常</span><br><span class="line"># In[ ]:</span><br><span class="line">import math</span><br><span class="line">while True:</span><br><span class="line">try:</span><br><span class="line">text &#x3D; input(&#39;&gt; &#39;)</span><br><span class="line">if text[0] &#x3D;&#x3D; &#39;q&#39;:</span><br><span class="line">break</span><br><span class="line">x &#x3D; float(text)</span><br><span class="line">y &#x3D; math.log10(x)</span><br><span class="line">print (&quot;log10(&#123;0&#125;) &#x3D; &#123;1&#125;&quot;.format(x, y))</span><br><span class="line">except ValueError:</span><br><span class="line">print( &quot;the value must be greater than 0&quot;)</span><br><span class="line"># In[ ]:</span><br><span class="line"># Exception as e</span><br><span class="line">import math</span><br><span class="line">while True:</span><br><span class="line">try:</span><br><span class="line">text &#x3D; raw_input(&#39;&gt; &#39;)</span><br><span class="line">if text[0] &#x3D;&#x3D; &#39;q&#39;:</span><br><span class="line">break</span><br><span class="line">x &#x3D; float(text)</span><br><span class="line">y &#x3D; 1 &#x2F; math.log10(x)</span><br><span class="line">print (&quot;log10(&#123;0&#125;) &#x3D; &#123;1&#125;&quot;.format(x, y))</span><br><span class="line">except Exception as e:</span><br><span class="line">print(e)</span><br><span class="line"># # 警告</span><br><span class="line"># In[ ]:</span><br><span class="line">import warnings</span><br><span class="line">warnings.filterwarnings(action &#x3D; &#39;ignore&#39;, category &#x3D; RuntimeWarning) # 会忽略Runtime警告</span><br><span class="line"># # 文件读写</span><br><span class="line"># In[ ]:</span><br><span class="line">f &#x3D; open(&#39;myfile.txt&#39;, &#39;r&#39;,encoding &#x3D; &#39;utf-8&#39;) # 注意编码格式，GBK</span><br><span class="line"># In[ ]:</span><br><span class="line">f &#x3D; open(&#39;myfile.txt&#39;, &#39;w&#39;) # 没有文件则新建</span><br><span class="line">f.write(&#39;hello world!&#39;)</span><br><span class="line">f.close()</span><br><span class="line"># In[ ]:</span><br><span class="line">import os</span><br><span class="line">os.remove(&#39;myfile.txt&#39;) # 删除文件</span><br><span class="line"># In[ ]:</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="合并数组"><a href="#合并数组" class="headerlink" title="合并数组"></a>合并数组</h4><p>1.extend方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c1 &#x3D; [&quot;Red&quot;,&quot;Green&quot;,&quot;Blue&quot;]</span><br><span class="line">c2 &#x3D; [&quot;Orange&quot;,&quot;Yellow&quot;,&quot;Indigo&quot;]</span><br><span class="line">c1.extend(c2)</span><br><span class="line">c1 &#x3D;&#x3D; [&quot;Red&quot;,&quot;Green&quot;,&quot;Blue&quot;,&quot;Orange&quot;,&quot;Yellow&quot;,&quot;Indigo&quot;]</span><br></pre></td></tr></table></figure>
+<p>1<br>2<br>3<br>4</p>
+<p>2.直接相加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c1 &#x3D; [&quot;Red&quot;,&quot;Green&quot;,&quot;Blue&quot;]</span><br><span class="line">c2 &#x3D; [&quot;Orange&quot;,&quot;Yellow&quot;,&quot;Indigo&quot;]</span><br><span class="line">c3 &#x3D; c1 + c2</span><br><span class="line">c3 &#x3D;&#x3D; [&quot;Red&quot;,&quot;Green&quot;,&quot;Blue&quot;,&quot;Orange&quot;,&quot;Yellow&quot;,&quot;Indigo&quot;]</span><br></pre></td></tr></table></figure>
+<p>1<br>2<br>3<br>4</p>
+<p>3.flatten</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; [[1,3],[2,4],[3,5]]</span><br><span class="line">a &#x3D; array(a)</span><br><span class="line">a.flatten()</span><br><span class="line">array([1, 3, 2, 4, 3, 5])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AE%9E%E5%88%99%E8%99%9A%E4%B9%8B/" rel="tag"># 实则虚之</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/02/13/OMZ%E9%85%8D%E7%BD%AE/" rel="prev" title="OMZ配置">
+      <i class="fa fa-chevron-left"></i> OMZ配置
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/04/06/Hexo/" rel="next" title="Hexo安装过程记录">
+      Hexo安装过程记录 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E6%95%B0%E7%BB%84"><span class="nav-number">2.</span> <span class="nav-text">合并数组</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Yukminnie</p>
+  <div class="site-description" itemprop="description">2点醒一次 4点醒一次 6点醒一次</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">67</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:yukminnie@hotmail.com" title="E-Mail → mailto:yukminnie@hotmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://music.163.com/#/user/home?id=3504124" title="我的网易云 → https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;3504124" rel="noopener" target="_blank"><i class="fab fa-music fa-fw"></i>我的网易云</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=524543708&auto=1&height=66"></iframe>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yukminnie</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'rpBRGEoXmrJ9fHlfoKzzD3V4-gzGzoHsz',
+      appKey     : 'M2lmKKKUD0z7S0z6OceadDsk',
+      placeholder: "我有一言, 请诸位静听~",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>
