@@ -13823,4 +13823,202 @@ NoSuchElementException: Message: no such element: Unable to locate element: &#12
         <tag>实则虚之</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Pypeeteer</title>
+    <url>/2021/05/22/Pypeeteer/</url>
+    <content><![CDATA[<p>好用的一个爬虫库</p>
+<a id="more"></a>
+
+<p>优点是后台调用 chromium ，异步抓取，使用也简单，对一些异步加载数据的网页，很方便</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 简单例子</span><br><span class="line"></span><br><span class="line"># coding&#x3D;utf-8</span><br><span class="line">import time</span><br><span class="line">import asyncio</span><br><span class="line">from pyppeteer import launch</span><br><span class="line">from pyquery import PyQuery as pq</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">urls &#x3D;[&quot;https:&#x2F;&#x2F;v.huya.com&#x2F;u&#x2F;146501201&#x2F;video.html?sort&#x3D;news&amp;p&#x3D;&#123;&#125;&quot;.format(i) for i in range(1,6)] </span><br><span class="line"></span><br><span class="line">async def main():   </span><br><span class="line">    down_list &#x3D; []</span><br><span class="line">    browser &#x3D; await launch()</span><br><span class="line">    page &#x3D; await browser.newPage()</span><br><span class="line">    with open(&quot;&#x2F;Users&#x2F;ming&#x2F;projects&#x2F;huyaPyDwon&#x2F;down.txt&quot;, &#39;a&#39;) as f:</span><br><span class="line">        for url in urls:</span><br><span class="line">            await page.goto(url)</span><br><span class="line">            await page.waitForSelector(&#39;.content-list .statpid&#39;)</span><br><span class="line">            doc &#x3D; pq(await page.content())</span><br><span class="line">            pink_link &#x3D; &quot;https:&#x2F;&#x2F;v.huya.com&quot;</span><br><span class="line">            names &#x3D; [pink_link + item.attr(&#39;href&#39;) for item in doc(&#39;.content-list .statpid&#39;).items()]</span><br><span class="line">            for name in names:</span><br><span class="line">                f.write(name + &#39;\n&#39;)</span><br><span class="line">            </span><br><span class="line">            # print(&#39;Names:&#39;, names)</span><br><span class="line">    await browser.close()</span><br><span class="line"></span><br><span class="line">asyncio.get_event_loop().run_until_complete(main())</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>ffmpeg压缩视频</title>
+    <url>/2021/05/09/ffmpeg%E5%8E%8B%E7%BC%A9%E8%A7%86%E9%A2%91/</url>
+    <content><![CDATA[<p>也可以用个Handbrake的软件，开源的</p>
+<a id="more"></a>
+
+<p>改变帧率</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ffmpeg -i Desktop&#x2F;吉他.mp4  -r 20  Desktop&#x2F;output1.mp4</span><br></pre></td></tr></table></figure>
+
+<p>改变文件大小（截掉了一部分，不建议使用）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ffmpeg -i Desktop&#x2F;吉他.mp4  -fs 15MB  Desktop&#x2F;output1.mp4</span><br></pre></td></tr></table></figure>
+<p>改变分辨率</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ffmpeg -i Desktop&#x2F;1.mov -s vga Desktop&#x2F;1.mp4</span><br></pre></td></tr></table></figure>
+<p>改变码率</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ffmpeg -i Desktop&#x2F;1.mov -b:v 1.5M  Desktop&#x2F;1.mp4</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>git提交报错Connect closed by remote host</title>
+    <url>/2021/05/22/git%E6%8F%90%E4%BA%A4%E6%8A%A5%E9%94%99Connect-closed-by-remote-host/</url>
+    <content><![CDATA[<p>ip不行</p>
+<a id="more"></a>
+
+<p>原因是机场ip可能不太干净，被拉黑了吧，尴尬</p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2021-05-15_18-29-45.jpg"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>losslesscut</title>
+    <url>/2021/05/09/losslesscut/</url>
+    <content><![CDATA[<p>losslesscut 比 avidemux好用</p>
+<a id="more"></a>
+
+<p>多段同时截取</p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/20210509174648.png"></p>
+<p>合并和转码</p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/20210509174823.png"></p>
+<p>当然 ffmpeg 合并和转码也很简单，主要还是多段同时截取，效率很高</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>linux文件写入特殊字符报错</title>
+    <url>/2021/05/22/linux%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2021-05-05_13-41-32.jpg"></p>
+<a id="more"></a>
+
+<h4 id="懒得写了，看图吧"><a href="#懒得写了，看图吧" class="headerlink" title="懒得写了，看图吧"></a>懒得写了，看图吧</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2021-05-05_13-43-16.jpg"></p>
+<h4 id="这个python文件，没有试过，是手动删除的，链接在这里"><a href="#这个python文件，没有试过，是手动删除的，链接在这里" class="headerlink" title="这个python文件，没有试过，是手动删除的，链接在这里"></a>这个python文件，没有试过，是手动删除的，链接在这里</h4><p><a href="https://www.programmersought.com/article/13646026328/">https://www.programmersought.com/article/13646026328/</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>alias加参数</title>
+    <url>/2021/05/09/alias%E5%8A%A0%E5%8F%82%E6%95%B0/</url>
+    <content><![CDATA[<p>往系统变量中添加alias，带参数需要用到函数</p>
+<a id="more"></a>
+
+<p>写个简单脚本，将脚本添加到系统变量中</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 自定义的脚本目录</span><br><span class="line">export PATH&#x3D;&quot;&#x2F;Users&#x2F;ming&#x2F;bash:$PATH&quot;</span><br></pre></td></tr></table></figure>
+
+<p>通过脚本向系统变量中写入alias,带入参数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line"></span><br><span class="line">echo &quot;新添加的参数为：$1&quot;;</span><br><span class="line"></span><br><span class="line">echo &quot;alias $1&#x3D;&#39;$2&#39;&quot; &gt;&gt; ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>nodejs本地服务器</title>
+    <url>/2021/05/09/npm%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p>http-server</p>
+<a id="more"></a>
+
+<p>安装</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g http-server</span><br></pre></td></tr></table></figure>
+
+<p>使用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http-server</span><br></pre></td></tr></table></figure>
+
+<p>其实 python 也方便，既然用前端了，就用这个吧，也替代 browser-sync ，当然，很多自动化工具自带这个，临时用还是需要的，记性不好老忘记</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>scrcpy</title>
+    <url>/2021/05/22/scrapy/</url>
+    <content><![CDATA[<p>不是windows时，没法用多屏协同怎么办</p>
+<a id="more"></a>
+
+<h4 id="只说无线吧"><a href="#只说无线吧" class="headerlink" title="只说无线吧"></a>只说无线吧</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># usb连接，开启usb调试后，输入以下命令</span><br><span class="line">adb tcpip 5555</span><br><span class="line"></span><br><span class="line"># 拔掉usb线，输入以下命令</span><br><span class="line">adb connect 192.168.11.31:5555</span><br><span class="line"></span><br><span class="line">scrcpy</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="报错的话，把这个“仅充电”钩上，就好了"><a href="#报错的话，把这个“仅充电”钩上，就好了" class="headerlink" title="报错的话，把这个“仅充电”钩上，就好了"></a>报错的话，把这个“仅充电”钩上，就好了</h4><p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2021-05-05_10-28-02.jpg"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>youtube-dl 字幕选项</title>
+    <url>/2021/05/17/youtube-dl-%E5%AD%97%E5%B9%95%E9%80%89%E9%A1%B9/</url>
+    <content><![CDATA[<p>youtube-dl参数选项</p>
+<a id="more"></a>
+
+<p>youtube-dl关于youtube字幕的参数选项:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">--write-sub           写字幕文件</span><br><span class="line">--write-auto-sub      编写自动字幕文件（仅限YouTube） </span><br><span class="line">--all-subs            下载关于视频的所有字幕 </span><br><span class="line">--list-subs           列出关于视频所有可用的字幕</span><br><span class="line">--sub-format FORMAT   字幕格式,接受格式首选项,如&quot;srt&quot;或&quot;ass&#x2F;srt&#x2F;best&quot;,这个选项一般不指定,因为指定的格式可能没有</span><br><span class="line">--sub-lange LANGS     要下载字幕的语言(可选),以逗号分隔,事业IETF语言标签,如&quot;en,pt&quot;</span><br><span class="line">--proxy               要求youtube-dl下载的路线为代理</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>只下载youtube视频字幕<br>如果只下载youtube视频字幕可以用下面的例子:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">youtube-dl --write-sub --sub-lang en --skip-download URL&#x2F;URI</span><br></pre></td></tr></table></figure>
+<p>–write-sub : 写入字幕文件,如果想下载自动字幕可以换成–write-auto-sub<br>–sub-lang en : 获取英文字幕<br>–sub-format srt : 获取字幕的格式为srt<br>–skip-download : 不 下载视频<br>URL : <a href="https://www.youtube.com/watch?v=tFq6Q_muwG0">https://www.youtube.com/watch?v=tFq6Q_muwG0</a> (换成你自己要下载的视频URL)<br>URI : tFq6Q_muwG0 视频的识别码(换成你自己要下载的视频识别码)</p>
+]]></content>
+      <tags>
+        <tag>实则虚之</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mac自带的自动工具</title>
+    <url>/2021/05/22/mac%E8%87%AA%E5%B8%A6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>以前没注意过这东西</p>
+<a id="more"></a>
+
+<p>批量改个名啊，转个格式啊，pdf导图片啊什么的，挺方便的</p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/Xnip2021-04-22_17-11-49.jpg"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>crontab-ui</title>
+    <url>/2021/05/22/crontab-ui/</url>
+    <content><![CDATA[<p>支持备份</p>
+<a id="more"></a>
+
+<p>其实想什么都扔到alias里面，不过这个挺方便的，可以用一下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 安装</span><br><span class="line">brew install crontab-ui</span><br><span class="line"></span><br><span class="line"># 使用</span><br><span class="line">crontab-ui</span><br></pre></td></tr></table></figure>
+
+<p>放几个自己用的</p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/20210522221824.png"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>延时摄影去闪烁</title>
+    <url>/2021/05/22/%E5%BB%B6%E6%97%B6%E6%91%84%E5%BD%B1%E5%8E%BB%E9%97%AA%E7%83%81/</url>
+    <content><![CDATA[<p>DEFlicker</p>
+<a id="more"></a>
+
+<p>很简单，拖到时间轴，选择效果就好，自动/高速/延时，会损失些许画质</p>
+<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/4243133080.png"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>命令行切换ip和dns(win-linux)</title>
+    <url>/2021/05/09/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%88%87%E6%8D%A2ip%E5%92%8Cdns/</url>
+    <content><![CDATA[<p>我的旁路有网关是213</p>
+<a id="more"></a>
+
+<p>如下，包含 win和mac</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># setnet</span><br><span class="line">win</span><br><span class="line">netsh interface ip set address name&#x3D;&quot;NET&quot; source&#x3D;static addr&#x3D;192.168.11.143 mask&#x3D;255.255.255.0 gateway&#x3D;192.168.11.213</span><br><span class="line">netsh interface ip set dns name&#x3D;&quot;NET&quot; source&#x3D;static addr&#x3D;192.168.11.213</span><br><span class="line"></span><br><span class="line">mac</span><br><span class="line">networksetup -setmanual &quot;Wi-Fi&quot; 192.168.11.220 255.255.252.0 192.168.11.213; networksetup -setdnsservers Wi-Fi 192.168.11.213</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># backnet</span><br><span class="line">win</span><br><span class="line">netsh interface ip set address name&#x3D;&quot;NET&quot; source&#x3D;dhcp</span><br><span class="line">netsh interface ip set dns name&#x3D;&quot;NET&quot; source&#x3D;dhcp</span><br><span class="line"></span><br><span class="line">mac</span><br><span class="line">networksetup -setdhcp &quot;Wi-Fi&quot;; networksetup -setdnsservers Wi-Fi 192.168.11.1</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>python调用youtube_dl常用参数</title>
+    <url>/2021/05/22/youtube-dl-%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%E5%90%8D/</url>
+    <content><![CDATA[<p>ydl_opts</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def down(data,name):</span><br><span class="line">    ydl_opts &#x3D; &#123;</span><br><span class="line">        &#39;nooverwrites&#39;: True,</span><br><span class="line">        &#39;ignoreerrors&#39;: True,</span><br><span class="line">        &#39;retries&#39;: True,</span><br><span class="line">        &#39;outtmpl&#39;: name,</span><br><span class="line">    &#125;</span><br><span class="line">    with youtube_dl.YoutubeDL(ydl_opts) as ydl:</span><br><span class="line">        ydl.download([data])</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>写个某直播网站的视频爬虫</title>
+    <url>/2021/05/22/%E6%9F%90%E7%9B%B4%E6%92%AD%E7%BD%91%E7%AB%99%E7%9A%84%E8%A7%86%E9%A2%91%E7%88%AC%E8%99%AB/</url>
+    <content><![CDATA[<p>pyppeteer pyquery jsonloads</p>
+<a id="more"></a>
+
+<p>很喜欢一个up的龙珠解说视频，但是youtube-dl和you-get都不支持，就写了这个，不严谨，就是个思路</p>
+<h4 id="先爬取主播主页，遍历多页，等待元素加载，获取所有视频链接，上面说pyppeteer时说过，结果保存到文件中"><a href="#先爬取主播主页，遍历多页，等待元素加载，获取所有视频链接，上面说pyppeteer时说过，结果保存到文件中" class="headerlink" title="先爬取主播主页，遍历多页，等待元素加载，获取所有视频链接，上面说pyppeteer时说过，结果保存到文件中"></a>先爬取主播主页，遍历多页，等待元素加载，获取所有视频链接，上面说pyppeteer时说过，结果保存到文件中</h4><h5 id="parse-py"><a href="#parse-py" class="headerlink" title="parse.py"></a>parse.py</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding&#x3D;utf-8</span><br><span class="line">import time</span><br><span class="line">import asyncio</span><br><span class="line">from pyppeteer import launch</span><br><span class="line">from pyquery import PyQuery as pq</span><br><span class="line"></span><br><span class="line">urls &#x3D;[&quot;https:&#x2F;&#x2F;v.huya.com&#x2F;u&#x2F;146501201&#x2F;video.html?sort&#x3D;news&amp;p&#x3D;&#123;&#125;&quot;.format(i) for i in range(1,6)] </span><br><span class="line"></span><br><span class="line">async def main():   </span><br><span class="line">    down_list &#x3D; []</span><br><span class="line">    browser &#x3D; await launch()</span><br><span class="line">    page &#x3D; await browser.newPage()</span><br><span class="line">    with open(&quot;&#x2F;Users&#x2F;ming&#x2F;projects&#x2F;huyaPyDwon&#x2F;down.txt&quot;, &#39;a&#39;) as f:</span><br><span class="line">        for url in urls:</span><br><span class="line">            await page.goto(url)</span><br><span class="line">            await page.waitForSelector(&#39;.content-list .statpid&#39;)</span><br><span class="line">            doc &#x3D; pq(await page.content())</span><br><span class="line">            pink_link &#x3D; &quot;https:&#x2F;&#x2F;v.huya.com&quot;</span><br><span class="line">            names &#x3D; [pink_link + item.attr(&#39;href&#39;) for item in doc(&#39;.content-list .statpid&#39;).items()]</span><br><span class="line">            for name in names:</span><br><span class="line">                f.write(name + &#39;\n&#39;)</span><br><span class="line">            </span><br><span class="line">            # print(&#39;Names:&#39;, names)</span><br><span class="line">    await browser.close()</span><br><span class="line"></span><br><span class="line">asyncio.get_event_loop().run_until_complete(main())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="遍历读取文件中的链接，调用视频接口，解析json数据，获取m3u8文件链接，最后调用-youtube-dl-下载"><a href="#遍历读取文件中的链接，调用视频接口，解析json数据，获取m3u8文件链接，最后调用-youtube-dl-下载" class="headerlink" title="遍历读取文件中的链接，调用视频接口，解析json数据，获取m3u8文件链接，最后调用 youtube_dl 下载"></a>遍历读取文件中的链接，调用视频接口，解析json数据，获取m3u8文件链接，最后调用 youtube_dl 下载</h4><h5 id="down-py"><a href="#down-py" class="headerlink" title="down.py"></a>down.py</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># youtube_dl 接口函数</span><br><span class="line"></span><br><span class="line">def down(data,name):</span><br><span class="line">    ydl_opts &#x3D; &#123;</span><br><span class="line">        &#39;nooverwrites&#39;: True,</span><br><span class="line">        &#39;ignoreerrors&#39;: True,</span><br><span class="line">        &#39;retries&#39;: True,</span><br><span class="line">        &#39;outtmpl&#39;: name,</span><br><span class="line">    &#125;</span><br><span class="line">    with youtube_dl.YoutubeDL(ydl_opts) as ydl:</span><br><span class="line">        ydl.download([data])</span><br><span class="line"></span><br><span class="line"># 读取，解析，下载</span><br><span class="line"></span><br><span class="line">with open(&quot;&#x2F;Users&#x2F;ming&#x2F;projects&#x2F;huyaPyDwon&#x2F;down.txt&quot; , &#39;r&#39;) as f:</span><br><span class="line">    list &#x3D; f.readlines()</span><br><span class="line">    # print(list)</span><br><span class="line">    list &#x3D; [i.strip()[24:33] for i in list]</span><br><span class="line">    list &#x3D; [API_URL.format(i) for i in list]</span><br><span class="line">    for l in list:</span><br><span class="line">        data &#x3D; json.loads(requests.get(l, headers&#x3D;headers).text)</span><br><span class="line">        m3u8Link &#x3D; data[&#39;data&#39;][&#39;moment&#39;][&#39;videoInfo&#39;][&#39;definitions&#39;][0][&#39;m3u8&#39;]</span><br><span class="line">        name  &#x3D; data[&#39;data&#39;][&#39;moment&#39;][&#39;videoInfo&#39;][&#39;videoTitle&#39;]</span><br><span class="line">        down(m3u8Link,name)</span><br><span class="line">        </span><br><span class="line">        time.sleep(5)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Linux端口占用查看</title>
+    <url>/2021/05/15/mac%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E6%9F%A5%E7%9C%8B/</url>
+    <content><![CDATA[<p>老是忘，记一下</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> 1 $ lsof </span><br><span class="line"></span><br><span class="line">可以使用如下命令实现分页</span><br><span class="line"></span><br><span class="line"> 1 $ lsof | less </span><br><span class="line"></span><br><span class="line">使用如下命令查看特定端口</span><br><span class="line"></span><br><span class="line"> 1 $ lsof -i:8080 </span><br><span class="line"></span><br><span class="line">如果端口被占用，则会返回相关信息，如果没被占用，则不返回任何信息。</span><br><span class="line"></span><br><span class="line">以上命令会返回占用端口的进程PID,可以用kill命令杀死进程</span><br><span class="line"></span><br><span class="line"> 1 $ kill PID </span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>学到一个变压器的知识</title>
+    <url>/2021/05/22/%E5%AD%A6%E5%88%B0%E4%B8%80%E4%B8%AA%E5%8F%98%E5%8E%8B%E5%99%A8%E7%9A%84%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<p>起因是路由器的原装电源找不到了</p>
+<p>电压相同电流不同的充电器能互相通用，不会有什么严重的后果。</p>
+<a id="more"></a>
+
+
+<p>只要输出电压相同，输出电流不同的充电器可以通用。而且替换的充电器最大输来出电流应该比原装充电器一样或大一些为好。</p>
+<p>比如说原装充电器是 5V1A，那么用 5V、1.5A 的充电器一点问题都没有。不要以为 1.5A 就会把机器烧坏。如果原装充电器是 5V1A，那么 MP4 机器的充电电流肯定比 1A 小（比如说 800mA）。如果用 5V、1.5A 的充电器，机器仍然只抽取自 800mA 的充电电流，绝不会把机器烧坏。</p>
+<p>毫安值仅是说明充电器最大输出功率，会根据用电情况自适应的。正如功率大的稳压器，它可以带动更多的用电器，但用于小用电器时，也是照样百用，并没有说大功率的稳压器不能用于小电器。也正如一根粗的电线，它可以允许更大的电流通过，而对小电流不会禁止。电流多少、功率大小取决于用电器自身，而不是电线的粗细、度稳压电源的功率大小。</p>
+<hr>
+<p>摘自百度知道</p>
+]]></content>
+  </entry>
 </search>
