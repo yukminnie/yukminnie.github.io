@@ -14069,4 +14069,32 @@ NoSuchElementException: Message: no such element: Unable to locate element: &#12
         <tag>寻章摘句</tag>
       </tags>
   </entry>
+  <entry>
+    <title>ffmpeg转码的一点心得</title>
+    <url>/2021/07/09/ffmpeg%E8%BD%AC%E7%A0%81%E7%9A%84%E4%B8%80%E7%82%B9%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<p>h264_qsv hevc_qsv</p>
+<a id="more"></a>
+
+<h5 id="非高清视频，h264-和-hevc-压制出的视频体积相差不大"><a href="#非高清视频，h264-和-hevc-压制出的视频体积相差不大" class="headerlink" title="非高清视频，h264 和 hevc 压制出的视频体积相差不大"></a>非高清视频，h264 和 hevc 压制出的视频体积相差不大</h5><p>hevc更耗时，但是cpu占用率更低。不能挂机操作时，可以考虑 hevc</p>
+<h5 id="英特尔-qsv-硬件加速的压制速度，和-a卡n卡独显差不多"><a href="#英特尔-qsv-硬件加速的压制速度，和-a卡n卡独显差不多" class="headerlink" title="英特尔 qsv 硬件加速的压制速度，和 a卡n卡独显差不多"></a>英特尔 qsv 硬件加速的压制速度，和 a卡n卡独显差不多</h5><p>单纯用 cpu 压制，哪怕是 ryzen3，和带 uhd630 的7代8代英特尔处理器，压制速度还差几倍</p>
+<h5 id="压制质量上，低于1080p的视频（尤其是画面变化幅度不大的教程类视频），肉眼观察画面差异不明显"><a href="#压制质量上，低于1080p的视频（尤其是画面变化幅度不大的教程类视频），肉眼观察画面差异不明显" class="headerlink" title="压制质量上，低于1080p的视频（尤其是画面变化幅度不大的教程类视频），肉眼观察画面差异不明显"></a>压制质量上，低于1080p的视频（尤其是画面变化幅度不大的教程类视频），肉眼观察画面差异不明显</h5><p>不管是就 hevc 加速还是 h264 加速，或者纯 cpu 压制来说</p>
+<h5 id="教程类视频（画面变化幅度不大），更改分辨率或者帧率，对视频体积大小的影响，微乎其微"><a href="#教程类视频（画面变化幅度不大），更改分辨率或者帧率，对视频体积大小的影响，微乎其微" class="headerlink" title="教程类视频（画面变化幅度不大），更改分辨率或者帧率，对视频体积大小的影响，微乎其微"></a>教程类视频（画面变化幅度不大），更改分辨率或者帧率，对视频体积大小的影响，微乎其微</h5><p>只更改码率即可</p>
+]]></content>
+      <tags>
+        <tag>实则虚之</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>you-get的几个参数</title>
+    <url>/2021/07/09/you-get%E7%9A%84%E5%87%A0%E4%B8%AA%E5%8F%82%E6%95%B0/</url>
+    <content><![CDATA[<p>you-get 有很多针对国内网站的参数选项</p>
+<a id="more"></a>
+
+<p>个人感觉不少选项很鸡肋，针对少量的网站，没有通用性，比如指定列表中的几项进行下载，对 bilibili 就是无效的，自己构造网址列表文件呢，本身下载列表你又是支持的，中间下载失败，对于已经下载的文件，检查过程又特别的慢</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 无效，检查已经存在的文件，还是很慢</span><br><span class="line">  --skip-existing-file-size-check</span><br><span class="line">                        Skip existing file without checking file size</span><br><span class="line"># 优先尝试下载 dash 流，快速</span><br><span class="line">  -F STREAM_ID, --format STREAM_ID</span><br><span class="line">                        Set video format to STREAM_ID</span><br><span class="line"></span><br><span class="line"># cookies</span><br><span class="line">  -c COOKIES_FILE, --cookies COOKIES_FILE</span><br><span class="line">                        Load cookies.txt or cookies.sqlite</span><br><span class="line"></span><br><span class="line"># 日常都带上</span><br><span class="line">  -t SECONDS, --timeout SECONDS</span><br><span class="line">                        Set socket timeout</span><br><span class="line">  </span><br><span class="line"># 或许和 youtube-dl 的 -o 参数类似？没有想到可用的地方</span><br><span class="line">  -I FILE, --input-file FILE</span><br><span class="line">                        Read non-playlist URLs from FILE</span><br><span class="line"># 日常都带上</span><br><span class="line">  -k, --insecure        ignore ssl errors</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 今年新增加的参数，至今没成功过，估计对特定网站支持</span><br><span class="line">Playlist optional options:</span><br><span class="line">  --first FIRST         the first number</span><br><span class="line">  --last LAST           the last number</span><br><span class="line">  --size PAGE_SIZE, --page-size PAGE_SIZE</span><br><span class="line">                        the page size number</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>实则虚之</tag>
+      </tags>
+  </entry>
 </search>
