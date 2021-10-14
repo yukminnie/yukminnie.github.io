@@ -12492,8 +12492,22 @@
     <url>/2021/03/21/openwrt-%E5%8E%9F%E7%89%88-%E5%AE%89%E8%A3%85openclash/</url>
     <content><![CDATA[<p><img data-src="https://mweb-1253466367.cos.ap-shanghai.myqcloud.com/20200929141428.jpeg"></p>
 <a id="more"></a>
-
-<h4 id="依赖库"><a href="#依赖库" class="headerlink" title="依赖库"></a>依赖库</h4><p>ssh登陆后，先opkg update 升级， 然后安装依赖库，大部分都很顺利，最新依赖库列表在这里 <a href="https://github.com/vernesong/OpenClash" target="_blank" rel="noopener">https://github.com/vernesong/OpenClash</a></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>后台看到，这篇文章的浏览量还是挺高的(不过没人回复，大家都惜字如金啊)，因为文章已经写了好长时间了，最近有点心得，写点注意事项，希望能更好的帮助大家</p>
+<ul>
+<li><p>第一步的 opkg update是必须的，大家不要省掉</p>
+</li>
+<li><p>关于依赖库，本身openwrt已经自带的，原则是能不重新安装，就不重新安装，推荐大家网页登录到路由后台，对照着已安装库，和clash所需依赖库，一个一个对比着安装</p>
+</li>
+<li><p>关于一些问题缠绕的库的说明</p>
+</li>
+</ul>
+<p>1，luci和luci-base，这两个库，就不要管它，直接无视</p>
+<p>2，从iptable到libcap之前的这些库，大部分openwrt都自带的，已有的就不要动了，如果提示找不到，就重新opkg update一下，并且尝试使用后面的强制安装依赖命令，基本没啥问题</p>
+<p>如果有极个别，还是找不到或者无法安装，直接无视，忽略不装（我安装的几回，碰到过iptables-mod-tproxy还是iptables-mod-extra不能安装的问题），最终不影响openclash的使用</p>
+<p>3，libcap和libcap-bin，可以按照下面的链接，手动去下载安装一下库</p>
+<p>4，后面ruby和ruby-yaml，同2</p>
+<p>5，之后的几个库，也可以直接无视</p>
+<h4 id="依赖库"><a href="#依赖库" class="headerlink" title="依赖库"></a>依赖库</h4><p>ssh登陆后，先opkg update 升级， 然后安装依赖库，大部分都很顺利，最新依赖库列表在这里 <a href="https://github.com/vernesong/OpenClash">https://github.com/vernesong/OpenClash</a></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">opkg update</span><br><span class="line"></span><br><span class="line">luci</span><br><span class="line">luci-base</span><br><span class="line">iptables</span><br><span class="line">dnsmasq-full</span><br><span class="line">coreutils</span><br><span class="line">coreutils-nohup</span><br><span class="line">bash</span><br><span class="line">curl</span><br><span class="line">jsonfilter</span><br><span class="line">ca-certificates</span><br><span class="line">ipset</span><br><span class="line">ip-full</span><br><span class="line">iptables-mod-tproxy</span><br><span class="line">iptables-mod-extra</span><br><span class="line">libcap</span><br><span class="line">libcap-bin</span><br><span class="line">ruby</span><br><span class="line">ruby-yaml</span><br><span class="line">kmod-tun(TUN模式)</span><br><span class="line">luci-compat(Luci-19.07)</span><br><span class="line">ip6tables-mod-nat(ipv6)</span><br></pre></td></tr></table></figure>
 <h4 id="碰到的问题"><a href="#碰到的问题" class="headerlink" title="碰到的问题"></a>碰到的问题</h4><p>1，libcap-bin 这个库无法找到，需要到另外的库手动下载，ssh登录后安装，注意处理器类型是mipsel，不是mips</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;downloads.openwrt.org&#x2F;snapshots&#x2F;packages&#x2F;mipsel_24kc&#x2F;packages&#x2F;</span><br><span class="line"></span><br><span class="line">libcap-bin_2.43-1_mipsel_24kc.ipk</span><br></pre></td></tr></table></figure>
@@ -14117,5 +14131,10 @@ NoSuchElementException: Message: no such element: Unable to locate element: &#12
       <tags>
         <tag>实则虚之</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>shellclash</title>
+    <url>/2021/10/14/shellclash/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
